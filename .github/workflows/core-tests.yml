@@ -1,0 +1,23 @@
+name: Core tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  swift-test:
+    runs-on: macos-14
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify bundled model checksum
+        run: |
+          expected="4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad"
+          actual="$(shasum -a 256 App/pose_landmarker_full.task | awk '{print $1}')"
+          test "$actual" = "$expected"
+      - name: Run deterministic core tests
+        run: swift test
