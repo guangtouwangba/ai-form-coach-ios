@@ -2,6 +2,9 @@
 
 一个隐私优先、端侧运行的保加利亚分腿蹲动作辅助原型。手机侧面拍摄后，应用实时提取人体关键点、识别动作阶段和完整次数，并在高置信度问题出现时给出简短中文语音提示。
 
+> Status: experimental open-source prototype. It has not completed real-device,
+> coach-labelled accuracy or App Store release gates.
+
 ## 当前能力
 
 - iOS 17 SwiftUI 流程：安全说明、动作配置、机位引导、三次校准引导、实时训练、组后总结、历史和设置。
@@ -33,3 +36,9 @@ ENABLE_MEDIAPIPE=1 LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 pod install
 这不是医疗诊断或专业教练替代品。当前规则只覆盖纯侧面机位下的保加利亚分腿蹲；卧推、3D 几何、多机位和经过教练标注的准确率验证不在 P0 内。
 
 详见 [实现与测试计划](Docs/IMPLEMENTATION_AND_TEST_PLAN.md) 和 [依赖审计](Docs/DEPENDENCY_AUDIT.md)。
+
+## 开源协作
+
+项目代码采用 [MIT License](LICENSE)。随仓库分发的 MediaPipe 模型保留其
+上游许可证，详见 [第三方声明](THIRD_PARTY_NOTICES.md)。提交改进前请阅读
+[贡献指南](CONTRIBUTING.md) 与 [安全策略](SECURITY.md)。
