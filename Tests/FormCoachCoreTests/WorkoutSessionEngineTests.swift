@@ -25,6 +25,22 @@ final class WorkoutSessionEngineTests: XCTestCase {
         XCTAssertEqual(summary.effectiveRepCount, 0)
     }
 
+    func testMovementBelowNinetyPercentOfCalibratedDepthDoesNotCount() async {
+        let engine = WorkoutSessionEngine()
+        await engine.start(config: SessionConfig(), calibration: FixtureFactory.calibration)
+        let frames = [
+            FixtureFactory.pose(timestamp: 0, hipY: 0.70, kneeAngle: 165),
+            FixtureFactory.pose(timestamp: 250, hipY: 0.66, kneeAngle: 145),
+            FixtureFactory.pose(timestamp: 500, hipY: 0.615, kneeAngle: 110),
+            FixtureFactory.pose(timestamp: 750, hipY: 0.615, kneeAngle: 105),
+            FixtureFactory.pose(timestamp: 1_000, hipY: 0.65, kneeAngle: 135),
+            FixtureFactory.pose(timestamp: 1_300, hipY: 0.70, kneeAngle: 165)
+        ]
+        for pose in frames { _ = await engine.ingest(pose) }
+        let summary = await engine.finish()
+        XCTAssertEqual(summary.effectiveRepCount, 0)
+    }
+
     func testLowConfidenceIssueNeverProducesFeedback() async {
         let engine = WorkoutSessionEngine()
         await engine.start(config: SessionConfig(minimumLandmarkQuality: 0.5), calibration: FixtureFactory.calibration)
@@ -58,5 +74,17 @@ final class WorkoutSessionEngineTests: XCTestCase {
             }
         }
         XCTAssertLessThanOrEqual(cues.count, 1)
+    }
+
+    func testSpokenFeedbackPersistsTraceabilityMetadata() async {
+        let engine = WorkoutSessionEngine()
+        let config = SessionConfig(spokenThreshold: 0.80, ruleVersion: "test-rules-7")
+        await engine.start(config: config, calibration: FixtureFactory.calibration)
+        for pose in FixtureFactory.validRep(trunkAtBottom: 38) { _ = await engine.ingest(pose) }
+        let feedback = await engine.finish().feedbackEvents.first
+        XCTAssertEqual(feedback?.ruleVersion, "test-rules-7")
+        XCTAssertEqual(feedback?.engineVersion, "fixture")
+        XCTAssertEqual(feedback?.spokenThreshold, 0.80)
+        XCTAssertFalse(feedback?.evidence.isEmpty ?? true)
     }
 }

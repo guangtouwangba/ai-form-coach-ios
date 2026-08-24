@@ -10,10 +10,11 @@ final class AppModel: ObservableObject {
     @Published var trainingSide: TrainingSide = .right
     @Published var variant: ExerciseVariant = .general
     @Published var speechEnabled = true
-    @Published var saveVideo = false
     @Published var calibrationProgress = 0
+    @Published var calibrationMessage = "保持起始姿势，然后完成 3 次轻负重动作"
     @Published var repCount = 0
     @Published var liveStatus: LiveStatus = .ready
+    @Published var isAnalysisPaused = false
     @Published var latestCue: String?
     @Published var summary = WorkoutSummary(reps: [], suppressedIssueCount: 0)
     @Published var selectedRep: RepSummary?
@@ -21,44 +22,57 @@ final class AppModel: ObservableObject {
     private let engine = WorkoutSessionEngine()
     private let speech = SpeechService()
     private var demoTask: Task<Void, Never>?
+    private var calibrationCollector = GuidedCalibrationCollector()
+    private var acceptsWorkoutObservations = false
 
     deinit { demoTask?.cancel() }
 
     func acknowledgeSafety() { step = .selection }
     func selectExercise() { step = .configuration }
     func confirmConfiguration() { step = .positioning }
-    func beginPositioning() { step = .calibration }
-
-    func runGuidedCalibration() {
+    func beginPositioning() {
+        calibrationCollector.reset()
         calibrationProgress = 0
-        demoTask?.cancel()
-        demoTask = Task { [weak self] in
-            for rep in 1...3 {
-                guard !Task.isCancelled else { return }
-                try? await Task.sleep(for: .milliseconds(650))
-                self?.calibrationProgress = rep
-            }
-            try? await Task.sleep(for: .milliseconds(350))
-            self?.startLiveWorkout()
+        calibrationMessage = "保持起始姿势，然后完成 3 次轻负重动作"
+        step = .calibration
+    }
+
+    func receiveCalibration(_ observation: PoseObservation) {
+        guard let update = calibrationCollector.ingest(observation) else { return }
+        calibrationProgress = update.completedRepCount
+        if update.error != nil {
+            calibrationMessage = "三次动作差异较大，请稳定节奏后重新完成 3 次"
+        } else if let profile = update.profile {
+            calibrationMessage = "校准完成"
+            startLiveWorkout(calibration: profile)
+        } else {
+            calibrationMessage = "已记录第 \(update.completedRepCount) 次"
         }
     }
 
-    func startLiveWorkout() {
+    func startLiveWorkout(calibration: CalibrationProfile) {
         demoTask?.cancel()
-        step = .live
         repCount = 0
         latestCue = nil
         liveStatus = .active
-        let config = SessionConfig(trainingSide: trainingSide, variant: variant, speechEnabled: speechEnabled, saveVideo: saveVideo)
-        Task { await engine.start(config: config, calibration: DemoSequence.calibration) }
+        isAnalysisPaused = false
+        let config = SessionConfig(trainingSide: trainingSide, variant: variant, speechEnabled: speechEnabled, saveVideo: false)
+        Task {
+            await engine.start(config: config, calibration: calibration)
+            acceptsWorkoutObservations = true
+            step = .live
+        }
     }
 
-    func receive(_ observation: PoseObservation) {
-        Task { [weak self] in
-            guard let self else { return }
-            let events = await engine.ingest(observation)
-            consume(events)
-        }
+    func receive(_ observation: PoseObservation) async {
+        guard acceptsWorkoutObservations, !isAnalysisPaused else { return }
+        let events = await engine.ingest(observation)
+        consume(events)
+    }
+
+    func toggleAnalysisPause() {
+        isAnalysisPaused.toggle()
+        liveStatus = isAnalysisPaused ? .paused("manual") : .active
     }
 
     func startDemoWorkout() {
@@ -67,7 +81,7 @@ final class AppModel: ObservableObject {
         repCount = 0
         latestCue = nil
         liveStatus = .active
-        let config = SessionConfig(trainingSide: trainingSide, variant: variant, speechEnabled: speechEnabled, saveVideo: saveVideo)
+        let config = SessionConfig(trainingSide: trainingSide, variant: variant, speechEnabled: speechEnabled, saveVideo: false)
         let calibration = DemoSequence.calibration
         demoTask = Task { [weak self] in
             guard let self else { return }
@@ -84,6 +98,7 @@ final class AppModel: ObservableObject {
 
     func finishWorkout() {
         demoTask?.cancel()
+        acceptsWorkoutObservations = false
         Task { summary = await engine.finish(); step = .summary }
     }
 

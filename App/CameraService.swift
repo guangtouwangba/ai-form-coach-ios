@@ -16,7 +16,7 @@ final class CameraService: NSObject, ObservableObject, AVCaptureVideoDataOutputS
     @Published private(set) var status: Status = .idle
     @Published private(set) var droppedFrameCount = 0
 
-    var observationHandler: ((PoseObservation) -> Void)?
+    var observationHandler: ((PoseObservation) async -> Void)?
 
     private let captureQueue = DispatchQueue(label: "coach.camera.capture", qos: .userInteractive)
     private let stateLock = NSLock()
@@ -107,7 +107,7 @@ final class CameraService: NSObject, ObservableObject, AVCaptureVideoDataOutputS
             }
             do {
                 if let observation = try await perception.process(buffer.value, orientation: .right, timestampMs: timestampMs) {
-                    await MainActor.run { self.observationHandler?(observation) }
+                    await self.observationHandler?(observation)
                 }
             } catch {
                 publish(.unavailable("pose_inference_failed"))

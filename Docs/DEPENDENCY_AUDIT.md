@@ -31,3 +31,4 @@
 3. 至少两档真机：目标最低性能设备与一台当前主流设备。
 4. MediaPipe 构建、真机 Metal 路径和模型许可证复核。
 5. App Store Connect 隐私问卷、隐私政策 URL、支持 URL、截图与年龄分级。
+6. 生成最终 App Icon，并在 Xcode 26 构建中重新启用 asset catalog 的 AppIcon 编译设置。

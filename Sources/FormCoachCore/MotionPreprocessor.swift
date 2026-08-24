@@ -57,7 +57,8 @@ public struct MotionPreprocessor: Sendable {
             frontKneeAngle: Geometry.angle(frontHip, knee, ankle),
             trunkAngle: filteredTrunk,
             poseQuality: quality,
-            containsPredictedRequiredPoint: points.contains(where: \.isPredicted)
+            containsPredictedRequiredPoint: points.contains(where: \.isPredicted),
+            engineVersion: observation.engineVersion
         )
     }
 

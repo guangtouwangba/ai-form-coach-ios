@@ -34,7 +34,9 @@ final class AppleVisionPosePerception: LivePosePerception {
             var landmarks: [LandmarkID: Landmark] = [:]
             for (id, joint) in map {
                 guard let value = points[joint], value.confidence > 0 else { continue }
-                landmarks[id] = Landmark(x: value.location.x, y: value.location.y, visibility: Double(value.confidence), presence: Double(value.confidence))
+                // Vision uses a lower-left origin while MediaPipe and the core
+                // contract use image coordinates with a top-left origin.
+                landmarks[id] = Landmark(x: value.location.x, y: 1 - value.location.y, visibility: Double(value.confidence), presence: Double(value.confidence))
             }
             let elapsed = ContinuousClock.now - started
             return PoseObservation(timestampMs: timestampMs, landmarks: landmarks, inferenceMs: elapsed.milliseconds, engineVersion: self.engineVersion)

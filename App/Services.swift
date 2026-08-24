@@ -5,7 +5,6 @@ import FormCoachCore
 
 final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
     private let synthesizer = AVSpeechSynthesizer()
-    private var lastText: String?
 
     override init() {
         super.init()
@@ -13,8 +12,7 @@ final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
     }
 
     func speak(_ text: String) {
-        guard !text.isEmpty, text != lastText else { return }
-        lastText = text
+        guard !text.isEmpty else { return }
         if synthesizer.isSpeaking { synthesizer.stopSpeaking(at: .immediate) }
         let utterance = AVSpeechUtterance(string: text)
         utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.language.languageCode?.identifier == "zh" ? "zh-CN" : "en-US")
@@ -55,6 +53,9 @@ final class StoredWorkoutSession {
 enum SessionDeletionService {
     static func delete(_ session: StoredWorkoutSession, context: ModelContext) throws {
         if let relative = session.mediaRelativePath {
+            guard !relative.hasPrefix("/"), !relative.split(separator: "/").contains("..") else {
+                throw CocoaError(.fileReadInvalidFileName)
+            }
             let base = try FileManager.default.url(for: .applicationSupportDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
             let mediaURL = base.appending(path: relative)
             if FileManager.default.fileExists(atPath: mediaURL.path) { try FileManager.default.removeItem(at: mediaURL) }

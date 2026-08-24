@@ -7,6 +7,7 @@ public actor WorkoutSessionEngine {
     private var phase: ExercisePhase = .invalid
     private var reps: [RepSummary] = []
     private var suppressedIssueCount = 0
+    private var feedbackEvents: [FeedbackEvent] = []
     private var activeRep: RepAccumulator?
     private var lastFeedbackByType: [IssueType: Int] = [:]
     private var paused = false
@@ -19,6 +20,7 @@ public actor WorkoutSessionEngine {
         phase = .ready
         reps = []
         suppressedIssueCount = 0
+        feedbackEvents = []
         activeRep = nil
         lastFeedbackByType = [:]
         paused = false
@@ -67,6 +69,7 @@ public actor WorkoutSessionEngine {
                 events.append(.issueDetected(issue))
             }
             if let feedback = chooseFeedback(from: result.rep.issues, at: frame.timestampMs, config: config) {
+                feedbackEvents.append(feedback)
                 events.append(.feedback(feedback))
             }
             activeRep = nil
@@ -77,7 +80,7 @@ public actor WorkoutSessionEngine {
     }
 
     public func finish() -> WorkoutSummary {
-        WorkoutSummary(reps: reps, suppressedIssueCount: suppressedIssueCount)
+        WorkoutSummary(reps: reps, suppressedIssueCount: suppressedIssueCount, feedbackEvents: feedbackEvents)
     }
 
     private func nextPhase(for frame: MotionFrame, calibration: CalibrationProfile) -> ExercisePhase {
@@ -89,7 +92,7 @@ public actor WorkoutSessionEngine {
             // Depth is the stable phase boundary. Velocity is deliberately not
             // required here because smoothing can keep a small negative value
             // for several frames after the athlete reaches the bottom.
-            if frame.hipDrop >= calibration.targetDepth * 0.80 { return .bottom }
+            if frame.hipDrop >= calibration.targetDepth * 0.90 { return .bottom }
             return .descending
         case .bottom:
             return frame.verticalVelocity > 0.04 ? .ascending : .bottom
@@ -115,7 +118,7 @@ public actor WorkoutSessionEngine {
         if accumulator.maximumTrunkDelta > allowedDelta {
             issues.append(makeIssue(.torsoCollapse, accumulator: accumulator, confidence: baseConfidence * evidenceStrength(accumulator.maximumTrunkDelta, threshold: allowedDelta), config: config, evidence: ["trunkDelta": accumulator.maximumTrunkDelta, "allowedDelta": allowedDelta]))
         }
-        if accumulator.maximumDepth < calibration.targetDepth * 0.90 {
+        if accumulator.maximumDepth < calibration.targetDepth * 0.98 {
             let ratio = accumulator.maximumDepth / max(calibration.targetDepth, 0.001)
             issues.append(makeIssue(.insufficientDepth, accumulator: accumulator, confidence: baseConfidence * min(1, max(0.75, 1 - ratio + 0.75)), config: config, evidence: ["depth": accumulator.maximumDepth, "targetDepth": calibration.targetDepth]))
         }
@@ -131,7 +134,8 @@ public actor WorkoutSessionEngine {
             descentDurationMs: accumulator.descentDurationMs,
             maximumDepth: accumulator.maximumDepth,
             maximumTrunkDelta: accumulator.maximumTrunkDelta,
-            issues: issues
+            issues: issues,
+            engineVersion: accumulator.engineVersion
         )
         return (rep, issues)
     }
@@ -161,7 +165,18 @@ public actor WorkoutSessionEngine {
             guard let issue = issues.first(where: { $0.type == type && $0.disposition == .spoken }) else { continue }
             if let last = lastFeedbackByType[type], timestampMs - last < config.feedbackCooldownMs { continue }
             lastFeedbackByType[type] = timestampMs
-            return FeedbackEvent(issue: type, repIndex: issue.repIndex, timestampMs: timestampMs, cueKey: cueKey(for: type))
+            return FeedbackEvent(
+                issue: type,
+                repIndex: issue.repIndex,
+                timestampMs: timestampMs,
+                cueKey: cueKey(for: type),
+                phase: issue.phase,
+                confidence: issue.confidence,
+                spokenThreshold: config.spokenThreshold,
+                evidence: issue.evidence,
+                engineVersion: reps.last?.engineVersion ?? "unknown",
+                ruleVersion: config.ruleVersion
+            )
         }
         return nil
     }
@@ -189,6 +204,7 @@ private struct RepAccumulator: Sendable {
     var maximumTrunkDelta = 0.0
     var minimumPoseQuality = 1.0
     var containsPredictedPoint = false
+    var engineVersion = "unknown"
     var sawBottom = false
 
     init(index: Int, startMs: Int, initialTrunkAngle: Double) {
@@ -204,6 +220,7 @@ private struct RepAccumulator: Sendable {
         maximumTrunkDelta = max(maximumTrunkDelta, frame.trunkAngle - initialTrunkAngle)
         minimumPoseQuality = min(minimumPoseQuality, frame.poseQuality)
         containsPredictedPoint = containsPredictedPoint || frame.containsPredictedRequiredPoint
+        engineVersion = frame.engineVersion
         if frame.hipDrop > 0.35 {
             sawBottom = true
             bottomTimestampMs = bottomTimestampMs ?? frame.timestampMs

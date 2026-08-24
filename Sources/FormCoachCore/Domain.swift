@@ -147,6 +147,7 @@ public struct MotionFrame: Codable, Equatable, Sendable {
     public let trunkAngle: Double
     public let poseQuality: Double
     public let containsPredictedRequiredPoint: Bool
+    public let engineVersion: String
 }
 
 public struct RepSummary: Codable, Equatable, Identifiable, Sendable {
@@ -157,6 +158,7 @@ public struct RepSummary: Codable, Equatable, Identifiable, Sendable {
     public let maximumDepth: Double
     public let maximumTrunkDelta: Double
     public let issues: [IssueEvent]
+    public let engineVersion: String
 }
 
 public struct IssueEvent: Codable, Equatable, Identifiable, Sendable {
@@ -177,6 +179,12 @@ public struct FeedbackEvent: Codable, Equatable, Sendable {
     public let repIndex: Int
     public let timestampMs: Int
     public let cueKey: String
+    public let phase: ExercisePhase
+    public let confidence: Double
+    public let spokenThreshold: Double
+    public let evidence: [String: Double]
+    public let engineVersion: String
+    public let ruleVersion: String
 }
 
 public enum SessionEvent: Equatable, Sendable {
@@ -191,10 +199,12 @@ public enum SessionEvent: Equatable, Sendable {
 public struct WorkoutSummary: Codable, Equatable, Sendable {
     public let reps: [RepSummary]
     public let suppressedIssueCount: Int
+    public let feedbackEvents: [FeedbackEvent]
     public var effectiveRepCount: Int { reps.count }
 
-    public init(reps: [RepSummary], suppressedIssueCount: Int) {
+    public init(reps: [RepSummary], suppressedIssueCount: Int, feedbackEvents: [FeedbackEvent] = []) {
         self.reps = reps
         self.suppressedIssueCount = suppressedIssueCount
+        self.feedbackEvents = feedbackEvents
     }
 }

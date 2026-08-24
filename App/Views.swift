@@ -92,16 +92,25 @@ struct PositioningView: View {
 
 struct CalibrationView: View {
     @EnvironmentObject private var model: AppModel
+    @StateObject private var camera = CameraService()
     var body: some View {
         ZStack {
             Color.black.ignoresSafeArea()
+            CameraPreview(session: camera.session).ignoresSafeArea().opacity(0.48)
             VStack(spacing:24) {
                 Text("建立你的动作基线").font(.title2.bold())
-                Text("先保持起始姿势，再完成 3 次轻负重动作。校准动作不会被评价。") .multilineTextAlignment(.center).foregroundStyle(.secondary)
+                Text(model.calibrationMessage).multilineTextAlignment(.center).foregroundStyle(.white.opacity(0.8))
                 ZStack { Circle().stroke(.white.opacity(0.15), lineWidth:12); Circle().trim(from:0,to:Double(model.calibrationProgress)/3).stroke(mint,style:StrokeStyle(lineWidth:12,lineCap:.round)).rotationEffect(.degrees(-90)); Text("\(model.calibrationProgress) / 3").font(.system(size:40,weight:.bold)) }.frame(width:190,height:190)
-                if model.calibrationProgress == 0 { PrimaryButton("开始校准", action:model.runGuidedCalibration) } else { Text(model.calibrationProgress == 3 ? "校准完成" : "动作保持稳定").foregroundStyle(mint).font(.headline) }
+                Text("关键点不足时不会记录；三次动作不一致会自动要求重试。")
+                    .font(.caption)
+                    .multilineTextAlignment(.center)
             }.foregroundStyle(.white).padding(30)
         }
+        .onAppear {
+            camera.observationHandler = { observation in model.receiveCalibration(observation) }
+            camera.start()
+        }
+        .onDisappear { camera.stop() }
     }
 }
 
@@ -113,16 +122,22 @@ struct LiveWorkoutView: View {
             LinearGradient(colors:[.black,Color(red:0.04,green:0.11,blue:0.10)],startPoint:.top,endPoint:.bottom).ignoresSafeArea()
             CameraPreview(session: camera.session).ignoresSafeArea()
             PoseSilhouette().stroke(mint.opacity(0.85), style:StrokeStyle(lineWidth:5,lineCap:.round,lineJoin:.round)).frame(width:270,height:440).offset(y:20)
+            if camera.status == .denied {
+                ContentUnavailableView("无法使用摄像头", systemImage: "camera.fill", description: Text("请在系统设置中允许摄像头权限后重试。"))
+                    .foregroundStyle(.white)
+                    .padding()
+                    .background(.black.opacity(0.75), in: RoundedRectangle(cornerRadius: 20))
+            }
             VStack {
                 HStack { Button { model.finishWorkout() } label:{ Image(systemName:"xmark") }; Spacer(); Text("保加利亚分腿蹲").font(.caption.bold()).padding(.horizontal,14).padding(.vertical,9).background(.ultraThinMaterial,in:Capsule()); Spacer(); Button { model.speechEnabled.toggle() } label:{ Image(systemName:model.speechEnabled ? "speaker.wave.2" : "speaker.slash") } }.font(.title3)
                 HStack(alignment:.firstTextBaseline) { Text("\(model.repCount)").font(.system(size:76,weight:.bold)); Text("次"); Spacer() }.padding(.top,24)
                 Spacer()
                 if let cue=model.latestCue { Label(cue,systemImage:"speaker.wave.2.fill").font(.headline).padding().frame(maxWidth:.infinity).background(.black.opacity(0.55),in:Capsule()).overlay(Capsule().stroke(amber)) }
-                HStack { Button { model.liveStatus = .paused("manual") } label:{ Image(systemName:"pause.fill").frame(width:54,height:54).background(.ultraThinMaterial,in:Circle()) }; Spacer(); Button("结束训练",action:model.finishWorkout).foregroundStyle(amber).font(.headline).padding() }
+                HStack { Button(action:model.toggleAnalysisPause) { Image(systemName:model.isAnalysisPaused ? "play.fill" : "pause.fill").frame(width:54,height:54).background(.ultraThinMaterial,in:Circle()) }; Spacer(); Button("结束训练",action:model.finishWorkout).foregroundStyle(amber).font(.headline).padding() }
             }.padding().foregroundStyle(.white)
         }
         .onAppear {
-            camera.observationHandler = { observation in model.receive(observation) }
+            camera.observationHandler = { observation in await model.receive(observation) }
             camera.start()
         }
         .onDisappear { camera.stop() }
@@ -192,12 +207,7 @@ struct SettingsView: View {
                 Section("训练反馈") {
                     Toggle("语音提示", isOn: $model.speechEnabled)
                 }
-                Section("隐私") {
-                    Toggle("保存训练视频", isOn: $model.saveVideo)
-                    Text("默认关闭。视频只保存在本机应用容器中。")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
+                Section("隐私") { Text("训练画面只用于实时本机分析，本版本不会保存视频。") }
                 Section("关于") {
                     LabeledContent("规则版本", value: "bss-0.1.0")
                     Text("仅提供一般训练辅助，不替代医疗建议或专业教练。")
