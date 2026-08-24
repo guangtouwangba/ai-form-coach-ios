@@ -1,0 +1,11 @@
+.DS_Store
+.build/
+build/
+DerivedData/
+Pods/
+AIFormCoach.xcworkspace/
+*.xcuserstate
+xcuserdata/
+*.ipa
+*.dSYM.zip
+AIFormCoach.xcworkspace/xcuserdata/

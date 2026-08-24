@@ -1,0 +1,9 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "cue.control_descent" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Control the descent." } }, "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "控制下降。" } } } },
+    "cue.go_lower" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Go a little lower next rep." } }, "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "下一次再低一点。" } } } },
+    "cue.torso_stable" : { "localizations" : { "en" : { "stringUnit" : { "state" : "translated", "value" : "Keep your torso steady next rep." } }, "zh-Hans" : { "stringUnit" : { "state" : "translated", "value" : "下一次稳住躯干。" } } } }
+  },
+  "version" : "1.0"
+}
