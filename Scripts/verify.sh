@@ -18,7 +18,7 @@ if command -v xcodebuild >/dev/null 2>&1; then
   xcodebuild \
     -project AIFormCoach.xcodeproj \
     -target AIFormCoach \
-    -sdk iphonesimulator17.5 \
+    -sdk iphonesimulator \
     -configuration Debug \
     CODE_SIGNING_ALLOWED=NO \
     ONLY_ACTIVE_ARCH=YES \

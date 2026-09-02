@@ -9,7 +9,6 @@ struct AIFormCoachApp: App {
         WindowGroup {
             RootView()
                 .environmentObject(model)
-                .preferredColorScheme(model.step == .live ? .dark : .light)
         }
         .modelContainer(for: StoredWorkoutSession.self)
     }

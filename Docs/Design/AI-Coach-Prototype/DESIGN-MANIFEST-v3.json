@@ -1,0 +1,2542 @@
+{
+  "artifact": "AI 动作教练",
+  "version": "v3 Production",
+  "source": "ai-action-coach-prototype-v3.html",
+  "locale": "zh-CN",
+  "platform": "原生 iOS App 设计稿",
+  "canvas": {
+    "primary": {
+      "width": 393,
+      "height": 852,
+      "unit": "pt"
+    },
+    "validation": [
+      {
+        "width": 360,
+        "height": 800
+      },
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 430,
+        "height": 932
+      }
+    ]
+  },
+  "visualSystem": {
+    "backgrounds": [
+      "暖白准备与历史界面",
+      "深墨绿训练界面"
+    ],
+    "accent": "Coach Mint",
+    "warning": "Coaching Amber",
+    "danger": "Safety Red",
+    "spacing": "4 pt",
+    "navigation": "底部训练／历史／我的 Tab，仅在一级页面出现"
+  },
+  "productBoundary": {
+    "P0": "单人、单台 iPhone、纯侧面、保加利亚分腿蹲的端侧离线训练观察；无账号、云同步或订阅；视频默认不保存。",
+    "P1": "组结束后的 Gemini 异步高级复盘；需要独立购买与上传同意；不参与实时计数或口令，也不能覆盖端侧事实。"
+  },
+  "unresolvedProductDecisions": [
+    "P1 是单次购买、次数包还是周期权益。",
+    "正式价格、试用或免费额度。",
+    "默认关键帧数量上限与可选短视频时长上限。",
+    "云端数据默认保留期限及各地区文案。",
+    "分析超时、速率限制与重试阈值。"
+  ],
+  "counts": {
+    "screens": 98,
+    "p0": 69,
+    "p1": 29,
+    "components": 27,
+    "groups": 8
+  },
+  "groups": [
+    {
+      "name": "01 核心与会话",
+      "count": 24
+    },
+    {
+      "name": "02 画面质量",
+      "count": 9
+    },
+    {
+      "name": "03 系统与设备",
+      "count": 11
+    },
+    {
+      "name": "04 本地数据与恢复",
+      "count": 18
+    },
+    {
+      "name": "05 无障碍",
+      "count": 7
+    },
+    {
+      "name": "06 Gemini 高级复盘",
+      "count": 10
+    },
+    {
+      "name": "07 Gemini 异步任务",
+      "count": 12
+    },
+    {
+      "name": "08 Gemini 结果与删除",
+      "count": 7
+    }
+  ],
+  "screens": [
+    {
+      "order": 1,
+      "stateId": "P0-LAUNCH",
+      "name": "App 启动",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "冷启动或进程重启",
+      "userSees": {
+        "title": "AI 动作教练",
+        "detail": "正在加载端侧姿态模型；视频默认不保存。"
+      },
+      "primaryAction": "继续",
+      "secondaryAction": null,
+      "nextState": "P0-SAFETY",
+      "secondaryTarget": null,
+      "exceptionRecovery": "加载失败进入模型失败状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "VoiceOver 读出应用名与加载状态。",
+      "layoutKind": "launch",
+      "tone": "dark"
+    },
+    {
+      "order": 2,
+      "stateId": "P0-SAFETY",
+      "name": "首次安全说明",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "首次安装或安全条款版本变化",
+      "userSees": {
+        "title": "训练前请先了解",
+        "detail": "不是医疗诊断；出现疼痛或眩晕请停止；手机远离器械路径。"
+      },
+      "primaryAction": "我已了解",
+      "secondaryAction": "查看隐私",
+      "nextState": "P0-HOME",
+      "secondaryTarget": null,
+      "exceptionRecovery": "可返回后再次查看",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作。",
+      "layoutKind": "notice",
+      "tone": "light"
+    },
+    {
+      "order": 3,
+      "stateId": "P0-HOME",
+      "name": "产品首页",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "已完成首次安全说明",
+      "userSees": {
+        "title": "开始或继续训练会话",
+        "detail": "唯一职责：开始新会话、恢复草稿、查看最近会话与本机状态。"
+      },
+      "primaryAction": "选择训练动作",
+      "secondaryAction": "恢复上次草稿",
+      "nextState": "P0-EXERCISE-LIBRARY",
+      "secondaryTarget": "P0-DRAFT-RESUME",
+      "exceptionRecovery": "草稿不可用时隐藏恢复入口",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "标题后依次读取主操作、草稿和最近会话。",
+      "layoutKind": "home",
+      "tone": "light"
+    },
+    {
+      "order": 4,
+      "stateId": "P0-EXERCISE-LIBRARY",
+      "name": "动作库",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "首页选择开始新会话",
+      "userSees": {
+        "title": "这次练什么？",
+        "detail": "P0 仅开放保加利亚分腿蹲；由用户明确选择，不自动猜测。"
+      },
+      "primaryAction": "选择保加利亚分腿蹲",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-SESSION-SETUP",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "动作卡具有选中名称和状态。",
+      "layoutKind": "select",
+      "tone": "light"
+    },
+    {
+      "order": 5,
+      "stateId": "P0-SESSION-SETUP",
+      "name": "训练会话设置",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "已选择动作",
+      "userSees": {
+        "title": "设置本次会话",
+        "detail": "选择训练腿与训练目标；后续各组默认沿用。"
+      },
+      "primaryAction": "继续检查机位",
+      "secondaryAction": "更换动作",
+      "nextState": "P0-CAMERA-GUIDE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回动作库",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "分段控件使用 aria-pressed 表达选择。",
+      "layoutKind": "setup",
+      "tone": "light"
+    },
+    {
+      "order": 6,
+      "stateId": "P0-CAMERA-GUIDE",
+      "name": "侧面机位引导",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "会话设置完成",
+      "userSees": {
+        "title": "把手机放在纯侧面",
+        "detail": "头、双脚和训练凳完整入镜；手机与髋部齐平并固定。"
+      },
+      "primaryAction": "检查摄像头",
+      "secondaryAction": "为什么需要侧面",
+      "nextState": "P0-PERMISSION-REQUEST",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回会话设置",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "图示附完整文字说明。",
+      "layoutKind": "camera-guide",
+      "tone": "light"
+    },
+    {
+      "order": 7,
+      "stateId": "P0-PERMISSION-REQUEST",
+      "name": "摄像头权限请求",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "相机权限状态为未决定",
+      "userSees": {
+        "title": "只用于实时端侧识别",
+        "detail": "核心训练不依赖网络；训练视频默认不保存。"
+      },
+      "primaryAction": "继续并允许",
+      "secondaryAction": "暂不使用",
+      "nextState": "P0-CALIBRATION-READY",
+      "secondaryTarget": "P0-PERMISSION-DENIED",
+      "exceptionRecovery": "拒绝进入权限拒绝状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作。",
+      "layoutKind": "notice",
+      "tone": "light"
+    },
+    {
+      "order": 8,
+      "stateId": "P0-PERMISSION-DENIED",
+      "name": "摄像头权限拒绝",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "系统返回权限拒绝",
+      "userSees": {
+        "title": "需要摄像头权限",
+        "detail": "说明原因和修复路径，不重复弹系统权限框。"
+      },
+      "primaryAction": "打开系统设置",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-PERMISSION-RETURN-GRANTED",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "错误由图标、标题和文字共同表达。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 9,
+      "stateId": "P0-PERMISSION-RETURN-GRANTED",
+      "name": "从设置返回：已授权",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "前台恢复且权限变为允许",
+      "userSees": {
+        "title": "摄像头权限已开启",
+        "detail": "自动继续原会话的机位检查，不丢失设置。"
+      },
+      "primaryAction": "继续校准",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-CALIBRATION-READY",
+      "secondaryTarget": null,
+      "exceptionRecovery": "相机不可用进入占用状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作。",
+      "layoutKind": "notice",
+      "tone": "light"
+    },
+    {
+      "order": 10,
+      "stateId": "P0-PERMISSION-RETURN-DENIED",
+      "name": "从设置返回：仍拒绝",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "前台恢复但权限仍拒绝",
+      "userSees": {
+        "title": "仍未获得摄像头权限",
+        "detail": "核心训练无法继续；可以再次前往设置或退出。"
+      },
+      "primaryAction": "再次打开设置",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-PERMISSION-RETURN-GRANTED",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "读出权限仍拒绝及两个恢复操作。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 11,
+      "stateId": "P0-CALIBRATION-READY",
+      "name": "校准准备",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "权限与画面质量通过",
+      "userSees": {
+        "title": "建立本次会话基线",
+        "detail": "连续完成三次正常动作；同一会话后续组复用这条基线。"
+      },
+      "primaryAction": "开始校准",
+      "secondaryAction": "查看校准说明",
+      "nextState": "P0-CALIBRATION-RUNNING",
+      "secondaryTarget": null,
+      "exceptionRecovery": "退出可保存草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "状态和三次进度均有文字。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 12,
+      "stateId": "P0-CALIBRATION-RUNNING",
+      "name": "校准进行中",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "校准已开始且画面可靠",
+      "userSees": {
+        "title": "正在记录会话基线",
+        "detail": "只记录证据充分且完整的动作；不足时不计入三次。"
+      },
+      "primaryAction": "继续完成动作",
+      "secondaryAction": "暂停校准",
+      "nextState": "P0-CALIBRATION-SUCCESS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "画面问题进入对应纠正状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "实时播报当前校准进度。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 13,
+      "stateId": "P0-CALIBRATION-INCONSISTENT",
+      "name": "校准动作差异较大",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "三次校准动作幅度、节奏或起始位置差异过大",
+      "userSees": {
+        "title": "三次动作差异较大",
+        "detail": "不建立模糊基线；说明需要保持相近的正常动作再重新记录。"
+      },
+      "primaryAction": "重新完成三次校准",
+      "secondaryAction": "退出并保存草稿",
+      "nextState": "P0-CALIBRATION-RUNNING",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回校准准备或保存草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "逐项读出造成不一致的动作阶段。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 14,
+      "stateId": "P0-CALIBRATION-SUCCESS",
+      "name": "校准成功",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "三次校准一致且证据充分",
+      "userSees": {
+        "title": "本次会话基线已建立",
+        "detail": "后续多组复用，不要求每组重复校准。"
+      },
+      "primaryAction": "开始第 1 组",
+      "secondaryAction": "重新校准",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "重新校准返回准备状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "成功同时使用图标、文字和颜色。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 15,
+      "stateId": "P0-TRAINING-ACTIVE",
+      "name": "实时训练：正常",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "训练开始且画面与推理可靠",
+      "userSees": {
+        "title": "第 1 组进行中",
+        "detail": "完整重复一律计数；界面区分计数、稳定、问题和未计数尝试。"
+      },
+      "primaryAction": "结束本组",
+      "secondaryAction": "暂停",
+      "nextState": "P0-END-SET-CONFIRM",
+      "secondaryTarget": null,
+      "exceptionRecovery": "中断进入恢复状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "计数变化通过 aria-live 简短播报。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 16,
+      "stateId": "P0-TRAINING-COACHING",
+      "name": "实时训练：单一提示",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "一次计数重复存在一个或多个成立问题",
+      "userSees": {
+        "title": "一次只提醒一个重点",
+        "detail": "该重复仍计数；其他成立问题保留到 Summary 与重复详情。"
+      },
+      "primaryAction": "继续训练",
+      "secondaryAction": "关闭语音",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "证据不足则保持沉默",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "语音提示同步显示等价文字。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 17,
+      "stateId": "P0-TRAINING-UNCERTAIN",
+      "name": "实时训练：无法可靠判断",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "关键点置信度或视角证据不足",
+      "userSees": {
+        "title": "无法可靠判断",
+        "detail": "不推断动作问题；根据完整性决定计数或记为未计数尝试。"
+      },
+      "primaryAction": "调整后继续",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续不足进入画面纠正",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "不只用颜色表达不确定状态。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 18,
+      "stateId": "P0-END-SET-CONFIRM",
+      "name": "结束本组确认",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "用户选择结束本组",
+      "userSees": {
+        "title": "结束并生成本组总结？",
+        "detail": "保留全部已完成重复；未完成尝试不会被补算。"
+      },
+      "primaryAction": "结束本组",
+      "secondaryAction": "继续训练",
+      "nextState": "P0-SUMMARY-CLEAN",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回训练",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "焦点限制在确认弹层，危险与取消清晰区分。",
+      "layoutKind": "sheet",
+      "tone": "light"
+    },
+    {
+      "order": 19,
+      "stateId": "P0-SUMMARY-CLEAN",
+      "name": "组总结：无成立问题",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "本组完成且没有成立问题",
+      "userSees": {
+        "title": "本组总结",
+        "detail": "显示四类计数和完整问题汇总；没有成立的问题时，不会硬给建议。"
+      },
+      "primaryAction": "再做一组",
+      "secondaryAction": "完成会话",
+      "nextState": "P0-NEXT-SET-READY",
+      "secondaryTarget": "P0-SESSION-COMPLETE",
+      "exceptionRecovery": "保存失败进入本地保存状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "统计标签完整，不依赖颜色。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 20,
+      "stateId": "P0-SUMMARY-ISSUES",
+      "name": "组总结：存在问题",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "本组完成且存在成立问题",
+      "userSees": {
+        "title": "本组总结",
+        "detail": "汇总本组发现的所有问题、出现次数和判断依据；给出最多三条下一组建议。"
+      },
+      "primaryAction": "看动作详情",
+      "secondaryAction": "再做一组",
+      "nextState": "P0-REP-DETAIL",
+      "secondaryTarget": "P0-NEXT-SET-READY",
+      "exceptionRecovery": "可完成会话",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "问题和建议分区并有标题。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 21,
+      "stateId": "P0-REP-DETAIL",
+      "name": "单次重复全部证据",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "从问题聚合或组详情选择一次重复",
+      "userSees": {
+        "title": "该重复的全部问题",
+        "detail": "同时展示该重复所有成立问题、证据来源、无法判断项和实时播报的唯一提示。"
+      },
+      "primaryAction": "返回组总结",
+      "secondaryAction": "查看下一次重复",
+      "nextState": "P0-SUMMARY-ISSUES",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回组总结",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "证据按事实、问题、未判断顺序读取。",
+      "layoutKind": "detail",
+      "tone": "light"
+    },
+    {
+      "order": 22,
+      "stateId": "P0-SESSION-GROUPS",
+      "name": "会话组列表",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "至少完成一组",
+      "userSees": {
+        "title": "本次训练会话",
+        "detail": "按组展示状态；动作、训练腿、目标和校准基线属于会话级。"
+      },
+      "primaryAction": "再做一组",
+      "secondaryAction": "完成会话",
+      "nextState": "P0-NEXT-SET-READY",
+      "secondaryTarget": "P0-SESSION-COMPLETE",
+      "exceptionRecovery": "返回最近组总结",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "每组行的名称包含组序号和问题摘要。",
+      "layoutKind": "history",
+      "tone": "light"
+    },
+    {
+      "order": 23,
+      "stateId": "P0-NEXT-SET-READY",
+      "name": "下一组就绪",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "从组总结选择再做一组",
+      "userSees": {
+        "title": "第 2 组准备就绪",
+        "detail": "已沿用动作、训练腿、训练目标和会话校准基线。"
+      },
+      "primaryAction": "开始下一组",
+      "secondaryAction": "修改会话设置",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "修改设置会标明是否需要重校准",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "明确读出已复用的四项设置。",
+      "layoutKind": "setup",
+      "tone": "light"
+    },
+    {
+      "order": 24,
+      "stateId": "P0-SESSION-COMPLETE",
+      "name": "完成训练会话",
+      "tier": "P0",
+      "group": "01 核心与会话",
+      "entryCondition": "用户在组总结或组列表完成会话",
+      "userSees": {
+        "title": "训练会话已完成",
+        "detail": "保存会话级摘要和各组结果；视频仍未保存。"
+      },
+      "primaryAction": "查看会话详情",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-HISTORY-SESSION-DETAIL",
+      "secondaryTarget": null,
+      "exceptionRecovery": "保存失败进入本地保存状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "成功信息使用图标和文字。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 25,
+      "stateId": "P0-QUALITY-TOO-NEAR",
+      "name": "人体太近",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "身体超出合理占画比例",
+      "userSees": {
+        "title": "向后移动手机",
+        "detail": "暂停判断与提示，不丢失会话和已完成重复。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 26,
+      "stateId": "P0-QUALITY-TOO-FAR",
+      "name": "人体太远",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "关键点尺寸不足",
+      "userSees": {
+        "title": "把手机移近一些",
+        "detail": "暂停判断，提示完整身体仍需入镜。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 27,
+      "stateId": "P0-QUALITY-OUT-OF-FRAME",
+      "name": "头脚出框",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "头部或任一脚持续出框",
+      "userSees": {
+        "title": "让头和双脚完整入镜",
+        "detail": "不使用裁切后的证据判断动作问题。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 28,
+      "stateId": "P0-QUALITY-OCCLUDED",
+      "name": "身体被遮挡",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "关键关节持续被器械或物体遮挡",
+      "userSees": {
+        "title": "移开遮挡物",
+        "detail": "指出被遮挡区域；不猜测缺失关键点。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 29,
+      "stateId": "P0-QUALITY-DARK",
+      "name": "环境过暗",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "曝光不足导致关键点不稳定",
+      "userSees": {
+        "title": "增加正面或侧面照明",
+        "detail": "暂停可靠判断，保留已完成重复。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 30,
+      "stateId": "P0-QUALITY-BACKLIGHT",
+      "name": "强逆光",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "主体与背景亮度差过大",
+      "userSees": {
+        "title": "避免光源正对镜头",
+        "detail": "建议调整机位或光源方向。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 31,
+      "stateId": "P0-QUALITY-NOT-SIDE",
+      "name": "不是纯侧面",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "身体朝向偏离侧面判断范围",
+      "userSees": {
+        "title": "转回纯侧面",
+        "detail": "实时计数和问题判断暂停，避免跨视角误判。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 32,
+      "stateId": "P0-QUALITY-WRONG-LEG",
+      "name": "训练腿不一致",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "当前动作侧与会话设置不一致",
+      "userSees": {
+        "title": "确认正在训练右腿",
+        "detail": "允许回到设置修改，但修改后明确基线是否仍适用。"
+      },
+      "primaryAction": "保持右腿继续",
+      "secondaryAction": "修改训练腿",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "修改后按规则重校准",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 33,
+      "stateId": "P0-QUALITY-MULTI-PERSON",
+      "name": "多人入镜",
+      "tier": "P0",
+      "group": "02 画面质量",
+      "entryCondition": "检测到多个可能主体",
+      "userSees": {
+        "title": "画面中只保留一名训练者",
+        "detail": "暂停主体跟踪，不自动选择其中一人。"
+      },
+      "primaryAction": "重新检查",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败可放弃本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "quality",
+      "tone": "dark"
+    },
+    {
+      "order": 34,
+      "stateId": "P0-INTERRUPT-BACKGROUND",
+      "name": "App 进入后台",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "用户切换 App",
+      "userSees": {
+        "title": "分析已暂停",
+        "detail": "保留当前组草稿和已完成重复；后台不继续使用相机。"
+      },
+      "primaryAction": "返回后继续",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-INTERRUPT-FOREGROUND",
+      "secondaryTarget": null,
+      "exceptionRecovery": "恢复时重新检查画面",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 35,
+      "stateId": "P0-INTERRUPT-LOCK",
+      "name": "设备锁屏",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "屏幕锁定",
+      "userSees": {
+        "title": "训练已暂停",
+        "detail": "停止相机与推理；解锁后进入前台恢复。"
+      },
+      "primaryAction": "解锁后继续",
+      "secondaryAction": "保留草稿退出",
+      "nextState": "P0-INTERRUPT-FOREGROUND",
+      "secondaryTarget": null,
+      "exceptionRecovery": "恢复草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 36,
+      "stateId": "P0-INTERRUPT-CALL",
+      "name": "来电中断",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "系统来电覆盖训练",
+      "userSees": {
+        "title": "训练已暂停",
+        "detail": "已完成重复保留；通话结束后重新确认机位。"
+      },
+      "primaryAction": "通话后继续",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-INTERRUPT-FOREGROUND",
+      "secondaryTarget": null,
+      "exceptionRecovery": "结束本组",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 37,
+      "stateId": "P0-INTERRUPT-AUDIO",
+      "name": "音频中断",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "其他音频会话抢占或蓝牙变化",
+      "userSees": {
+        "title": "语音提示已暂停",
+        "detail": "视觉文字反馈继续；计数与端侧判断不受影响。"
+      },
+      "primaryAction": "继续静音训练",
+      "secondaryAction": "恢复语音",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "音频恢复后重新启用",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "等价文字反馈持续可见。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 38,
+      "stateId": "P0-INTERRUPT-FOREGROUND",
+      "name": "前台恢复检查",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "从后台、锁屏或来电返回",
+      "userSees": {
+        "title": "正在恢复训练",
+        "detail": "重新检查权限、相机、主体与会话草稿，再恢复计数。"
+      },
+      "primaryAction": "继续本组",
+      "secondaryAction": "放弃本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "失败进入对应异常状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 39,
+      "stateId": "P0-DEVICE-THERMAL",
+      "name": "设备过热",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "系统热状态达到需要降载的级别",
+      "userSees": {
+        "title": "设备温度过高",
+        "detail": "暂停相机和推理，说明冷却后可恢复；不降低精度继续运行。"
+      },
+      "primaryAction": "冷却后重试",
+      "secondaryAction": "保存草稿退出",
+      "nextState": "P0-INTERRUPT-FOREGROUND",
+      "secondaryTarget": null,
+      "exceptionRecovery": "恢复草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 40,
+      "stateId": "P0-DEVICE-LOW-BATTERY",
+      "name": "低电量",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "电量低于产品阈值",
+      "userSees": {
+        "title": "电量较低",
+        "detail": "允许继续但提示连接电源；不影响已经成立的事实。"
+      },
+      "primaryAction": "继续训练",
+      "secondaryAction": "保存草稿退出",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "退出后恢复草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 41,
+      "stateId": "P0-CAMERA-IN-USE",
+      "name": "相机被占用",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "其他应用或系统功能占用相机",
+      "userSees": {
+        "title": "摄像头暂时不可用",
+        "detail": "不启动无画面的推理；等待资源释放。"
+      },
+      "primaryAction": "重新尝试",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-CALIBRATION-READY",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 42,
+      "stateId": "P0-MODEL-LOADING",
+      "name": "姿态模型加载",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "端侧模型尚未就绪",
+      "userSees": {
+        "title": "正在准备端侧识别",
+        "detail": "显示确定的加载状态；不伪造进度百分比。"
+      },
+      "primaryAction": "继续等待",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-CALIBRATION-READY",
+      "secondaryTarget": null,
+      "exceptionRecovery": "失败进入模型失败",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "loading",
+      "tone": "light"
+    },
+    {
+      "order": 43,
+      "stateId": "P0-MODEL-LOAD-FAILED",
+      "name": "姿态模型加载失败",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "模型资源校验或加载失败",
+      "userSees": {
+        "title": "无法加载姿态模型",
+        "detail": "核心训练不可用；提供重试与本地诊断信息。"
+      },
+      "primaryAction": "重新加载",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-MODEL-LOADING",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 44,
+      "stateId": "P0-INFERENCE-FAILED",
+      "name": "姿态推理失败",
+      "tier": "P0",
+      "group": "03 系统与设备",
+      "entryCondition": "运行中推理连续失败",
+      "userSees": {
+        "title": "分析暂时停止",
+        "detail": "保留会话和计数事实；重启推理前不判断新重复。"
+      },
+      "primaryAction": "重新启动分析",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "持续失败保存草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "dark"
+    },
+    {
+      "order": 45,
+      "stateId": "P0-EXIT-MENU",
+      "name": "训练中退出菜单",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "训练中选择关闭",
+      "userSees": {
+        "title": "暂停还是退出？",
+        "detail": "提供继续、结束本组、放弃本组三个明确层级。"
+      },
+      "primaryAction": "继续训练",
+      "secondaryAction": "结束本组",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "放弃进入确认",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "sheet",
+      "tone": "dark"
+    },
+    {
+      "order": 46,
+      "stateId": "P0-ABANDON-CONFIRM",
+      "name": "放弃本组确认",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "用户选择放弃本组",
+      "userSees": {
+        "title": "放弃当前组？",
+        "detail": "可以保留已经完成的重复，或删除整个未完成组。"
+      },
+      "primaryAction": "保留完成重复",
+      "secondaryAction": "删除本组",
+      "nextState": "P0-ABANDON-KEEP-REPS",
+      "secondaryTarget": "P0-SESSION-GROUPS",
+      "exceptionRecovery": "删除后回会话组列表",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "sheet",
+      "tone": "light"
+    },
+    {
+      "order": 47,
+      "stateId": "P0-ABANDON-KEEP-REPS",
+      "name": "保留已完成重复",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "放弃本组时选择保留",
+      "userSees": {
+        "title": "已保留完成的重复",
+        "detail": "本组标记为未完成；未完成尝试不会计数。"
+      },
+      "primaryAction": "返回会话",
+      "secondaryAction": "查看已保留重复",
+      "nextState": "P0-SESSION-GROUPS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回会话",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 48,
+      "stateId": "P0-DRAFT-RESUME",
+      "name": "恢复训练草稿",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "首页检测到未完成会话",
+      "userSees": {
+        "title": "继续上次训练？",
+        "detail": "显示动作、训练腿、目标、已完成组和草稿时间；不自动恢复相机。"
+      },
+      "primaryAction": "检查机位并继续",
+      "secondaryAction": "删除草稿",
+      "nextState": "P0-INTERRUPT-FOREGROUND",
+      "secondaryTarget": "P0-DELETE-CONFIRM",
+      "exceptionRecovery": "删除失败保留草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "home",
+      "tone": "light"
+    },
+    {
+      "order": 49,
+      "stateId": "P0-SAVE-PROGRESS",
+      "name": "保存中",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "组或会话完成后写入本地",
+      "userSees": {
+        "title": "正在保存到本机",
+        "detail": "只保存结构化摘要、设置、版本与证据引用。"
+      },
+      "primaryAction": "继续等待",
+      "secondaryAction": null,
+      "nextState": "P0-SAVE-SUCCESS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "失败进入保存失败",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "loading",
+      "tone": "light"
+    },
+    {
+      "order": 50,
+      "stateId": "P0-SAVE-FAILED",
+      "name": "保存失败",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "本地写入失败",
+      "userSees": {
+        "title": "暂时无法保存",
+        "detail": "保留内存中的草稿，说明重试不会重复创建记录。"
+      },
+      "primaryAction": "重新保存",
+      "secondaryAction": "稍后恢复",
+      "nextState": "P0-SAVE-PROGRESS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页显示草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 51,
+      "stateId": "P0-STORAGE-FULL",
+      "name": "存储空间不足",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "系统返回磁盘空间不足",
+      "userSees": {
+        "title": "无法保存：空间不足",
+        "detail": "建议释放空间；训练视频默认未保存，不把问题归因于视频。"
+      },
+      "primaryAction": "重新检查空间",
+      "secondaryAction": "保留草稿退出",
+      "nextState": "P0-SAVE-PROGRESS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "首页恢复草稿",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 52,
+      "stateId": "P0-SAVE-SUCCESS",
+      "name": "保存成功",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "本地事务提交成功",
+      "userSees": {
+        "title": "已保存到本机",
+        "detail": "提供查看会话和返回首页；Toast 与文字状态一致。"
+      },
+      "primaryAction": "查看会话",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-HISTORY-SESSION-DETAIL",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 53,
+      "stateId": "P0-DELETE-CONFIRM",
+      "name": "删除会话确认",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "历史中选择删除会话",
+      "userSees": {
+        "title": "删除这次训练会话？",
+        "detail": "删除全部组摘要且不可恢复；本版本没有保存训练视频。"
+      },
+      "primaryAction": "删除会话",
+      "secondaryAction": "取消",
+      "nextState": "P0-DELETE-SUCCESS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "失败进入删除失败",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "sheet",
+      "tone": "light"
+    },
+    {
+      "order": 54,
+      "stateId": "P0-DELETE-FAILED",
+      "name": "删除失败",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "本地删除事务失败",
+      "userSees": {
+        "title": "暂时无法删除",
+        "detail": "原记录保持完整；提供重试，不显示假成功。"
+      },
+      "primaryAction": "重新删除",
+      "secondaryAction": "返回会话",
+      "nextState": "P0-DELETE-CONFIRM",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回会话详情",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 55,
+      "stateId": "P0-DELETE-SUCCESS",
+      "name": "删除成功",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "本地删除事务完成",
+      "userSees": {
+        "title": "训练会话已删除",
+        "detail": "从历史移除并提供明确完成状态。"
+      },
+      "primaryAction": "返回训练历史",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-HISTORY-SESSIONS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 56,
+      "stateId": "P0-HISTORY-EMPTY",
+      "name": "训练历史空状态",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "没有已保存会话",
+      "userSees": {
+        "title": "还没有训练会话",
+        "detail": "完成并保存一组训练后，会话会出现在这里。"
+      },
+      "primaryAction": "开始第一次训练",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-EXERCISE-LIBRARY",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "history",
+      "tone": "light"
+    },
+    {
+      "order": 57,
+      "stateId": "P0-HISTORY-SESSIONS",
+      "name": "训练会话历史",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "至少有一个已保存会话",
+      "userSees": {
+        "title": "训练历史",
+        "detail": "按会话组织；每个会话显示动作、训练腿、组数与问题摘要。"
+      },
+      "primaryAction": "查看最近会话",
+      "secondaryAction": "返回首页",
+      "nextState": "P0-HISTORY-SESSION-DETAIL",
+      "secondaryTarget": null,
+      "exceptionRecovery": "空数据进入空状态",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "history",
+      "tone": "light"
+    },
+    {
+      "order": 58,
+      "stateId": "P0-HISTORY-SESSION-DETAIL",
+      "name": "会话详情",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "选择一个历史会话",
+      "userSees": {
+        "title": "本次训练会话",
+        "detail": "展示会话级设置、校准版本和多个训练组。"
+      },
+      "primaryAction": "查看第 1 组",
+      "secondaryAction": "删除会话",
+      "nextState": "P0-HISTORY-GROUP-DETAIL",
+      "secondaryTarget": null,
+      "exceptionRecovery": "删除进入确认",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "history",
+      "tone": "light"
+    },
+    {
+      "order": 59,
+      "stateId": "P0-HISTORY-GROUP-DETAIL",
+      "name": "历史组详情",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "在会话详情选择一个组",
+      "userSees": {
+        "title": "第 1 组总结",
+        "detail": "显示四类计数、问题汇总、下一组建议和每次动作详情。"
+      },
+      "primaryAction": "看动作详情",
+      "secondaryAction": "返回会话",
+      "nextState": "P0-REP-DETAIL",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回会话详情",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 60,
+      "stateId": "P0-MY-LOCAL",
+      "name": "我的：仅本机",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "底部导航选择我的",
+      "userSees": {
+        "title": "我的",
+        "detail": "仅提供训练历史、语音与动态效果、隐私、本地存储和版本；没有账号或订阅。"
+      },
+      "primaryAction": "打开训练设置",
+      "secondaryAction": "查看本地隐私",
+      "nextState": "P0-SETTINGS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "settings",
+      "tone": "light"
+    },
+    {
+      "order": 61,
+      "stateId": "P0-SETTINGS",
+      "name": "训练设置",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "从我的进入设置",
+      "userSees": {
+        "title": "训练设置",
+        "detail": "语音提示、等价文字、Reduce Motion 跟随系统、存储与版本信息。"
+      },
+      "primaryAction": "保存设置",
+      "secondaryAction": "查看隐私",
+      "nextState": "P0-MY-LOCAL",
+      "secondaryTarget": null,
+      "exceptionRecovery": "保存失败保持原值",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "settings",
+      "tone": "light"
+    },
+    {
+      "order": 62,
+      "stateId": "P0-PRIVACY-LOCAL",
+      "name": "本地隐私说明",
+      "tier": "P0",
+      "group": "04 本地数据与恢复",
+      "entryCondition": "从首页或我的查看隐私",
+      "userSees": {
+        "title": "你的训练画面如何处理",
+        "detail": "摄像头 → 本机关键点 → 动作判断 → 实时反馈；视频默认不保存。"
+      },
+      "primaryAction": "返回我的",
+      "secondaryAction": "查看 P1 数据说明",
+      "nextState": "P0-MY-LOCAL",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回上一页",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "detail",
+      "tone": "light"
+    },
+    {
+      "order": 63,
+      "stateId": "A11Y-HOME-XXXL",
+      "name": "首页：最大 Dynamic Type",
+      "tier": "P0",
+      "group": "05 无障碍",
+      "entryCondition": "系统文字设为最大辅助字号",
+      "userSees": {
+        "title": "开始训练",
+        "detail": "主标题、主操作和草稿入口重排为单列；不截断，不覆盖底部导航。"
+      },
+      "primaryAction": "选择训练动作",
+      "secondaryAction": "恢复草稿",
+      "nextState": "P0-EXERCISE-LIBRARY",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回标准字号由系统控制",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "最大字号下仍保持逻辑阅读顺序。",
+      "layoutKind": "a11y",
+      "tone": "light"
+    },
+    {
+      "order": 64,
+      "stateId": "A11Y-TRAINING-XXXL",
+      "name": "训练：最大 Dynamic Type",
+      "tier": "P0",
+      "group": "05 无障碍",
+      "entryCondition": "训练中使用最大辅助字号",
+      "userSees": {
+        "title": "训练进行中",
+        "detail": "计数保持远距离可读；次级状态折叠为可滚动文字区域。"
+      },
+      "primaryAction": "结束本组",
+      "secondaryAction": "暂停",
+      "nextState": "P0-END-SET-CONFIRM",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回训练",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "计数、状态、提示、操作依序读取。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 65,
+      "stateId": "A11Y-SUMMARY-XXXL",
+      "name": "组总结：最大 Dynamic Type",
+      "tier": "P0",
+      "group": "05 无障碍",
+      "entryCondition": "组总结使用最大辅助字号",
+      "userSees": {
+        "title": "本组总结",
+        "detail": "四类计数、问题汇总、下一组建议与操作纵向重排；卡片自动增高且不裁切。"
+      },
+      "primaryAction": "看动作详情",
+      "secondaryAction": "再做一组",
+      "nextState": "P0-SUMMARY-ISSUES",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回标准组总结",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "先读四类计数，再读问题、判断依据与下一组建议。",
+      "layoutKind": "a11y",
+      "tone": "light"
+    },
+    {
+      "order": 66,
+      "stateId": "A11Y-VOICEOVER-ORDER",
+      "name": "VoiceOver 阅读顺序",
+      "tier": "P0",
+      "group": "05 无障碍",
+      "entryCondition": "VoiceOver 开启",
+      "userSees": {
+        "title": "阅读顺序预览",
+        "detail": "页面标题 → 识别状态 → 计数事实 → 当前文字提示 → 主操作 → 次操作。"
+      },
+      "primaryAction": "播放顺序示例",
+      "secondaryAction": "返回设置",
+      "nextState": "A11Y-VOICE-OFF-TEXT",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回设置",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "所有图标按钮提供具体可访问名称。",
+      "layoutKind": "a11y",
+      "tone": "light"
+    },
+    {
+      "order": 67,
+      "stateId": "A11Y-REDUCE-MOTION",
+      "name": "Reduce Motion",
+      "tier": "P0",
+      "group": "05 无障碍",
+      "entryCondition": "系统开启减少动态效果",
+      "userSees": {
+        "title": "已减少动态效果",
+        "detail": "取消位移动画、倒计时缩放和骨架闪烁；保留即时状态变化。"
+      },
+      "primaryAction": "继续",
+      "secondaryAction": "返回设置",
+      "nextState": "P0-HOME",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回设置",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "状态变化通过文字与焦点管理表达。",
+      "layoutKind": "a11y",
+      "tone": "light"
+    },
+    {
+      "order": 68,
+      "stateId": "A11Y-NONCOLOR-STATUS",
+      "name": "颜色以外的状态表达",
+      "tier": "P0",
+      "group": "05 无障碍",
+      "entryCondition": "系统提高对比度、颜色辨识受限或常规验收",
+      "userSees": {
+        "title": "状态不只依赖颜色",
+        "detail": "成功、警告、错误和无法判断同时使用图标、标题、说明和可访问名称。"
+      },
+      "primaryAction": "查看状态示例",
+      "secondaryAction": "返回设置",
+      "nextState": "P0-SETTINGS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回设置",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "图标均有等价名称，状态变化通过 aria-live 宣告。",
+      "layoutKind": "a11y",
+      "tone": "light"
+    },
+    {
+      "order": 69,
+      "stateId": "A11Y-VOICE-OFF-TEXT",
+      "name": "语音关闭：等价文字",
+      "tier": "P0",
+      "group": "05 无障碍",
+      "entryCondition": "用户关闭语音提示",
+      "userSees": {
+        "title": "语音提示已关闭",
+        "detail": "所有实时口令在屏幕固定区域显示，并保留触觉反馈选项。"
+      },
+      "primaryAction": "继续静音训练",
+      "secondaryAction": "开启语音",
+      "nextState": "P0-TRAINING-ACTIVE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回设置",
+      "requiresNetwork": false,
+      "uploadedData": "无",
+      "accessibility": "文字提示区域使用 aria-live polite。",
+      "layoutKind": "camera",
+      "tone": "dark"
+    },
+    {
+      "order": 70,
+      "stateId": "P1-REVIEW-ENTRY",
+      "name": "高级复盘入口",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "P0 组总结已保存",
+      "userSees": {
+        "title": "获取 Gemini 高级复盘",
+        "detail": "训练结束后再生成，不会影响训练中的计数和提示。"
+      },
+      "primaryAction": "看看能分析什么",
+      "secondaryAction": "继续看本组总结",
+      "nextState": "P1-CAPABILITY-PRICE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "无",
+      "accessibility": "明确标注网络与云端处理。",
+      "layoutKind": "gemini",
+      "tone": "light"
+    },
+    {
+      "order": 71,
+      "stateId": "P1-CAPABILITY-PRICE",
+      "name": "能力说明与价格",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "从高级复盘入口进入",
+      "userSees": {
+        "title": "高级复盘能帮你看什么",
+        "detail": "说明复盘能做什么、会用哪些内容以及价格；不会修改训练记录。"
+      },
+      "primaryAction": "继续购买",
+      "secondaryAction": "返回本组总结",
+      "nextState": "P1-STORE-PURCHASING",
+      "secondaryTarget": "P0-SUMMARY-ISSUES",
+      "exceptionRecovery": "返回本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "无",
+      "accessibility": "价格待定以文字说明，不留空白。",
+      "layoutKind": "store",
+      "tone": "light"
+    },
+    {
+      "order": 72,
+      "stateId": "P1-STORE-PURCHASING",
+      "name": "StoreKit 购买中",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "用户确认购买",
+      "userSees": {
+        "title": "正在向 App Store 确认",
+        "detail": "使用系统购买流程；不收集应用内银行卡信息。"
+      },
+      "primaryAction": "继续等待",
+      "secondaryAction": "取消",
+      "nextState": "P1-STORE-SUCCESS",
+      "secondaryTarget": "P1-STORE-CANCELLED",
+      "exceptionRecovery": "取消或失败进入对应状态",
+      "requiresNetwork": true,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "loading",
+      "tone": "light"
+    },
+    {
+      "order": 73,
+      "stateId": "P1-STORE-CANCELLED",
+      "name": "购买已取消",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "用户取消 StoreKit sheet",
+      "userSees": {
+        "title": "购买已取消",
+        "detail": "没有扣款，也没有上传训练内容。本组总结仍然可以查看。"
+      },
+      "primaryAction": "重新查看方案",
+      "secondaryAction": "返回本组总结",
+      "nextState": "P1-CAPABILITY-PRICE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "store",
+      "tone": "light"
+    },
+    {
+      "order": 74,
+      "stateId": "P1-STORE-FAILED",
+      "name": "购买失败",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "StoreKit 返回失败",
+      "userSees": {
+        "title": "暂时无法完成购买",
+        "detail": "说明发生了什么，并提供重试。用户主动取消不会被当作失败。"
+      },
+      "primaryAction": "再试一次",
+      "secondaryAction": "返回本组总结",
+      "nextState": "P1-STORE-PURCHASING",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 75,
+      "stateId": "P1-STORE-SUCCESS",
+      "name": "购买成功",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "StoreKit 验证通过",
+      "userSees": {
+        "title": "高级复盘已解锁",
+        "detail": "下一步会先告诉你需要上传什么，由你确认后才开始。"
+      },
+      "primaryAction": "查看上传内容",
+      "secondaryAction": "稍后再说",
+      "nextState": "P1-CONSENT-DATA-LIST",
+      "secondaryTarget": "P0-SUMMARY-ISSUES",
+      "exceptionRecovery": "返回本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "store",
+      "tone": "light"
+    },
+    {
+      "order": 76,
+      "stateId": "P1-STORE-RESTORE",
+      "name": "恢复购买",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "用户选择恢复购买",
+      "userSees": {
+        "title": "正在恢复购买",
+        "detail": "通过 StoreKit 验证历史权益，不上传训练数据。"
+      },
+      "primaryAction": "继续",
+      "secondaryAction": "取消",
+      "nextState": "P1-STORE-SUCCESS",
+      "secondaryTarget": null,
+      "exceptionRecovery": "未找到权益返回价格页",
+      "requiresNetwork": true,
+      "uploadedData": "无",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "loading",
+      "tone": "light"
+    },
+    {
+      "order": 77,
+      "stateId": "P1-CONSENT-DATA-LIST",
+      "name": "上传前数据清单与同意",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "权益有效且用户发起高级复盘",
+      "userSees": {
+        "title": "确认要上传什么",
+        "detail": "默认上传动作分析记录和少量关键动作截图；短视频保持关闭。"
+      },
+      "primaryAction": "同意并继续",
+      "secondaryAction": "取消",
+      "nextState": "P1-KEYFRAME-DEFAULT",
+      "secondaryTarget": "P0-SUMMARY-ISSUES",
+      "exceptionRecovery": "取消不上传",
+      "requiresNetwork": true,
+      "uploadedData": "动作分析记录 + 关键动作截图",
+      "accessibility": "逐项读出数据类型、目的和开关状态。",
+      "layoutKind": "gemini",
+      "tone": "light"
+    },
+    {
+      "order": 78,
+      "stateId": "P1-KEYFRAME-DEFAULT",
+      "name": "默认上传方案",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "用户同意默认数据范围",
+      "userSees": {
+        "title": "只上传复盘需要的内容",
+        "detail": "动作分析记录和关键动作截图已选择，短视频保持关闭。"
+      },
+      "primaryAction": "开始准备",
+      "secondaryAction": "调整上传内容",
+      "nextState": "P1-PREPARE",
+      "secondaryTarget": "P1-VIDEO-OPT-IN",
+      "exceptionRecovery": "返回上传清单",
+      "requiresNetwork": true,
+      "uploadedData": "动作分析记录 + 关键动作截图",
+      "accessibility": "开关同时读出用途与默认状态。",
+      "layoutKind": "upload",
+      "tone": "light"
+    },
+    {
+      "order": 79,
+      "stateId": "P1-VIDEO-OPT-IN",
+      "name": "短视频独立 opt-in",
+      "tier": "P1",
+      "group": "06 Gemini 高级复盘",
+      "entryCondition": "用户主动打开短视频上传",
+      "userSees": {
+        "title": "是否额外发送短视频？",
+        "detail": "默认关闭；单独说明用途、大小、保存时间和立即删除能力。"
+      },
+      "primaryAction": "明确同意发送",
+      "secondaryAction": "保持关闭",
+      "nextState": "P1-PREPARE",
+      "secondaryTarget": "P1-PREPARE",
+      "exceptionRecovery": "返回默认方案",
+      "requiresNetwork": true,
+      "uploadedData": "动作分析记录 + 关键动作截图 + 短视频",
+      "accessibility": "同意控件不可预选。",
+      "layoutKind": "upload",
+      "tone": "light"
+    },
+    {
+      "order": 80,
+      "stateId": "P1-PREPARE",
+      "name": "准备高级复盘数据",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "已完成数据同意",
+      "userSees": {
+        "title": "正在准备复盘内容",
+        "detail": "正在这台 iPhone 上整理动作分析记录和关键动作截图。"
+      },
+      "primaryAction": "继续等待",
+      "secondaryAction": "取消",
+      "nextState": "P1-UPLOADING",
+      "secondaryTarget": null,
+      "exceptionRecovery": "取消并删除临时内容",
+      "requiresNetwork": true,
+      "uploadedData": "尚未上传",
+      "accessibility": "进度不伪造百分比。",
+      "layoutKind": "loading",
+      "tone": "light"
+    },
+    {
+      "order": 81,
+      "stateId": "P1-UPLOADING",
+      "name": "上传中",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "本地数据包准备完成且网络可用",
+      "userSees": {
+        "title": "正在安全上传",
+        "detail": "显示已上传与剩余数据类型；允许转入后台。"
+      },
+      "primaryAction": "在后台继续",
+      "secondaryAction": "取消并删除",
+      "nextState": "P1-QUEUED",
+      "secondaryTarget": "P1-CLOUD-DELETING",
+      "exceptionRecovery": "取消后请求删除已上传部分",
+      "requiresNetwork": true,
+      "uploadedData": "用户同意的数据",
+      "accessibility": "进度条有数值文本和可访问名称。",
+      "layoutKind": "upload",
+      "tone": "light"
+    },
+    {
+      "order": 82,
+      "stateId": "P1-QUEUED",
+      "name": "等待分析",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "上传完成且任务已创建",
+      "userSees": {
+        "title": "高级复盘正在排队",
+        "detail": "你可以先看训练结果，排队不会影响其他训练。"
+      },
+      "primaryAction": "看训练结果",
+      "secondaryAction": "在后台继续",
+      "nextState": "P1-ANALYZING",
+      "secondaryTarget": null,
+      "exceptionRecovery": "网络恢复后刷新状态",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "状态通过文字与系统通知说明。",
+      "layoutKind": "gemini",
+      "tone": "light"
+    },
+    {
+      "order": 83,
+      "stateId": "P1-ANALYZING",
+      "name": "Gemini 分析中",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "云端任务进入分析",
+      "userSees": {
+        "title": "正在生成高级复盘",
+        "detail": "Gemini 只会解读训练结束后的内容，不会修改训练计数和问题记录。"
+      },
+      "primaryAction": "在后台继续",
+      "secondaryAction": "取消并删除",
+      "nextState": "P1-BACKGROUND-CONTINUE",
+      "secondaryTarget": "P1-CLOUD-DELETING",
+      "exceptionRecovery": "失败进入可恢复异常",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "旋转动画在 Reduce Motion 下静止。",
+      "layoutKind": "gemini",
+      "tone": "light"
+    },
+    {
+      "order": 84,
+      "stateId": "P1-BACKGROUND-CONTINUE",
+      "name": "后台继续",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "用户离开任务页",
+      "userSees": {
+        "title": "高级复盘会在后台继续",
+        "detail": "完成后会通知你，不需要停在这个页面等待。"
+      },
+      "primaryAction": "返回首页",
+      "secondaryAction": "看训练结果",
+      "nextState": "P1-COMPLETE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "通知关闭时在首页显示完成状态",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "不要求用户停留等待。",
+      "layoutKind": "gemini",
+      "tone": "light"
+    },
+    {
+      "order": 85,
+      "stateId": "P1-COMPLETE",
+      "name": "高级复盘完成",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "异步任务成功完成",
+      "userSees": {
+        "title": "高级复盘已完成",
+        "detail": "训练记录、Gemini 的解读、看不准的地方和下一组建议已经分开整理。"
+      },
+      "primaryAction": "查看复盘",
+      "secondaryAction": "稍后查看",
+      "nextState": "P1-RESULT-LAYERED",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "完成状态同时使用文字和图标。",
+      "layoutKind": "gemini",
+      "tone": "light"
+    },
+    {
+      "order": 86,
+      "stateId": "P1-NO-NETWORK",
+      "name": "无网络",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "准备或上传阶段没有网络",
+      "userSees": {
+        "title": "等待网络连接",
+        "detail": "本组总结仍然可以查看，准备好的内容还留在这台 iPhone 上。"
+      },
+      "primaryAction": "网络恢复后重试",
+      "secondaryAction": "看训练结果",
+      "nextState": "P1-PREPARE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "回到本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "未上传",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 87,
+      "stateId": "P1-TIMEOUT",
+      "name": "分析超时",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "任务超过产品阈值",
+      "userSees": {
+        "title": "高级复盘用时较长",
+        "detail": "这次需要多一点时间。你可以继续等待，或取消并删除已上传内容。"
+      },
+      "primaryAction": "继续等待",
+      "secondaryAction": "取消并删除",
+      "nextState": "P1-ANALYZING",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回训练结果",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 88,
+      "stateId": "P1-SERVICE-UNAVAILABLE",
+      "name": "服务不可用",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "服务返回明确不可用状态",
+      "userSees": {
+        "title": "高级复盘暂时不可用",
+        "detail": "训练结果不受影响。你可以稍后再试，也可以删除已经上传的内容。"
+      },
+      "primaryAction": "稍后重试",
+      "secondaryAction": "删除上传内容",
+      "nextState": "P1-RETRY",
+      "secondaryTarget": "P1-CLOUD-DELETING",
+      "exceptionRecovery": "进入上传内容删除",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 89,
+      "stateId": "P1-RATE-LIMITED",
+      "name": "速率限制",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "服务返回速率限制",
+      "userSees": {
+        "title": "尝试得有点频繁",
+        "detail": "请稍后再试；可以再次尝试时，我们会在这里告诉你。"
+      },
+      "primaryAction": "稍后重试",
+      "secondaryAction": "看训练结果",
+      "nextState": "P1-RETRY",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "system",
+      "tone": "light"
+    },
+    {
+      "order": 90,
+      "stateId": "P1-QUOTA-EXHAUSTED",
+      "name": "额度用尽",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "权益额度不足",
+      "userSees": {
+        "title": "本期高级复盘次数已用完",
+        "detail": "新的可用次数恢复后，你可以再次使用高级复盘。"
+      },
+      "primaryAction": "查看可用次数",
+      "secondaryAction": "看训练结果",
+      "nextState": "P1-CAPABILITY-PRICE",
+      "secondaryTarget": null,
+      "exceptionRecovery": "返回本组总结",
+      "requiresNetwork": true,
+      "uploadedData": "未新增上传",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "store",
+      "tone": "light"
+    },
+    {
+      "order": 91,
+      "stateId": "P1-RETRY",
+      "name": "重试高级复盘",
+      "tier": "P1",
+      "group": "07 Gemini 异步任务",
+      "entryCondition": "网络或服务异常后用户重试",
+      "userSees": {
+        "title": "准备再试一次",
+        "detail": "继续使用你刚才同意上传的内容；如果同意已经失效，会再次请你确认。"
+      },
+      "primaryAction": "再试一次",
+      "secondaryAction": "取消并删除",
+      "nextState": "P1-PREPARE",
+      "secondaryTarget": "P1-CLOUD-DELETING",
+      "exceptionRecovery": "返回训练结果",
+      "requiresNetwork": true,
+      "uploadedData": "按原同意范围",
+      "accessibility": "先读页面标题，再读状态、事实和操作；状态不只依赖颜色。",
+      "layoutKind": "gemini",
+      "tone": "light"
+    },
+    {
+      "order": 92,
+      "stateId": "P1-RESULT-LAYERED",
+      "name": "高级复盘分层结果",
+      "tier": "P1",
+      "group": "08 Gemini 结果与删除",
+      "entryCondition": "高级复盘完成且无事实冲突",
+      "userSees": {
+        "title": "这组动作复盘",
+        "detail": "训练记录、Gemini 的解读、还不能确定的地方和下一组建议分开呈现。"
+      },
+      "primaryAction": "看动作详情",
+      "secondaryAction": "管理已上传内容",
+      "nextState": "P0-REP-DETAIL",
+      "secondaryTarget": "P1-CLOUD-RETENTION",
+      "exceptionRecovery": "进入已上传内容管理",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "每个区域都有清楚、自然的标题。",
+      "layoutKind": "ai-result",
+      "tone": "light"
+    },
+    {
+      "order": 93,
+      "stateId": "P1-RESULT-CONFLICT",
+      "name": "Gemini 与端侧冲突",
+      "tier": "P1",
+      "group": "08 Gemini 结果与删除",
+      "entryCondition": "AI 解释与端侧客观事实冲突",
+      "userSees": {
+        "title": "有一处需要确认",
+        "detail": "训练记录不会被修改；对不上的内容也不会变成下一组建议。"
+      },
+      "primaryAction": "看看哪里不一致",
+      "secondaryAction": "回到训练结果",
+      "nextState": "P0-REP-DETAIL",
+      "secondaryTarget": "P1-RESULT-LAYERED",
+      "exceptionRecovery": "返回动作复盘",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "冲突由文字、图标和 Amber 共同表达。",
+      "layoutKind": "ai-result",
+      "tone": "light"
+    },
+    {
+      "order": 94,
+      "stateId": "P1-RESULT-UNCERTAIN",
+      "name": "高级复盘不确定内容",
+      "tier": "P1",
+      "group": "08 Gemini 结果与删除",
+      "entryCondition": "AI 对部分证据无法形成可靠解释",
+      "userSees": {
+        "title": "这几处还看不准",
+        "detail": "说明缺少哪些画面；看不准的部分不会被写成结论或建议。"
+      },
+      "primaryAction": "看训练结果",
+      "secondaryAction": "管理已上传内容",
+      "nextState": "P1-RESULT-LAYERED",
+      "secondaryTarget": "P1-CLOUD-RETENTION",
+      "exceptionRecovery": "进入已上传内容管理",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "不确定内容使用完整句子。",
+      "layoutKind": "ai-result",
+      "tone": "light"
+    },
+    {
+      "order": 95,
+      "stateId": "P1-CLOUD-RETENTION",
+      "name": "云端数据保留",
+      "tier": "P1",
+      "group": "08 Gemini 结果与删除",
+      "entryCondition": "用户查看高级复盘数据管理",
+      "userSees": {
+        "title": "管理已上传内容",
+        "detail": "列出动作分析记录、关键动作截图和可选视频的保存状态。"
+      },
+      "primaryAction": "删除已上传内容",
+      "secondaryAction": "回到复盘",
+      "nextState": "P1-CLOUD-DELETING",
+      "secondaryTarget": "P1-RESULT-LAYERED",
+      "exceptionRecovery": "返回动作复盘",
+      "requiresNetwork": true,
+      "uploadedData": "已上传",
+      "accessibility": "每类内容都有保存与删除状态。",
+      "layoutKind": "detail",
+      "tone": "light"
+    },
+    {
+      "order": 96,
+      "stateId": "P1-CLOUD-DELETING",
+      "name": "云端立即删除中",
+      "tier": "P1",
+      "group": "08 Gemini 结果与删除",
+      "entryCondition": "用户确认立即删除",
+      "userSees": {
+        "title": "正在删除上传内容",
+        "detail": "本机训练记录会继续保留；删除会在后台完成。"
+      },
+      "primaryAction": "继续等待",
+      "secondaryAction": "回到复盘",
+      "nextState": "P1-CLOUD-DELETE-SUCCESS",
+      "secondaryTarget": "P1-RESULT-LAYERED",
+      "exceptionRecovery": "失败进入删除失败",
+      "requiresNetwork": true,
+      "uploadedData": "删除中",
+      "accessibility": "进度状态通过 role=status。",
+      "layoutKind": "loading",
+      "tone": "light"
+    },
+    {
+      "order": 97,
+      "stateId": "P1-CLOUD-DELETE-SUCCESS",
+      "name": "云端删除成功",
+      "tier": "P1",
+      "group": "08 Gemini 结果与删除",
+      "entryCondition": "服务确认删除完成",
+      "userSees": {
+        "title": "已删除上传内容",
+        "detail": "逐项显示动作分析记录和关键动作截图已删除；未上传的视频保持未上传。"
+      },
+      "primaryAction": "回到复盘",
+      "secondaryAction": "返回首页",
+      "nextState": "P1-RESULT-LAYERED",
+      "secondaryTarget": "P0-HOME",
+      "exceptionRecovery": "返回首页",
+      "requiresNetwork": true,
+      "uploadedData": "已删除",
+      "accessibility": "成功不只使用绿色。",
+      "layoutKind": "summary",
+      "tone": "light"
+    },
+    {
+      "order": 98,
+      "stateId": "P1-CLOUD-DELETE-FAILED",
+      "name": "云端删除失败",
+      "tier": "P1",
+      "group": "08 Gemini 结果与删除",
+      "entryCondition": "删除请求失败或未确认",
+      "userSees": {
+        "title": "还不能确认已删除",
+        "detail": "保留删除请求并允许重试；没有确认前不会显示删除成功。"
+      },
+      "primaryAction": "再试一次",
+      "secondaryAction": "返回上传内容",
+      "nextState": "P1-CLOUD-DELETING",
+      "secondaryTarget": "P1-CLOUD-RETENTION",
+      "exceptionRecovery": "返回已上传内容管理",
+      "requiresNetwork": true,
+      "uploadedData": "等待确认",
+      "accessibility": "错误说明包含下一步。",
+      "layoutKind": "system",
+      "tone": "light"
+    }
+  ],
+  "components": [
+    {
+      "id": "CMP-PRIMARY-BUTTON",
+      "name": "主按钮",
+      "purpose": "每屏唯一主操作。",
+      "states": [
+        "default",
+        "pressed",
+        "focus-visible",
+        "disabled",
+        "loading"
+      ]
+    },
+    {
+      "id": "CMP-SECONDARY-BUTTON",
+      "name": "次按钮",
+      "purpose": "返回、取消与危险操作的次级层级。",
+      "states": [
+        "light",
+        "dark",
+        "danger",
+        "pressed",
+        "focus-visible",
+        "disabled"
+      ]
+    },
+    {
+      "id": "CMP-EXERCISE-CARD",
+      "name": "动作卡片",
+      "purpose": "动作库中由用户明确选择动作。",
+      "states": [
+        "default",
+        "selected",
+        "disabled"
+      ]
+    },
+    {
+      "id": "CMP-SEGMENTED-CONTROL",
+      "name": "分段选择器",
+      "purpose": "选择会话级训练腿或训练目标。",
+      "states": [
+        "left-selected",
+        "right-selected",
+        "focus-visible"
+      ]
+    },
+    {
+      "id": "CMP-CAMERA-STATUS",
+      "name": "相机状态标签",
+      "purpose": "表达相机与端侧识别状态。",
+      "states": [
+        "normal",
+        "waiting",
+        "paused",
+        "failed"
+      ]
+    },
+    {
+      "id": "CMP-COACHING-CARD",
+      "name": "训练反馈卡",
+      "purpose": "一次重复实时最多显示一个教练提示。",
+      "states": [
+        "single-live-cue",
+        "voice-off-text-equivalent"
+      ]
+    },
+    {
+      "id": "CMP-CALIBRATION-PROGRESS",
+      "name": "校准进度",
+      "purpose": "建立并复用会话校准基线。",
+      "states": [
+        "0-of-3",
+        "1-of-3",
+        "2-of-3",
+        "3-of-3",
+        "paused",
+        "inconsistent"
+      ]
+    },
+    {
+      "id": "CMP-REP-ROW",
+      "name": "单次动作行",
+      "purpose": "区分重复计数、问题与证据状态。",
+      "states": [
+        "stable",
+        "issue",
+        "summary-only",
+        "suppressed-low-confidence"
+      ]
+    },
+    {
+      "id": "CMP-PRIVACY-BADGE",
+      "name": "隐私标签",
+      "purpose": "清晰表达本地数据边界。",
+      "states": [
+        "on-device",
+        "video-not-saved",
+        "local-summary-saved"
+      ]
+    },
+    {
+      "id": "CMP-TOAST",
+      "name": "轻提示",
+      "purpose": "短暂但不依赖颜色的状态确认。",
+      "states": [
+        "saved",
+        "analysis-restored",
+        "cue-muted"
+      ]
+    },
+    {
+      "id": "CMP-ERROR-STATUS",
+      "name": "错误状态",
+      "purpose": "显示错误原因与恢复路径。",
+      "states": [
+        "permission-denied",
+        "camera-unavailable",
+        "inference-failed",
+        "save-failed"
+      ]
+    },
+    {
+      "id": "CMP-CONFIRM-SHEET",
+      "name": "确认弹层",
+      "purpose": "对不可逆或会改变会话的操作二次确认。",
+      "states": [
+        "end-set",
+        "abandon-set",
+        "delete-local",
+        "delete-cloud"
+      ]
+    },
+    {
+      "id": "CMP-UPLOAD-PROGRESS",
+      "name": "上传进度",
+      "purpose": "显示上传对象、真实进度和取消删除路径。",
+      "states": [
+        "preparing",
+        "uploading",
+        "paused",
+        "failed",
+        "complete"
+      ]
+    },
+    {
+      "id": "CMP-ASYNC-ANALYSIS",
+      "name": "异步分析",
+      "purpose": "允许离开页面并恢复异步任务。",
+      "states": [
+        "queued",
+        "analyzing",
+        "background",
+        "complete",
+        "error"
+      ]
+    },
+    {
+      "id": "CMP-ENTITLEMENT",
+      "name": "高级复盘权益",
+      "purpose": "表达 StoreKit 高级复盘权益。",
+      "states": [
+        "locked",
+        "purchasing",
+        "unlocked",
+        "restore"
+      ]
+    },
+    {
+      "id": "CMP-CONFLICT",
+      "name": "结果对不上",
+      "purpose": "出现不一致时保留训练记录，并引导用户查看差异。",
+      "states": [
+        "needs-review",
+        "resolved"
+      ]
+    },
+    {
+      "id": "CMP-UNABLE-TO-JUDGE",
+      "name": "暂时看不准",
+      "purpose": "缺少必要画面时直接说明，不勉强给出结论。",
+      "states": [
+        "unable-to-judge",
+        "silent"
+      ]
+    },
+    {
+      "id": "CMP-CLOUD-DELETE",
+      "name": "删除上传内容",
+      "purpose": "逐项说明已上传内容的删除状态。",
+      "states": [
+        "confirm",
+        "deleting",
+        "success",
+        "failed"
+      ]
+    },
+    {
+      "id": "CMP-DRAFT-RESUME-CARD",
+      "name": "恢复草稿卡",
+      "purpose": "展示未完成会话的动作、腿别、完成组数和本机边界。",
+      "states": [
+        "available",
+        "unavailable",
+        "delete-confirm"
+      ]
+    },
+    {
+      "id": "CMP-LOCAL-SAVE-CHECKLIST",
+      "name": "本机保存清单",
+      "purpose": "逐项显示结构化摘要、训练设置和证据引用的真实保存状态。",
+      "states": [
+        "pending",
+        "saving",
+        "saved",
+        "failed"
+      ]
+    },
+    {
+      "id": "CMP-STORAGE-DIAGNOSTIC",
+      "name": "存储诊断",
+      "purpose": "说明空间不足、草稿保留和重新检查路径。",
+      "states": [
+        "space-insufficient",
+        "draft-retained",
+        "recheck"
+      ]
+    },
+    {
+      "id": "CMP-SESSION-CARD",
+      "name": "训练会话卡",
+      "purpose": "以会话为单位汇总动作、腿别、多组训练和问题摘要。",
+      "states": [
+        "complete",
+        "incomplete",
+        "selected",
+        "delete-confirm"
+      ]
+    },
+    {
+      "id": "CMP-VOICEOVER-ORDER",
+      "name": "VoiceOver 阅读顺序",
+      "purpose": "展示关键页面的语义顺序和具体可访问名称。",
+      "states": [
+        "preview",
+        "focused",
+        "announced"
+      ]
+    },
+    {
+      "id": "CMP-DYNAMIC-TYPE-STACK",
+      "name": "最大字号重排",
+      "purpose": "在最大辅助字号下纵向重排内容和操作，避免裁切与遮挡。",
+      "states": [
+        "home-xxxl",
+        "training-xxxl",
+        "summary-xxxl"
+      ]
+    },
+    {
+      "id": "CMP-UPLOAD-DATA-CHOICE",
+      "name": "上传数据选择",
+      "purpose": "逐项说明动作分析记录、关键动作截图与短视频的用途和同意状态。",
+      "states": [
+        "selected",
+        "optional",
+        "off-by-default",
+        "consented"
+      ]
+    },
+    {
+      "id": "CMP-ASYNC-TIMELINE",
+      "name": "异步任务时间线",
+      "purpose": "连续显示准备、上传、排队、分析和完成阶段。",
+      "states": [
+        "preparing",
+        "uploading",
+        "queued",
+        "analyzing",
+        "complete"
+      ]
+    },
+    {
+      "id": "CMP-LAYERED-AI-RESULT",
+      "name": "复盘结果分区",
+      "purpose": "分开呈现训练记录、Gemini 的解读、看不准的内容、不一致和下一组建议。",
+      "states": [
+        "layered",
+        "uncertain",
+        "needs-review",
+        "cloud-managed"
+      ]
+    }
+  ]
+}

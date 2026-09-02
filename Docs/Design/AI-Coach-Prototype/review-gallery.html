@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI 动作教练 · v2 设计归档</title>
+  <style>
+    :root { color-scheme: light; --bg:#eef1ed; --ink:#15201e; --muted:#66716e; --mint:#0bb8a5; --surface:#fff; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:"SF Pro Text","PingFang SC",sans-serif; }
+    header { padding:48px clamp(24px,5vw,80px) 28px; background:#07100f; color:#f6f7f4; }
+    header p { max-width:760px; color:#aeb9b5; line-height:1.7; }
+    header a { color:#64e6d2; font-weight:700; }
+    main { padding:32px clamp(20px,4vw,64px) 64px; }
+    section { margin:0 0 48px; }
+    h2 { margin:0 0 18px; font-size:22px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:20px; align-items:start; }
+    figure { margin:0; padding:14px; border-radius:18px; background:var(--surface); box-shadow:0 10px 30px rgba(7,16,15,.08); }
+    img { display:block; width:100%; height:auto; border-radius:12px; background:#07100f; }
+    figcaption { display:flex; gap:8px; align-items:baseline; padding:12px 2px 2px; line-height:1.45; }
+    .num { color:var(--mint); font-weight:700; font-variant-numeric:tabular-nums; }
+    .name { font-size:14px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI 动作教练 · v2 设计归档（33 页）</h1>
+    <p>这是旧版逐页截图，仅用于追溯。当前实现请打开 <a href="ai-action-coach-prototype-v3.html">v3 Production 原型</a>，并以 <a href="DESIGN-INDEX.md">设计文稿索引</a>、v3 manifest 和状态矩阵为准。</p>
+  </header>
+  <main>
+    <section><h2>进入产品与训练准备</h2><div class="grid">
+      <figure><img src="review-screenshots/cropped-pages/01.png"><figcaption><span class="num">01</span><span class="name">App 启动页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/02.png"><figcaption><span class="num">02</span><span class="name">首次使用安全说明</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/03.png"><figcaption><span class="num">03</span><span class="name">训练入口页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/04.png"><figcaption><span class="num">04</span><span class="name">产品首页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/05.png"><figcaption><span class="num">05</span><span class="name">动作库 / 选择动作</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/06.png"><figcaption><span class="num">06</span><span class="name">训练设置页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/07.png"><figcaption><span class="num">07</span><span class="name">手机机位引导页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/08.png"><figcaption><span class="num">08</span><span class="name">摄像头权限说明页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/09.png"><figcaption><span class="num">09</span><span class="name">摄像头权限被拒绝</span></figcaption></figure>
+    </div></section>
+    <section><h2>校准流程</h2><div class="grid">
+      <figure><img src="review-screenshots/cropped-pages/10.png"><figcaption><span class="num">10</span><span class="name">校准准备页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/11.png"><figcaption><span class="num">11</span><span class="name">校准进行中</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/12.png"><figcaption><span class="num">12</span><span class="name">校准画面质量不足</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/13.png"><figcaption><span class="num">13</span><span class="name">三次校准不一致</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/14.png"><figcaption><span class="num">14</span><span class="name">校准成功过渡</span></figcaption></figure>
+    </div></section>
+    <section><h2>实时训练与异常恢复</h2><div class="grid">
+      <figure><img src="review-screenshots/cropped-pages/15.png"><figcaption><span class="num">15</span><span class="name">实时训练 · 正常识别</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/16.png"><figcaption><span class="num">16</span><span class="name">实时反馈 · 躯干不稳定</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/17.png"><figcaption><span class="num">17</span><span class="name">实时反馈 · 深度不足</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/18.png"><figcaption><span class="num">18</span><span class="name">实时反馈 · 下降过快</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/19.png"><figcaption><span class="num">19</span><span class="name">自动暂停分析状态</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/20.png"><figcaption><span class="num">20</span><span class="name">手动暂停状态</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/21.png"><figcaption><span class="num">21</span><span class="name">摄像头或识别引擎故障</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/22.png"><figcaption><span class="num">22</span><span class="name">结束训练确认弹窗</span></figcaption></figure>
+    </div></section>
+    <section><h2>总结、证据与保存</h2><div class="grid">
+      <figure><img src="review-screenshots/cropped-pages/23.png"><figcaption><span class="num">23</span><span class="name">本组总结 · 动作稳定</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/24.png"><figcaption><span class="num">24</span><span class="name">本组总结 · 存在问题</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/25.png"><figcaption><span class="num">25</span><span class="name">单次动作详情 / 问题证据</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/26.png"><figcaption><span class="num">26</span><span class="name">保存摘要状态</span></figcaption></figure>
+    </div></section>
+    <section><h2>历史、设置、隐私与账户</h2><div class="grid">
+      <figure><img src="review-screenshots/cropped-pages/27.png"><figcaption><span class="num">27</span><span class="name">训练历史列表</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/28.png"><figcaption><span class="num">28</span><span class="name">训练历史空状态</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/29.png"><figcaption><span class="num">29</span><span class="name">删除训练记录确认</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/30.png"><figcaption><span class="num">30</span><span class="name">单次历史训练详情</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/31.png"><figcaption><span class="num">31</span><span class="name">设置页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/32.png"><figcaption><span class="num">32</span><span class="name">隐私详情页</span></figcaption></figure>
+      <figure><img src="review-screenshots/cropped-pages/33.png"><figcaption><span class="num">33</span><span class="name">个人中心 / Account</span></figcaption></figure>
+    </div></section>
+  </main>
+</body>
+</html>

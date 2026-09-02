@@ -16,6 +16,10 @@
 		A00000000000000000000008 /* FormCoachCore in Frameworks */ = {isa = PBXBuildFile; productRef = D00000000000000000000002 /* FormCoachCore */; };
 		A00000000000000000000009 /* pose_landmarker_full.task in Resources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000009 /* pose_landmarker_full.task */; };
 		A0000000000000000000000A /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000A /* CameraService.swift */; };
+		A0000000000000000000000B /* DesignSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000B /* DesignSystem.swift */; };
+		A0000000000000000000000C /* P0FlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000C /* P0FlowModel.swift */; };
+		A0000000000000000000000D /* P0Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000D /* P0Screens.swift */; };
+		A0000000000000000000000E /* DESIGN-MANIFEST-v3.json in Resources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000E /* DESIGN-MANIFEST-v3.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		F00000000000000000000008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F00000000000000000000009 /* pose_landmarker_full.task */ = {isa = PBXFileReference; lastKnownFileType = file; path = pose_landmarker_full.task; sourceTree = "<group>"; };
 		F0000000000000000000000A /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		F0000000000000000000000B /* DesignSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystem.swift; sourceTree = "<group>"; };
+		F0000000000000000000000C /* P0FlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P0FlowModel.swift; sourceTree = "<group>"; };
+		F0000000000000000000000D /* P0Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P0Screens.swift; sourceTree = "<group>"; };
+		F0000000000000000000000E /* DESIGN-MANIFEST-v3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "../Docs/Design/AI-Coach-Prototype/DESIGN-MANIFEST-v3.json"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +68,10 @@
 				F00000000000000000000003 /* Services.swift */,
 				F00000000000000000000004 /* PoseAdapters.swift */,
 				F0000000000000000000000A /* CameraService.swift */,
+				F0000000000000000000000B /* DesignSystem.swift */,
+				F0000000000000000000000C /* P0FlowModel.swift */,
+				F0000000000000000000000D /* P0Screens.swift */,
+				F0000000000000000000000E /* DESIGN-MANIFEST-v3.json */,
 				F00000000000000000000005 /* Views.swift */,
 				F00000000000000000000006 /* Info.plist */,
 				F00000000000000000000007 /* Localizable.xcstrings */,
@@ -144,6 +156,7 @@
 			files = (
 				A00000000000000000000006 /* Localizable.xcstrings in Resources */,
 				A00000000000000000000009 /* pose_landmarker_full.task in Resources */,
+				A0000000000000000000000E /* DESIGN-MANIFEST-v3.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,6 +172,9 @@
 				A00000000000000000000003 /* Services.swift in Sources */,
 				A00000000000000000000004 /* PoseAdapters.swift in Sources */,
 				A0000000000000000000000A /* CameraService.swift in Sources */,
+				A0000000000000000000000B /* DesignSystem.swift in Sources */,
+				A0000000000000000000000C /* P0FlowModel.swift in Sources */,
+				A0000000000000000000000D /* P0Screens.swift in Sources */,
 				A00000000000000000000005 /* Views.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

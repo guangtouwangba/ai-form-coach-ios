@@ -2,26 +2,9 @@ import SwiftUI
 import SwiftData
 import FormCoachCore
 
-private let mint = Color(red: 0.05, green: 0.72, blue: 0.65)
-private let amber = Color(red: 0.96, green: 0.63, blue: 0.10)
-
 struct RootView: View {
-    @EnvironmentObject private var model: AppModel
     var body: some View {
-        Group {
-            switch model.step {
-            case .onboarding: SafetyView()
-            case .selection: ExerciseSelectionView()
-            case .configuration: ConfigurationView()
-            case .positioning: PositioningView()
-            case .calibration: CalibrationView()
-            case .live: LiveWorkoutView()
-            case .summary: SummaryView()
-            case .history: HistoryView()
-            case .settings: SettingsView()
-            }
-        }
-        .animation(.easeInOut(duration: 0.24), value: model.step)
+        P0FlowRootView()
     }
 }
 
@@ -40,17 +23,19 @@ struct SafetyView: View {
 struct ExerciseSelectionView: View {
     @EnvironmentObject private var model: AppModel
     var body: some View {
-        NavigationScaffold(title: "AI 动作教练", trailing: { Button { model.openSettings() } label: { Image(systemName: "gearshape") } }) {
-            VStack(spacing: 16) {
+        CoachNavigationScaffold(title: "AI 动作教练", trailing: { Button { model.openSettings() } label: { Image(systemName: "gearshape") } }) {
+            CoachScreen {
+              VStack(spacing: CoachSpacing.md) {
                 ZStack(alignment: .bottomLeading) {
-                    LinearGradient(colors: [Color(red:0.05,green:0.23,blue:0.21), mint], startPoint: .topLeading, endPoint: .bottomTrailing)
+                    LinearGradient(colors: [CoachColor.trainingSurface, CoachColor.mint], startPoint: .topLeading, endPoint: .bottomTrailing)
                     Image(systemName: "figure.strengthtraining.traditional").font(.system(size: 120)).foregroundStyle(.white.opacity(0.34)).frame(maxWidth: .infinity, alignment: .trailing).padding()
                     VStack(alignment: .leading, spacing: 8) { Text("保加利亚分腿蹲").font(.title2.bold()); Text("侧面拍摄 · 实时语音纠正").font(.subheadline); Label("AI 本地识别 · 隐私保护", systemImage: "lock.shield") .font(.caption).padding(.top, 120) }.foregroundStyle(.white).padding(22)
                 }.frame(height: 330).clipShape(RoundedRectangle(cornerRadius: 24))
                 HStack { Benefit(icon:"speaker.wave.2", text:"实时纠正"); Benefit(icon:"number", text:"自动计次"); Benefit(icon:"shield", text:"安全优先") }
-                PrimaryButton("开始训练", action: model.selectExercise)
+                CoachButton(title: "开始训练", systemImage: "figure.strengthtraining.traditional", action: model.selectExercise)
                 Button("查看历史记录", action: model.openHistory).foregroundStyle(.secondary)
-            }.padding()
+              }
+            }
         }
     }
 }
@@ -58,19 +43,21 @@ struct ExerciseSelectionView: View {
 struct ConfigurationView: View {
     @EnvironmentObject private var model: AppModel
     var body: some View {
-        NavigationScaffold(title: "训练设置") {
-            VStack(alignment: .leading, spacing: 24) {
+        CoachNavigationScaffold(title: "训练设置") {
+          CoachScreen(scrolls: false) {
+            VStack(alignment: .leading, spacing: CoachSpacing.xl) {
                 Text("训练腿").font(.headline)
                 Picker("训练腿", selection: $model.trainingSide) { Text("左腿").tag(TrainingSide.left); Text("右腿").tag(TrainingSide.right) }.pickerStyle(.segmented)
                 Text("训练目标").font(.headline)
                 ForEach(ExerciseVariant.allCases, id: \.self) { variant in
                     Button { model.variant = variant } label: {
-                        HStack { VStack(alignment:.leading) { Text(variant.title).font(.headline); Text(variant.detail).font(.caption).foregroundStyle(.secondary) }; Spacer(); Image(systemName: model.variant == variant ? "checkmark.circle.fill" : "circle").foregroundStyle(mint) }
-                        .padding().background(.background).clipShape(RoundedRectangle(cornerRadius: 16)).overlay(RoundedRectangle(cornerRadius:16).stroke(model.variant == variant ? mint : .gray.opacity(0.2)))
+                        HStack { VStack(alignment:.leading) { Text(variant.title).font(CoachTypography.section); Text(variant.detail).font(CoachTypography.caption).foregroundStyle(CoachColor.textSecondary) }; Spacer(); Image(systemName: model.variant == variant ? "checkmark.circle.fill" : "circle").foregroundStyle(CoachColor.mintDark) }
+                        .padding().background(CoachColor.surface).clipShape(RoundedRectangle(cornerRadius: CoachRadius.medium)).overlay(RoundedRectangle(cornerRadius: CoachRadius.medium).stroke(model.variant == variant ? CoachColor.mintDark : CoachColor.border))
                     }.buttonStyle(.plain)
                 }
-                Spacer(); PrimaryButton("继续", action: model.confirmConfiguration)
-            }.padding()
+                Spacer(); CoachButton(title: "继续", action: model.confirmConfiguration)
+            }
+          }
         }
     }
 }
@@ -78,14 +65,16 @@ struct ConfigurationView: View {
 struct PositioningView: View {
     @EnvironmentObject private var model: AppModel
     var body: some View {
-        NavigationScaffold(title: "把手机放在侧面") {
-            VStack(spacing: 20) {
-                ZStack { RoundedRectangle(cornerRadius:24).fill(Color.gray.opacity(0.08)); HStack(spacing:36) { Image(systemName:"iphone").font(.system(size:50)); Image(systemName:"arrow.right").foregroundStyle(mint); Image(systemName:"figure.stand").font(.system(size:120)) } }.frame(height:310)
-                ChecklistRow(title:"保持全身可见", detail:"头、双脚和训练凳都要完整入镜")
-                ChecklistRow(title:"手机与髋部齐平", detail:"距离约 2.5–4 米，保持纯侧面")
-                ChecklistRow(title:"远离运动路径", detail:"不要把手机放在器械或行走路线内")
-                Spacer(); PrimaryButton("检查机位", action:model.beginPositioning)
-            }.padding()
+        CoachNavigationScaffold(title: "把手机放在侧面") {
+          CoachScreen {
+            VStack(spacing: CoachSpacing.lg) {
+                ZStack { RoundedRectangle(cornerRadius: CoachRadius.extraLarge).fill(CoachColor.mintSoft); HStack(spacing:36) { Image(systemName:"iphone").font(.system(size:50)); Image(systemName:"arrow.right").foregroundStyle(CoachColor.mintDark); Image(systemName:"figure.stand").font(.system(size:120)) } }.frame(height:310)
+                CoachChecklistRow(title:"保持全身可见", detail:"头、双脚和训练凳都要完整入镜")
+                CoachChecklistRow(title:"手机与髋部齐平", detail:"距离约 2.5–4 米，保持纯侧面")
+                CoachChecklistRow(title:"远离运动路径", detail:"不要把手机放在器械或行走路线内")
+                Spacer(); CoachButton(title: "检查机位", systemImage: "camera.viewfinder", action:model.beginPositioning)
+            }
+          }
         }
     }
 }
@@ -95,12 +84,12 @@ struct CalibrationView: View {
     @StateObject private var camera = CameraService()
     var body: some View {
         ZStack {
-            Color.black.ignoresSafeArea()
+            CoachTrainingBackground()
             CameraPreview(session: camera.session).ignoresSafeArea().opacity(0.48)
             VStack(spacing:24) {
                 Text("建立你的动作基线").font(.title2.bold())
                 Text(model.calibrationMessage).multilineTextAlignment(.center).foregroundStyle(.white.opacity(0.8))
-                ZStack { Circle().stroke(.white.opacity(0.15), lineWidth:12); Circle().trim(from:0,to:Double(model.calibrationProgress)/3).stroke(mint,style:StrokeStyle(lineWidth:12,lineCap:.round)).rotationEffect(.degrees(-90)); Text("\(model.calibrationProgress) / 3").font(.system(size:40,weight:.bold)) }.frame(width:190,height:190)
+                CoachProgressRing(value: Double(model.calibrationProgress) / 3, label: "\(model.calibrationProgress) / 3", detail: "校准动作").frame(width:190,height:190)
                 Text("关键点不足时不会记录；三次动作不一致会自动要求重试。")
                     .font(.caption)
                     .multilineTextAlignment(.center)
@@ -119,9 +108,9 @@ struct LiveWorkoutView: View {
     @StateObject private var camera = CameraService()
     var body: some View {
         ZStack {
-            LinearGradient(colors:[.black,Color(red:0.04,green:0.11,blue:0.10)],startPoint:.top,endPoint:.bottom).ignoresSafeArea()
+            CoachTrainingBackground()
             CameraPreview(session: camera.session).ignoresSafeArea()
-            PoseSilhouette().stroke(mint.opacity(0.85), style:StrokeStyle(lineWidth:5,lineCap:.round,lineJoin:.round)).frame(width:270,height:440).offset(y:20)
+            PoseSilhouette().stroke(CoachColor.mint.opacity(0.85), style:StrokeStyle(lineWidth:5,lineCap:.round,lineJoin:.round)).frame(width:270,height:440).offset(y:20)
             if camera.status == .denied {
                 ContentUnavailableView("无法使用摄像头", systemImage: "camera.fill", description: Text("请在系统设置中允许摄像头权限后重试。"))
                     .foregroundStyle(.white)
@@ -132,8 +121,8 @@ struct LiveWorkoutView: View {
                 HStack { Button { model.finishWorkout() } label:{ Image(systemName:"xmark") }; Spacer(); Text("保加利亚分腿蹲").font(.caption.bold()).padding(.horizontal,14).padding(.vertical,9).background(.ultraThinMaterial,in:Capsule()); Spacer(); Button { model.speechEnabled.toggle() } label:{ Image(systemName:model.speechEnabled ? "speaker.wave.2" : "speaker.slash") } }.font(.title3)
                 HStack(alignment:.firstTextBaseline) { Text("\(model.repCount)").font(.system(size:76,weight:.bold)); Text("次"); Spacer() }.padding(.top,24)
                 Spacer()
-                if let cue=model.latestCue { Label(cue,systemImage:"speaker.wave.2.fill").font(.headline).padding().frame(maxWidth:.infinity).background(.black.opacity(0.55),in:Capsule()).overlay(Capsule().stroke(amber)) }
-                HStack { Button(action:model.toggleAnalysisPause) { Image(systemName:model.isAnalysisPaused ? "play.fill" : "pause.fill").frame(width:54,height:54).background(.ultraThinMaterial,in:Circle()) }; Spacer(); Button("结束训练",action:model.finishWorkout).foregroundStyle(amber).font(.headline).padding() }
+                if let cue=model.latestCue { CoachLiveCue(message: cue, isSpoken: model.speechEnabled) }
+                HStack { Button(action:model.toggleAnalysisPause) { Image(systemName:model.isAnalysisPaused ? "play.fill" : "pause.fill").frame(width:54,height:54).background(.ultraThinMaterial,in:Circle()) }; Spacer(); Button("结束训练",action:model.finishWorkout).foregroundStyle(CoachColor.amber).font(CoachTypography.bodyStrong).padding() }
             }.padding().foregroundStyle(.white)
         }
         .onAppear {
@@ -150,23 +139,23 @@ struct SummaryView: View {
     @State private var saveMessage: String?
     private var issues:[IssueEvent] { model.summary.reps.flatMap(\.issues).filter{$0.disposition != .suppressed} }
     var body: some View {
-        NavigationScaffold(title: "本组总结") {
-            ScrollView { VStack(spacing:16) {
+        CoachNavigationScaffold(title: "本组总结") {
+          CoachScreen { VStack(spacing:CoachSpacing.md) {
                 Text("完成 \(model.summary.effectiveRepCount) 次有效动作").font(.title2.bold()).padding(.top)
-                VStack(alignment:.leading,spacing:8) { Text("核心问题").font(.caption).foregroundStyle(.secondary); Text(issues.isEmpty ? "本组动作稳定" : "躯干前倾 \(issues.filter{$0.type == .torsoCollapse}.count) 次").font(.title3.bold()).foregroundStyle(issues.isEmpty ? mint : amber); Text(issues.isEmpty ? "继续保持当前节奏。" : "下一组先减小幅度，保持躯干稳定。").font(.subheadline) }.frame(maxWidth:.infinity,alignment:.leading).padding().background(.background,in:RoundedRectangle(cornerRadius:18)).shadow(color:.black.opacity(0.06),radius:12)
-                VStack(spacing:8) { ForEach(model.summary.reps) { rep in Button { model.showRep(rep) } label:{ HStack { Text("第 \(rep.id) 次"); Spacer(); Text(rep.issues.isEmpty ? "稳定" : rep.issues.first!.type.title).foregroundStyle(rep.issues.isEmpty ? mint : amber); Image(systemName:"chevron.right") }.padding().background(Color.gray.opacity(0.07),in:RoundedRectangle(cornerRadius:13)) }.buttonStyle(.plain) } }
+                CoachCard(elevated: true) { VStack(alignment:.leading,spacing:CoachSpacing.xs) { Text("核心问题").font(CoachTypography.caption).foregroundStyle(CoachColor.textSecondary); Text(issues.isEmpty ? "本组动作稳定" : "躯干前倾 \(issues.filter{$0.type == .torsoCollapse}.count) 次").font(CoachTypography.title).foregroundStyle(issues.isEmpty ? CoachColor.mintDark : CoachColor.amber); Text(issues.isEmpty ? "继续保持当前节奏。" : "下一组先减小幅度，保持躯干稳定。").font(CoachTypography.body) } }
+                VStack(spacing:8) { ForEach(model.summary.reps) { rep in Button { model.showRep(rep) } label:{ CoachCard { HStack { Text("第 \(rep.id) 次"); Spacer(); Text(rep.issues.isEmpty ? "稳定" : rep.issues.first!.type.title).foregroundStyle(rep.issues.isEmpty ? CoachColor.mintDark : CoachColor.amber); Image(systemName:"chevron.right") } } }.buttonStyle(.plain) } }
                 if let selected=model.selectedRep { ProblemEvidenceView(rep:selected) }
-                PrimaryButton("保存本次摘要") { do { context.insert(try StoredWorkoutSession(summary:model.summary,config:SessionConfig(trainingSide:model.trainingSide,variant:model.variant,speechEnabled:model.speechEnabled,saveVideo:false))); try context.save(); saveMessage="已保存到本机" } catch { saveMessage="保存失败，请重试" } }
-                Button("再做一组",action:model.resetWorkout).buttonStyle(.bordered).tint(mint)
+                CoachButton(title: "保存本次摘要", systemImage: "square.and.arrow.down") { do { context.insert(try StoredWorkoutSession(summary:model.summary,config:SessionConfig(trainingSide:model.trainingSide,variant:model.variant,speechEnabled:model.speechEnabled,saveVideo:false))); try context.save(); saveMessage="已保存到本机" } catch { saveMessage="保存失败，请重试" } }
+                CoachButton(title: "再做一组", kind: .secondary, action:model.resetWorkout)
                 if let saveMessage { Text(saveMessage).font(.caption).foregroundStyle(.secondary) }
-            }.padding() }
+          } }
         }
     }
 }
 
 struct ProblemEvidenceView: View {
     let rep:RepSummary
-    var body:some View { VStack(alignment:.leading,spacing:10) { Text("第 \(rep.id) 次 · 问题证据").font(.headline); if let issue=rep.issues.first { Text(issue.type.title).foregroundStyle(amber); Text("置信度 \(Int(issue.confidence*100))% · \(issue.phase.rawValue)").font(.caption).foregroundStyle(.secondary); ForEach(issue.evidence.sorted(by:{$0.key<$1.key}),id:\.key){Text("\($0.key)：\(String(format:"%.2f",$0.value))").font(.caption.monospaced())} } }.frame(maxWidth:.infinity,alignment:.leading).padding().background(Color.black.opacity(0.92),in:RoundedRectangle(cornerRadius:18)).foregroundStyle(.white) }
+    var body:some View { VStack(alignment:.leading,spacing:10) { Text("第 \(rep.id) 次 · 问题证据").font(CoachTypography.section); if let issue=rep.issues.first { Text(issue.type.title).foregroundStyle(CoachColor.amber); Text("置信度 \(Int(issue.confidence*100))% · \(issue.phase.rawValue)").font(CoachTypography.caption).foregroundStyle(CoachColor.onTrainingMuted); ForEach(issue.evidence.sorted(by:{$0.key<$1.key}),id:\.key){CoachEvidenceRow(label:$0.key,value:String(format:"%.2f",$0.value),tone:.coaching)} } }.frame(maxWidth:.infinity,alignment:.leading).padding().background(CoachColor.trainingCanvas,in:RoundedRectangle(cornerRadius:CoachRadius.large)).foregroundStyle(CoachColor.onTraining) }
 }
 
 struct HistoryView: View {
@@ -175,7 +164,7 @@ struct HistoryView: View {
     @Query(sort: \StoredWorkoutSession.startedAt, order: .reverse) private var sessions: [StoredWorkoutSession]
 
     var body: some View {
-        NavigationScaffold(title: "训练历史", trailing: { Button("完成", action: model.goHome) }) {
+        CoachNavigationScaffold(title: "训练历史", trailing: { Button("完成", action: model.goHome) }) {
             List {
                 if sessions.isEmpty {
                     ContentUnavailableView("还没有训练记录", systemImage: "clock", description: Text("完成训练后可主动保存摘要。"))
@@ -194,6 +183,8 @@ struct HistoryView: View {
                     }
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(CoachColor.canvas)
         }
     }
 }
@@ -202,7 +193,7 @@ struct SettingsView: View {
     @EnvironmentObject private var model: AppModel
 
     var body: some View {
-        NavigationScaffold(title: "设置", trailing: { Button("完成", action: model.goHome) }) {
+        CoachNavigationScaffold(title: "设置", trailing: { Button("完成", action: model.goHome) }) {
             Form {
                 Section("训练反馈") {
                     Toggle("语音提示", isOn: $model.speechEnabled)
@@ -213,63 +204,60 @@ struct SettingsView: View {
                     Text("仅提供一般训练辅助，不替代医疗建议或专业教练。")
                 }
             }
+            .scrollContentBackground(.hidden)
+            .background(CoachColor.canvas)
         }
     }
 }
 
-struct NavigationScaffold<Content: View>: View {
+struct OnboardingPage: View {
+    let icon: String
     let title: String
-    let trailing: AnyView
-    let content: Content
-
-    init(title: String, @ViewBuilder content: () -> Content) {
-        self.title = title
-        self.trailing = AnyView(EmptyView())
-        self.content = content()
-    }
-
-    init<Trailing: View>(title: String, @ViewBuilder trailing: () -> Trailing, @ViewBuilder content: () -> Content) {
-        self.title = title
-        self.trailing = AnyView(trailing())
-        self.content = content()
-    }
-
-    var body: some View {
-        NavigationStack {
-            content
-                .navigationTitle(title)
-                .navigationBarTitleDisplayMode(.inline)
-                .toolbar { ToolbarItem(placement: .topBarTrailing) { trailing } }
-        }
-    }
-}
-struct OnboardingPage:View{let icon:String;let title:String;let items:[String];let actionTitle:String;let action:()->Void;var body:some View{VStack(alignment:.leading,spacing:24){Spacer();Image(systemName:icon).font(.system(size:70)).foregroundStyle(mint);Text(title).font(.largeTitle.bold());ForEach(items,id:\.self){Label($0,systemImage:"checkmark.circle.fill").font(.body).foregroundStyle(.primary).labelStyle(.titleAndIcon)};Spacer();PrimaryButton(actionTitle,action:action)}.padding(28)}}
-struct PrimaryButton: View {
-    let title: String
+    let items: [String]
+    let actionTitle: String
     let action: () -> Void
 
-    init(_ title: String, action: @escaping () -> Void) {
-        self.title = title
-        self.action = action
-    }
-
     var body: some View {
-        Button(action: action) {
-            Text(title)
-                .font(.headline)
-                .frame(maxWidth: .infinity)
-                .padding()
-                .foregroundStyle(.white)
-                .background(
-                    LinearGradient(colors: [mint, Color(red: 0, green: 0.82, blue: 0.72)], startPoint: .leading, endPoint: .trailing),
-                    in: RoundedRectangle(cornerRadius: 16)
-                )
+        CoachScreen(scrolls: false) {
+            VStack(alignment: .leading, spacing: CoachSpacing.xl) {
+                Spacer()
+                Image(systemName: icon)
+                    .font(.system(size: 64, weight: .semibold))
+                    .foregroundStyle(CoachColor.mintDark)
+                    .accessibilityHidden(true)
+                Text(title).font(CoachTypography.display)
+                CoachCard {
+                    VStack(alignment: .leading, spacing: CoachSpacing.md) {
+                        ForEach(items, id: \.self) {
+                            Label($0, systemImage: "checkmark.circle.fill")
+                                .font(CoachTypography.body)
+                                .foregroundStyle(CoachColor.textPrimary)
+                                .labelStyle(.titleAndIcon)
+                        }
+                    }
+                }
+                Spacer()
+                CoachButton(title: actionTitle, action: action)
+            }
         }
-        .buttonStyle(.plain)
     }
 }
-struct Benefit:View{let icon:String;let text:String;var body:some View{VStack{Image(systemName:icon).font(.title3).foregroundStyle(mint);Text(text).font(.caption2)}.frame(maxWidth:.infinity).padding(.vertical,14).background(.background,in:RoundedRectangle(cornerRadius:16)).shadow(color:.black.opacity(0.05),radius:8)}}
-struct ChecklistRow:View{let title:String;let detail:String;var body:some View{HStack{Image(systemName:"checkmark.circle.fill").foregroundStyle(mint).font(.title2);VStack(alignment:.leading){Text(title).font(.headline);Text(detail).font(.caption).foregroundStyle(.secondary)};Spacer()}.padding().background(.background,in:RoundedRectangle(cornerRadius:16)).shadow(color:.black.opacity(0.05),radius:8)}}
+
+struct Benefit: View {
+    let icon: String
+    let text: String
+
+    var body: some View {
+        VStack(spacing: CoachSpacing.xs) {
+            Image(systemName: icon).font(.title3).foregroundStyle(CoachColor.mintDark)
+            Text(text).font(CoachTypography.caption)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, CoachSpacing.sm)
+        .background(CoachColor.surface, in: RoundedRectangle(cornerRadius: CoachRadius.medium))
+        .overlay { RoundedRectangle(cornerRadius: CoachRadius.medium).stroke(CoachColor.border) }
+    }
+}
 struct PoseSilhouette:Shape{func path(in r:CGRect)->Path{var p=Path();p.addEllipse(in:CGRect(x:r.midX-22,y:r.minY,width:44,height:44));p.move(to:CGPoint(x:r.midX,y:r.minY+45));p.addLine(to:CGPoint(x:r.midX+8,y:r.minY+180));p.addLine(to:CGPoint(x:r.midX-55,y:r.minY+280));p.addLine(to:CGPoint(x:r.midX-96,y:r.maxY));p.move(to:CGPoint(x:r.midX+8,y:r.minY+180));p.addLine(to:CGPoint(x:r.midX+86,y:r.minY+300));p.addLine(to:CGPoint(x:r.maxX,y:r.minY+340));p.move(to:CGPoint(x:r.midX,y:r.minY+90));p.addLine(to:CGPoint(x:r.midX-45,y:r.minY+190));return p}}
 
 private extension ExerciseVariant {
