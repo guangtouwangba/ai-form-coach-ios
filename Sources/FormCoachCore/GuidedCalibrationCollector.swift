@@ -20,6 +20,8 @@ public struct GuidedCalibrationCollector: Sendable {
     private var maximumDepth = 0.0
     private var earlyTrunkAngle = 0.0
     private var bottomTrunkAngle = 0.0
+    private var smoothedHipY: Double?
+    private var smoothedTrunkAngle: Double?
 
     public init() {}
 
@@ -40,13 +42,19 @@ public struct GuidedCalibrationCollector: Sendable {
 
         let shoulder = Geometry.midpoint(leftShoulder, rightShoulder)
         let hip = Geometry.midpoint(leftHip, rightHip)
-        let canonicalHipY = 1 - hip.y
+        let rawHipY = 1 - hip.y
         let canonicalShoulder = Landmark(x: shoulder.x, y: 1 - shoulder.y)
-        let canonicalHip = Landmark(x: hip.x, y: canonicalHipY)
+        let canonicalHip = Landmark(x: hip.x, y: rawHipY)
         let torsoLength = hypot(canonicalShoulder.x - canonicalHip.x, canonicalShoulder.y - canonicalHip.y)
         guard torsoLength > 0.08 else { return nil }
 
-        let trunkAngle = Geometry.trunkAngleFromVertical(hip: canonicalHip, shoulder: canonicalShoulder)
+        // Match MotionPreprocessor: calibrating raw maxima and judging smoothed
+        // maxima would reject the very motion used to establish the baseline.
+        let canonicalHipY = smoothedHipY.map { 0.42 * rawHipY + 0.58 * $0 } ?? rawHipY
+        let rawTrunkAngle = Geometry.trunkAngleFromVertical(hip: canonicalHip, shoulder: canonicalShoulder)
+        let trunkAngle = smoothedTrunkAngle.map { 0.42 * rawTrunkAngle + 0.58 * $0 } ?? rawTrunkAngle
+        smoothedHipY = canonicalHipY
+        smoothedTrunkAngle = trunkAngle
         let velocity: Double
         if let previousHipY, let previousTimestampMs, observation.timestampMs > previousTimestampMs {
             velocity = (canonicalHipY - previousHipY) / (Double(observation.timestampMs - previousTimestampMs) / 1_000) / torsoLength
@@ -82,7 +90,7 @@ public struct GuidedCalibrationCollector: Sendable {
             }
             if velocity > 0.06 && maximumDepth >= 0.25 { phase = .ascending }
         case .ascending:
-            if depth < 0.10 {
+            if depth < max(0.15, maximumDepth * 0.35) {
                 samples.append(CalibrationRepSample(
                     depth: maximumDepth,
                     earlyDescentTrunkAngle: earlyTrunkAngle,

@@ -6,6 +6,22 @@
 	objectVersion = 56;
 	objects = {
 
+        T00000000000000000000001 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/AppIntegrationTests.swift; sourceTree = SOURCE_ROOT; };
+        T00000000000000000000002 = {isa = PBXBuildFile; fileRef = T00000000000000000000001; };
+        T00000000000000000000003 = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = AIFormCoachTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+        T00000000000000000000004 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (T00000000000000000000002,T0000000000000000000000F,); runOnlyForDeploymentPostprocessing = 0; };
+        T0000000000000000000000E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/FormCoachCoreTests/FixtureFactory.swift; sourceTree = SOURCE_ROOT; };
+        T0000000000000000000000F = {isa = PBXBuildFile; fileRef = T0000000000000000000000E; };
+        T00000000000000000000005 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (T0000000000000000000000D,); runOnlyForDeploymentPostprocessing = 0; };
+        T00000000000000000000006 = {isa = PBXNativeTarget; name = AIFormCoachTests; productName = AIFormCoachTests; productReference = T00000000000000000000003; productType = "com.apple.product-type.bundle.unit-test"; buildConfigurationList = T00000000000000000000007; buildPhases = (T00000000000000000000004,T00000000000000000000005,); dependencies = (T0000000000000000000000A,); packageProductDependencies = (D00000000000000000000002,); };
+        T00000000000000000000007 = {isa = XCConfigurationList; buildConfigurations = (T00000000000000000000008,T00000000000000000000009,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
+        T00000000000000000000008 = {isa = XCBuildConfiguration; name = Debug; buildSettings = { GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.aiformcoach.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIFormCoach.app/AIFormCoach"; BUNDLE_LOADER = "$(TEST_HOST)"; TARGETED_DEVICE_FAMILY = 1; CODE_SIGNING_ALLOWED = NO; }; };
+        T00000000000000000000009 = {isa = XCBuildConfiguration; name = Release; buildSettings = { GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.aiformcoach.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIFormCoach.app/AIFormCoach"; BUNDLE_LOADER = "$(TEST_HOST)"; TARGETED_DEVICE_FAMILY = 1; CODE_SIGNING_ALLOWED = NO; }; };
+        T0000000000000000000000A = {isa = PBXTargetDependency; target = E00000000000000000000001; targetProxy = T0000000000000000000000B; };
+        T0000000000000000000000B = {isa = PBXContainerItemProxy; containerPortal = D00000000000000000000000; proxyType = 1; remoteGlobalIDString = E00000000000000000000001; remoteInfo = AIFormCoach; };
+        T0000000000000000000000D = {isa = PBXBuildFile; productRef = D00000000000000000000002; };
+
+
 /* Begin PBXBuildFile section */
 		A00000000000000000000001 /* AIFormCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000001 /* AIFormCoachApp.swift */; };
 		A00000000000000000000002 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000002 /* AppModel.swift */; };
@@ -56,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				C00000000000000000000001 /* App */,
+                T00000000000000000000001,
 				C00000000000000000000002 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				F00000000000000000000000 /* AIFormCoach.app */,
+                T00000000000000000000003,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -144,6 +162,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+                T00000000000000000000006,
 				E00000000000000000000001 /* AIFormCoach */,
 			);
 		};

@@ -1,7 +1,12 @@
 import SwiftUI
+import SwiftData
+import FormCoachCore
+import AVFoundation
 
 struct P0FlowRootView: View {
     @StateObject private var flow = P0FlowModel()
+    @Environment(\.modelContext) private var context
+    @Environment(\.scenePhase) private var scenePhase
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
@@ -16,6 +21,16 @@ struct P0FlowRootView: View {
             }
         }
         .environmentObject(flow)
+        .task { flow.attach(context) }
+        .alert("本机存储提示", isPresented: Binding(get: { flow.saveFailureMessage != nil }, set: { if !$0 { flow.saveFailureMessage = nil } })) {
+            Button("知道了") { flow.saveFailureMessage = nil }
+        } message: { Text(flow.saveFailureMessage ?? "") }
+        .onChange(of: scenePhase) { _, phase in flow.sceneChanged(phase) }
+        .onReceive(flow.camera.$status) { flow.cameraStatusChanged($0) }
+        .onReceive(Timer.publish(every: 1, on: .main, in: .common).autoconnect()) { _ in flow.tick() }
+        .onReceive(NotificationCenter.default.publisher(for: AVCaptureSession.wasInterruptedNotification)) { _ in
+            if flow.needsCamera { flow.interrupt(to: "P0-CAMERA-IN-USE") }
+        }
         .animation(CoachMotion.animation(reduceMotion: reduceMotion), value: flow.currentID)
         .sheet(isPresented: $flow.showsStateCatalog) {
             P0StateCatalogView()
@@ -83,6 +98,7 @@ private struct V3LightPage<Content: View>: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { flow.showsStateCatalog = true } label: { Image(systemName: "square.grid.2x2") }
+                        .hidden()
                         .accessibilityLabel("页面状态目录")
                 }
             }
@@ -109,7 +125,7 @@ private struct V3PageHeading: View {
             Text(screen.userSees.title)
                 .font(CoachTypography.display)
                 .foregroundStyle(dark ? CoachColor.onTraining : CoachColor.textPrimary)
-            Text(screen.userSees.detail)
+            Text(screen.productDetail)
                 .font(CoachTypography.body)
                 .foregroundStyle(dark ? CoachColor.onTrainingMuted : CoachColor.textSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -132,8 +148,9 @@ private struct V3ActionStack: View {
                     kind: destructivePrimary ? .destructive : (dark ? .coaching : .primary),
                     action: flow.performPrimary
                 )
+                .disabled(screen.stateId == "P0-CALIBRATION-RUNNING")
             }
-            if let secondary = screen.secondaryAction {
+            if let secondary = screen.secondaryAction, !secondary.contains("P1"), !(screen.stateId == "P0-HOME" && flow.draft == nil) {
                 CoachButton(
                     title: secondary,
                     kind: secondary.contains("删除") ? .destructive : .secondary,
@@ -142,6 +159,7 @@ private struct V3ActionStack: View {
             }
         }
         .frame(maxWidth: .infinity)
+        .disabled(flow.busy)
     }
 
     private var destructivePrimary: Bool {
@@ -217,11 +235,11 @@ private struct V3LaunchScreen: View {
                     .padding(28)
                     .background(CoachColor.trainingSurface, in: RoundedRectangle(cornerRadius: CoachRadius.extraLarge))
                 Text(screen.userSees.title).font(CoachTypography.display)
-                Text(screen.userSees.detail)
+                Text("离线动作辅助 · 视频不保存")
                     .font(CoachTypography.body)
                     .foregroundStyle(CoachColor.onTrainingMuted)
                     .multilineTextAlignment(.center)
-                ProgressView().tint(CoachColor.mint)
+                Text("实验版本 · 不替代专业教练").font(CoachTypography.caption)
                 Spacer()
                 CoachButton(title: screen.primaryAction ?? "继续", kind: .coaching, action: flow.performPrimary)
             }
@@ -252,7 +270,7 @@ private struct V3HomeScreen: View {
                                 .frame(maxWidth: .infinity, alignment: .trailing)
                                 .padding()
                             VStack(alignment: .leading, spacing: CoachSpacing.xs) {
-                                CoachStatusBadge(title: "端侧识别就绪", tone: .success)
+                                CoachStatusBadge(title: "本机处理", tone: .success)
                                 Text("保加利亚分腿蹲").font(CoachTypography.title)
                                 Text("纯侧面 · 单人 · 视频不保存").font(CoachTypography.caption)
                             }
@@ -267,10 +285,12 @@ private struct V3HomeScreen: View {
                         CoachSectionHeader(title: "本机状态", detail: "数据不会自动上传")
                         CoachCard {
                             VStack(spacing: CoachSpacing.sm) {
+                                if flow.draft != nil {
                                 Button { flow.navigate(to: "P0-DRAFT-RESUME") } label: {
                                     CoachListRow(systemImage: "arrow.uturn.forward", title: "恢复上次训练草稿", detail: "已保留完成的重复")
                                 }.buttonStyle(.plain)
                                 Divider()
+                                }
                                 Button { flow.navigate(to: flow.savedSessionCount == 0 ? "P0-HISTORY-EMPTY" : "P0-HISTORY-SESSIONS") } label: {
                                     CoachListRow(systemImage: "clock", title: "最近训练", detail: "\(flow.savedSessionCount) 个本地会话")
                                 }.buttonStyle(.plain)
@@ -284,6 +304,7 @@ private struct V3HomeScreen: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { flow.showsStateCatalog = true } label: { Image(systemName: "square.grid.2x2") }
+                        .hidden()
                 }
             }
         }
@@ -298,13 +319,13 @@ private struct V3HomeScreen: View {
                     HStack {
                         CoachStatusBadge(title: "等待恢复", tone: .coaching)
                         Spacer()
-                        Text("今天 20:18").font(CoachTypography.caption).foregroundStyle(CoachColor.textSecondary)
+                        Text(flow.draft?.startedAt.formatted(date: .abbreviated, time: .shortened) ?? "无草稿").font(CoachTypography.caption).foregroundStyle(CoachColor.textSecondary)
                     }
                     Text("保加利亚分腿蹲").font(CoachTypography.title)
-                    CoachEvidenceRow(label: "训练腿", value: flow.trainingSide)
-                    CoachEvidenceRow(label: "训练目标", value: flow.trainingGoal)
-                    CoachEvidenceRow(label: "已完成", value: "1 组 · 8 次")
-                    CoachEvidenceRow(label: "校准基线", value: "可继续复用", tone: .success)
+                    CoachEvidenceRow(label: "训练腿", value: flow.draft?.side ?? flow.trainingSide)
+                    CoachEvidenceRow(label: "训练目标", value: flow.draft?.goal ?? flow.trainingGoal)
+                    CoachEvidenceRow(label: "已完成", value: "\(flow.draft?.groups.count ?? 0) 组 · 当前组 \(flow.draft?.active.reps.count ?? 0) 次")
+                    CoachEvidenceRow(label: "校准基线", value: flow.draft?.calibration == nil ? "需要校准" : "恢复前重新检查", tone: .info)
                 }
             }
             CoachBanner(title: "不会自动打开摄像头", message: "恢复前会重新检查权限、机位和画面质量。", tone: .info)
@@ -347,7 +368,7 @@ private struct V3SetupScreen: View {
             Picker("训练腿", selection: $flow.trainingSide) {
                 Text("左腿").tag("左腿")
                 Text("右腿").tag("右腿")
-            }.pickerStyle(.segmented)
+            }.pickerStyle(.segmented).disabled(flow.settingsLocked)
             CoachSectionHeader(title: "本组目标")
             VStack(spacing: CoachSpacing.sm) {
                 ForEach(["一般检查", "偏臀", "偏股四头肌"], id: \.self) { goal in
@@ -363,7 +384,7 @@ private struct V3SetupScreen: View {
                                     .foregroundStyle(CoachColor.mintDark)
                             }
                         }
-                    }.buttonStyle(.plain)
+                    }.buttonStyle(.plain).disabled(flow.settingsLocked)
                 }
             }
         }
@@ -402,20 +423,15 @@ private struct V3CameraGuideScreen: View {
 // MARK: - Camera, calibration and training
 
 private struct V3CameraStage: View {
+    @EnvironmentObject private var flow: P0FlowModel
     var body: some View {
         ZStack {
-            LinearGradient(colors: [Color.black.opacity(0.15), CoachColor.trainingCanvas], startPoint: .top, endPoint: .bottom)
-            VStack(spacing: 0) {
-                Spacer()
-                Image(systemName: "figure.stand")
-                    .font(.system(size: 210, weight: .ultraLight))
-                    .foregroundStyle(CoachColor.onTraining.opacity(0.3))
-                Spacer()
-            }
+            Color.black
+            CameraPreview(session: flow.camera.session)
             RoundedRectangle(cornerRadius: CoachRadius.extraLarge)
                 .stroke(CoachColor.mint.opacity(0.75), style: StrokeStyle(lineWidth: 2, dash: [8, 8]))
                 .padding(.horizontal, 46).padding(.vertical, 118)
-        }
+        }.ignoresSafeArea()
     }
 }
 
@@ -456,17 +472,15 @@ private struct V3CameraScreen: View {
                         Spacer()
                     }.padding(.horizontal, CoachSpacing.xl).foregroundStyle(.white)
                     Spacer()
-                    if screen.stateId == "P0-TRAINING-COACHING" {
-                        CoachLiveCue(message: "下一次稳住躯干", isSpoken: flow.speechEnabled)
-                    } else if screen.stateId == "A11Y-VOICE-OFF-TEXT" {
-                        CoachLiveCue(message: "下一次稳住躯干", isSpoken: false)
+                    if let cue = flow.latestCue {
+                        CoachLiveCue(message: cue, isSpoken: flow.speechEnabled)
                     } else if screen.stateId == "P0-TRAINING-UNCERTAIN" {
                         CoachBanner(title: "暂时无法可靠判断", message: "计数已暂停。调整机位后会自动继续，已完成的重复不会丢失。", tone: .coaching)
                     }
                 }
 
                 VStack(alignment: .leading, spacing: CoachSpacing.sm) {
-                    Text(screen.userSees.title).font(CoachTypography.title)
+                    Text(flow.trackingMessage).font(CoachTypography.title)
                     Text(screen.userSees.detail).font(CoachTypography.body).foregroundStyle(CoachColor.onTrainingMuted)
                     V3ActionStack(screen: screen, dark: true)
                 }
@@ -476,7 +490,7 @@ private struct V3CameraScreen: View {
             }
             .foregroundStyle(CoachColor.onTraining)
         }
-        .dynamicTypeSize(screen.stateId.contains("XXXL") ? .accessibility3 : .large)
+
     }
 
     private var progress: Double {
@@ -586,8 +600,6 @@ private struct V3NoticeScreen: View {
                         safetyRow("手机必须远离器械和行走路径")
                     }
                 }
-            } else {
-                V3StateMeta(screen: screen)
             }
             Spacer(minLength: CoachSpacing.lg)
         }
@@ -624,7 +636,7 @@ private struct V3DarkSystemScreen: View {
                     Spacer()
                     Text("训练已安全暂停").font(CoachTypography.captionStrong).foregroundStyle(CoachColor.onTrainingMuted)
                     Spacer()
-                    CoachIconButton(systemImage: "square.grid.2x2", accessibilityLabel: "页面状态目录", foreground: .white, background: .black.opacity(0.22)) { flow.showsStateCatalog = true }
+                    EmptyView()
                 }
                 Spacer()
                 Image(systemName: screen.symbol)
@@ -633,6 +645,9 @@ private struct V3DarkSystemScreen: View {
                     .frame(width: 96, height: 96)
                     .background(.black.opacity(0.24), in: RoundedRectangle(cornerRadius: CoachRadius.extraLarge))
                 V3PageHeading(screen: screen, eyebrow: screen.group, dark: true)
+                if screen.stateId == "P0-INTERRUPT-FOREGROUND" {
+                    Text(flow.trackingMessage).font(CoachTypography.bodyStrong)
+                }
                 CoachBanner(title: "已完成的重复会保留", message: screen.exceptionRecovery, tone: screen.semanticTone)
                 V3ActionStack(screen: screen, dark: true)
             }
@@ -664,6 +679,7 @@ private struct V3LoadingScreen: View {
 
 private struct V3SheetStateScreen: View {
     let screen: V3ScreenSpec
+    @EnvironmentObject private var flow: P0FlowModel
 
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -676,7 +692,12 @@ private struct V3SheetStateScreen: View {
                 V3PageHeading(screen: screen)
                 CoachBanner(title: "已完成的重复不会自动丢失", message: screen.exceptionRecovery, tone: screen.semanticTone)
                 V3ActionStack(screen: screen)
+                if screen.stateId == "P0-EXIT-MENU" {
+                    CoachButton(title: "保留草稿并返回首页", kind: .secondary) { flow.interrupt(to: "P0-HOME") }
+                    CoachButton(title: "放弃本组", kind: .destructive) { flow.navigate(to: "P0-ABANDON-CONFIRM") }
+                }
             }
+            .disabled(flow.busy)
             .padding(CoachSpacing.xl)
             .background(CoachColor.canvas, in: UnevenRoundedRectangle(topLeadingRadius: 28, topTrailingRadius: 28))
         }
@@ -687,86 +708,81 @@ private struct V3SheetStateScreen: View {
 
 private struct V3SummaryScreen: View {
     let screen: V3ScreenSpec
+    @EnvironmentObject private var flow: P0FlowModel
+    private var types: [IssueType] { [.torsoCollapse, .insufficientDepth, .fastDescent].filter { type in flow.issues.contains { $0.type == type } } }
 
     var body: some View {
         V3LightPage(screen: screen) {
-            VStack(alignment: .leading, spacing: CoachSpacing.sm) {
-                CoachStatusBadge(title: summaryStatus, tone: screen.semanticTone)
-                V3PageHeading(screen: screen, eyebrow: "本机总结")
+            if ["P0-SAVE-SUCCESS", "P0-DELETE-SUCCESS", "P0-SESSION-COMPLETE"].contains(screen.stateId) {
+                Text(screen.stateId == "P0-DELETE-SUCCESS" ? "已从本机删除" : "会话已保存在本机").font(CoachTypography.display)
+                CoachBanner(title: "操作完成", message: screen.stateId == "P0-DELETE-SUCCESS" ? "训练记录已删除，不可撤销。" : "可以从训练历史重新打开各组总结和逐次证据。", tone: .success)
+            } else {
+            Text("本组总结").font(CoachTypography.display)
+            CoachMetricRow(items: [
+                .init(value: "\(flow.summary.reps.count)", label: "有效重复"),
+                .init(value: "\(flow.issues.count)", label: "问题记录", tone: .coaching)
+            ])
+            if flow.summary.reps.isEmpty {
+                CoachBanner(title: "本组没有完整重复", message: "没有足够证据生成动作结论。请检查机位并完成一次完整动作。", tone: .info)
+            } else if types.isEmpty {
+                CoachBanner(title: "未发现达到阈值的问题", message: "这不代表每个动作都正确；遮挡和低质量数据不会被判为动作错误。", tone: .info)
             }
-            CoachCard(elevated: true) {
-                CoachMetricRow(items: [
-                    .init(value: "8", label: "有效重复"),
-                    .init(value: screen.stateId.contains("CLEAN") ? "8" : "6", label: "稳定", tone: .success),
-                    .init(value: screen.stateId.contains("CLEAN") ? "0" : "2", label: "有问题", tone: .coaching)
-                ])
-            }
-            if screen.stateId.contains("ISSUES") || screen.stateId.contains("KEEP-REPS") || screen.stateId.contains("GROUP-DETAIL") {
+            ForEach(types, id: \.rawValue) { type in
                 CoachCard {
                     VStack(alignment: .leading, spacing: CoachSpacing.sm) {
-                        Text("最值得先处理").font(CoachTypography.captionStrong).foregroundStyle(CoachColor.textSecondary)
-                        Label("躯干稳定性不足", systemImage: "exclamationmark.triangle.fill")
-                            .font(CoachTypography.title).foregroundStyle(CoachColor.amber)
-                        Text("第 4、7 次重复达到成立阈值。下一组先保持较小幅度和稳定节奏。")
-                            .font(CoachTypography.body).foregroundStyle(CoachColor.textSecondary)
+                        Text(type.coachTitle).font(CoachTypography.section)
+                        Text("记录 \(flow.issues.filter { $0.type == type }.count) 次").font(CoachTypography.body)
+                        Text(type.coachCue).font(CoachTypography.bodyStrong)
                     }
                 }
-            } else {
-                CoachBanner(title: "动作整体稳定", message: "没有发现达到成立阈值的问题。继续保持当前节奏。", tone: .success)
             }
-            CoachSectionHeader(title: "下一步", detail: "最多三条、可以立刻执行")
-            CoachChecklistRow(title: "稳住躯干", detail: "下降阶段让肩髋相对关系更稳定")
-            CoachChecklistRow(title: "保持节奏", detail: "不要为了追求次数加快下降")
+            CoachSectionHeader(title: "重复与证据", detail: "点开查看实际测量值")
+            ForEach(flow.summary.reps, id: \.id) { rep in
+                Button { flow.openRep(rep) } label: {
+                    CoachCard { CoachListRow(systemImage: "figure.run", title: "第 \(rep.id) 次",
+                        detail: "\(rep.issues.filter { $0.disposition != .suppressed }.count) 条问题记录") }
+                }.buttonStyle(.plain)
+            }
+            if flow.selectedRecord == nil {
+                CoachButton(title: "查看本次会话的所有组", kind: .secondary) { flow.navigate(to: "P0-SESSION-GROUPS") }
+                CoachButton(title: "完成会话并保存") { flow.saveSession() }.disabled(flow.busy)
+            }
+            }
         }
-    }
-
-    private var summaryStatus: String {
-        if screen.stateId.contains("SUCCESS") || screen.stateId.contains("COMPLETE") { return "已完成" }
-        if screen.stateId.contains("CLEAN") { return "本组稳定" }
-        return "需要关注"
     }
 }
 
 private struct V3DetailScreen: View {
     let screen: V3ScreenSpec
-
+    @EnvironmentObject private var flow: P0FlowModel
     var body: some View {
         V3LightPage(screen: screen) {
-            V3PageHeading(screen: screen, eyebrow: screen.stateId == "P0-PRIVACY-LOCAL" ? "隐私" : "证据")
             if screen.stateId == "P0-PRIVACY-LOCAL" {
-                CoachCard(elevated: true) {
-                    VStack(spacing: CoachSpacing.md) {
-                        privacyRow("摄像头画面", "仅用于实时端侧分析", "不保存")
-                        Divider()
-                        privacyRow("结构化训练记录", "重复、问题、提示与证据", "本机保存")
-                        Divider()
-                        privacyRow("网络上传", "核心训练不依赖网络", "无")
+                Text("数据只保存在本机").font(CoachTypography.display)
+                CoachEvidenceRow(label: "摄像头画面", value: "实时处理，不保存")
+                CoachEvidenceRow(label: "训练记录", value: "结构化数据，本机保存")
+                CoachEvidenceRow(label: "网络上传", value: "无")
+            } else if let rep = flow.selectedRep {
+                Text("第 \(rep.id) 次重复").font(CoachTypography.display)
+                CoachEvidenceRow(label: "下降时长", value: "\(rep.descentDurationMs) ms")
+                CoachEvidenceRow(label: "识别引擎", value: rep.engineVersion)
+                ForEach(rep.issues.filter { $0.disposition != .suppressed }) { issue in
+                    CoachCard {
+                        VStack(alignment: .leading, spacing: CoachSpacing.sm) {
+                            Text(issue.type.coachTitle).font(CoachTypography.section)
+                            CoachEvidenceRow(label: "置信度（不是准确率）", value: String(format: "%.0f%%", issue.confidence * 100))
+                            CoachEvidenceRow(label: "阶段", value: issue.phase.rawValue)
+                            ForEach(issue.evidence.keys.sorted(), id: \.self) { key in
+                                CoachEvidenceRow(label: key, value: String(format: "%.3f", issue.evidence[key] ?? 0))
+                            }
+                            Text(issue.type.coachCue).font(CoachTypography.body)
+                        }
                     }
                 }
+                CoachBanner(title: "只展示达到阈值的问题", message: "未展示的问题可能因证据不足被抑制，不代表动作一定正确。", tone: .info)
             } else {
-                CoachCard(elevated: true) {
-                    VStack(alignment: .leading, spacing: CoachSpacing.md) {
-                        HStack { Text("第 4 次重复").font(CoachTypography.title); Spacer(); CoachStatusBadge(title: "问题成立", tone: .coaching) }
-                        CoachEvidenceRow(label: "问题", value: "躯干稳定性不足", tone: .coaching)
-                        CoachEvidenceRow(label: "阶段", value: "下降末段")
-                        CoachEvidenceRow(label: "置信度", value: "91%", tone: .coaching)
-                        CoachEvidenceRow(label: "躯干变化", value: "+18.4°")
-                        CoachEvidenceRow(label: "规则版本", value: "bss-0.1.0")
-                    }
-                }
-                CoachBanner(title: "证据可以追溯", message: "只展示达到成立阈值的问题；不确定帧不会写成动作错误。", tone: .info)
+                CoachEmptyState(systemImage: "doc.text", title: "没有重复证据", message: "完成训练后选择具体重复查看。")
             }
-        }
-    }
-
-    private func privacyRow(_ title: String, _ detail: String, _ status: String) -> some View {
-        HStack(alignment: .top) {
-            VStack(alignment: .leading, spacing: CoachSpacing.xxs) {
-                Text(title).font(CoachTypography.bodyStrong)
-                Text(detail).font(CoachTypography.caption).foregroundStyle(CoachColor.textSecondary)
-            }
-            Spacer()
-            CoachStatusBadge(title: status, tone: status == "无" || status == "不保存" ? .success : .neutral)
         }
     }
 }
@@ -774,87 +790,33 @@ private struct V3DetailScreen: View {
 private struct V3HistoryScreen: View {
     let screen: V3ScreenSpec
     @EnvironmentObject private var flow: P0FlowModel
-
+    private var listing: Bool { ["P0-HISTORY-EMPTY", "P0-HISTORY-SESSIONS"].contains(screen.stateId) }
     var body: some View {
-        NavigationStack {
-            VStack(spacing: 0) {
-                CoachScreen {
-                    VStack(alignment: .leading, spacing: CoachSpacing.xl) {
-                        V3PageHeading(screen: screen, eyebrow: "仅保存在本机")
-                        if screen.stateId == "P0-HISTORY-EMPTY" || flow.savedSessionCount == 0 {
-                            CoachCard { CoachEmptyState(systemImage: "clock", title: "还没有训练会话", message: "完成并保存第一组训练后，会话会出现在这里。") }
-                        } else if screen.stateId == "P0-SESSION-GROUPS" {
-                            currentSessionGroups
-                        } else if screen.stateId.contains("DETAIL") {
-                            sessionDetail
-                        } else {
-                            ForEach(0..<flow.savedSessionCount, id: \.self) { index in
-                                Button { flow.navigate(to: "P0-HISTORY-SESSION-DETAIL") } label: {
-                                    CoachCard {
-                                        CoachListRow(
-                                            systemImage: "figure.strengthtraining.traditional",
-                                            title: "保加利亚分腿蹲",
-                                            detail: index == 0 ? "今天 20:18 · 2 组 · 16 次" : "8 月 30 日 · 1 组 · 8 次"
-                                        )
-                                    }
-                                }.buttonStyle(.plain)
-                            }
-                        }
-                        V3ActionStack(screen: screen)
-                    }
+        V3LightPage(screen: screen) {
+            Text(listing ? "训练历史" : "会话训练组").font(CoachTypography.display)
+            if listing {
+                if flow.records.isEmpty {
+                    CoachEmptyState(systemImage: "clock", title: "还没有训练会话", message: "完成并保存训练后，会话会出现在这里。")
                 }
-                if isTopLevel { V3TabBar() }
-            }
-            .navigationTitle("训练历史")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                if !isTopLevel {
-                    ToolbarItem(placement: .topBarLeading) {
-                        Button(action: flow.goBack) { Image(systemName: "chevron.left") }
-                    }
+                ForEach(flow.records, id: \.id) { record in
+                    Button { flow.openRecord(record) } label: {
+                        CoachCard { CoachListRow(systemImage: "figure.run", title: "保加利亚分腿蹲",
+                            detail: "\(record.startedAt.formatted(date: .abbreviated, time: .shortened)) · \(record.repCount) 次") }
+                    }.buttonStyle(.plain)
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button { flow.showsStateCatalog = true } label: { Image(systemName: "square.grid.2x2") }
+                V3TabBar()
+            } else {
+                ForEach(Array(flow.groups.enumerated()), id: \.offset) { index, group in
+                    Button { flow.openGroup(index) } label: {
+                        CoachCard { CoachListRow(systemImage: "list.number", title: "第 \(index + 1) 组",
+                            detail: "\(group.reps.count) 次 · \(group.reps.flatMap(\.issues).filter { $0.disposition != .suppressed }.count) 条问题") }
+                    }.buttonStyle(.plain)
+                }
+                if flow.groups.isEmpty { Text("还没有完成的训练组") }
+                if flow.selectedRecord == nil {
+                    CoachButton(title: "完成会话并保存") { flow.saveSession() }.disabled(flow.busy)
                 }
             }
-        }.tint(CoachColor.mintDark)
-    }
-
-    private var isTopLevel: Bool {
-        screen.stateId == "P0-HISTORY-EMPTY" || screen.stateId == "P0-HISTORY-SESSIONS"
-    }
-
-    private var sessionDetail: some View {
-        VStack(spacing: CoachSpacing.md) {
-            CoachCard(elevated: true) {
-                CoachMetricRow(items: [
-                    .init(value: "2", label: "训练组"),
-                    .init(value: "16", label: "有效重复"),
-                    .init(value: "3", label: "成立问题", tone: .coaching)
-                ])
-            }
-            Button { flow.navigate(to: "P0-HISTORY-GROUP-DETAIL") } label: {
-                CoachCard { CoachListRow(systemImage: "1.circle.fill", title: "第 1 组", detail: "8 次 · 躯干稳定性 2 次") }
-            }.buttonStyle(.plain)
-            Button { flow.navigate(to: "P0-HISTORY-GROUP-DETAIL") } label: {
-                CoachCard { CoachListRow(systemImage: "2.circle.fill", title: "第 2 组", detail: "8 次 · 深度不足 1 次") }
-            }.buttonStyle(.plain)
-        }
-    }
-
-    private var currentSessionGroups: some View {
-        VStack(spacing: CoachSpacing.md) {
-            CoachCard {
-                VStack(alignment: .leading, spacing: CoachSpacing.sm) {
-                    Text("会话设置").font(CoachTypography.section)
-                    CoachEvidenceRow(label: "动作", value: "保加利亚分腿蹲")
-                    CoachEvidenceRow(label: "训练腿", value: flow.trainingSide)
-                    CoachEvidenceRow(label: "训练目标", value: flow.trainingGoal)
-                    CoachEvidenceRow(label: "校准基线", value: "已建立", tone: .success)
-                }
-            }
-            CoachCard { CoachListRow(systemImage: "1.circle.fill", title: "第 1 组 · 已完成", detail: "8 次 · 2 个成立问题") }
-            CoachCard { CoachListRow(systemImage: "2.circle", title: "第 2 组 · 待开始", detail: "沿用当前会话设置") }
         }
     }
 }
@@ -917,6 +879,7 @@ private struct V3SettingsScreen: View {
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button { flow.showsStateCatalog = true } label: { Image(systemName: "square.grid.2x2") }
+                        .hidden()
                 }
             }
         }.tint(CoachColor.mintDark)

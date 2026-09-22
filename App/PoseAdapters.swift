@@ -24,7 +24,10 @@ final class AppleVisionPosePerception: LivePosePerception {
             let request = VNDetectHumanBodyPoseRequest()
             let handler = VNImageRequestHandler(cmSampleBuffer: buffer.value, orientation: orientation)
             try handler.perform([request])
-            guard let observation = request.results?.first else { return nil }
+            // Do not silently pick one person when someone else enters the frame.
+            guard let results = request.results, results.count == 1, let observation = results.first else {
+                return PoseObservation(timestampMs: timestampMs, landmarks: [:], engineVersion: self.engineVersion)
+            }
             let map: [(LandmarkID, VNHumanBodyPoseObservation.JointName)] = [
                 (.nose, .nose), (.leftShoulder, .leftShoulder), (.rightShoulder, .rightShoulder),
                 (.leftHip, .leftHip), (.rightHip, .rightHip), (.leftKnee, .leftKnee),

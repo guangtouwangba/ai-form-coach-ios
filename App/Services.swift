@@ -3,22 +3,19 @@ import Foundation
 import SwiftData
 import FormCoachCore
 
-final class SpeechService: NSObject, AVSpeechSynthesizerDelegate {
+final class SpeechService {
     private let synthesizer = AVSpeechSynthesizer()
-
-    override init() {
-        super.init()
-        synthesizer.delegate = self
-    }
 
     func speak(_ text: String) {
         guard !text.isEmpty else { return }
         if synthesizer.isSpeaking { synthesizer.stopSpeaking(at: .immediate) }
         let utterance = AVSpeechUtterance(string: text)
-        utterance.voice = AVSpeechSynthesisVoice(language: Locale.current.language.languageCode?.identifier == "zh" ? "zh-CN" : "en-US")
+        utterance.voice = AVSpeechSynthesisVoice(language: "zh-CN")
         utterance.rate = 0.48
         synthesizer.speak(utterance)
     }
+
+    func stop() { synthesizer.stopSpeaking(at: .immediate) }
 }
 
 @Model
@@ -33,6 +30,7 @@ final class StoredWorkoutSession {
     var issueCount: Int
     var summaryJSON: Data
     var mediaRelativePath: String?
+    var groupsJSON: Data? = nil
 
     init(summary: WorkoutSummary, config: SessionConfig, startedAt: Date = .now, endedAt: Date = .now, mediaRelativePath: String? = nil) throws {
         self.id = UUID()

@@ -14,6 +14,20 @@ public actor WorkoutSessionEngine {
 
     public init() {}
 
+    public func interrupt() {
+        activeRep = nil
+        phase = .ready
+        preprocessor.reset()
+        paused = true
+    }
+
+    public func restore(config: SessionConfig, calibration: CalibrationProfile, summary: WorkoutSummary) {
+        start(config: config, calibration: calibration)
+        reps = summary.reps
+        suppressedIssueCount = summary.suppressedIssueCount
+        feedbackEvents = summary.feedbackEvents
+    }
+
     public func start(config: SessionConfig, calibration: CalibrationProfile) {
         self.config = config
         self.calibration = calibration
@@ -31,6 +45,8 @@ public actor WorkoutSessionEngine {
         guard let config, let calibration else { return [.analysisPaused("session_not_started")] }
         guard let frame = preprocessor.process(observation, config: config, calibration: calibration) else {
             if !paused {
+                activeRep = nil
+                preprocessor.reset()
                 paused = true
                 phase = .invalid
                 return [.analysisPaused("required_landmarks_unavailable"), .phaseChanged(.invalid)]
@@ -74,7 +90,7 @@ public actor WorkoutSessionEngine {
             }
             activeRep = nil
         case .ready, .invalid:
-            break
+            activeRep = nil
         }
         return events
     }
@@ -93,6 +109,7 @@ public actor WorkoutSessionEngine {
             // required here because smoothing can keep a small negative value
             // for several frames after the athlete reaches the bottom.
             if frame.hipDrop >= calibration.targetDepth * 0.90 { return .bottom }
+            if isTop && frame.verticalVelocity > 0.04 { return .ready }
             return .descending
         case .bottom:
             return frame.verticalVelocity > 0.04 ? .ascending : .bottom
@@ -159,7 +176,6 @@ public actor WorkoutSessionEngine {
     }
 
     private func chooseFeedback(from issues: [IssueEvent], at timestampMs: Int, config: SessionConfig) -> FeedbackEvent? {
-        guard config.speechEnabled else { return nil }
         let priority: [IssueType] = [.torsoCollapse, .insufficientDepth, .fastDescent]
         for type in priority {
             guard let issue = issues.first(where: { $0.type == type && $0.disposition == .spoken }) else { continue }

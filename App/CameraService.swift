@@ -22,6 +22,7 @@ final class CameraService: NSObject, ObservableObject, AVCaptureVideoDataOutputS
     private let stateLock = NSLock()
     private var isProcessingFrame = false
     private var isConfigured = false
+    private var requestGeneration = 0
     private let perception: LivePosePerception
 
     override init() {
@@ -34,20 +35,39 @@ final class CameraService: NSObject, ObservableObject, AVCaptureVideoDataOutputS
     }
 
     func start() {
+        stateLock.lock()
+        requestGeneration += 1
+        let ticket = requestGeneration
+        stateLock.unlock()
         Task { @MainActor in
             status = .requestingPermission
             let granted = await AVCaptureDevice.requestAccess(for: .video)
+            guard isCurrent(ticket) else { return }
             guard granted else {
                 status = .denied
                 return
             }
-            captureQueue.async { [weak self] in self?.configureAndRun() }
+            captureQueue.async { [weak self] in
+                guard let self, self.isCurrent(ticket) else { return }
+                self.configureAndRun()
+            }
         }
     }
 
     func stop() {
+        stateLock.lock(); requestGeneration += 1; stateLock.unlock()
         captureQueue.async { [weak self] in self?.session.stopRunning() }
         DispatchQueue.main.async { [weak self] in self?.status = .idle }
+    }
+
+    private func isCurrent(_ ticket: Int) -> Bool {
+        stateLock.lock(); defer { stateLock.unlock() }
+        return ticket == requestGeneration
+    }
+
+    private func finishProcessing() {
+        stateLock.lock(); defer { stateLock.unlock() }
+        isProcessingFrame = false
     }
 
     private func configureAndRun() {
@@ -100,13 +120,9 @@ final class CameraService: NSObject, ObservableObject, AVCaptureVideoDataOutputS
         let buffer = SendableSampleBuffer(sampleBuffer)
         Task { [weak self] in
             guard let self else { return }
-            defer {
-                stateLock.lock()
-                isProcessingFrame = false
-                stateLock.unlock()
-            }
+            defer { finishProcessing() }
             do {
-                if let observation = try await perception.process(buffer.value, orientation: .right, timestampMs: timestampMs) {
+                if let observation = try await perception.process(buffer.value, orientation: .up, timestampMs: timestampMs) {
                     await self.observationHandler?(observation)
                 }
             } catch {

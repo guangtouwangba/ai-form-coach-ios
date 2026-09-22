@@ -26,4 +26,14 @@ if command -v xcodebuild >/dev/null 2>&1; then
     build
 fi
 
+# Run the hosted integration suite on an explicitly selected simulator.
+# Example: COACH_TEST_SIMULATOR=<device UUID> ./Scripts/verify.sh
+if [[ -n "${COACH_TEST_SIMULATOR:-}" ]]; then
+  xcodebuild \
+    -project AIFormCoach.xcodeproj \
+    -scheme AIFormCoach-Integration \
+    -destination "platform=iOS Simulator,id=$COACH_TEST_SIMULATOR" \
+    CODE_SIGNING_ALLOWED=NO ONLY_ACTIVE_ARCH=YES ARCHS=arm64 test
+fi
+
 echo "Verification passed."

@@ -2,6 +2,43 @@ import XCTest
 @testable import FormCoachCore
 
 final class WorkoutSessionEngineTests: XCTestCase {
+    func testInterruptedRepIsNotStitchedAcrossResume() async {
+        let engine = WorkoutSessionEngine()
+        await engine.start(config: SessionConfig(), calibration: FixtureFactory.calibration)
+        let frames = FixtureFactory.validRep()
+        for pose in frames.prefix(5) { _ = await engine.ingest(pose) }
+        await engine.interrupt()
+        for pose in frames.suffix(3) { _ = await engine.ingest(pose) }
+        let interrupted = await engine.finish()
+        XCTAssertEqual(interrupted.reps.count, 0)
+        for pose in FixtureFactory.validRep(start: 3000) { _ = await engine.ingest(pose) }
+        let resumed = await engine.finish()
+        XCTAssertEqual(resumed.reps.count, 1)
+    }
+
+    func testRestoreRetainsCompletedRepsAndContinuesNumbering() async throws {
+        let engine = WorkoutSessionEngine()
+        await engine.start(config: SessionConfig(), calibration: FixtureFactory.calibration)
+        for pose in FixtureFactory.validRep(trunkAtBottom: 38) { _ = await engine.ingest(pose) }
+        let saved = await engine.finish()
+        let restored = WorkoutSessionEngine()
+        let decoded = try JSONDecoder().decode(WorkoutSummary.self, from: JSONEncoder().encode(saved))
+        await restored.restore(config: SessionConfig(), calibration: FixtureFactory.calibration, summary: decoded)
+        for pose in FixtureFactory.validRep(start: 5000) { _ = await restored.ingest(pose) }
+        let result = await restored.finish()
+        XCTAssertEqual(result.reps.map(\.id), [1, 2])
+        XCTAssertEqual(result.reps.first, saved.reps.first)
+        XCTAssertEqual(result.feedbackEvents.prefix(saved.feedbackEvents.count), saved.feedbackEvents[...])
+    }
+
+    func testMutedTrainingStillProducesEquivalentTextFeedback() async {
+        let engine = WorkoutSessionEngine()
+        await engine.start(config: SessionConfig(speechEnabled: false, spokenThreshold: 0.80), calibration: FixtureFactory.calibration)
+        for pose in FixtureFactory.validRep(trunkAtBottom: 38) { _ = await engine.ingest(pose) }
+        let result = await engine.finish()
+        XCTAssertFalse(result.feedbackEvents.isEmpty)
+    }
+
     func testCompleteSequenceCountsExactlyOneRep() async {
         let engine = WorkoutSessionEngine()
         await engine.start(config: SessionConfig(), calibration: FixtureFactory.calibration)
