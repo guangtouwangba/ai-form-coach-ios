@@ -52,6 +52,10 @@ MediaPipe 已通过 Xcode 的官方 Swift Package 接入，无需 CocoaPods 或�
 
 详见 [实现与测试计划](Docs/IMPLEMENTATION_AND_TEST_PLAN.md) 和 [依赖审计](Docs/DEPENDENCY_AUDIT.md)。
 
+## 后续功能提案
+
+- [手机摄像头杠铃测速与 VBT 分析](Docs/Proposals/BARBELL_VBT.md)：通过实际杠铃片直径标定、视频追踪和时间戳计算杠铃速度，规划逐次分析、速度损失和训练对比。当前仅为功能构思，未实现、未验证精度，不属于现有 P0 能力。
+
 ## 开源协作
 
 项目代码采用 [MIT License](LICENSE)。随仓库分发的 MediaPipe 模型保留其
