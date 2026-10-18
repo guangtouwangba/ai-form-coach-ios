@@ -1,0 +1,274 @@
+{
+  "cases": [
+    {
+      "id": "office-01",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-04",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-07",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-10",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-13",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms2.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-16",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_fast1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-02",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr2.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-03",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr3.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-05",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high2.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-06",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high3.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-08",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low2.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-09",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low3.avi",
+      "times": [
+        0.18,
+        0.99,
+        1.8,
+        2.61,
+        3.42,
+        4.23
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-11",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt2.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-12",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt3.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-14",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms3.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-15",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms5.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-17",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_fast2.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    },
+    {
+      "id": "office-18",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_fast3.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees / stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "maxPixels": 262144
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "endFootprintBytes" : 2072218336,
+  "extractSeconds" : 0.18078398704528809,
+  "firstChunkSeconds" : 0.66506695747375488,
+  "frames" : [
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/caption-real\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 0.7845768928527832,
+  "generation" : {
+    "generationSeconds" : 0.11876499652862549,
+    "outputTokens" : 8,
+    "promptSeconds" : 0.66465508937835693,
+    "promptTokens" : 289,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 67.359914400972428
+  },
+  "id" : "caption-real",
+  "inputTokens" : 289,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1788143880,
+    "cacheBytes" : 59305128,
+    "peakActiveBytes" : 2785970566
+  },
+  "peakFootprintBytes" : 3009563336,
+  "prepareSeconds" : 0.025683045387268066,
+  "prompt" : "用一句中文具体描述图片里的人正在做什么，不要评价标准与否。",
+  "rawOutput" : "一位女士正在做深蹲动作。",
+  "success" : true,
+  "totalSeconds" : 0.99225497245788574,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 252
+}

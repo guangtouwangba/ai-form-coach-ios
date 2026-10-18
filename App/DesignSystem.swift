@@ -161,6 +161,7 @@ enum CoachButtonKind {
     case coaching
     case destructive
     case ghost
+    case trainingSecondary
 }
 
 struct CoachButtonStyle: ButtonStyle {
@@ -191,6 +192,7 @@ struct CoachButtonStyle: ButtonStyle {
         case .secondary, .ghost: CoachColor.textPrimary
         case .coaching: CoachColor.textPrimary
         case .destructive: CoachColor.danger
+        case .trainingSecondary: .white
         }
     }
 
@@ -201,6 +203,7 @@ struct CoachButtonStyle: ButtonStyle {
         case .coaching: CoachColor.amber
         case .destructive: CoachColor.dangerSoft
         case .ghost: .clear
+        case .trainingSecondary: .white.opacity(0.10)
         }
     }
 
@@ -210,6 +213,7 @@ struct CoachButtonStyle: ButtonStyle {
         case .secondary, .ghost: CoachColor.border
         case .coaching: CoachColor.amber
         case .destructive: CoachColor.danger.opacity(0.45)
+        case .trainingSecondary: .white.opacity(0.28)
         }
     }
 }
@@ -288,6 +292,99 @@ struct CoachSectionHeader: View {
     }
 }
 
+/// A scalable pictogram whose rear foot rests on a bench.
+struct CoachSplitSquatIcon: View {
+    var tint: Color = CoachColor.mintDark
+
+    var body: some View {
+        Canvas { context, size in
+            let scale = min(size.width, size.height) / 100
+            context.translateBy(x: (size.width - 100 * scale) / 2, y: (size.height - 100 * scale) / 2)
+            context.scaleBy(x: scale, y: scale)
+
+            // The elevated rear foot and bench distinguish this from a lunge or deadlift.
+            var bench = Path()
+            bench.move(to: CGPoint(x: 76, y: 63))
+            bench.addLine(to: CGPoint(x: 95, y: 63))
+            bench.move(to: CGPoint(x: 80, y: 63))
+            bench.addLine(to: CGPoint(x: 80, y: 88))
+            bench.move(to: CGPoint(x: 92, y: 63))
+            bench.addLine(to: CGPoint(x: 92, y: 88))
+            bench.move(to: CGPoint(x: 76, y: 89))
+            bench.addLine(to: CGPoint(x: 96, y: 89))
+            context.stroke(bench, with: .color(tint), style: StrokeStyle(lineWidth: 3.5, lineCap: .round, lineJoin: .round))
+
+            context.fill(Path(ellipseIn: CGRect(x: 25, y: 6, width: 14, height: 14)), with: .color(tint))
+            var torso = Path()
+            torso.move(to: CGPoint(x: 35, y: 29))
+            torso.addLine(to: CGPoint(x: 44, y: 53))
+            context.stroke(torso, with: .color(tint), style: StrokeStyle(lineWidth: 9, lineCap: .round))
+
+            var legs = Path()
+            legs.move(to: CGPoint(x: 44, y: 53))
+            legs.addLine(to: CGPoint(x: 23, y: 59))
+            legs.addLine(to: CGPoint(x: 23, y: 86))
+            legs.addLine(to: CGPoint(x: 13, y: 86))
+            legs.move(to: CGPoint(x: 44, y: 53))
+            legs.addLine(to: CGPoint(x: 59, y: 77))
+            legs.addLine(to: CGPoint(x: 79, y: 59))
+            legs.addLine(to: CGPoint(x: 87, y: 60))
+            context.stroke(legs, with: .color(tint), style: StrokeStyle(lineWidth: 6.5, lineCap: .round, lineJoin: .round))
+
+            var arm = Path()
+            arm.move(to: CGPoint(x: 36, y: 30))
+            arm.addLine(to: CGPoint(x: 51, y: 37))
+            arm.addLine(to: CGPoint(x: 43, y: 47))
+            context.stroke(arm, with: .color(tint), style: StrokeStyle(lineWidth: 4.5, lineCap: .round, lineJoin: .round))
+        }
+        .aspectRatio(1, contentMode: .fit)
+        .accessibilityHidden(true)
+    }
+}
+
+struct CoachSquatIcon: View {
+    var tint: Color = CoachColor.mintDark
+    var body: some View {
+        Canvas { context, size in
+            let unit = min(size.width, size.height) / 100
+            context.translateBy(x: (size.width - 100 * unit) / 2, y: (size.height - 100 * unit) / 2)
+            context.scaleBy(x: unit, y: unit)
+            context.fill(Path(ellipseIn: CGRect(x: 28, y: 6, width: 14, height: 14)), with: .color(tint))
+            var torso = Path(); torso.move(to: CGPoint(x: 43, y: 29)); torso.addLine(to: CGPoint(x: 61, y: 48))
+            context.stroke(torso, with: .color(tint), style: StrokeStyle(lineWidth: 9, lineCap: .round))
+            var leg = Path(); leg.move(to: CGPoint(x: 61, y: 48)); leg.addLine(to: CGPoint(x: 30, y: 60)); leg.addLine(to: CGPoint(x: 43, y: 87)); leg.addLine(to: CGPoint(x: 27, y: 87))
+            context.stroke(leg, with: .color(tint), style: StrokeStyle(lineWidth: 7, lineCap: .round, lineJoin: .round))
+            var arm = Path(); arm.move(to: CGPoint(x: 43, y: 30)); arm.addLine(to: CGPoint(x: 24, y: 39)); arm.addLine(to: CGPoint(x: 9, y: 33))
+            context.stroke(arm, with: .color(tint), style: StrokeStyle(lineWidth: 5, lineCap: .round, lineJoin: .round))
+        }.aspectRatio(1, contentMode: .fit).accessibilityHidden(true)
+    }
+}
+
+struct CoachExerciseRow: View {
+    var exerciseID: String = "bodyweight_squat"
+    let detail: String
+
+    var body: some View {
+        HStack(spacing: CoachSpacing.sm) {
+            Group {
+                if exerciseID == "bodyweight_squat" { CoachSquatIcon() }
+                else { CoachSplitSquatIcon() }
+            }
+                .frame(width: 28, height: 28)
+                .padding(4)
+                .background(CoachColor.mintSoft, in: RoundedRectangle(cornerRadius: CoachRadius.small))
+            VStack(alignment: .leading, spacing: CoachSpacing.xxs) {
+                Text(exerciseID == "bodyweight_squat" ? "徒手深蹲" : "保加利亚分腿蹲").font(CoachTypography.bodyStrong).foregroundStyle(CoachColor.textPrimary)
+                Text(detail).font(CoachTypography.caption).foregroundStyle(CoachColor.textSecondary)
+            }
+            Spacer(minLength: CoachSpacing.xs)
+            Image(systemName: "chevron.right").foregroundStyle(CoachColor.textSecondary)
+        }
+        .padding(.vertical, CoachSpacing.xs)
+        .contentShape(Rectangle())
+    }
+}
+
 struct CoachListRow<Trailing: View>: View {
     let systemImage: String
     let title: String
@@ -361,7 +458,7 @@ struct CoachBanner: View {
                 .foregroundStyle(tone.foreground)
                 .accessibilityHidden(true)
             VStack(alignment: .leading, spacing: CoachSpacing.xxs) {
-                Text(title).font(CoachTypography.bodyStrong)
+                Text(title).font(CoachTypography.bodyStrong).foregroundStyle(CoachColor.textPrimary)
                 Text(message).font(CoachTypography.caption).foregroundStyle(CoachColor.textSecondary)
             }
             Spacer()

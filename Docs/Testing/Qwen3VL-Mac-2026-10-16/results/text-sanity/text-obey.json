@@ -1,0 +1,41 @@
+{
+  "decodedPromptTail" : "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n请只输出一个英文单词 correct，不要添加其他内容。<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2014185632,
+  "extractSeconds" : 0.0011800527572631836,
+  "firstChunkSeconds" : 0.64676499366760254,
+  "frames" : [
+
+  ],
+  "generateWallSeconds" : 0.66340899467468262,
+  "generation" : {
+    "generationSeconds" : 0.016057014465332031,
+    "outputTokens" : 1,
+    "promptSeconds" : 0.64631295204162598,
+    "promptTokens" : 32,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 62.278078042406605
+  },
+  "id" : "text-obey",
+  "inputTokens" : 32,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 16,
+  "mlx" : {
+    "activeBytes" : 1781949664,
+    "cacheBytes" : 29913760,
+    "peakActiveBytes" : 1880592280
+  },
+  "peakFootprintBytes" : 2048313504,
+  "prefillChunking" : "balanced",
+  "prepareSeconds" : 0.0077040195465087891,
+  "prompt" : "请只输出一个英文单词 correct，不要添加其他内容。",
+  "rawOutput" : "correct",
+  "success" : true,
+  "totalSeconds" : 0.67588901519775391,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+
+  ],
+  "visualTokens" : 0
+}

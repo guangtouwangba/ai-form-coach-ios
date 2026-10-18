@@ -1,0 +1,60 @@
+{
+  "id": "blank-control",
+  "text": "```json\n{\n  \"motion\": \"squat\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"uncertain\",\n  \"explanation\": \"在F4帧中，人物的膝盖位置处于蹲下状态，表明动作处于蹲下阶段。\"\n}\n```",
+  "seconds": 1.5119346669962397,
+  "mlxPeakBytes": 3294492348,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      1772
+    ],
+    "input_ids": [
+      1,
+      1772
+    ],
+    "pixel_values": [
+      6048,
+      1536
+    ],
+    "image_grid_thw": [
+      6,
+      3
+    ]
+  },
+  "imageGridTHW": [
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ]
+  ],
+  "promptTail": " evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "promptTokens": 1772,
+  "outputTokens": 70,
+  "scope": "Python MLX-VLM 0.3.4 using identical saved PNG files and pinned quantized weights; not phone timing"
+}

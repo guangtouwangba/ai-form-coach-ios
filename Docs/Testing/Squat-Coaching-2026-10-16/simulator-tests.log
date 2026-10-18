@@ -1,0 +1,1136 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/coach-quality-build/Build/Products/Quality.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB" -resultBundlePath /tmp/coach-quality-integration-verified.xcresult -test-timeouts-enabled YES -default-test-execution-time-allowance 120
+
+2026-10-16 11:00:10.354 xcodebuild[61092:3547215] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Writing result bundle at path:
+	/tmp/coach-quality-integration-verified.xcresult
+
+2026-10-16 11:00:10.356 xcodebuild[61092:3547215] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-16 11:00:10.516 xcodebuild[61092:3547215] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+IOSurfaceClientSetSurfaceNotify failed e00002c7
+Test Suite 'All tests' started at 2026-10-16 11:00:12.496.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-16 11:00:12.497.
+Test Suite 'AppIntegrationTests' started at 2026-10-16 11:00:12.497.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testBackFromDiscardConfirmationNeverDiscardsGroup]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testBackFromDiscardConfirmationNeverDiscardsGroup]' passed (0.082 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationAndTrainingKeepTheSamePreview]' started.
+2026-10-16 11:00:12.602246+0800 AIFormCoach[61102:3547619] [] <<<< FigCaptureSessionSimulator >>>> signalled err=-12782 at <>:297
+objc[61102]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x1296f4310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x1292c4398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationAndTrainingKeepTheSamePreview]' passed (0.696 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationInterruptionKeepsControlsAvailable]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationInterruptionKeepsControlsAvailable]' passed (0.071 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationProgressRequiresThreeObservedMovements]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationProgressRequiresThreeObservedMovements]' passed (0.073 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testChangingPoseEngineResetsStandingWithoutStartingCamera]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testChangingPoseEngineResetsStandingWithoutStartingCamera]' passed (0.075 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDiagnosticTraceIsRelativeAndStopsCollecting]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDiagnosticTraceIsRelativeAndStopsCollecting]' passed (0.067 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftReloadRestoresCompletedRepsWithoutCountingPartialRep]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftReloadRestoresCompletedRepsWithoutCountingPartialRep]' passed (0.070 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftWriteFailureRetainsDraftAndDoesNotClaimSuccess]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftWriteFailureRetainsDraftAndDoesNotClaimSuccess]' passed (0.081 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:64: -[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview] : Test skipped - Interactive review is opt-in; not part of automated regression
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' skipped (0.074 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLandmarkReplayCountsAndRejectsNonMonotonicTimestamps]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLandmarkReplayCountsAndRejectsNonMonotonicTimestamps]' passed (0.074 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLiveInputToTwoGroupsSaveReloadAndDelete]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLiveInputToTwoGroupsSaveReloadAndDelete]' passed (0.097 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMacMediaPipeExportAndSimulatorCoreParity]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMacMediaPipeExportAndSimulatorCoreParity]' passed (0.105 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeActualVideoReplayAndModelSelection]' started.
+2026-10-16 11:00:14.115004+0800 AIFormCoach[61102:3547622] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119614.163490 3547618 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+2026-10-16 11:00:14.163924+0800 AIFormCoach[61102:3547781] Initialized TensorFlow Lite runtime.
+INFO: Initialized TensorFlow Lite runtime.
+2026-10-16 11:00:14.165715+0800 AIFormCoach[61102:3547781] Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792119614.197323 3547781 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119614.204174 3547792 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119614.220429 3547794 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+MEDIAPIPE_REAL_VIDEO {
+  "count" : 5,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "standing-then-five-squats-hd.mp4",
+  "firstStandingMs" : 2000,
+  "frames" : 630,
+  "inferenceP50Ms" : 14.926,
+  "inferenceP95Ms" : 15.777875,
+  "maximumFrameGapMs" : 34,
+  "rejectionCounts" : {
+    "waitingForTop" : 49
+  },
+  "reps" : [
+    {
+      "descentDurationMs" : 1300,
+      "endMs" : 5733,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 1,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7263518408768149,
+      "maximumTrunkDelta" : 44.085911072389855,
+      "startMs" : 3733
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 9133,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 2,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7294928910235742,
+      "maximumTrunkDelta" : 44.3471793426413,
+      "startMs" : 7233
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 12533,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 3,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.727216801208256,
+      "maximumTrunkDelta" : 43.94843988665128,
+      "startMs" : 10633
+    },
+    {
+      "descentDurationMs" : 1233,
+      "endMs" : 15933,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 4,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7271531089747695,
+      "maximumTrunkDelta" : 44.10768105197145,
+      "startMs" : 14033
+    },
+    {
+      "descentDurationMs" : 1300,
+      "endMs" : 19333,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 5,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7257145885303774,
+      "maximumTrunkDelta" : 44.44443657372775,
+      "startMs" : 17333
+    }
+  ],
+  "squatAnalysis" : {
+    "algorithmVersion" : "squat-observation-1.0",
+    "attempts" : [
+      {
+        "ascentDurationMs" : 767,
+        "assessments" : [
+          {
+            "evidenceMs" : 5966,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 5033,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7263518408768149,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 5033,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "下降用时 1.4 秒，短于所选 2.0 秒目标；下一次放慢下降",
+            "status" : "outsideTarget",
+            "targetValue" : 2000
+          }
+        ],
+        "bottomMs" : 5033,
+        "countedRepID" : 1,
+        "coverage" : {
+          "ascentFrames" : 28,
+          "bottomFrames" : 12,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 5966,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "E5F7F10E-4419-4223-9AA9-D6AAE38AED91",
+        "maximumHipDrop" : 0.7263518408768149,
+        "minimumProjectedKneeAngle" : 76.2150487620082,
+        "startMs" : 3666,
+        "target" : {
+          "minimumDescentMs" : 2000
+        }
+      },
+      {
+        "ascentDurationMs" : 800,
+        "assessments" : [
+          {
+            "evidenceMs" : 9366,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 8400,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7294928910235742,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 8400,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "下降用时 1.4 秒，短于所选 2.0 秒目标；下一次放慢下降",
+            "status" : "outsideTarget",
+            "targetValue" : 2000
+          }
+        ],
+        "bottomMs" : 8400,
+        "countedRepID" : 2,
+        "coverage" : {
+          "ascentFrames" : 29,
+          "bottomFrames" : 9,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 71,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 9366,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "3BCFB803-8D15-46E9-B9D8-3118C8CF323D",
+        "maximumHipDrop" : 0.7294928910235742,
+        "minimumProjectedKneeAngle" : 76.1221997299857,
+        "startMs" : 7033,
+        "target" : {
+          "minimumDescentMs" : 2000
+        }
+      },
+      {
+        "ascentDurationMs" : 700,
+        "assessments" : [
+          {
+            "evidenceMs" : 12700,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 11833,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.727216801208256,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 11833,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "下降用时 1.4 秒，短于所选 2.0 秒目标；下一次放慢下降",
+            "status" : "outsideTarget",
+            "targetValue" : 2000
+          }
+        ],
+        "bottomMs" : 11833,
+        "countedRepID" : 3,
+        "coverage" : {
+          "ascentFrames" : 26,
+          "bottomFrames" : 10,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 68,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 12700,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "699E84AF-6CA3-4C3A-9451-2BF3C97FD68B",
+        "maximumHipDrop" : 0.727216801208256,
+        "minimumProjectedKneeAngle" : 75.82249241452784,
+        "startMs" : 10466,
+        "target" : {
+          "minimumDescentMs" : 2000
+        }
+      },
+      {
+        "ascentDurationMs" : 734,
+        "assessments" : [
+          {
+            "evidenceMs" : 16166,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 15266,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7271531089747695,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 15266,
+            "item" : "descentTempo",
+            "measuredValue" : 1400,
+            "message" : "下降用时 1.4 秒，短于所选 2.0 秒目标；下一次放慢下降",
+            "status" : "outsideTarget",
+            "targetValue" : 2000
+          }
+        ],
+        "bottomMs" : 15266,
+        "countedRepID" : 4,
+        "coverage" : {
+          "ascentFrames" : 27,
+          "bottomFrames" : 9,
+          "descentFrames" : 43,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1400,
+        "endMs" : 16166,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "621A8982-57D6-4B31-A768-E39AA483A693",
+        "maximumHipDrop" : 0.7271531089747695,
+        "minimumProjectedKneeAngle" : 76.30956990378262,
+        "startMs" : 13866,
+        "target" : {
+          "minimumDescentMs" : 2000
+        }
+      },
+      {
+        "ascentDurationMs" : 767,
+        "assessments" : [
+          {
+            "evidenceMs" : 19566,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 18633,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7257145885303774,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 18633,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "下降用时 1.4 秒，短于所选 2.0 秒目标；下一次放慢下降",
+            "status" : "outsideTarget",
+            "targetValue" : 2000
+          }
+        ],
+        "bottomMs" : 18633,
+        "countedRepID" : 5,
+        "coverage" : {
+          "ascentFrames" : 28,
+          "bottomFrames" : 10,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 19566,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "1DF0E0B3-4BFB-4CB6-AB01-3A677B328512",
+        "maximumHipDrop" : 0.7257145885303774,
+        "minimumProjectedKneeAngle" : 76.73860114185597,
+        "startMs" : 17266,
+        "target" : {
+          "minimumDescentMs" : 2000
+        }
+      }
+    ]
+  },
+  "usablePoseFrames" : 630
+}
+2026-10-16 11:00:23.842884+0800 AIFormCoach[61102:3547620] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119623.851595 3547626 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792119623.882625 3548048 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119623.889330 3548052 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 5,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "standing-then-five-squats.mp4",
+  "firstStandingMs" : 2000,
+  "frames" : 630,
+  "inferenceP50Ms" : 12.830833,
+  "inferenceP95Ms" : 13.294792,
+  "maximumFrameGapMs" : 34,
+  "rejectionCounts" : {
+    "waitingForTop" : 49
+  },
+  "reps" : [
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 5733,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 1,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7215765269071579,
+      "maximumTrunkDelta" : 44.463657299208776,
+      "startMs" : 3833
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 9100,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 2,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7189264298228717,
+      "maximumTrunkDelta" : 44.44575666880398,
+      "startMs" : 7233
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 12533,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 3,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7161753361920826,
+      "maximumTrunkDelta" : 44.69983424926901,
+      "startMs" : 10633
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 15933,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 4,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7167329417206708,
+      "maximumTrunkDelta" : 44.41137404654274,
+      "startMs" : 14033
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 19333,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 5,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7145809635259321,
+      "maximumTrunkDelta" : 44.48455252033532,
+      "startMs" : 17433
+    }
+  ],
+  "squatAnalysis" : {
+    "algorithmVersion" : "squat-observation-1.0",
+    "attempts" : [
+      {
+        "ascentDurationMs" : 767,
+        "assessments" : [
+          {
+            "evidenceMs" : 5966,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 5033,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7215765269071579,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 5033,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 5033,
+        "countedRepID" : 1,
+        "coverage" : {
+          "ascentFrames" : 28,
+          "bottomFrames" : 10,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 5966,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "97562EFC-056B-4BDE-8ABF-9595134BE4E6",
+        "maximumHipDrop" : 0.7215765269071579,
+        "minimumProjectedKneeAngle" : 76.12778352370836,
+        "startMs" : 3666,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 800,
+        "assessments" : [
+          {
+            "evidenceMs" : 9366,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 8400,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7189264298228717,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 8400,
+            "item" : "descentTempo",
+            "measuredValue" : 1334,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 8400,
+        "countedRepID" : 2,
+        "coverage" : {
+          "ascentFrames" : 29,
+          "bottomFrames" : 12,
+          "descentFrames" : 41,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1334,
+        "endMs" : 9366,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "F3BE47DF-C55E-4354-BCE2-777DE0E67854",
+        "maximumHipDrop" : 0.7189264298228717,
+        "minimumProjectedKneeAngle" : 76.4346939360997,
+        "startMs" : 7066,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 800,
+        "assessments" : [
+          {
+            "evidenceMs" : 12766,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 11800,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7161753361920826,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 11800,
+            "item" : "descentTempo",
+            "measuredValue" : 1334,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 11800,
+        "countedRepID" : 3,
+        "coverage" : {
+          "ascentFrames" : 29,
+          "bottomFrames" : 12,
+          "descentFrames" : 41,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1334,
+        "endMs" : 12766,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "9139624C-F00F-40BA-940F-4CEE224A014A",
+        "maximumHipDrop" : 0.7161753361920826,
+        "minimumProjectedKneeAngle" : 76.59589019897375,
+        "startMs" : 10466,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 767,
+        "assessments" : [
+          {
+            "evidenceMs" : 16166,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 15233,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7167329417206708,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 15233,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 15233,
+        "countedRepID" : 4,
+        "coverage" : {
+          "ascentFrames" : 28,
+          "bottomFrames" : 12,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 16166,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "31FFD6B9-6ECB-4855-B876-D32360F36841",
+        "maximumHipDrop" : 0.7167329417206708,
+        "minimumProjectedKneeAngle" : 75.93259457419035,
+        "startMs" : 13866,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 766,
+        "assessments" : [
+          {
+            "evidenceMs" : 19533,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 18600,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7145809635259321,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 18600,
+            "item" : "descentTempo",
+            "measuredValue" : 1334,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 18600,
+        "countedRepID" : 5,
+        "coverage" : {
+          "ascentFrames" : 28,
+          "bottomFrames" : 12,
+          "descentFrames" : 41,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 69,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1334,
+        "endMs" : 19533,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "801C1F82-C4E6-4579-8299-E9E7D10731C4",
+        "maximumHipDrop" : 0.7145809635259321,
+        "minimumProjectedKneeAngle" : 75.92081632277711,
+        "startMs" : 17266,
+        "target" : {
+
+        }
+      }
+    ]
+  },
+  "usablePoseFrames" : 630
+}
+2026-10-16 11:00:32.142841+0800 AIFormCoach[61102:3547620] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119632.151200 3547607 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792119632.181056 3548263 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119632.188128 3548274 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 5,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "standing-five-rotated-metadata.mp4",
+  "firstStandingMs" : 2000,
+  "frames" : 630,
+  "inferenceP50Ms" : 15.957792,
+  "inferenceP95Ms" : 17.281917,
+  "maximumFrameGapMs" : 34,
+  "rejectionCounts" : {
+    "waitingForTop" : 49
+  },
+  "reps" : [
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 5733,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 1,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.723554892386511,
+      "maximumTrunkDelta" : 43.874286086296145,
+      "startMs" : 3833
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 9133,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 2,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7288174082865277,
+      "maximumTrunkDelta" : 43.98713250750336,
+      "startMs" : 7233
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 12533,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 3,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7307700413552366,
+      "maximumTrunkDelta" : 43.770322094756516,
+      "startMs" : 10633
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 15933,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 4,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7278656521377244,
+      "maximumTrunkDelta" : 44.129836910877984,
+      "startMs" : 14000
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 19333,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 5,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7291193856444439,
+      "maximumTrunkDelta" : 44.15880821616845,
+      "startMs" : 17433
+    }
+  ],
+  "squatAnalysis" : {
+    "algorithmVersion" : "squat-observation-1.0",
+    "attempts" : [
+      {
+        "ascentDurationMs" : 800,
+        "assessments" : [
+          {
+            "evidenceMs" : 5966,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 5000,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.723554892386511,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 5000,
+            "item" : "descentTempo",
+            "measuredValue" : 1334,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 5000,
+        "countedRepID" : 1,
+        "coverage" : {
+          "ascentFrames" : 29,
+          "bottomFrames" : 12,
+          "descentFrames" : 41,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1334,
+        "endMs" : 5966,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "D2ECC89B-B3C0-431C-B957-F6FCA195238A",
+        "maximumHipDrop" : 0.723554892386511,
+        "minimumProjectedKneeAngle" : 76.65085519132107,
+        "startMs" : 3666,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 800,
+        "assessments" : [
+          {
+            "evidenceMs" : 9366,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 8400,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7288174082865277,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 8400,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 8400,
+        "countedRepID" : 2,
+        "coverage" : {
+          "ascentFrames" : 29,
+          "bottomFrames" : 9,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 71,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 9366,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "0F012AB3-7F03-4156-AFBE-AB11C3AE0741",
+        "maximumHipDrop" : 0.7288174082865277,
+        "minimumProjectedKneeAngle" : 76.51610099080554,
+        "startMs" : 7033,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 800,
+        "assessments" : [
+          {
+            "evidenceMs" : 12766,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 11800,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7307700413552366,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 11800,
+            "item" : "descentTempo",
+            "measuredValue" : 1334,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 11800,
+        "countedRepID" : 3,
+        "coverage" : {
+          "ascentFrames" : 29,
+          "bottomFrames" : 10,
+          "descentFrames" : 41,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1334,
+        "endMs" : 12766,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "01FD9B8E-8894-496D-878A-C7072536A197",
+        "maximumHipDrop" : 0.7307700413552366,
+        "minimumProjectedKneeAngle" : 75.70823653632021,
+        "startMs" : 10466,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 800,
+        "assessments" : [
+          {
+            "evidenceMs" : 16166,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 15200,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7278656521377244,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 15200,
+            "item" : "descentTempo",
+            "measuredValue" : 1334,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 15200,
+        "countedRepID" : 4,
+        "coverage" : {
+          "ascentFrames" : 29,
+          "bottomFrames" : 10,
+          "descentFrames" : 41,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1334,
+        "endMs" : 16166,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "7CAAFF03-09C7-4AD3-955C-028D684AFB49",
+        "maximumHipDrop" : 0.7278656521377244,
+        "minimumProjectedKneeAngle" : 75.95735212942328,
+        "startMs" : 13866,
+        "target" : {
+
+        }
+      },
+      {
+        "ascentDurationMs" : 767,
+        "assessments" : [
+          {
+            "evidenceMs" : 19566,
+            "item" : "returnToStart",
+            "message" : "已观察到下降并回到站立起点",
+            "status" : "withinTarget"
+          },
+          {
+            "evidenceMs" : 18633,
+            "item" : "rangeOfMotion",
+            "measuredValue" : 0.7291193856444439,
+            "message" : "已记录幅度；未设置参考目标，不评价深浅",
+            "status" : "notConfigured"
+          },
+          {
+            "evidenceMs" : 18633,
+            "item" : "descentTempo",
+            "measuredValue" : 1367,
+            "message" : "已记录下降时长；未设置节奏目标",
+            "status" : "notConfigured"
+          }
+        ],
+        "bottomMs" : 18633,
+        "countedRepID" : 5,
+        "coverage" : {
+          "ascentFrames" : 28,
+          "bottomFrames" : 12,
+          "descentFrames" : 42,
+          "failure" : "none",
+          "maximumFrameGapMs" : 34,
+          "observedFrames" : 70,
+          "observedReturn" : true
+        },
+        "descentDurationMs" : 1367,
+        "endMs" : 19566,
+        "endReason" : "returnedToStart",
+        "engineVersion" : "mediapipe-pose-full-1.1.1",
+        "id" : "86F29516-C6BE-4833-86EA-202E94033EE2",
+        "maximumHipDrop" : 0.7291193856444439,
+        "minimumProjectedKneeAngle" : 76.2095972944945,
+        "startMs" : 17266,
+        "target" : {
+
+        }
+      }
+    ]
+  },
+  "usablePoseFrames" : 630
+}
+2026-10-16 11:00:42.471144+0800 AIFormCoach[61102:3547623] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119642.482544 3547622 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792119642.512967 3548566 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119642.519906 3548564 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 0,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "negative-frontal-moving-5319965.mp4",
+  "frames" : 150,
+  "inferenceP50Ms" : 12.713,
+  "inferenceP95Ms" : 17.399417,
+  "maximumFrameGapMs" : 40,
+  "rejectionCounts" : {
+    "lowConfidence" : 23,
+    "multiplePeople" : 58,
+    "noPerson" : 18,
+    "notUpright" : 45,
+    "outOfFrame" : 4,
+    "tooSmall" : 1
+  },
+  "reps" : [
+
+  ],
+  "usablePoseFrames" : 46
+}
+2026-10-16 11:00:44.473665+0800 AIFormCoach[61102:3547626] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119644.482188 3547613 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792119644.512682 3548653 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119644.519569 3548656 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 0,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "negative-cropped-4820063.mp4",
+  "frames" : 185,
+  "inferenceP50Ms" : 12.879917,
+  "inferenceP95Ms" : 17.603209,
+  "maximumFrameGapMs" : 42,
+  "rejectionCounts" : {
+    "lowConfidence" : 145,
+    "multiplePeople" : 17,
+    "noPerson" : 23
+  },
+  "reps" : [
+
+  ],
+  "usablePoseFrames" : 0
+}
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeActualVideoReplayAndModelSelection]' passed (32.903 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeImportComparisonExportAndCancellation]' started.
+2026-10-16 11:00:47.089635+0800 AIFormCoach[61102:3547625] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119647.102707 3547613 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792119647.141908 3548910 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119647.149152 3548924 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+2026-10-16 11:00:56.722772+0800 AIFormCoach[61102:3547618] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119656.734196 3547608 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792119656.765324 3551291 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119656.772252 3551298 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+2026-10-16 11:01:05.616856+0800 AIFormCoach[61102:3547622] [] (Fig) signalled err=-12900 at <>:1242
+2026-10-16 11:01:05.682920+0800 AIFormCoach[61102:3548327] [espresso] [Espresso::handle_ex_plan] exception=Espresso exception: "I/O error": Missing weights path cnn_human_pose.espresso.weights status=-2
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeImportComparisonExportAndCancellation]' passed (18.819 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingArchivesActiveRepsAndRecalibrationKeepsEarlierGroup]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingArchivesActiveRepsAndRecalibrationKeepsEarlierGroup]' passed (0.097 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingDoesNotHijackOrOverwriteDraft]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingDoesNotHijackOrOverwriteDraft]' passed (0.069 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingFromColdDraftPreservesActiveRepsWithoutOpeningCamera]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingFromColdDraftPreservesActiveRepsWithoutOpeningCamera]' passed (0.070 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPauseResumeAndReturnHomePreserveCompletedReps]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPauseResumeAndReturnHomePreserveCompletedReps]' passed (0.066 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPrivacyAndHelpReturnToTheirSourceWithoutPausing]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPrivacyAndHelpReturnToTheirSourceWithoutPausing]' passed (0.065 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:714: -[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames]' skipped (0.071 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:687: -[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames]' skipped (0.066 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:747: -[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive]' skipped (0.065 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:799: -[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive]' skipped (0.066 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplayFinalizesTruncatedAttemptWithoutGivingTechniqueAdvice]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplayFinalizesTruncatedAttemptWithoutGivingTechniqueAdvice]' passed (0.068 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplaySheetPresentsAndDismissesWithFlowEnvironment]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplaySheetPresentsAndDismissesWithFlowEnvironment]' passed (1.471 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReturningFromPauseKeepsUncertainStatusUntilValidInputResumes]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReturningFromPauseKeepsUncertainStatusUntilValidInputResumes]' passed (0.070 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSelectedRealSquatVideoReplay]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:222: -[AIFormCoachTests.AppIntegrationTests testSelectedRealSquatVideoReplay] : Test skipped - Real video inference requires a physical iPhone
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSelectedRealSquatVideoReplay]' skipped (0.066 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatAttemptsTargetsSummarySaveAndReload]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatAttemptsTargetsSummarySaveAndReload]' passed (0.085 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatAutomaticStandingCountsAndPersistsExerciseIdentity]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatAutomaticStandingCountsAndPersistsExerciseIdentity]' passed (0.081 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatDraftRestoresTargetAndAttemptEvidence]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatDraftRestoresTargetAndAttemptEvidence]' passed (0.074 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testTrainingEntryRoutesByAuthorizationAndDoesNotCreateEmptyDraftOnBack]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testTrainingEntryRoutesByAuthorizationAndDoesNotCreateEmptyDraftOnBack]' passed (0.078 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testVideoReplayDecodesActualMovieAndDoesNotCountEmptyFrames]' started.
+2026-10-16 11:01:08.430228+0800 AIFormCoach[61102:3547563] [] (Fig) signalled err=0 at <>:85
+2026-10-16 11:01:08.502457+0800 AIFormCoach[61102:3547625] [] (Fig) signalled err=-12900 at <>:1242
+2026-10-16 11:01:08.508228+0800 AIFormCoach[61102:3547607] [] <<<< FigExportCommmon >>>> signalled err=-12785 at <>:4345
+Test Case '-[AIFormCoachTests.AppIntegrationTests testVideoReplayDecodesActualMovieAndDoesNotCountEmptyFrames]' passed (0.150 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-16 11:01:08.573.
+	 Executed 32 tests, with 6 tests skipped and 0 failures (0 unexpected) in 56.065 (56.076) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-16 11:01:08.573.
+	 Executed 32 tests, with 6 tests skipped and 0 failures (0 unexpected) in 56.065 (56.076) seconds
+Test Suite 'All tests' passed at 2026-10-16 11:01:08.573.
+	 Executed 32 tests, with 6 tests skipped and 0 failures (0 unexpected) in 56.065 (56.077) seconds
+2026-10-16 11:01:17.402 xcodebuild[61092:3547215] [MT] IDETestOperationsObserverDebug: 66.885 elapsed -- Testing started completed.
+2026-10-16 11:01:17.402 xcodebuild[61092:3547215] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-16 11:01:17.402 xcodebuild[61092:3547215] [MT] IDETestOperationsObserverDebug: 66.885 sec, +66.885 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/coach-quality-integration-verified.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

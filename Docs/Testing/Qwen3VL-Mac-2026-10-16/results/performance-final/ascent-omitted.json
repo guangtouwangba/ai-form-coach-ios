@@ -1,0 +1,126 @@
+{
+  "decodedPromptTail" : " For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2337737104,
+  "extractSeconds" : 0.41652095317840576,
+  "firstChunkSeconds" : 0.67754697799682617,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-final\/ascent-omitted\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.3,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-final\/ascent-omitted\/F2.png",
+      "height" : 1920,
+      "id" : "F2",
+      "requestedTime" : 1.3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.6000000000000001,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-final\/ascent-omitted\/F3.png",
+      "height" : 1920,
+      "id" : "F3",
+      "requestedTime" : 1.6000000000000001,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.8999999999999999,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-final\/ascent-omitted\/F4.png",
+      "height" : 1920,
+      "id" : "F4",
+      "requestedTime" : 1.8999999999999999,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.2000000000000002,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-final\/ascent-omitted\/F5.png",
+      "height" : 1920,
+      "id" : "F5",
+      "requestedTime" : 2.2000000000000002,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-final\/ascent-omitted\/F6.png",
+      "height" : 1920,
+      "id" : "F6",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 1.2010189294815063,
+  "generation" : {
+    "generationSeconds" : 0.52044594287872314,
+    "outputTokens" : 81,
+    "promptSeconds" : 0.67740213871002197,
+    "promptTokens" : 1772,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 155.63576027121613
+  },
+  "id" : "ascent-omitted",
+  "identicalQueryFramePixels" : false,
+  "inputTokens" : 1772,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1918227716,
+    "cacheBytes" : 134519772,
+    "peakActiveBytes" : 2969038152
+  },
+  "observationGate" : {
+    "acceptedAsObservation" : false,
+    "eligibleForAutomaticCoaching" : false,
+    "reasons" : [
+      "lateral_view_cannot_assess_knee_in"
+    ]
+  },
+  "peakFootprintBytes" : 3162311056,
+  "prefillChunking" : "balanced",
+  "preparedTensorPath" : "",
+  "prepareSeconds" : 0.034785985946655273,
+  "prompt" : "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+  "rawOutput" : "```json\n{\n  \"motion\": \"squat\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"yes\",\n  \"explanation\": \"The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person is returning to a standing position.\"\n}\n```",
+  "success" : true,
+  "totalSeconds" : 1.6527210474014282,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 1512
+}

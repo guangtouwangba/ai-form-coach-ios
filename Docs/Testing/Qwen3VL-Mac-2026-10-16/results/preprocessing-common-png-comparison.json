@@ -1,0 +1,98 @@
+{
+  "scope": "Swift actual AVAsset/CIImage patches vs Python HF fast processor of the saved sRGB PNG; bicubic implementations can differ. Not assumed bit identical.",
+  "results": [
+    {
+      "case": "caption-real",
+      "swiftShape": [
+        1008,
+        1536
+      ],
+      "pythonShape": [
+        1008,
+        1536
+      ],
+      "swiftGrid": [
+        {
+          "h": 42,
+          "t": 1,
+          "w": 24
+        }
+      ],
+      "pythonGrid": [
+        [
+          1,
+          42,
+          24
+        ]
+      ],
+      "meanAbsoluteError": 0.0046996246092021465,
+      "p99AbsoluteError": 0.033994823694229126,
+      "maxAbsoluteError": 0.11224085092544556,
+      "swiftMean": 0.7488974928855896,
+      "pythonMean": 0.7494975924491882,
+      "sameLayout": true
+    },
+    {
+      "case": "caption-blank",
+      "swiftShape": [
+        1008,
+        1536
+      ],
+      "pythonShape": [
+        1008,
+        1536
+      ],
+      "swiftGrid": [
+        {
+          "h": 42,
+          "t": 1,
+          "w": 24
+        }
+      ],
+      "pythonGrid": [
+        [
+          1,
+          42,
+          24
+        ]
+      ],
+      "meanAbsoluteError": 0.002481838921085,
+      "p99AbsoluteError": 0.0029144282452762127,
+      "maxAbsoluteError": 0.003220140468329191,
+      "swiftMean": -0.006403407547622919,
+      "pythonMean": -0.003921568859368563,
+      "sameLayout": true
+    },
+    {
+      "case": "colorchart",
+      "swiftShape": [
+        1008,
+        1536
+      ],
+      "pythonShape": [
+        1008,
+        1536
+      ],
+      "swiftGrid": [
+        {
+          "h": 42,
+          "t": 1,
+          "w": 24
+        }
+      ],
+      "pythonGrid": [
+        [
+          1,
+          42,
+          24
+        ]
+      ],
+      "meanAbsoluteError": 9.40310496133634e-10,
+      "p99AbsoluteError": 2.9802322387695312e-08,
+      "maxAbsoluteError": 5.9138983488082886e-08,
+      "swiftMean": -0.002171287080273032,
+      "pythonMean": -0.002171288011595607,
+      "sameLayout": true
+    }
+  ]
+}

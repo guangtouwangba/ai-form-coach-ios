@@ -1,0 +1,73 @@
+{
+  "cases": [
+    {
+      "id": "caption-real",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        2.5
+      ],
+      "variant": "original",
+      "prompt": "用一句中文具体描述图片里的人正在做什么，不要评价标准与否。"
+    },
+    {
+      "id": "caption-blank",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        2.5
+      ],
+      "variant": "blank",
+      "prompt": "用一句中文具体描述图片里是否有人，正在做什么。"
+    },
+    {
+      "id": "caption-standing",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        1
+      ],
+      "variant": "original",
+      "prompt": "用一句中文具体描述图片里的人正在做什么，不要评价标准与否。"
+    },
+    {
+      "id": "fixed-real",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "variant": "original",
+      "prompt": "按时间顺序观察这些图片。仅报告看得到的内容，看不清用uncertain。请直接输出JSON对象，不要代码块。字段要求：motion取squat、static或unknown之一；view取side、front、oblique或unknown之一；full_body是布尔值；depth取reached、not_reached或uncertain之一，指最低点髋达到膝高附近；returned取yes、no或uncertain之一，指这一序列是否已从下蹲回到站立；heel取down、raised或uncertain之一；knee_in取yes、no或uncertain之一，侧面图必须用uncertain；evidence是支持判断的帧ID数组；cue是你实际给出的简短中文建议，没证据就说明。每个字段只填写一个实际判断值。不要复述这些要求。"
+    },
+    {
+      "id": "fixed-blank",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "variant": "blank",
+      "prompt": "按时间顺序观察这些图片。仅报告看得到的内容，看不清用uncertain。请直接输出JSON对象，不要代码块。字段要求：motion取squat、static或unknown之一；view取side、front、oblique或unknown之一；full_body是布尔值；depth取reached、not_reached或uncertain之一，指最低点髋达到膝高附近；returned取yes、no或uncertain之一，指这一序列是否已从下蹲回到站立；heel取down、raised或uncertain之一；knee_in取yes、no或uncertain之一，侧面图必须用uncertain；evidence是支持判断的帧ID数组；cue是你实际给出的简短中文建议，没证据就说明。每个字段只填写一个实际判断值。不要复述这些要求。"
+    },
+    {
+      "id": "fixed-static",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "variant": "static",
+      "prompt": "按时间顺序观察这些图片。仅报告看得到的内容，看不清用uncertain。请直接输出JSON对象，不要代码块。字段要求：motion取squat、static或unknown之一；view取side、front、oblique或unknown之一；full_body是布尔值；depth取reached、not_reached或uncertain之一，指最低点髋达到膝高附近；returned取yes、no或uncertain之一，指这一序列是否已从下蹲回到站立；heel取down、raised或uncertain之一；knee_in取yes、no或uncertain之一，侧面图必须用uncertain；evidence是支持判断的帧ID数组；cue是你实际给出的简短中文建议，没证据就说明。每个字段只填写一个实际判断值。不要复述这些要求。"
+    }
+  ]
+}

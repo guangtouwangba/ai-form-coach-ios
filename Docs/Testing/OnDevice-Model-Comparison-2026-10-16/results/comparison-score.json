@@ -1,0 +1,200 @@
+{
+  "qwen3vl-common": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 1,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 1,
+        "falseTargetMatch": 4,
+        "invalid": 0,
+        "abstentions": 0
+      },
+      "unused-trial-confirmation": {
+        "correct": 3,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 3,
+        "falseTargetMatch": 3,
+        "invalid": 0,
+        "abstentions": 0
+      }
+    },
+    "controlsPassed": 0,
+    "controlsN": 5
+  },
+  "qwen35-common": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 0,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 0,
+        "falseTargetMatch": 0,
+        "invalid": 0,
+        "abstentions": 12
+      },
+      "unused-trial-confirmation": {
+        "correct": 0,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 0,
+        "falseTargetMatch": 0,
+        "invalid": 0,
+        "abstentions": 9
+      }
+    },
+    "controlsPassed": 2,
+    "controlsN": 5
+  },
+  "gemma4-common": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 2,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 2,
+        "falseTargetMatch": 10,
+        "invalid": 0,
+        "abstentions": 0
+      },
+      "unused-trial-confirmation": {
+        "correct": 2,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 2,
+        "falseTargetMatch": 8,
+        "invalid": 0,
+        "abstentions": 0
+      }
+    },
+    "controlsPassed": 0,
+    "controlsN": 5
+  },
+  "smolvlm-common": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 0,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 0,
+        "falseTargetMatch": 0,
+        "invalid": 12,
+        "abstentions": 0
+      },
+      "unused-trial-confirmation": {
+        "correct": 0,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 0,
+        "falseTargetMatch": 0,
+        "invalid": 10,
+        "abstentions": 0
+      }
+    },
+    "controlsPassed": 0,
+    "controlsN": 5
+  },
+  "smolvlm-native": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 0,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 0,
+        "falseTargetMatch": 0,
+        "invalid": 12,
+        "abstentions": 0
+      },
+      "unused-trial-confirmation": {
+        "correct": 0,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 0,
+        "falseTargetMatch": 0,
+        "invalid": 10,
+        "abstentions": 0
+      }
+    },
+    "controlsPassed": 0,
+    "controlsN": 5
+  },
+  "qwen35-4b-common": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 2,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 2,
+        "falseTargetMatch": 0,
+        "invalid": 0,
+        "abstentions": 0
+      },
+      "unused-trial-confirmation": {
+        "correct": 1,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 1,
+        "falseTargetMatch": 0,
+        "invalid": 0,
+        "abstentions": 0
+      }
+    },
+    "controlsPassed": 5,
+    "controlsN": 5
+  },
+  "qwen35-recommended": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 3,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 3,
+        "falseTargetMatch": 0,
+        "invalid": 0,
+        "abstentions": 4
+      },
+      "unused-trial-confirmation": {
+        "correct": 0,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 0,
+        "falseTargetMatch": 0,
+        "invalid": 0,
+        "abstentions": 2
+      }
+    },
+    "controlsPassed": 1,
+    "controlsN": 5
+  },
+  "qwen35-4b-recommended": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 2,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 2,
+        "falseTargetMatch": 5,
+        "invalid": 0,
+        "abstentions": 0
+      },
+      "unused-trial-confirmation": {
+        "correct": 2,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 3,
+        "falseTargetMatch": 4,
+        "invalid": 0,
+        "abstentions": 0
+      }
+    },
+    "controlsPassed": 4,
+    "controlsN": 5
+  },
+  "gemma4-recommended": {
+    "statistics": {
+      "seen-comparison": {
+        "correct": 2,
+        "n": 12,
+        "primaryOrSecondaryCorrect": 2,
+        "falseTargetMatch": 9,
+        "invalid": 0,
+        "abstentions": 0
+      },
+      "unused-trial-confirmation": {
+        "correct": 2,
+        "n": 10,
+        "primaryOrSecondaryCorrect": 2,
+        "falseTargetMatch": 8,
+        "invalid": 0,
+        "abstentions": 0
+      }
+    },
+    "controlsPassed": 1,
+    "controlsN": 5
+  }
+}

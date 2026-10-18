@@ -1,0 +1,58 @@
+{
+  "id": "blank-control",
+  "success": true,
+  "split": "temporal-controls",
+  "rawOutput": " motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: one short English sentence describing the observed evidence, not generic exercise instructions.",
+  "finishReason": "stop",
+  "generateSeconds": 0.4384194589947583,
+  "mlxPeakBytes": 1915817632,
+  "peakRSSBytes": 1460748288,
+  "originalShapes": {
+    "pixel_values": [
+      1,
+      6,
+      3,
+      512,
+      512
+    ],
+    "pixel_attention_mask": [
+      1,
+      6,
+      512,
+      512
+    ],
+    "input_ids": [
+      1,
+      695
+    ],
+    "attention_mask": [
+      1,
+      695
+    ]
+  },
+  "actualShapes": {
+    "pixel_values": [
+      1,
+      6,
+      3,
+      512,
+      512
+    ],
+    "pixel_attention_mask": [
+      1,
+      6,
+      512,
+      512
+    ],
+    "input_ids": [
+      1,
+      695
+    ],
+    "mask": [
+      1,
+      695
+    ]
+  },
+  "promptTokens": 695,
+  "outputTokens": 71
+}

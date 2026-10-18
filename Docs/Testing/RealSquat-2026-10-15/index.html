@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>侧面深蹲 · 拍屏对照</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f2f5f2;color:#19342e;font:16px/1.6 -apple-system,BlinkMacSystemFont,sans-serif}main{max-width:1000px;margin:auto;padding:26px}h1{font-size:26px;margin:0 0 8px}p{margin:8px 0 18px}.status{padding:12px 16px;background:#dff1e7;border-radius:12px;margin:18px 0}.stage{height:65vh;min-height:320px;background:#e9ebe7;border-radius:16px;overflow:hidden;display:flex;justify-content:center}.stage video{height:100%;max-width:100%;object-fit:contain}.stage:fullscreen{height:100vh;background:#e9ebe7}.controls{display:flex;gap:12px;margin:18px 0;flex-wrap:wrap}button,a.button{border:0;border-radius:10px;background:#225f4b;color:white;font:inherit;padding:12px 20px;cursor:pointer;text-decoration:none}button.secondary{background:white;color:#225f4b}small{color:#566a61}a{color:#225f4b}
+</style>
+<main>
+<h1>侧面徒手深蹲 · 拍屏对照</h1>
+<p>测试版约 21 秒：开头站立定格 3 秒，再播放 5 个完整起落周期。同一个真人动作循环 5 遍，动作速度不变。</p>
+<div class="status"><strong>人工预期：5 次　｜　Mac 本地：5 次　｜　iPhone 回放：5 次</strong><br>修复后，两种分辨率都在第 2 秒建立站立起点。拍屏时请记录是否站稳及最终次数；拍屏结果仍待实际对照。</div>
+<div class="stage" id="stage"><video id="clip" controls preload="auto" playsinline src="media/standing-then-five-squats-hd.mp4"></video></div>
+<div class="controls"><button id="start">从头全屏播放</button><button id="reset" class="secondary">回到站立起点</button><a class="button" href="media/standing-then-five-squats-hd.mp4" download>保存测试片</a></div>
+<p>先把 iPhone 固定并打开 App 相机，对准屏幕，让人物全身尽量占满手机画面，再点击全屏播放。播放结束后记录是否站稳、最终次数和提示文字。</p>
+<small>来源：<a href="https://www.pexels.com/video/young-woman-exercising-6525519/">Polina Tankilevitch / Pexels</a> · <a href="https://www.pexels.com/license/">Pexels License</a>。剪取原片 0.9–4.3 秒，加定格并循环；不代表五次独立真人测试。<a href="media/original-6525519.mp4">查看未处理原片</a>。</small>
+</main>
+<script>
+const clip=document.getElementById('clip'),stage=document.getElementById('stage');
+document.getElementById('start').addEventListener('click',async()=>{clip.currentTime=0;try{await stage.requestFullscreen()}catch{}await clip.play()});
+document.getElementById('reset').addEventListener('click',()=>{clip.pause();clip.currentTime=0});
+</script>
+</html>

@@ -1,0 +1,46 @@
+LOADED qwen3_5 0.7991297089902218
+fresh-01 2.379 'high'
+fresh-02 2.859 'high'
+fresh-03 3.579 'high'
+fresh-04 3.87 'high'
+fresh-05 3.151 'high'
+fresh-06 3.595 'high'
+fresh-07 3.896 'high'
+fresh-08 3.42 'high'
+fresh-09 3.906 'high'
+fresh-10 3.343 'high'
+fresh-11 3.248 'high'
+fresh-12 3.521 'high'
+confirmation-01 3.204 'high'
+confirmation-02 3.071 'high'
+confirmation-03 3.152 'high'
+confirmation-04 2.823 'high'
+confirmation-05 2.735 'high'
+confirmation-06 2.627 'high'
+confirmation-07 2.918 'high'
+confirmation-08 2.44 'high'
+confirmation-09 2.855 'high'
+confirmation-10 2.624 'high'
+real-cycle 2.399 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "Side view shows a squatting motion with knees not clearly visible."\n}'
+standing-static 2.435 '{\n  "motion": "static",\n  "lowest_frame": null,\n  "returned": "uncertain",\n  "knee_in": "uncertain",\n  "explanation": "The person remains in a standing position with no visible movement or squatting."\n}'
+blank-control 2.417 '{\n  "motion": "unknown",\n  "lowest_frame": null,\n  "returned": "uncertain",\n  "knee_in": "uncertain",\n  "explanation": "All frames are blank; no person or knee is visible."\n}'
+cropped-control 2.684 '{\n  "motion": "unknown",\n  "lowest_frame": null,\n  "returned": "uncertain",\n  "knee_in": "uncertain",\n  "explanation": "The person is standing in a side profile view with no visible knees or squatting motion."\n}'
+ascent-omitted 2.46 '{\n  "motion": "squat",\n  "lowest_frame": "F6",\n  "returned": "no",\n  "knee_in": "uncertain",\n  "explanation": "The subject descends into a squat position but does not return to the starting standing position within the provided frames."\n}'
+       86.20 real         7.14 user         9.41 sys
+          3674062848  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              333488  page reclaims
+                1644  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                3199  voluntary context switches
+               90034  involuntary context switches
+        132390214486  instructions retired
+         56150601963  cycles elapsed
+          6436064616  peak memory footprint

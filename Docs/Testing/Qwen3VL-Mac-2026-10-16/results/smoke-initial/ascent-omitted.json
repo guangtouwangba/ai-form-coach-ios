@@ -1,0 +1,115 @@
+{
+  "endFootprintBytes" : 2332543400,
+  "extractSeconds" : 0.41123199462890625,
+  "firstChunkSeconds" : 0.7169950008392334,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/ascent-omitted\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.3,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/ascent-omitted\/F2.png",
+      "height" : 1920,
+      "id" : "F2",
+      "requestedTime" : 1.3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.6000000000000001,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/ascent-omitted\/F3.png",
+      "height" : 1920,
+      "id" : "F3",
+      "requestedTime" : 1.6000000000000001,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.8999999999999999,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/ascent-omitted\/F4.png",
+      "height" : 1920,
+      "id" : "F4",
+      "requestedTime" : 1.8999999999999999,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.2000000000000002,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/ascent-omitted\/F5.png",
+      "height" : 1920,
+      "id" : "F5",
+      "requestedTime" : 2.2000000000000002,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/ascent-omitted\/F6.png",
+      "height" : 1920,
+      "id" : "F6",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 2.8557840585708618,
+  "generation" : {
+    "generationSeconds" : 2.1377179622650146,
+    "outputTokens" : 122,
+    "promptSeconds" : 0.71681201457977295,
+    "promptTokens" : 1764,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 57.070203906007862
+  },
+  "id" : "ascent-omitted",
+  "inputTokens" : 1764,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1982239940,
+    "cacheBytes" : 136798988,
+    "peakActiveBytes" : 2969038088
+  },
+  "peakFootprintBytes" : 3182184872,
+  "prepareSeconds" : 0.058119058609008789,
+  "prompt" : "这些图片按时间排序，图旁标签是帧ID和采集时间。仅根据图片分析徒手深蹲。看不清必须填uncertain。侧面不能确定膝内扣。只输出一行JSON，不要Markdown或额外文字：{\"motion\":\"squat|static|unknown\",\"view\":\"side|front|oblique|unknown\",\"full_body\":true,\"depth\":\"reached|not_reached|uncertain\",\"returned\":\"yes|no|uncertain\",\"heel\":\"down|raised|uncertain\",\"knee_in\":\"yes|no|uncertain\",\"evidence\":[\"F1\"],\"cue\":\"简短中文建议或说明看不清\"}。depth仅指最低时髋部达到膝高附近或以下的可见证据，不代表整体动作合格。只在有明显证据时下结论。",
+  "rawOutput" : "```json\n{\n  \"motion\": \"squat|static|unknown\",\n  \"view\": \"side|front|oblique|unknown\",\n  \"full_body\": true,\n  \"depth\": \"reached\",\n  \"returned\": \"yes\",\n  \"heel\": \"down\",\n  \"knee_in\": \"yes\",\n  \"evidence\": [\n    \"F1\",\n    \"F2\",\n    \"F3\",\n    \"F4\",\n    \"F5\",\n    \"F6\"\n  ],\n  \"cue\": \"简短中文建议或说明看不清\"\n}\n```",
+  "success" : true,
+  "totalSeconds" : 3.3259360790252686,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 1512
+}

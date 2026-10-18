@@ -54,10 +54,17 @@ struct LocalTrainingDraft: Codable {
     var startedAt = Date()
     var side: String
     var goal: String
+    var exerciseID: String? = nil
+    var minimumDescentMs: Int? = nil
     var calibration: CalibrationProfile?
     var groups: [WorkoutSummary] = []
     var active = WorkoutSummary(reps: [], suppressedIssueCount: 0)
     var groupInProgress = false
+}
+
+enum TrainingHelp: String, Identifiable {
+    case camera, calibration
+    var id: String { rawValue }
 }
 
 @MainActor
@@ -81,6 +88,36 @@ final class P0FlowModel: ObservableObject {
     @Published var selectedRecord: StoredWorkoutSession?
     @Published var draft: LocalTrainingDraft?
     @Published var busy = false
+    @Published var help: TrainingHelp?
+    @Published var showsNewTrainingChoice = false
+    @Published var showsReplay = false
+    @Published var standingProgress = 0.0
+    @Published var latestPose: PoseObservation?
+    @Published var poseFailure: PoseFailureReason = .none
+    @Published var showsSkeleton = true
+    @Published var showsPoseDiagnostics = false
+    @Published var squatDescentTargetMs = 0 {
+        didSet {
+            squatSession.target = SquatTrainingTarget(minimumDescentMs: squatDescentTargetMs > 0 ? squatDescentTargetMs : nil)
+            draft?.minimumDescentMs = squatDescentTargetMs > 0 ? squatDescentTargetMs : nil
+        }
+    }
+    private var lastSkeletonTimestamp = -1
+    private var squatSession = SquatSession()
+    var isSquat: Bool {
+        if let selectedRecord { return selectedRecord.exerciseID == ExerciseKind.bodyweightSquat.rawValue }
+        if let draft { return draft.exerciseID == ExerciseKind.bodyweightSquat.rawValue }
+        return true
+    }
+    var exerciseTitle: String { isSquat ? "徒手深蹲" : "保加利亚分腿蹲" }
+    var sessionDescription: String { isSquat ? "徒手深蹲 · 侧面计次" : "保加利亚分腿蹲 · \(trainingSide) · \(trainingGoal)" }
+    func selectPoseEngine(_ choice: PoseEngineChoice) {
+        guard !groupInProgress, !camera.isRecordingDiagnostic else { return }
+        squatSession.reset(); standingProgress = 0; readyFrames = 0
+        latestPose = nil; lastSkeletonTimestamp = -1; poseFailure = .none
+        camera.selectEngine(choice)
+        if needsCamera { navigate(to: "P0-CALIBRATION-READY") }
+    }
     let camera = CameraService()
     private let engine = WorkoutSessionEngine()
     private let speech = SpeechService()
@@ -88,6 +125,7 @@ final class P0FlowModel: ObservableObject {
     private var context: ModelContext?
     private var calibration: CalibrationProfile?
     private var groupInProgress = false
+    private var analysisWasUncertain = false
     private var operation: Task<Void, Never>?
     private var generation = 0
     private var mounted = false
@@ -98,12 +136,47 @@ final class P0FlowModel: ObservableObject {
     private var deletionIsDraft = false
     private let storageURL: URL?
     private let cameraEnabled: Bool
+    private let authorizationStatus: () -> AVAuthorizationStatus
     let screens: [V3ScreenSpec]
     private let byID: [String: V3ScreenSpec]
     var savedSessionCount: Int { records.count }
     var current: V3ScreenSpec? { byID[currentID] }
     var activeTraining: Bool { ["P0-TRAINING-ACTIVE", "P0-TRAINING-COACHING", "P0-TRAINING-UNCERTAIN"].contains(currentID) }
-    var needsCamera: Bool { activeTraining || ["P0-CALIBRATION-READY", "P0-CALIBRATION-RUNNING", "P0-INTERRUPT-FOREGROUND"].contains(currentID) }
+    var isCameraPaused: Bool { ["P0-EXIT-MENU", "P0-END-SET-CONFIRM", "P0-ABANDON-CONFIRM"].contains(currentID) }
+    var needsCamera: Bool { activeTraining || isCameraPaused || ["P0-CALIBRATION-READY", "P0-CALIBRATION-RUNNING", "P0-CALIBRATION-SUCCESS", "P0-INTERRUPT-FOREGROUND"].contains(currentID) }
+    var hasActiveGroup: Bool { groupInProgress }
+    var hasCalibration: Bool { isSquat ? squatSession.baseline != nil : calibration != nil }
+    var nextGroupNumber: Int { (draft?.groups.count ?? 0) + 1 }
+    var deletingDraft: Bool { deletionIsDraft }
+    var primaryTitle: String? {
+        switch currentID {
+        case "P0-HOME", "P0-HISTORY-EMPTY": "开始新训练"
+        case "P0-SESSION-SETUP": "打开相机"
+        case "P0-CALIBRATION-SUCCESS": "开始第 \(nextGroupNumber) 组"
+        case "P0-INTERRUPT-FOREGROUND": canPerformPrimary ? (groupInProgress ? "继续本组" : (calibration == nil ? "前往校准" : "开始下一组")) : "等待画面稳定…"
+        case "P0-EXIT-MENU": groupInProgress ? "继续本组" : "返回校准"
+        case "P0-ABANDON-CONFIRM": "放弃本组"
+        case "P0-PRIVACY-LOCAL": "返回上一页"
+        case "P0-SETTINGS": "完成"
+        case "P0-DELETE-CONFIRM": deletionIsDraft ? "删除草稿" : "删除训练记录"
+        case "P0-HISTORY-GROUP-DETAIL": summary.reps.isEmpty ? nil : current?.primaryAction
+        default: current?.primaryAction
+        }
+    }
+    var secondaryTitle: String? {
+        switch currentID {
+        case "P0-HOME", "P0-SESSION-SETUP", "P0-HISTORY-EMPTY", "P0-HISTORY-SESSIONS", "P0-HISTORY-SESSION-DETAIL", "P0-PRIVACY-LOCAL": nil
+        case "P0-CALIBRATION-READY": "校准与机位说明"
+        case "P0-ABANDON-CONFIRM": "返回暂停菜单"
+        case "P0-INTERRUPT-FOREGROUND": "机位说明"
+        case "P0-PERMISSION-REQUEST": "返回训练设置"
+        default: current?.secondaryAction
+        }
+    }
+    var canPerformPrimary: Bool {
+        !busy && !(currentID == "P0-CALIBRATION-RUNNING") &&
+        !(currentID == "P0-INTERRUPT-FOREGROUND" && cameraEnabled && readyFrames < 5)
+    }
     var groups: [WorkoutSummary] {
         if let selectedRecord, let data = selectedRecord.groupsJSON,
            let groups = try? JSONDecoder().decode([WorkoutSummary].self, from: data) { return groups }
@@ -113,7 +186,7 @@ final class P0FlowModel: ObservableObject {
     var issues: [IssueEvent] { summary.reps.flatMap(\.issues).filter { $0.disposition != .suppressed } }
     var settingsLocked: Bool { groupInProgress || !(draft?.groups.isEmpty ?? true) }
     var config: SessionConfig {
-        SessionConfig(trainingSide: trainingSide == "左腿" ? .left : .right,
+        SessionConfig(exercise: isSquat ? .bodyweightSquat : .bulgarianSplitSquat, trainingSide: trainingSide == "左腿" ? .left : .right,
                       variant: trainingGoal == "偏臀" ? .gluteBias : trainingGoal == "偏股四头肌" ? .quadBias : .general,
                       speechEnabled: true, saveVideo: false)
     }
@@ -122,10 +195,12 @@ final class P0FlowModel: ObservableObject {
         return FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appendingPathComponent("training-draft.json")
     }
 
-    init(screens: [V3ScreenSpec] = V3ManifestStore.p0Screens, storageURL: URL? = nil, cameraEnabled: Bool = true) {
+    init(screens: [V3ScreenSpec] = V3ManifestStore.p0Screens, storageURL: URL? = nil, cameraEnabled: Bool = true,
+         authorizationStatus: @escaping () -> AVAuthorizationStatus = { AVCaptureDevice.authorizationStatus(for: .video) }) {
         self.screens = screens
         self.storageURL = storageURL
         self.cameraEnabled = cameraEnabled
+        self.authorizationStatus = authorizationStatus
         byID = Dictionary(uniqueKeysWithValues: screens.map { ($0.stateId, $0) })
     }
 
@@ -143,6 +218,47 @@ final class P0FlowModel: ObservableObject {
             catch { saveFailureMessage = "未能读取上次草稿，请保留本机数据后重试。" }
         }
         camera.observationHandler = { [weak self] observation in await self?.receive(observation) }
+        if currentID == "P0-LAUNCH" { performPrimary() }
+    }
+
+    func selectTab(_ target: String) {
+        routeHistory = []
+        if target == "P0-HOME" { selectedRecord = nil }
+        navigate(to: target, recordingHistory: false)
+    }
+
+    func beginNewTraining() {
+        guard !busy else { return }
+        if draft != nil { showsNewTrainingChoice = true }
+        else { prepareFreshTraining() }
+    }
+
+    private func prepareFreshTraining() {
+        selectedRecord = nil; selectedRep = nil; draft = nil; calibration = nil
+        groupInProgress = false; analysisWasUncertain = false; completedCalibrationReps = 0; completedTrainingReps = 0
+        summary = WorkoutSummary(reps: [], suppressedIssueCount: 0)
+        squatSession.reset(); standingProgress = 0
+        squatDescentTargetMs = 0
+        trainingSide = "双腿"; trainingGoal = "完整周期计次"
+        collector.reset(); routeHistory = ["P0-HOME"]
+        navigate(to: "P0-SESSION-SETUP", recordingHistory: false)
+    }
+
+    func savePreviousAndBeginNew() {
+        guard !busy, let draft else { return }
+        showsNewTrainingChoice = false
+        trainingSide = draft.side; trainingGoal = draft.goal
+        generation += 1
+        saveSession(archivingActiveGroup: true)
+        if currentID == "P0-SAVE-SUCCESS" { prepareFreshTraining() }
+    }
+
+    private func openCamera() {
+        switch authorizationStatus() {
+        case .authorized: navigate(to: groupInProgress || calibration != nil ? "P0-INTERRUPT-FOREGROUND" : "P0-CALIBRATION-READY")
+        case .notDetermined: navigate(to: "P0-PERMISSION-REQUEST")
+        default: navigate(to: "P0-PERMISSION-DENIED")
+        }
     }
 
     func refreshRecords() {
@@ -170,24 +286,28 @@ final class P0FlowModel: ObservableObject {
         case "P0-LAUNCH":
             navigate(to: UserDefaults.standard.bool(forKey: "coach.safety") ? "P0-HOME" : "P0-SAFETY")
         case "P0-SAFETY":
-            UserDefaults.standard.set(true, forKey: "coach.safety"); navigate(to: "P0-HOME")
+            UserDefaults.standard.set(true, forKey: "coach.safety"); selectTab("P0-HOME")
         case "P0-HOME":
-            selectedRecord = nil
-            navigate(to: draft == nil ? "P0-EXERCISE-LIBRARY" : "P0-DRAFT-RESUME")
+            beginNewTraining()
         case "P0-EXERCISE-LIBRARY":
             selectedRecord = nil
-            if draft == nil { draft = LocalTrainingDraft(side: trainingSide, goal: trainingGoal) }
+            if draft == nil { draft = LocalTrainingDraft(side: trainingSide, goal: trainingGoal, exerciseID: ExerciseKind.bodyweightSquat.rawValue) }
             navigate(to: "P0-SESSION-SETUP")
         case "P0-SESSION-SETUP":
+            if draft == nil { draft = LocalTrainingDraft(side: trainingSide, goal: trainingGoal, exerciseID: ExerciseKind.bodyweightSquat.rawValue) }
             if draft?.side != trainingSide || draft?.goal != trainingGoal { calibration = nil; draft?.calibration = nil }
             draft?.side = trainingSide; draft?.goal = trainingGoal
-            checkpoint(); navigate(to: "P0-CAMERA-GUIDE")
+            draft?.minimumDescentMs = squatDescentTargetMs > 0 ? squatDescentTargetMs : nil
+            checkpoint(); openCamera()
+        case "P0-CAMERA-GUIDE": openCamera()
+        case "P0-PERMISSION-RETURN-GRANTED": openCamera()
         case "P0-PERMISSION-REQUEST":
             Task { let granted = await AVCaptureDevice.requestAccess(for: .video)
-                navigate(to: granted ? "P0-CALIBRATION-READY" : "P0-PERMISSION-DENIED") }
+                if granted { openCamera() } else { navigate(to: "P0-PERMISSION-DENIED") } }
         case "P0-PERMISSION-DENIED", "P0-PERMISSION-RETURN-DENIED":
             if let url = URL(string: UIApplication.openSettingsURLString) { UIApplication.shared.open(url) }
         case "P0-CALIBRATION-READY", "P0-CALIBRATION-INCONSISTENT":
+            if isSquat { squatSession.reset(); standingProgress = 0; navigate(to: "P0-CALIBRATION-READY"); return }
             collector.reset(); completedCalibrationReps = 0; calibration = nil
             navigate(to: "P0-CALIBRATION-RUNNING")
         case "P0-CALIBRATION-RUNNING": break // Only observed complete movements advance calibration.
@@ -203,14 +323,14 @@ final class P0FlowModel: ObservableObject {
             break // Resume is driven only by fresh valid observations.
         case "P0-CAMERA-IN-USE", "P0-INFERENCE-FAILED":
             navigate(to: groupInProgress ? "P0-INTERRUPT-FOREGROUND" : "P0-CALIBRATION-READY")
-        case "P0-END-SET-CONFIRM", "P0-ABANDON-KEEP-REPS":
-            finishGroup()
-        case "P0-ABANDON-CONFIRM":
-            finishGroup()
+        case "P0-END-SET-CONFIRM": finishGroup()
+        case "P0-ABANDON-KEEP-REPS": navigate(to: "P0-SESSION-GROUPS")
+        case "P0-ABANDON-CONFIRM": discardCurrentGroup()
         case "P0-EXIT-MENU", "P0-INTERRUPT-FOREGROUND":
             if currentID == "P0-INTERRUPT-FOREGROUND", readyFrames < 5, cameraEnabled { return }
-            if groupInProgress { navigate(to: "P0-TRAINING-ACTIVE") }
-            else { navigate(to: calibration == nil ? "P0-CALIBRATION-READY" : "P0-NEXT-SET-READY") }
+            if groupInProgress { resumeCurrentGroup() }
+            else if !hasCalibration { navigate(to: "P0-CALIBRATION-READY") }
+            else { startGroup() }
         case "P0-DRAFT-RESUME": resumeDraft()
         case "P0-SAVE-PROGRESS", "P0-SAVE-FAILED", "P0-STORAGE-FULL": saveSession()
         case "P0-SESSION-COMPLETE": openSelectedRecord()
@@ -221,58 +341,102 @@ final class P0FlowModel: ObservableObject {
             if let record = records.first { openRecord(record) }
             else { navigate(to: "P0-HISTORY-EMPTY") }
         case "P0-HISTORY-SESSION-DETAIL": openGroup(0)
-        case "P0-REP-DETAIL": goBack()
-        case "P0-SUMMARY-ISSUES", "P0-HISTORY-GROUP-DETAIL":
+        case "P0-REP-DETAIL", "P0-PRIVACY-LOCAL", "P0-SETTINGS": goBack()
+        case "P0-SUMMARY-CLEAN", "P0-SUMMARY-ISSUES", "P0-SESSION-GROUPS": startGroup()
+        case "P0-HISTORY-GROUP-DETAIL":
             if let rep = summary.reps.first { openRep(rep) }
+        case "P0-HISTORY-EMPTY": beginNewTraining()
+        case "P0-DELETE-SUCCESS": selectTab(records.isEmpty ? "P0-HISTORY-EMPTY" : "P0-HISTORY-SESSIONS")
         default:
             if let next = current?.nextState { navigate(to: next) } else { navigate(to: "P0-HOME") }
         }
     }
 
+    // Actions are keyed by screen identity. Display copy never determines routing.
     func performSecondary() {
-        guard !busy, let screen = current else { return }
-        let action = screen.secondaryAction ?? ""
-        if currentID == "P0-HOME" { navigate(to: draft == nil ? "P0-HOME" : "P0-DRAFT-RESUME"); return }
-        if action.contains("完成会话") { saveSession(); return }
-        if action.contains("删除草稿") { deletionIsDraft = true; navigate(to: "P0-DELETE-CONFIRM"); return }
-        if action.contains("删除会话") { deletionIsDraft = false; navigate(to: "P0-DELETE-CONFIRM"); return }
-        if action == "删除本组" {
+        guard !busy else { return }
+        switch currentID {
+        case "P0-SAFETY", "P0-MY-LOCAL", "P0-SETTINGS": navigate(to: "P0-PRIVACY-LOCAL")
+        case "P0-HOME": resumeDraft()
+        case "P0-EXERCISE-LIBRARY", "P0-PERMISSION-REQUEST": goBack()
+        case "P0-SESSION-SETUP": navigate(to: "P0-EXERCISE-LIBRARY")
+        case "P0-CAMERA-GUIDE": help = .camera
+        case "P0-CALIBRATION-READY": help = .calibration
+        case "P0-CALIBRATION-RUNNING", "P0-TRAINING-ACTIVE", "A11Y-TRAINING-XXXL": interrupt(to: "P0-EXIT-MENU")
+        case "P0-CALIBRATION-SUCCESS":
+            squatSession.reset(); standingProgress = 0
+            calibration = nil; draft?.calibration = nil; collector.reset(); completedCalibrationReps = 0
+            checkpoint(); navigate(to: "P0-CALIBRATION-READY")
+        case "P0-CALIBRATION-INCONSISTENT", "P0-INTERRUPT-LOCK", "P0-DEVICE-THERMAL", "P0-DEVICE-LOW-BATTERY", "P0-SAVE-FAILED", "P0-STORAGE-FULL": leaveWithDraft()
+        case "P0-TRAINING-UNCERTAIN", "P0-INTERRUPT-BACKGROUND", "P0-INTERRUPT-CALL", "P0-INFERENCE-FAILED": interrupt(to: "P0-END-SET-CONFIRM")
+        case "P0-EXIT-MENU": finishGroup()
+        case "P0-END-SET-CONFIRM": resumeCurrentGroup()
+        case "P0-ABANDON-CONFIRM": navigate(to: "P0-EXIT-MENU")
+        case "P0-INTERRUPT-FOREGROUND": help = .camera
+        case "P0-SUMMARY-CLEAN", "P0-SUMMARY-ISSUES", "P0-SESSION-GROUPS": saveSession()
+        case "P0-NEXT-SET-READY":
+            if settingsLocked { saveFailureMessage = "本次训练的腿和目标已固定。要更换设置，请先结束并保存，再开始新训练。" }
+            else { navigate(to: "P0-SESSION-SETUP") }
+        case "P0-DRAFT-RESUME": requestDeleteDraft()
+        case "P0-HISTORY-SESSION-DETAIL": requestDeleteRecord()
+        case "P0-DELETE-CONFIRM": goBack()
+        case "P0-DELETE-FAILED", "P0-HISTORY-GROUP-DETAIL", "P0-ABANDON-KEEP-REPS": navigate(to: selectedRecord == nil ? "P0-SESSION-GROUPS" : "P0-HISTORY-SESSION-DETAIL")
+        case "P0-REP-DETAIL":
+            if let selectedRep, let index = summary.reps.firstIndex(where: { $0.id == selectedRep.id }), !summary.reps.isEmpty {
+                self.selectedRep = summary.reps[(index + 1) % summary.reps.count]
+            }
+        case "P0-TRAINING-COACHING": speechEnabled = false; navigate(to: "P0-TRAINING-ACTIVE")
+        case "P0-INTERRUPT-AUDIO", "A11Y-VOICE-OFF-TEXT": speechEnabled = true; navigate(to: "P0-TRAINING-ACTIVE")
+        case "P0-QUALITY-WRONG-LEG":
+            interrupt(to: "P0-EXIT-MENU")
+        case let id where id.hasPrefix("P0-QUALITY-"): interrupt(to: "P0-END-SET-CONFIRM")
+        case "P0-PRIVACY-LOCAL": break
+        default:
+            if let target = current?.secondaryTarget { navigate(to: target) }
+            else { selectTab("P0-HOME") }
+        }
+    }
+
+    func leaveWithDraft() {
+        guard !busy else { return }
+        interrupt(to: "P0-HOME")
+        routeHistory = []; selectedRecord = nil
+    }
+
+    func resumeCurrentGroup() {
+        navigate(to: analysisWasUncertain ? "P0-TRAINING-UNCERTAIN" : "P0-TRAINING-ACTIVE")
+    }
+
+    func requestDeleteDraft() { deletionIsDraft = true; navigate(to: "P0-DELETE-CONFIRM") }
+    func requestDeleteRecord() { deletionIsDraft = false; navigate(to: "P0-DELETE-CONFIRM") }
+
+    func discardCurrentGroup() {
+        guard !busy else { return }
+        if isSquat {
+            squatSession.beginGroup(); groupInProgress = false; draft?.groupInProgress = false
+            summary = squatSession.summary; draft?.active = summary; completedTrainingReps = 0
+            checkpoint(); navigate(to: groups.isEmpty ? "P0-CALIBRATION-SUCCESS" : "P0-SESSION-GROUPS"); return
+        }
+        generation += 1; busy = true
+        operation = Task {
+            await engine.interrupt()
             groupInProgress = false; draft?.groupInProgress = false
-            draft?.active = WorkoutSummary(reps: [], suppressedIssueCount: 0)
-            checkpoint(); navigate(to: "P0-SESSION-GROUPS"); return
+            summary = WorkoutSummary(reps: [], suppressedIssueCount: 0)
+            draft?.active = summary; completedTrainingReps = 0; latestCue = nil
+            checkpoint(); busy = false
+            navigate(to: groups.isEmpty ? "P0-CALIBRATION-SUCCESS" : "P0-SESSION-GROUPS")
         }
-        if action.contains("暂停") { interrupt(to: "P0-EXIT-MENU"); return }
-        if action.contains("结束本组") { interrupt(to: "P0-END-SET-CONFIRM"); return }
-        if action.contains("放弃本组") { interrupt(to: "P0-ABANDON-CONFIRM"); return }
-        if action.contains("草稿") || action.contains("稍后恢复") {
-            checkpoint(); interrupt(to: "P0-HOME"); return
-        }
-        if action.contains("重新校准") {
-            calibration = nil; collector.reset(); completedCalibrationReps = 0
-            navigate(to: "P0-CALIBRATION-READY"); return
-        }
-        if action.contains("修改会话设置"), settingsLocked {
-            saveFailureMessage = "当前会话的训练腿和目标已固定。请先保存会话，再开始不同设置的训练。"
-            return
-        }
-        if action.contains("语音") {
-            speechEnabled = !action.contains("关闭"); navigate(to: "P0-TRAINING-ACTIVE"); return
-        }
-        if action.contains("下一次重复"), let selectedRep,
-           let index = summary.reps.firstIndex(where: { $0.id == selectedRep.id }), !summary.reps.isEmpty {
-            self.selectedRep = summary.reps[(index + 1) % summary.reps.count]; return
-        }
-        if action.contains("隐私") { navigate(to: "P0-PRIVACY-LOCAL"); return }
-        if let target = screen.secondaryTarget { navigate(to: target); return }
-        if action.contains("继续训练") { navigate(to: "P0-TRAINING-ACTIVE"); return }
-        if action.contains("返回首页") { navigate(to: "P0-HOME"); return }
-        if action.contains("修改") || action.contains("更换动作") { navigate(to: "P0-SESSION-SETUP"); return }
-        if action.contains("返回会话") { navigate(to: selectedRecord == nil ? "P0-SESSION-GROUPS" : "P0-HISTORY-SESSION-DETAIL"); return }
-        goBack()
     }
 
     func startGroup() {
         guard draft != nil else { navigate(to: "P0-HOME"); return }
+        if isSquat {
+            guard squatSession.baseline != nil else { navigate(to: "P0-CALIBRATION-READY"); return }
+            squatSession.beginGroup()
+            groupInProgress = true; analysisWasUncertain = false; completedTrainingReps = 0; latestCue = nil
+            summary = squatSession.summary; draft?.active = summary; draft?.groupInProgress = true
+            checkpoint(); navigate(to: "P0-TRAINING-ACTIVE"); return
+        }
         guard let calibration else { navigate(to: "P0-CALIBRATION-READY"); return }
         guard ProcessInfo.processInfo.thermalState != .critical else { navigate(to: "P0-DEVICE-THERMAL"); return }
         busy = true
@@ -280,7 +444,7 @@ final class P0FlowModel: ObservableObject {
         operation = Task {
             await engine.start(config: config, calibration: calibration)
             guard token == generation else { return }
-            groupInProgress = true; completedTrainingReps = 0; latestCue = nil
+            groupInProgress = true; analysisWasUncertain = false; completedTrainingReps = 0; latestCue = nil
             summary = WorkoutSummary(reps: [], suppressedIssueCount: 0)
             draft?.active = summary; draft?.groupInProgress = true
             checkpoint(); busy = false; navigate(to: "P0-TRAINING-ACTIVE")
@@ -291,6 +455,33 @@ final class P0FlowModel: ObservableObject {
         guard needsCamera, !busy else { return }
         lastFrame = .now
         let token = generation
+        if isSquat {
+            guard !isCameraPaused else { return }
+            if lastSkeletonTimestamp < 0 || observation.timestampMs < lastSkeletonTimestamp || observation.timestampMs - lastSkeletonTimestamp >= 100 {
+                latestPose = observation; lastSkeletonTimestamp = observation.timestampMs
+            }
+            if ["P0-CALIBRATION-READY", "P0-CALIBRATION-RUNNING", "P0-CALIBRATION-SUCCESS", "P0-INTERRUPT-FOREGROUND"].contains(currentID) || activeTraining {
+                let update = squatSession.ingest(observation, counting: groupInProgress && activeTraining)
+                if poseFailure != update.failure { poseFailure = update.failure }
+                if abs(standingProgress - update.standingProgress) >= 0.02 { standingProgress = update.standingProgress }
+                if trackingMessage != update.message { trackingMessage = update.message }
+                readyFrames = update.tracking ? readyFrames + 1 : 0
+                if readyFrames == 5 { objectWillChange.send() }
+                if update.rep != nil || update.attempt != nil {
+                    summary = squatSession.summary; completedTrainingReps = summary.reps.count; draft?.active = summary
+                    checkpoint()
+                    if let rep = update.rep, speechEnabled { speech.speak("\(rep.id) 次") }
+                }
+                if activeTraining {
+                    let target = update.baselineReady && update.tracking ? "P0-TRAINING-ACTIVE" : "P0-TRAINING-UNCERTAIN"
+                    if currentID != target { currentID = target }
+                } else if ["P0-CALIBRATION-READY", "P0-CALIBRATION-RUNNING"].contains(currentID), update.baselineReady {
+                    startGroup()
+                    if speechEnabled { speech.speak("已站稳，开始计次") }
+                } else if currentID == "P0-CALIBRATION-SUCCESS", !update.baselineReady { navigate(to: "P0-CALIBRATION-READY") }
+            }
+            return
+        }
         let required: [LandmarkID] = [.leftShoulder, .rightShoulder, .leftHip, .rightHip, .leftAnkle, .rightAnkle]
         let reliable = required.allSatisfy { (observation.landmarks[$0]?.quality ?? 0) >= 0.65 }
         readyFrames = reliable ? readyFrames + 1 : 0
@@ -326,11 +517,26 @@ final class P0FlowModel: ObservableObject {
     }
 
     func interrupt(to id: String) {
+        if activeTraining { analysisWasUncertain = currentID == "P0-TRAINING-UNCERTAIN" }
         generation += 1
         if currentID == "P0-CALIBRATION-RUNNING" { collector.reset(); completedCalibrationReps = 0 }
         navigate(to: id)
         speech.stop()
         latestCue = nil
+        // Permission dialogs and calibration can interrupt the preview before
+        // a training group exists. There is no engine state to drain then;
+        // waiting on it can leave every primary action blocked by `busy`.
+        if isSquat {
+            squatSession.interrupt()
+            if groupInProgress { summary = squatSession.summary; draft?.active = summary }
+            else { squatSession.reset(); standingProgress = 0 }
+            checkpoint(); busy = false; return
+        }
+        guard groupInProgress else {
+            checkpoint()
+            busy = false
+            return
+        }
         busy = true
         operation = Task {
             await engine.interrupt()
@@ -342,8 +548,16 @@ final class P0FlowModel: ObservableObject {
         }
     }
 
-    func finishGroup() {
-        guard groupInProgress else { navigate(to: "P0-SESSION-GROUPS"); return }
+    func finishGroup() { finishGroup(then: nil) }
+
+    private func finishGroup(then completion: (() -> Void)?) {
+        guard groupInProgress else { navigate(to: "P0-SESSION-GROUPS"); completion?(); return }
+        if isSquat {
+            generation += 1; camera.stop(); squatSession.interrupt(reason: .groupEnded); summary = squatSession.summary
+            draft?.groups.append(summary); draft?.active = WorkoutSummary(reps: [], suppressedIssueCount: 0)
+            draft?.groupInProgress = false; groupInProgress = false; selectedRep = summary.reps.first
+            checkpoint(); navigate(to: "P0-SUMMARY-CLEAN"); completion?(); return
+        }
         generation += 1; camera.stop(); busy = true
         operation = Task {
             await engine.interrupt()
@@ -354,6 +568,7 @@ final class P0FlowModel: ObservableObject {
             selectedRep = summary.reps.first
             checkpoint(); busy = false
             navigate(to: issues.isEmpty ? "P0-SUMMARY-CLEAN" : "P0-SUMMARY-ISSUES")
+            completion?()
         }
     }
 
@@ -367,30 +582,56 @@ final class P0FlowModel: ObservableObject {
     }
 
     func resumeDraft() {
+        guard !busy else { return }
         guard let value = draft else { navigate(to: "P0-HOME"); return }
         selectedRecord = nil; trainingSide = value.side; trainingGoal = value.goal
+        analysisWasUncertain = false
         calibration = value.calibration; groupInProgress = value.groupInProgress
+        if isSquat {
+            squatDescentTargetMs = value.minimumDescentMs ?? 0
+            squatSession.reset(summary: value.active); standingProgress = 0
+            summary = value.active; completedTrainingReps = value.active.reps.count
+            navigate(to: groupInProgress ? "P0-TRAINING-UNCERTAIN" : "P0-CALIBRATION-READY"); return
+        }
         summary = value.active; completedTrainingReps = value.active.reps.count
         busy = true
         operation = Task {
             if let calibration, groupInProgress { await engine.restore(config: config, calibration: calibration, summary: value.active) }
-            busy = false; navigate(to: "P0-INTERRUPT-FOREGROUND")
+            busy = false; openCamera()
         }
     }
 
-    func saveSession() {
-        guard let context, let value = draft, !groupInProgress else { return }
+    func recalibratePreservingCompletedReps() {
+        guard !busy else { return }
+        let reset = { [self] in
+            squatSession.reset(); standingProgress = 0
+            calibration = nil; draft?.calibration = nil; collector.reset(); completedCalibrationReps = 0
+            checkpoint(); navigate(to: "P0-CALIBRATION-READY")
+        }
+        if groupInProgress {
+            finishGroup(then: reset)
+        } else { reset() }
+    }
+
+    func saveSession() { saveSession(archivingActiveGroup: false) }
+
+    private func saveSession(archivingActiveGroup: Bool) {
+        guard let context, let value = draft, !groupInProgress || archivingActiveGroup else { return }
+        // A reloaded draft can have an active group before the live engine is
+        // restored. Archive its persisted completed reps, never just its groups.
+        let savedGroups = value.groups + (archivingActiveGroup && value.groupInProgress ? [value.active] : [])
         navigate(to: "P0-SAVE-PROGRESS")
         do {
-            let combined = WorkoutSummary(reps: value.groups.flatMap(\.reps),
-                                          suppressedIssueCount: value.groups.reduce(0) { $0 + $1.suppressedIssueCount },
-                                          feedbackEvents: value.groups.flatMap(\.feedbackEvents))
+            let combined = WorkoutSummary(reps: savedGroups.flatMap(\.reps),
+                                          suppressedIssueCount: savedGroups.reduce(0) { $0 + $1.suppressedIssueCount },
+                                          feedbackEvents: savedGroups.flatMap(\.feedbackEvents),
+                                          squatAnalysis: savedGroups.contains { $0.squatAnalysis != nil } ? SquatAnalysis(attempts: savedGroups.flatMap { $0.squatAnalysis?.attempts ?? [] }) : nil)
             let record: StoredWorkoutSession
             if let existing = records.first(where: { $0.id == value.id }) { record = existing }
             else { record = try StoredWorkoutSession(summary: combined, config: config, startedAt: value.startedAt) }
             record.id = value.id; record.endedAt = .now
             record.summaryJSON = try JSONEncoder().encode(combined)
-            record.groupsJSON = try JSONEncoder().encode(value.groups)
+            record.groupsJSON = try JSONEncoder().encode(savedGroups)
             record.repCount = combined.reps.count
             record.issueCount = combined.reps.flatMap(\.issues).filter { $0.disposition != .suppressed }.count
             context.insert(record); try context.save()
@@ -399,7 +640,8 @@ final class P0FlowModel: ObservableObject {
                 do { try FileManager.default.removeItem(at: draftURL) }
                 catch { saveFailureMessage = "会话已保存，但草稿清理失败。" }
             }
-            draft = nil; calibration = nil; refreshRecords(); navigate(to: "P0-SAVE-SUCCESS")
+            draft = nil; calibration = nil; groupInProgress = false
+            refreshRecords(); navigate(to: "P0-SAVE-SUCCESS")
         } catch {
             context.rollback(); saveFailureMessage = error.localizedDescription
             navigate(to: "P0-SAVE-FAILED")
@@ -407,8 +649,9 @@ final class P0FlowModel: ObservableObject {
     }
 
     func openRecord(_ record: StoredWorkoutSession) {
+        routeHistory = ["P0-HISTORY-SESSIONS"]
         selectedRecord = record; summary = record.decodedSummary() ?? WorkoutSummary(reps: [], suppressedIssueCount: 0)
-        navigate(to: "P0-HISTORY-SESSION-DETAIL")
+        navigate(to: "P0-HISTORY-SESSION-DETAIL", recordingHistory: false)
     }
     func openSelectedRecord() { if let selectedRecord { openRecord(selectedRecord) } }
     func openGroup(_ index: Int) {
@@ -446,7 +689,10 @@ final class P0FlowModel: ObservableObject {
             trackingMessage = "未检测到可靠人体，请调整机位"
             if activeTraining && currentID != "P0-TRAINING-UNCERTAIN" {
                 generation += 1; currentID = "P0-TRAINING-UNCERTAIN"
-                Task { await engine.interrupt() }
+                if isSquat {
+                    squatSession.interrupt(reason: .trackingLost, failure: .frameGap)
+                    summary = squatSession.summary; draft?.active = summary; checkpoint()
+                } else { Task { await engine.interrupt() } }
             }
         }
         if ProcessInfo.processInfo.thermalState == .critical { interrupt(to: "P0-DEVICE-THERMAL") }
@@ -462,9 +708,22 @@ final class P0FlowModel: ObservableObject {
         }
     }
     func goBack() {
+        if currentID == "P0-HISTORY-SESSION-DETAIL" { selectTab("P0-HISTORY-SESSIONS"); return }
+        if currentID == "P0-HISTORY-GROUP-DETAIL" {
+            routeHistory = [selectedRecord == nil ? "P0-HOME" : "P0-HISTORY-SESSIONS"]
+            navigate(to: selectedRecord == nil ? "P0-SESSION-GROUPS" : "P0-HISTORY-SESSION-DETAIL", recordingHistory: false)
+            return
+        }
+        if currentID == "P0-ABANDON-CONFIRM" { navigate(to: "P0-EXIT-MENU"); return }
+        if currentID == "P0-END-SET-CONFIRM" {
+            if groupInProgress { resumeCurrentGroup() } else { navigate(to: "P0-CALIBRATION-READY") }
+            return
+        }
+        if isCameraPaused { performPrimary(); return }
         if needsCamera { interrupt(to: "P0-EXIT-MENU"); return }
-        if ["P0-SAVE-SUCCESS", "P0-DELETE-SUCCESS"].contains(currentID) { routeHistory = []; navigate(to: "P0-HOME"); return }
-        if ["P0-SUMMARY-CLEAN", "P0-SUMMARY-ISSUES"].contains(currentID) { navigate(to: "P0-SESSION-GROUPS"); return }
+        if ["P0-SAVE-SUCCESS", "P0-DELETE-SUCCESS"].contains(currentID) { selectTab("P0-HOME"); return }
+        if ["P0-SUMMARY-CLEAN", "P0-SUMMARY-ISSUES"].contains(currentID) { routeHistory = ["P0-HOME"]; navigate(to: "P0-SESSION-GROUPS", recordingHistory: false); return }
+        if currentID == "P0-SESSION-SETUP" { selectTab("P0-HOME"); return }
         navigate(to: routeHistory.popLast() ?? "P0-HOME", recordingHistory: false)
     }
     func resetSession() { calibration = nil; completedCalibrationReps = 0; completedTrainingReps = 0; navigate(to: "P0-SESSION-SETUP") }
@@ -480,8 +739,23 @@ extension IssueType {
 }
 
 extension V3ScreenSpec {
+    var recoveryMessage: String {
+        switch stateId {
+        case "P0-SAFETY": "请在理解以下说明后开始训练。"
+        case "P0-PERMISSION-REQUEST": "只申请摄像头权限，用于实时识别动作。"
+        case "P0-PERMISSION-DENIED", "P0-PERMISSION-RETURN-DENIED": "在系统设置中允许摄像头后，再返回此 App。"
+        case "P0-CAMERA-IN-USE": "确认摄像头可用后重试，也可以返回首页稍后继续。"
+        case "P0-SAVE-FAILED", "P0-STORAGE-FULL": "草稿仍保留在本机；请检查存储空间后重试。"
+        case "P0-DEVICE-THERMAL": "请等待手机降温后再继续。"
+        default: "已完成的动作会保留；请按页面提示继续或返回首页。"
+        }
+    }
+
     var productDetail: String {
         switch stateId {
+        case "P0-PERMISSION-REQUEST": return "允许使用摄像头来识别动作。画面只在本机处理，不保存训练视频。"
+        case "P0-SETTINGS": return "语音设置会自动保存，文字提示始终显示。"
+        case "P0-MY-LOCAL": return "查看训练记录，调整反馈方式与了解本机隐私。"
         case "P0-HOME": return "选择一个动作开始训练，或继续上次未完成的会话。"
         case "P0-DRAFT-RESUME": return "已完成的重复保存在本机。继续前请确认机位没有改变。"
         case "P0-EXERCISE-LIBRARY": return "第一版支持侧面拍摄的保加利亚分腿蹲。"

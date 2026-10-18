@@ -1,0 +1,33 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/ai-form-coach-design-review-20261015/Build/Products/AIFormCoach-DesignReview.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB" "-only-testing:AIFormCoachTests/AppIntegrationTests/testInteractiveSimulatorDesignReview" -test-timeouts-enabled YES -default-test-execution-time-allowance 1250 -maximum-test-execution-time-allowance 1250
+
+2026-10-15 19:41:51.478 xcodebuild[61988:1808558] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:41:51.482 xcodebuild[61988:1808558] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:41:51.633 xcodebuild[61988:1808558] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:41:51.886 xcodebuild[61988:1808558] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:41:53.200990+0800 AIFormCoach[61990:1808897] [General] Failed to send CA Event for app launch measurements for ca_event_type: 0 event_name: com.apple.app_launch_measurement.FirstFramePresentationMetric
+Test Suite 'Selected tests' started at 2026-10-15 19:41:53.264.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-15 19:41:53.264.
+Test Suite 'AppIntegrationTests' started at 2026-10-15 19:41:53.264.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' started.
+INTERACTIVE_DESIGN_REVIEW_READY stop=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/2EFDB791-D513-4D46-BEFD-DB04D86CE57E/tmp/coach-design-review-stop scenario=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/2EFDB791-D513-4D46-BEFD-DB04D86CE57E/tmp/coach-design-review-scenario.txt
+2026-10-15 19:41:53.322553+0800 AIFormCoach[61990:1808864] [General] Failed to send CA Event for app launch measurements for ca_event_type: 1 event_name: com.apple.app_launch_measurement.ExtendedLaunchMetrics
+objc[61990]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x121f10310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x121790398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+2026-10-15 19:42:21.661083+0800 AIFormCoach[61990:1808893] [] <<<< FigCaptureSessionSimulator >>>> signalled err=-12782 at <>:297
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' passed (44.557 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-15 19:42:37.822.
+	 Executed 1 test, with 0 failures (0 unexpected) in 44.557 (44.558) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-15 19:42:37.822.
+	 Executed 1 test, with 0 failures (0 unexpected) in 44.557 (44.558) seconds
+Test Suite 'Selected tests' passed at 2026-10-15 19:42:37.822.
+	 Executed 1 test, with 0 failures (0 unexpected) in 44.557 (44.559) seconds
+2026-10-15 19:42:38.102 xcodebuild[61988:1808558] [MT] IDETestOperationsObserverDebug: 46.449 elapsed -- Testing started completed.
+2026-10-15 19:42:38.102 xcodebuild[61988:1808558] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-15 19:42:38.102 xcodebuild[61988:1808558] [MT] IDETestOperationsObserverDebug: 46.449 sec, +46.449 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/kids/Library/Developer/Xcode/DerivedData/AIFormCoach-gmoaologorkicyfawtmpfdwilpmf/Logs/Test/Test-AIFormCoach-Integration-2026.10.15_19-41-51-+0800.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

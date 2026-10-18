@@ -1,0 +1,78 @@
+{
+  "id": "train-office-17",
+  "split": "train",
+  "expected": "fast",
+  "features": [
+    161.66505296396815,
+    173.50516804395926,
+    179.32492809392193,
+    170.81016773946558,
+    177.9912023466248,
+    179.33098007385104,
+    136.39971528535784,
+    162.9399342898472,
+    169.01879188952597,
+    146.34258218447758,
+    165.3555148504804,
+    168.46730783868486,
+    0.08259206362861189,
+    0.3267333909166106,
+    0.3708450623155158,
+    0.04554838922907245,
+    0.3249426117392595,
+    0.38430015779095406,
+    0.1609656520226399,
+    0.6033602477282871,
+    0.7066446286076371,
+    0.060879609991909354,
+    0.5767427012314648,
+    0.7051198912065523,
+    -0.0009025343995469016,
+    0.020022116815815182,
+    0.057854700770513974,
+    0.003057177484294886,
+    0.006590278823234879,
+    0.029921307399451896,
+    0.9891911529849701,
+    0.9965193055166984,
+    0.9979969496403912,
+    0.3134056812291529,
+    0.6537961786458732,
+    0.7018092707421388,
+    -0.015487211733599068,
+    0.0072911669070687985,
+    0.06012660760650054,
+    0.007432588678786125,
+    0.03507100245760265,
+    0.04343127384695022,
+    0.7916666666666665,
+    15.053879717546334
+  ],
+  "coverage": 1.0,
+  "frames": [
+    {
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/pose-six-training/train-office-17-0.png",
+      "actualTime": 0.16666666666666666
+    },
+    {
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/pose-six-training/train-office-17-1.png",
+      "actualTime": 0.9583333333333334
+    },
+    {
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/pose-six-training/train-office-17-2.png",
+      "actualTime": 1.75
+    },
+    {
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/pose-six-training/train-office-17-3.png",
+      "actualTime": 2.5416666666666665
+    },
+    {
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/pose-six-training/train-office-17-4.png",
+      "actualTime": 3.375
+    },
+    {
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/pose-six-training/train-office-17-5.png",
+      "actualTime": 4.166666666666667
+    }
+  ]
+}

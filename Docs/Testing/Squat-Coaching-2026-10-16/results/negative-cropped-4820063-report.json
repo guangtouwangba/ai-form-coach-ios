@@ -1,0 +1,74 @@
+{
+  "actual" : 0,
+  "expected" : 0,
+  "file" : "negative-cropped-4820063-mediapipe.json",
+  "firstStandingMs" : null,
+  "reps" : [
+
+  ],
+  "snapshots" : [
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "左肩、左髋、左膝、左踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 0
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "右髋、右膝、右踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 1250
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "右髋、右膝、右踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 2500
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "左髋、左膝、左踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 3750
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "左髋、左膝、左踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 5000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "左膝、左踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 6250
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "左膝、左踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 7500
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "左膝、左踝证据不足，请靠近一些或改善光线",
+      "timeMs" : 7625
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未建立站立起点，请检查视频中的机位与姿势",
+      "timeMs" : 7625
+    }
+  ],
+  "summary" : {
+    "feedbackEvents" : [
+
+    ],
+    "reps" : [
+
+    ],
+    "suppressedIssueCount" : 0
+  }
+}

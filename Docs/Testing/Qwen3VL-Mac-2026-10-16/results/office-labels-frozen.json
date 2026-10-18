@@ -1,0 +1,168 @@
+{
+  "source": "Author filename labels; primary error only; no human label based on model output",
+  "limitations": "Single participant; protocol differs from bodyweight squat coaching target. Speed target absent; fast labels reported separately. Not an independent person holdout or clinical benchmark.",
+  "labels": [
+    {
+      "id": "office-01",
+      "label": "correct",
+      "partition": "development",
+      "file": "paper_squat_tn_corr1.avi",
+      "bytes": 2871364,
+      "sha256": "7cb685e9bd4ad68b1aa2f4121cbcf9c44a87bdc60b2b67657b04d6c4e7bfdd62",
+      "duration": 4.375
+    },
+    {
+      "id": "office-02",
+      "label": "correct",
+      "partition": "heldout",
+      "file": "paper_squat_tn_corr2.avi",
+      "bytes": 2875048,
+      "sha256": "5f41d47b86b9717dbec1185c65d73c6cf3d96cd128ad0d1b521f0600e102e7ac",
+      "duration": 4.375
+    },
+    {
+      "id": "office-03",
+      "label": "correct",
+      "partition": "heldout",
+      "file": "paper_squat_tn_corr3.avi",
+      "bytes": 2835198,
+      "sha256": "ef9c01d1c4f45937abb768d3771224c9573ed4fa58b9322901e8554bfaed334a",
+      "duration": 4.458333
+    },
+    {
+      "id": "office-04",
+      "label": "high",
+      "partition": "development",
+      "file": "paper_squat_tn_high1.avi",
+      "bytes": 2822726,
+      "sha256": "3aa725013c3ccd96c4350e919194a0ee721743c23cff2a0e06c951e71e8cb78e",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-05",
+      "label": "high",
+      "partition": "heldout",
+      "file": "paper_squat_tn_high2.avi",
+      "bytes": 2855608,
+      "sha256": "b52d5a13bd28da030c1de1e482779f977ac4c8c0e0352220ec2b13caa9a0209c",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-06",
+      "label": "high",
+      "partition": "heldout",
+      "file": "paper_squat_tn_high3.avi",
+      "bytes": 2848912,
+      "sha256": "4ef6e9070f28e388724f51db78ba463c1cb0e66dc2b015a04290032806738131",
+      "duration": 4.375
+    },
+    {
+      "id": "office-07",
+      "label": "low",
+      "partition": "development",
+      "file": "paper_squat_tn_low1.avi",
+      "bytes": 2786226,
+      "sha256": "afe7c2e94fd5d22cc656f9f4ffa39f680327ae60fe67b0aacb6c3a6f4744d842",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-08",
+      "label": "low",
+      "partition": "heldout",
+      "file": "paper_squat_tn_low2.avi",
+      "bytes": 2827366,
+      "sha256": "8642fede04d6802a10aedc874e149416c1ba0f6c4be40b304b548e6a361359b7",
+      "duration": 4.375
+    },
+    {
+      "id": "office-09",
+      "label": "low",
+      "partition": "heldout",
+      "file": "paper_squat_tn_low3.avi",
+      "bytes": 2804200,
+      "sha256": "48bfe6b37e7700fa55eb5d2fc55f3e892c7cb14280d6cbb9cc1b73e946bfe56b",
+      "duration": 4.5
+    },
+    {
+      "id": "office-10",
+      "label": "tilt",
+      "partition": "development",
+      "file": "paper_squat_tn_tilt1.avi",
+      "bytes": 2865664,
+      "sha256": "5609f5463f98555792566d9aaa1538e928329f13c197e6fe01b46c961226299e",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-11",
+      "label": "tilt",
+      "partition": "heldout",
+      "file": "paper_squat_tn_tilt2.avi",
+      "bytes": 2867806,
+      "sha256": "0c5f7868236c3bff0f0fa77f85c4e36447f9fc93d65fb03579e23086d66992f2",
+      "duration": 4.375
+    },
+    {
+      "id": "office-12",
+      "label": "tilt",
+      "partition": "heldout",
+      "file": "paper_squat_tn_tilt3.avi",
+      "bytes": 2867846,
+      "sha256": "212049ae83f515bfd8f907ca09d2dc8fd7e8f950d3a93f83af2dd85fa6029427",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-13",
+      "label": "arms",
+      "partition": "development",
+      "file": "paper_squat_tn_arms2.avi",
+      "bytes": 2805280,
+      "sha256": "9bd60f33d18568647ff781ae9e6f27b90da4d330dc1e487e6cf709f753398afa",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-14",
+      "label": "arms",
+      "partition": "heldout",
+      "file": "paper_squat_tn_arms3.avi",
+      "bytes": 2852398,
+      "sha256": "70abb5f9b4a6d8eddf3c9f4cfa039380a2b32be1b085d217e64ba7719be8854a",
+      "duration": 4.375
+    },
+    {
+      "id": "office-15",
+      "label": "arms",
+      "partition": "heldout",
+      "file": "paper_squat_tn_arms5.avi",
+      "bytes": 2758540,
+      "sha256": "9a6e78f72911d6d66555addf2167ad6b3ea5378e08f2aaadc8ca847a95fa37fe",
+      "duration": 4.375
+    },
+    {
+      "id": "office-16",
+      "label": "fast",
+      "partition": "development",
+      "file": "paper_squat_tn_fast1.avi",
+      "bytes": 2801174,
+      "sha256": "60ed607394bd2f033029c96f0a460f2e6f7be59cbc54084b1c99e1206085a357",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-17",
+      "label": "fast",
+      "partition": "heldout",
+      "file": "paper_squat_tn_fast2.avi",
+      "bytes": 2828164,
+      "sha256": "9cc3f3404dbf15bf136f128ca107d99e66a97dd6ae1fb35df43be46340956634",
+      "duration": 4.416667
+    },
+    {
+      "id": "office-18",
+      "label": "fast",
+      "partition": "heldout",
+      "file": "paper_squat_tn_fast3.avi",
+      "bytes": 2841234,
+      "sha256": "b451c602bf14bd18027612955ad42407e274a7f634a933e29ce655a8eaa5e490",
+      "duration": 4.375
+    }
+  ]
+}

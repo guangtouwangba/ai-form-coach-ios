@@ -1,0 +1,46 @@
+LOADED qwen3_vl 0.3749024999997346
+fresh-01 2.075 'low'
+fresh-02 0.677 'low'
+fresh-03 0.69 'correct'
+fresh-04 0.688 'correct'
+fresh-05 0.672 'low'
+fresh-06 0.69 'correct'
+fresh-07 0.686 'low'
+fresh-08 0.692 'low'
+fresh-09 0.71 'low'
+fresh-10 0.71 'low'
+fresh-11 0.706 'low'
+fresh-12 0.706 'correct'
+confirmation-01 0.717 'correct'
+confirmation-02 0.67 'correct'
+confirmation-03 0.682 'low'
+confirmation-04 0.668 'low'
+confirmation-05 0.67 'correct'
+confirmation-06 0.659 'low'
+confirmation-07 0.664 'low'
+confirmation-08 0.671 'low'
+confirmation-09 0.683 'correct'
+confirmation-10 0.683 'correct'
+real-cycle 1.041 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person returns to a standing position, as they are in a standing position at the end of the sequence."\n}\n```'
+standing-static 0.725 '```json\n{\n  "motion": "static",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "The person is standing in a static position with no movement or descent observed."\n}\n```'
+blank-control 0.695 '```json\n{\n  "motion": "static",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "unknown",\n  "explanation": "The person is in a static position with no visible movement or descent."\n}\n```'
+cropped-control 0.739 '```json\n{\n  "motion": "unknown",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "The person is in a static position throughout the sequence, with no visible movement or descent."\n}\n```'
+ascent-omitted 1.458 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person is returning to a standing position, as they are in a squatting stance with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and'
+       32.98 real         6.30 user         8.18 sys
+          2412347392  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              233285  page reclaims
+                 119  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2584  voluntary context switches
+               88762  involuntary context switches
+        131662272649  instructions retired
+         57958111011  cycles elapsed
+          3969370488  peak memory footprint

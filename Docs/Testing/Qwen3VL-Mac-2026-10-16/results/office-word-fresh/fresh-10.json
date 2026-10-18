@@ -1,0 +1,195 @@
+{
+  "decodedPromptTail" : " arms = both arms raised less than R; tilt = left\/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2167867888,
+  "extractSeconds" : 0.21926796436309814,
+  "firstChunkSeconds" : 0.7104949951171875,
+  "frames" : [
+    {
+      "actualTime" : 0.16666666666666666,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/R1.png",
+      "height" : 480,
+      "id" : "R1",
+      "requestedTime" : 0.17499999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 0.95833333333333337,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/R2.png",
+      "height" : 480,
+      "id" : "R2",
+      "requestedTime" : 0.96299999999999997,
+      "width" : 640
+    },
+    {
+      "actualTime" : 1.75,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/R3.png",
+      "height" : 480,
+      "id" : "R3",
+      "requestedTime" : 1.75,
+      "width" : 640
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/R4.png",
+      "height" : 480,
+      "id" : "R4",
+      "requestedTime" : 2.5369999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 3.2916666666666665,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/R5.png",
+      "height" : 480,
+      "id" : "R5",
+      "requestedTime" : 3.3250000000000002,
+      "width" : 640
+    },
+    {
+      "actualTime" : 4.083333333333333,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/R6.png",
+      "height" : 480,
+      "id" : "R6",
+      "requestedTime" : 4.1120000000000001,
+      "width" : 640
+    },
+    {
+      "actualTime" : 0.16666666666666666,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/F1.png",
+      "height" : 480,
+      "id" : "F1",
+      "requestedTime" : 0.17799999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 0.95833333333333337,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/F2.png",
+      "height" : 480,
+      "id" : "F2",
+      "requestedTime" : 0.98099999999999998,
+      "width" : 640
+    },
+    {
+      "actualTime" : 1.75,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/F3.png",
+      "height" : 480,
+      "id" : "F3",
+      "requestedTime" : 1.7829999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 2.5833333333333335,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/F4.png",
+      "height" : 480,
+      "id" : "F4",
+      "requestedTime" : 2.5859999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 3.375,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/F5.png",
+      "height" : 480,
+      "id" : "F5",
+      "requestedTime" : 3.3879999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 4.166666666666667,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-word-fresh\/fresh-10\/F6.png",
+      "height" : 480,
+      "id" : "F6",
+      "requestedTime" : 4.1909999999999998,
+      "width" : 640
+    }
+  ],
+  "generateWallSeconds" : 0.72867405414581299,
+  "generation" : {
+    "generationSeconds" : 0.017365932464599609,
+    "outputTokens" : 1,
+    "promptSeconds" : 0.71025407314300537,
+    "promptTokens" : 1677,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 57.584008347291253
+  },
+  "id" : "fresh-10",
+  "inputTokens" : 1677,
+  "jsonValid" : false,
+  "maxPixels" : 131072,
+  "maxTokens" : 16,
+  "mlx" : {
+    "activeBytes" : 1816461080,
+    "cacheBytes" : 136229536,
+    "peakActiveBytes" : 2897296361
+  },
+  "peakFootprintBytes" : 3121531400,
+  "prefillChunking" : "balanced",
+  "prepareSeconds" : 0.037760019302368164,
+  "prompt" : "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left\/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+  "rawOutput" : "low",
+  "success" : true,
+  "totalSeconds" : 0.98646199703216553,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/OfficeSquat\/Squat\/paper_squat_tn_arms6.avi",
+  "visualGridTHW" : [
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    }
+  ],
+  "visualTokens" : 1404
+}

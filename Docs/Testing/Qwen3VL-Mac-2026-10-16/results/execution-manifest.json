@@ -1,0 +1,151 @@
+{
+  "date": "2026-10-16",
+  "phoneInstalled": false,
+  "phoneLaunched": false,
+  "mainAppProjectChangedByThisExperiment": false,
+  "mainAppVLMAdded": false,
+  "actualInference": true,
+  "scopes": [
+    "Swift MLX 4bit and BF16",
+    "Python MLX-VLM same pinned quantized weights",
+    "Official Transformers/PyTorch MPS original BF16",
+    "Frozen real video trial labels",
+    "Monotonic Release Mac timings",
+    "Independent existing Vision/core count replay"
+  ],
+  "notClaimed": [
+    "iPhone performance or camera+MediaPipe+VLM concurrency",
+    "Population action correctness or safety",
+    "Native full-video VLM temporal alignment",
+    "True cold-disk startup",
+    "Fully fixed model hallucinations"
+  ],
+  "logs": [
+    {
+      "name": "download",
+      "originalLog": "/tmp/coach-qwen-full-download.log",
+      "sha256": "3e0511352f4ed0580c15f994bc1d4f20993feae3f233e3b4d67876037624c596",
+      "saved": "logs/download.txt"
+    },
+    {
+      "name": "download-bf16",
+      "originalLog": "/tmp/coach-qwen-bf16-download.log",
+      "sha256": "d4b518707327ccc3f6416777a9a779330a0c92bdfa9cb5b92b1d40478a1a347c",
+      "saved": "logs/download-bf16.txt"
+    },
+    {
+      "name": "download-recheck",
+      "originalLog": "/tmp/coach-qwen-download-recheck.log",
+      "sha256": "6a79fb3f15c478984f86deb5c61f7237cf9ae8f492808c9d47604c98e019d3b1",
+      "saved": "logs/download-recheck.txt"
+    },
+    {
+      "name": "download-bf16-recheck",
+      "originalLog": "/tmp/coach-qwen-bf16-download-recheck.log",
+      "sha256": "72c145ae37cc6c0949d8eff7221c8fa84d38a40f0b7a80672ac994efb4cb005d",
+      "saved": "logs/download-bf16-recheck.txt"
+    },
+    {
+      "name": "initial-smoke",
+      "originalLog": "/tmp/coach-qwen-smoke-initial.log",
+      "sha256": "1f1de570249596292a3693ed1efb77a3dd7fe77bd66b1dbae6a58faed802a006",
+      "saved": "logs/initial-smoke.txt"
+    },
+    {
+      "name": "python-mlx",
+      "originalLog": "/tmp/coach-qwen-python-reference-fixed.log",
+      "sha256": "2c195cea8e3bf2b20b47201e6bf7c27d4d6eb3bd0b29058f423db8f4f9d1d310",
+      "saved": "logs/python-mlx.txt"
+    },
+    {
+      "name": "bf16-swift",
+      "originalLog": "/tmp/coach-qwen-bf16-comparison.log",
+      "sha256": "94048b50ea52a856a2e18d11efbfa4874d1560d12877caf6dd2e3e8f4d8d8ffb",
+      "saved": "logs/bf16-swift.txt"
+    },
+    {
+      "name": "torch-mps",
+      "originalLog": "/tmp/coach-qwen-torch-reference.log",
+      "sha256": "b943838992b21c1bebb388589ade91389b8a9851897320511ae564ef26e0a8fd",
+      "saved": "logs/torch-mps.txt"
+    },
+    {
+      "name": "fresh-labels",
+      "originalLog": "/tmp/coach-qwen-word-fresh.log",
+      "sha256": "bc90bfed25cd557f052853adcc826cb9f1ec455691c9dd04a212a58fe21ed30f",
+      "saved": "logs/fresh-labels.txt"
+    },
+    {
+      "name": "release-performance",
+      "originalLog": "/tmp/coach-qwen-performance-monotonic.log",
+      "sha256": "ec4aa1d638f341da2290a4c9c509ba52245c84f09ede8be4e4072266a0e22740",
+      "saved": "logs/release-performance.txt"
+    },
+    {
+      "name": "gate-regression",
+      "originalLog": "/tmp/coach-qwen-gate-final.log",
+      "sha256": "7fedfdafd6af1787642af9529c020399729ac11a122307651f012821b0337130",
+      "saved": "logs/gate-regression.txt"
+    },
+    {
+      "name": "core-count",
+      "originalLog": "/tmp/coach-qwen-core-count-regression.log",
+      "sha256": "6a79a6dd9960c44be6e3db0e767e67527daa250be5fbb5fc4e1afe30cf90a03c",
+      "saved": "logs/core-count.txt"
+    },
+    {
+      "name": "core-negative",
+      "originalLog": "/tmp/coach-qwen-core-negative-regression.log",
+      "sha256": "6a34f026ffa808d712375ad2149857d9eaca7562f6acbef88abce0aa70e03698",
+      "saved": "logs/core-negative.txt"
+    },
+    {
+      "name": "release-final-build",
+      "originalLog": "/tmp/coach-qwen-release-bounded-build.log",
+      "sha256": "7a932d0b5eb33f9724f3bcc344f098e7d1c0c7f14f6b95e61153a54b2f214160",
+      "saved": "logs/release-final-build.txt"
+    },
+    {
+      "name": "final-boundary",
+      "originalLog": "/tmp/coach-qwen-final-boundary.log",
+      "sha256": "ea8f92ed9ac4096886a4ac6c8b71e618d8bb232bac05d435ca2b6b57f30e4e9c",
+      "saved": "logs/final-boundary.txt"
+    },
+    {
+      "name": "gate-final",
+      "originalLog": "/tmp/coach-qwen-gate-final.log",
+      "sha256": "7fedfdafd6af1787642af9529c020399729ac11a122307651f012821b0337130",
+      "saved": "logs/gate-final.txt"
+    }
+  ],
+  "sourcesSHA256": {
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/scripts/check_runtime_guards.py": "2286ea169d2ce548c72272e997f47c99a6b1f6a42bc59bcd1558c22041fb96ed",
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/scripts/torch_reference.py": "5d110f0a25494e178cb65c5c4b66f44042822f18133fa217044c0d057acb16e4",
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/scripts/run_benchmark.py": "d3fa68d47214ce1d53e369249df350edd24f741587c98dcc9c01c8902666262b",
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/scripts/download_model.py": "926628edfed28d1fd74518bac625adf20987355e9bb11a824b6855a1615f7df9",
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/scripts/check_preprocessing.py": "c3bde57636555e470b2a9e58f068b90a2ba8e73240cecb41357be392b6c5870c",
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/scripts/make_contact_sheet.py": "12d163aa34538df28b5c9bc9b458225baabbecc7354b1bf96905b2c2c2fd3735",
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/scripts/python_reference.py": "caec873bd83c69e512748753758055392b13452d5527fb700e1cb88dd36327a8",
+    "Docs/Testing/Qwen3VL-Mac-2026-10-16/regression/GateRegression.swift": "f7e68588748a87856d1e2ed239c2caae6bbceb7d28fab4635694aa36009a9cc1",
+    "Docs/Research/Qwen3VL-2026-10-16/preflight/Sources/CoachQwenPreflight/ObservationGate.swift": "e5984d59832086bc0c469565526ab14ab8478ad411d934822b3d33b2d539dfbe",
+    "Docs/Research/Qwen3VL-2026-10-16/preflight/Sources/CoachQwenPreflight/Preflight.swift": "3bfd503e197c1de3a29911dbe0374fedc80585ac1f9fb205ddf58491ab23f6a3",
+    "Docs/Research/Qwen3VL-2026-10-16/preflight/Sources/CoachVideoBenchmark/Benchmark.swift": "5e87a3401537bca536b9fbe62848c89f4bdc52a675f7089157da73dbac62e61f",
+    "Docs/Research/Qwen3VL-2026-10-16/preflight/Sources/CoachConfigAudit/Audit.swift": "eefec6e3b80035b9da798325d0b4edac6f490b88966c05105827f52c022d21ea",
+    "Docs/Research/Qwen3VL-2026-10-16/preflight/Package.swift": "c84705655df4e2afad7f8b975d25f35fabfaf40e581b39e9092dd71b17f89aa9",
+    "Docs/Research/Qwen3VL-2026-10-16/preflight/Package.resolved": "a7605a2d97bbc62981c7edeedc539a1718dbc7278af06a47456600b904e5c410"
+  },
+  "regression": "11 validation checks plus 4 captured model failure regressions; 10 final real observations and 4 unsafe controls checked at gate boundary",
+  "qualityDecision": "FAIL independent automatic coaching; gate retains research candidates only",
+  "commands": [
+    "python3 scripts/download_model.py [--bf16]",
+    "xcodebuild -scheme CoachVideoBenchmark -configuration Release -destination platform=macOS,arch=arm64 -derivedDataPath /tmp/coach-qwen-preflight-build -jobs 4 CODE_SIGNING_ALLOWED=NO build (preflight directory)",
+    "/usr/bin/time -l CoachVideoBenchmark <verified-model-dir> <frozen-suite-json> <result-dir>",
+    "python_reference.py <same-weight-dir> <suite> <captured-swift-result-dir> <out>",
+    "torch_reference.py <original-bf16-dir> <suite> <captured-swift-result-dir> <out>",
+    "check_preprocessing.py <model-dir> <captured-result-dir> <out>",
+    "bash Scripts/replay-video.sh <real-video> <expected-count> <out>"
+  ],
+  "runtimeGuardChecks": 5,
+  "clock": "monotonic system uptime",
+  "releaseBuildPassed": true
+}

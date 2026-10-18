@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-16",
+  "scope": "Mac and iOS Simulator only; no iPhone install or launch",
+  "core": {
+    "passed": 42,
+    "failed": 0,
+    "log": "core-tests.log"
+  },
+  "simulatorFullSuite": {
+    "passed": 26,
+    "skipped": 6,
+    "failed": 0,
+    "log": "simulator-tests.log"
+  },
+  "lastReplayChangeFocusedRegression": {
+    "passed": 2,
+    "failed": 0,
+    "log": "simulator-seek-tests.log",
+    "note": "These two tests are also members of the full suite, not additional distinct test cases."
+  },
+  "macRealVideoRegression": [
+    {
+      "file": "negative-cropped-4820063-report.json",
+      "count": 0,
+      "attempts": 0,
+      "pass_": true
+    },
+    {
+      "file": "negative-frontal-moving-5319965-report.json",
+      "count": 0,
+      "attempts": 0,
+      "pass_": true
+    },
+    {
+      "file": "standing-five-rotated-metadata-report.json",
+      "count": 5,
+      "attempts": 5,
+      "pass_": true
+    },
+    {
+      "file": "standing-then-five-squats-report.json",
+      "count": 5,
+      "attempts": 5,
+      "pass_": true
+    }
+  ],
+  "manual": [
+    {
+      "case": "Target selection, standing, count, pause/back/continue, summary, evidence, save and reopen",
+      "input": "synthetic pose; actual App flow and temporary database",
+      "result": "passed"
+    },
+    {
+      "case": "Small sustained motions",
+      "input": "synthetic pose; actual App core",
+      "result": "0 counted cycles; uncounted attempts retained; paused final attempt distinct from observed returns"
+    },
+    {
+      "case": "File picker import and replay",
+      "input": "real video; actual iOS MediaPipe",
+      "result": "5 counted cycles, 5 attempts, selected 2-second descent target comparison"
+    },
+    {
+      "case": "Evidence button",
+      "input": "real video; final UI build",
+      "result": "Pauses at 5.0 seconds, scrolls to video, actual bottom frame visible"
+    },
+    {
+      "case": "History navigation and zero-cycle primary action",
+      "input": "App integration regression after manual finding",
+      "result": "passed"
+    }
+  ],
+  "limits": [
+    "Positive five-cycle source repeats one real cycle and begins with a frozen standing segment.",
+    "No multi-person quality accuracy claim.",
+    "No new trained quality classifier or iPhone performance validation."
+  ]
+}

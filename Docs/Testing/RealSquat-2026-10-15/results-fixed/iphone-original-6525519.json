@@ -1,0 +1,209 @@
+{
+  "actual" : 0,
+  "decodedPoseFrames" : 187,
+  "expected" : 0,
+  "file" : "original-6525519.mp4",
+  "reps" : [
+
+  ],
+  "snapshots" : [
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 0
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 1000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 1200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "身体仍在移动，请保持站稳",
+      "timeMs" : 1400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 1600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 1800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 2000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 2200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 2400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 2600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 2800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 3800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 4000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 4200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 4400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 4600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 4800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 6000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "身体仍在移动，请保持站稳",
+      "timeMs" : 6200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未建立站立起点，请检查视频中的机位与姿势",
+      "timeMs" : 0
+    }
+  ]
+}

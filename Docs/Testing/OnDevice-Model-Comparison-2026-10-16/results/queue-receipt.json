@@ -1,0 +1,50 @@
+[
+  {
+    "name": "qwen35-common",
+    "returncode": 0,
+    "seconds": 25.058934708999004,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-2B-4bit/674aaa7240b91e8012fcad5d791b7dfe5ba90207",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-common"
+    ]
+  },
+  {
+    "name": "gemma4-common",
+    "returncode": 1,
+    "seconds": 0.8805074580013752,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/gemma-4-e2b-it-4bit/238767527555cb75a05732a84dff5d6ba0dd6809",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/gemma4-common"
+    ]
+  },
+  {
+    "name": "qwen35-4b-common",
+    "returncode": 0,
+    "seconds": 86.20982637500856,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-4B-MLX-4bit/32f3e8ecf65426fc3306969496342d504bfa13f3",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-4b-common"
+    ]
+  }
+]

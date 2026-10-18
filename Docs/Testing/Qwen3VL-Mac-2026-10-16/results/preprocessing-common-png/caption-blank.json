@@ -1,0 +1,53 @@
+{
+  "decodedPromptTail" : "<|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|>用一句中文具体描述图片里是否有人，正在做什么。<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2061896416,
+  "extractSeconds" : 0.069606541670509614,
+  "firstChunkSeconds" : 0.13444841666205321,
+  "frames" : [
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/preprocessing-common-png\/caption-blank\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 0.20492462499532849,
+  "generation" : {
+    "generationSeconds" : 0.06771695613861084,
+    "outputTokens" : 12,
+    "promptSeconds" : 0.1343151330947876,
+    "promptTokens" : 297,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 177.20820137628488
+  },
+  "id" : "caption-blank",
+  "inputTokens" : 297,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1788143956,
+    "cacheBytes" : 87357908,
+    "peakActiveBytes" : 2786398686
+  },
+  "peakFootprintBytes" : 2679458528,
+  "prefillChunking" : "balanced",
+  "preparedTensorPath" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/preprocessing-common-png\/caption-blank\/prepared-pixels.npy",
+  "prepareSeconds" : 0.012382125001749955,
+  "prompt" : "用一句中文具体描述图片里是否有人，正在做什么。",
+  "rawOutput" : "图片中没有显示任何人，也看不到任何人在做什么。",
+  "success" : true,
+  "totalSeconds" : 0.2876656666630879,
+  "variant" : "blank",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 252
+}

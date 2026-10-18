@@ -1,0 +1,49 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/coach-quality-build/Build/Products/Quality.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB" "-only-testing:AIFormCoachTests/AppIntegrationTests/testMediaPipeImportComparisonExportAndCancellation" "-only-testing:AIFormCoachTests/AppIntegrationTests/testReplaySheetPresentsAndDismissesWithFlowEnvironment" -resultBundlePath /tmp/coach-quality-seek-verified.xcresult -test-timeouts-enabled YES -default-test-execution-time-allowance 120
+
+2026-10-16 11:04:00.511 xcodebuild[63143:3572148] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Writing result bundle at path:
+	/tmp/coach-quality-seek-verified.xcresult
+
+2026-10-16 11:04:00.513 xcodebuild[63143:3572148] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-16 11:04:00.656 xcodebuild[63143:3572148] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+IOSurfaceClientSetSurfaceNotify failed e00002c7
+Test Suite 'Selected tests' started at 2026-10-16 11:04:02.553.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-16 11:04:02.553.
+Test Suite 'AppIntegrationTests' started at 2026-10-16 11:04:02.553.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeImportComparisonExportAndCancellation]' started.
+2026-10-16 11:04:02.706983+0800 AIFormCoach[63153:3572554] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119842.742504 3572621 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+2026-10-16 11:04:02.743168+0800 AIFormCoach[63153:3572623] Initialized TensorFlow Lite runtime.
+INFO: Initialized TensorFlow Lite runtime.
+2026-10-16 11:04:02.745134+0800 AIFormCoach[63153:3572623] Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792119842.777651 3572623 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119842.784350 3572634 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119842.801409 3572627 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+objc[63153]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x12aac0310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x128580398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+2026-10-16 11:04:11.143009+0800 AIFormCoach[63153:3572621] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792119851.153071 3572561 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792119851.186472 3572866 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119851.193277 3572869 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+2026-10-16 11:04:19.438168+0800 AIFormCoach[63153:3572616] [] (Fig) signalled err=-12900 at <>:1242
+2026-10-16 11:04:19.456866+0800 AIFormCoach[63153:3572554] [espresso] [Espresso::handle_ex_plan] exception=Espresso exception: "I/O error": Missing weights path cnn_human_pose.espresso.weights status=-2
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeImportComparisonExportAndCancellation]' passed (17.004 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplaySheetPresentsAndDismissesWithFlowEnvironment]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplaySheetPresentsAndDismissesWithFlowEnvironment]' passed (1.453 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-16 11:04:21.011.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 18.457 (18.458) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-16 11:04:21.011.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 18.457 (18.458) seconds
+Test Suite 'Selected tests' passed at 2026-10-16 11:04:21.012.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 18.457 (18.459) seconds
+2026-10-16 11:04:27.523 xcodebuild[63143:3572148] [MT] IDETestOperationsObserverDebug: 26.866 elapsed -- Testing started completed.
+2026-10-16 11:04:27.523 xcodebuild[63143:3572148] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-16 11:04:27.523 xcodebuild[63143:3572148] [MT] IDETestOperationsObserverDebug: 26.866 sec, +26.866 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/coach-quality-seek-verified.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

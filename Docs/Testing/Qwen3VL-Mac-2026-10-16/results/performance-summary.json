@@ -1,0 +1,71 @@
+{
+  "generateWallSeconds": {
+    "n": 10,
+    "p50": 1.1170114874839783,
+    "p95": 1.1571289241313933,
+    "min": 1.0835989713668823,
+    "max": 1.1717849969863892
+  },
+  "prepareSeconds": {
+    "n": 10,
+    "p50": 0.03430056571960449,
+    "p95": 0.04460858106613158,
+    "min": 0.03363204002380371,
+    "max": 0.05054903030395508
+  },
+  "extractSeconds": {
+    "n": 10,
+    "p50": 0.41754698753356934,
+    "p95": 0.47356839776039117,
+    "min": 0.3901439905166626,
+    "max": 0.5072410106658936
+  },
+  "totalSeconds": {
+    "n": 10,
+    "p50": 1.5693709254264832,
+    "p95": 1.6677539467811584,
+    "min": 1.5211989879608154,
+    "max": 1.7302720546722412
+  },
+  "firstChunkSeconds": {
+    "n": 10,
+    "p50": 0.6740179657936096,
+    "p95": 0.7171354293823242,
+    "min": 0.6621249914169312,
+    "max": 0.7274179458618164
+  },
+  "peakFootprintBytes": {
+    "n": 10,
+    "p50": 3156453764.0,
+    "p95": 3184952924.8,
+    "min": 3130804624,
+    "max": 3188115856
+  },
+  "load": {
+    "execution": "real macOS Metal GPU inference; not simulator or iPhone",
+    "gpu": "Apple M5 Pro",
+    "loadMLX": {
+      "activeBytes": 1781949872,
+      "cacheBytes": 4240,
+      "peakActiveBytes": 1781954112
+    },
+    "loadPeakFootprintBytes": 1922697232,
+    "loadSeconds": 0.3465059995651245,
+    "mlxCacheLimitBytes": 134217728,
+    "modelDirectory": "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3-VL-2B-Instruct-4bit/9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+    "os": "Version 26.5.1 (Build 25F80)",
+    "physicalMemoryBytes": 51539607552
+  },
+  "tokens": {
+    "input": [
+      1772
+    ],
+    "visual": [
+      1512
+    ],
+    "output": [
+      66
+    ]
+  },
+  "scope": "Mac M5 Pro 48GiB, Release, file and Metal caches warm; ten repeated requests of the SAME six real frames. Measures performance/repeatability, not ten independent action accuracy samples. 50ms footprint sampling plus process /usr/bin/time -l. Times include frame export in extract/total."
+}

@@ -1,0 +1,54 @@
+I0000 00:00:1792108315.184825 3220167 init-domain.cc:134] Fiber init: default domain = pthread, concurrency = 16, prefix = pthread-default
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792108315.224810 3220173 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108315.230166 3220175 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108315.246972 3220182 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+train-office-01 coverage 1.0 inference ms 11.6
+W0000 00:00:1792108317.215408 3220241 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108317.219494 3220243 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-02 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108318.892667 3220320 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108318.896690 3220320 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-03 coverage 1.0 inference ms 11.7
+W0000 00:00:1792108321.078898 3220467 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108321.082964 3220479 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/pose_baseline.py:54: RuntimeWarning: Mean of empty slice
+  knee=np.nanmean(arr[:,:2],axis=1);good=np.isfinite(knee)
+train-office-04 coverage 0.89 inference ms 11.6
+W0000 00:00:1792108323.389628 3220639 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108323.393601 3220641 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-05 coverage 0.77 inference ms 11.7
+W0000 00:00:1792108325.767334 3220786 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108325.771771 3220792 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-06 coverage 0.8 inference ms 11.7
+W0000 00:00:1792108327.738340 3220877 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108327.742696 3220876 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-07 coverage 0.84 inference ms 12.1
+W0000 00:00:1792108329.449149 3220999 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108329.453599 3220997 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-08 coverage 0.91 inference ms 11.9
+W0000 00:00:1792108331.986760 3221104 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108331.990907 3221108 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+Traceback (most recent call last):
+  File "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/pose_baseline.py", line 44, in <module>
+    if not ok:raise RuntimeError('Decode failure '+c['id'])
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Decode failure train-office-09
+      107.25 real        10.85 user         1.27 sys
+           414482432  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              131830  page reclaims
+                 400  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                3085  voluntary context switches
+               55853  involuntary context switches
+        149614683958  instructions retired
+         46790177681  cycles elapsed
+           301221064  peak memory footprint

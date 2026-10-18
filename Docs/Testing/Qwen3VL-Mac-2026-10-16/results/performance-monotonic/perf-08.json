@@ -1,0 +1,127 @@
+{
+  "decodedPromptTail" : " For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2319075752,
+  "extractSeconds" : 0.42032629167078994,
+  "firstChunkSeconds" : 0.67884774999401998,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/perf-08\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/perf-08\/F2.png",
+      "height" : 1920,
+      "id" : "F2",
+      "requestedTime" : 1.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/perf-08\/F3.png",
+      "height" : 1920,
+      "id" : "F3",
+      "requestedTime" : 2,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/perf-08\/F4.png",
+      "height" : 1920,
+      "id" : "F4",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 3,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/perf-08\/F5.png",
+      "height" : 1920,
+      "id" : "F5",
+      "requestedTime" : 3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 4,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/perf-08\/F6.png",
+      "height" : 1920,
+      "id" : "F6",
+      "requestedTime" : 4,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 1.122809333333862,
+  "generation" : {
+    "generationSeconds" : 0.44112801551818848,
+    "outputTokens" : 66,
+    "promptSeconds" : 0.67870903015136719,
+    "promptTokens" : 1772,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 149.61643259603562
+  },
+  "id" : "perf-08",
+  "identicalQueryFramePixels" : false,
+  "inputTokens" : 1772,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1872106788,
+    "cacheBytes" : 137876688,
+    "peakActiveBytes" : 2969038184
+  },
+  "observationGate" : {
+    "acceptedAsObservation" : true,
+    "eligibleForAutomaticCoaching" : false,
+    "normalizedJSON" : "{\"explanation\":\"在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。\",\"knee_in\":\"uncertain\",\"lowest_frame\":\"F4\",\"motion\":\"squat\",\"returned\":\"yes\"}",
+    "reasons" : [
+
+    ]
+  },
+  "peakFootprintBytes" : 3206252968,
+  "prefillChunking" : "balanced",
+  "preparedTensorPath" : "",
+  "prepareSeconds" : 0.034202916664071381,
+  "prompt" : "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+  "rawOutput" : "```json\n{\n  \"motion\": \"squat\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"unknown\",\n  \"explanation\": \"在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。\"\n}\n```",
+  "success" : true,
+  "totalSeconds" : 1.5783101666747825,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 1512
+}

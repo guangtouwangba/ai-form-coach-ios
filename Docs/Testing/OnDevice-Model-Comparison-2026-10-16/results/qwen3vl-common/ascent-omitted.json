@@ -1,0 +1,82 @@
+{
+  "id": "ascent-omitted",
+  "caseID": "ascent-omitted",
+  "split": "temporal-controls",
+  "success": true,
+  "rawOutput": "```json\n{\n  \"motion\": \"squat\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"yes\",\n  \"explanation\": \"The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person is returning to a standing position, as they are in a squatting stance with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The person is in a squat position with their knees bent and",
+  "finishReason": "length",
+  "generateSeconds": 1.4578819169983035,
+  "prepareSeconds": 0.10853179200785235,
+  "totalSeconds": 1.5665314590005437,
+  "peakFootprintBytes": 3514943984,
+  "endFootprintBytes": 2638399960,
+  "peakRSSBytes": 2412347392,
+  "mlxPeakBytes": 2948767220,
+  "promptTokens": 980,
+  "outputTokens": 192,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      980
+    ],
+    "input_ids": [
+      1,
+      980
+    ],
+    "pixel_values": [
+      2880,
+      1536
+    ],
+    "image_grid_thw": [
+      6,
+      3
+    ]
+  },
+  "promptTail": " evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 1,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F1.png",
+      "sha256": "3de78f1bee30f23361bc39bd46d2d6477eb805641fef02831ab857e8c1189a20"
+    },
+    {
+      "id": "F2",
+      "requestedTime": 1.3,
+      "actualTime": 1.3,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F2.png",
+      "sha256": "ce4bfa4b74e04d93618425d34295db39719b7490a192ec378718d403934c4106"
+    },
+    {
+      "id": "F3",
+      "requestedTime": 1.6,
+      "actualTime": 1.6,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F3.png",
+      "sha256": "f04520d4dc26012057c212960ab7ee36415ca629563eb6833a6cf1726fe25e2b"
+    },
+    {
+      "id": "F4",
+      "requestedTime": 1.9,
+      "actualTime": 1.9,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F4.png",
+      "sha256": "ed7015f5ab4002fb9a01ba48e7502eab156a69352b3f2ebe2ae033a7a59fb0d1"
+    },
+    {
+      "id": "F5",
+      "requestedTime": 2.2,
+      "actualTime": 2.2,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F5.png",
+      "sha256": "675361c964fe944011abff435d3ebace729dee23d8bf93a33c524b2b60fa23b8"
+    },
+    {
+      "id": "F6",
+      "requestedTime": 2.5,
+      "actualTime": 2.5,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F6.png",
+      "sha256": "849b9bd75cd49ea837841bf7726e0ea59e08b2a6bcab680e72f5f084809e69ab"
+    }
+  ],
+  "generationTemperature": 0,
+  "maxTokens": 192
+}

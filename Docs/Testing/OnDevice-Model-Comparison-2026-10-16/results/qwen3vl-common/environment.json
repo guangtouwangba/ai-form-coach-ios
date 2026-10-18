@@ -1,0 +1,20 @@
+{
+  "modelDirectory": "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3-VL-2B-Instruct-4bit/9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+  "modelType": "qwen3_vl",
+  "loadSeconds": 0.3749024999997346,
+  "loadPeakFootprintBytes": 2094696512,
+  "os": "macOS-26.5.1-arm64-arm-64bit",
+  "scope": "Real macOS Metal GPU, sequential inference. File/Metal caches may be warm; no camera or iPhone.",
+  "suiteSHA256": "e9633cd0cc64e9779fae193adf6855f05723d4c750408032e9bb456406fa2373",
+  "mlxCacheBytes": 134217728,
+  "runtime": "mlx-vlm 0.6.0",
+  "thinking": false,
+  "processorPolicy": {
+    "qwenPixels": [
+      65536,
+      131072
+    ],
+    "gemmaSoftTokens": 140,
+    "smolImageSplitting": false
+  }
+}

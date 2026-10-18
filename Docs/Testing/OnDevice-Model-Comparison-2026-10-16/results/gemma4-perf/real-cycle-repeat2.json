@@ -1,0 +1,83 @@
+{
+  "id": "real-cycle-repeat2",
+  "caseID": "real-cycle",
+  "split": "temporal-controls",
+  "success": true,
+  "rawOutput": "{\"motion\": \"squat\", \"lowest_frame\": \"F6\", \"returned\": \"yes\", \"knee_in\": \"uncertain\", \"explanation\": \"The sequence shows a progression from standing to a deep squat and back up.\"}",
+  "finishReason": "stop",
+  "generateSeconds": 1.8135233750072075,
+  "prepareSeconds": 0.11609895799483638,
+  "totalSeconds": 1.929784040999948,
+  "peakFootprintBytes": 5623500640,
+  "endFootprintBytes": 4497117024,
+  "peakRSSBytes": 4486709248,
+  "mlxPeakBytes": 4801960056,
+  "promptTokens": 993,
+  "outputTokens": 51,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      993
+    ],
+    "input_ids": [
+      1,
+      993
+    ],
+    "pixel_values": [
+      6,
+      3,
+      720,
+      384
+    ]
+  },
+  "promptTail": "the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<turn|>\n<|turn>model\n",
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 1,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F1.png",
+      "sha256": "3de78f1bee30f23361bc39bd46d2d6477eb805641fef02831ab857e8c1189a20"
+    },
+    {
+      "id": "F2",
+      "requestedTime": 1.5,
+      "actualTime": 1.5,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F2.png",
+      "sha256": "a2267fc4ebdc92bc35e97db4001e600dc87c17496869fc826bd15bff00297ce6"
+    },
+    {
+      "id": "F3",
+      "requestedTime": 2,
+      "actualTime": 2.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F3.png",
+      "sha256": "80c7e135fe3685fabec230d3c7dda9ead43dfab0a4513e6d4a1cca77cab9c463"
+    },
+    {
+      "id": "F4",
+      "requestedTime": 2.5,
+      "actualTime": 2.5,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F4.png",
+      "sha256": "849b9bd75cd49ea837841bf7726e0ea59e08b2a6bcab680e72f5f084809e69ab"
+    },
+    {
+      "id": "F5",
+      "requestedTime": 3,
+      "actualTime": 3.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F5.png",
+      "sha256": "b5629cab85b5976c5ba63ec263a6dc213d0f7b358a9c536997c766bd8036299c"
+    },
+    {
+      "id": "F6",
+      "requestedTime": 4,
+      "actualTime": 4.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F6.png",
+      "sha256": "e7142a8159ba50b1a1e1191cc64f4d4d028265b2bf7a0f1b549e390b152bf5ab"
+    }
+  ],
+  "sampling": {
+    "temperature": 0
+  },
+  "seed": 17,
+  "maxTokens": 192
+}

@@ -1,0 +1,50 @@
+{
+  "endFootprintBytes" : 2057636576,
+  "extractSeconds" : 0.06430506706237793,
+  "firstChunkSeconds" : 0.14814794063568115,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/caption-standing\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 0.51492595672607422,
+  "generation" : {
+    "generationSeconds" : 0.36587798595428467,
+    "outputTokens" : 24,
+    "promptSeconds" : 0.1479790210723877,
+    "promptTokens" : 289,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 65.595638221859915
+  },
+  "id" : "caption-standing",
+  "inputTokens" : 289,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1788143912,
+    "cacheBytes" : 59388588,
+    "peakActiveBytes" : 2786398690
+  },
+  "peakFootprintBytes" : 2842954464,
+  "prepareSeconds" : 0.0093230009078979492,
+  "prompt" : "用一句中文具体描述图片里的人正在做什么，不要评价标准与否。",
+  "rawOutput" : "一位女性站在白色背景前，身体侧面朝向镜头，双臂自然下垂，身体保持直立。",
+  "success" : true,
+  "totalSeconds" : 0.58947408199310303,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 252
+}

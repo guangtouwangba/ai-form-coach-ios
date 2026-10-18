@@ -1,0 +1,133 @@
+{
+  "decodedPromptTail" : " For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 4753232000,
+  "extractSeconds" : 0.38978803157806396,
+  "firstChunkSeconds" : 1.5796821117401123,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/bf16-comparison\/standing-static\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/bf16-comparison\/standing-static\/F2.png",
+      "height" : 1920,
+      "id" : "F2",
+      "requestedTime" : 1.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/bf16-comparison\/standing-static\/F3.png",
+      "height" : 1920,
+      "id" : "F3",
+      "requestedTime" : 2,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/bf16-comparison\/standing-static\/F4.png",
+      "height" : 1920,
+      "id" : "F4",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/bf16-comparison\/standing-static\/F5.png",
+      "height" : 1920,
+      "id" : "F5",
+      "requestedTime" : 3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/bf16-comparison\/standing-static\/F6.png",
+      "height" : 1920,
+      "id" : "F6",
+      "requestedTime" : 4,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 1.601128101348877,
+  "generation" : {
+    "generationSeconds" : 0.8806459903717041,
+    "outputTokens" : 56,
+    "promptSeconds" : 0.71427798271179199,
+    "promptTokens" : 1772,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 63.589683723380666
+  },
+  "id" : "standing-static",
+  "identicalQueryFramePixels" : true,
+  "inputTokens" : 1772,
+  "jsonValid" : true,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 4322527276,
+    "cacheBytes" : 136543156,
+    "peakActiveBytes" : 5442166896
+  },
+  "observationGate" : {
+    "acceptedAsObservation" : false,
+    "eligibleForAutomaticCoaching" : false,
+    "reasons" : [
+      "non_squat_claims_cycle",
+      "static_input_claims_motion"
+    ]
+  },
+  "parsedOutput" : {
+    "explanation" : "The person is standing in a static pose with no visible movement or descent.",
+    "knee_in" : "uncertain",
+    "lowest_frame" : "F4",
+    "motion" : "static",
+    "returned" : "no"
+  },
+  "peakFootprintBytes" : 5648830592,
+  "prefillChunking" : "balanced",
+  "prepareSeconds" : 0.036540985107421875,
+  "prompt" : "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+  "rawOutput" : "{\n  \"motion\": \"static\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"no\",\n  \"knee_in\": \"uncertain\",\n  \"explanation\": \"The person is standing in a static pose with no visible movement or descent.\"\n}",
+  "success" : true,
+  "totalSeconds" : 2.0285329818725586,
+  "variant" : "static",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 1512
+}

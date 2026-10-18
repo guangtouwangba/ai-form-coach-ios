@@ -1,0 +1,160 @@
+Loading local verified Qwen3-VL weights
+Loaded in 0.42445383332960773s; MLX ["cacheBytes": 4240, "peakActiveBytes": 1781954112, "activeBytes": 1781949872]
+CASE perf-01
+DONE perf-01 1.14s; peak 3174533376; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-02
+DONE perf-02 1.14s; peak 3171207592; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-03
+DONE perf-03 1.14s; peak 3241740736; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-04
+DONE perf-04 1.16s; peak 3171486120; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-05
+DONE perf-05 1.16s; peak 3168209320; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-06
+DONE perf-06 1.15s; peak 3171944872; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-07
+DONE perf-07 1.15s; peak 3203762600; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-08
+DONE perf-08 1.12s; peak 3206252968; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-09
+DONE perf-09 1.12s; peak 3181119912; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE perf-10
+DONE perf-10 1.15s; peak 3169044904; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE standing-static
+DONE standing-static 1.07s; peak 3182021032; ```json
+{
+  "motion": "static",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "人物保持静止，没有明显的下降或返回动作。"
+}
+```
+CASE blank-control
+DONE blank-control 1.11s; peak 3172845992; ```json
+{
+  "motion": "unknown",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，一个人的膝盖位置接近最低点，但动作尚未完全完成。"
+}
+```
+CASE cropped-control
+DONE cropped-control 1.12s; peak 3120499136; ```json
+{
+  "motion": "unknown",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "uncertain",
+  "explanation": "The person is in a static position throughout the sequence, with no visible movement or descent."
+}
+```
+CASE ascent-omitted
+DONE ascent-omitted 1.22s; peak 3181660632; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "yes",
+  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person is returning to a standing position."
+}
+```
+       22.70 real         9.60 user         6.97 sys
+          2081636352  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              370110  page reclaims
+                1223  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                3451  voluntary context switches
+              167764  involuntary context switches
+        214667425901  instructions retired
+         67885122257  cycles elapsed
+          3326806440  peak memory footprint

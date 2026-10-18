@@ -1,0 +1,63 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/ai-form-coach-navigation-20261015/Build/Products/AIFormCoach-NavigationReview.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB" "-only-testing:AIFormCoachTests/AppIntegrationTests/testInteractiveSimulatorDesignReview" -test-timeouts-enabled YES -default-test-execution-time-allowance 1250 -maximum-test-execution-time-allowance 1250
+
+2026-10-15 19:49:25.328 xcodebuild[68337:1852203] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:49:25.330 xcodebuild[68337:1852203] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:49:25.476 xcodebuild[68337:1852203] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Test Suite 'Selected tests' started at 2026-10-15 19:49:27.413.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-15 19:49:27.414.
+Test Suite 'AppIntegrationTests' started at 2026-10-15 19:49:27.414.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' started.
+INTERACTIVE_DESIGN_REVIEW_READY stop=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/2F92C594-3E26-42F2-AC05-5812CCAAE7C7/tmp/coach-design-review-stop scenario=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/2F92C594-3E26-42F2-AC05-5812CCAAE7C7/tmp/coach-design-review-scenario.txt
+objc[68356]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x11fe6c310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x11f6e8398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+2026-10-15 19:50:07.688993+0800 AIFormCoach[68356:1852579] [] <<<< FigCaptureSessionSimulator >>>> signalled err=-12782 at <>:297
+IOSurfaceClientSetSurfaceNotify failed e00002c7
+2026-10-15 19:50:32.822 xcodebuild[68337:1852203] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:51:26.689833+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:51:26.699803+0800 AIFormCoach[68356:1852584] [VoiceDBClient] Error fetching voices: DecodingError.dataCorrupted: Data was corrupted. Debug description: Invalid container metadata for _UnkeyedDecodingContainer, found keyedGraphEncodingNodeID. Using fallback voices.
+2026-10-15 19:51:26.775159+0800 AIFormCoach[68356:1860477] [plugin] AddInstanceForFactory: No factory registered for id <CFUUID 0x1030b03c0> F8BB1C28-BAE8-11D6-9C31-00039315CD46
+2026-10-15 19:51:26.798931+0800 AIFormCoach[68356:1860479] [VoiceDBClient] Error fetching voices: DecodingError.dataCorrupted: Data was corrupted. Debug description: Invalid container metadata for _UnkeyedDecodingContainer, found keyedGraphEncodingNodeID. Using fallback voices.
+2026-10-15 19:51:27.284844+0800 AIFormCoach[68356:1852584] [AQ]        LoudnessManager.mm:1755  ReadPListFile: unable to open stream for LoudnessManager plist
+2026-10-15 19:51:27.284952+0800 AIFormCoach[68356:1852584] [AQ]        LoudnessManager.mm:1261  GetHardwarePlatformKey: cannot get acoustic ID
+2026-10-15 19:51:27.285054+0800 AIFormCoach[68356:1852584] [AQ]        LoudnessManager.mm:1215  IsHardwareSupported: no plist loaded, returning false
+2026-10-15 19:51:27.285164+0800 AIFormCoach[68356:1852584] [AQ]        LoudnessManager.mm:1215  IsHardwareSupported: no plist loaded, returning false
+2026-10-15 19:51:27.309204+0800 AIFormCoach[68356:1860479] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:51:31.720016+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:51:31.758132+0800 AIFormCoach[68356:1852584] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:51:36.758500+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:51:36.793000+0800 AIFormCoach[68356:1852578] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:52:10.195923+0800 AIFormCoach[68356:1852477] [AXRuntimeCommon] Unknown client: AIFormCoach
+2026-10-15 19:52:17.387 xcodebuild[68337:1852203] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:52:42.794134+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:52:42.840362+0800 AIFormCoach[68356:1852578] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:52:47.827221+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:52:47.863818+0800 AIFormCoach[68356:1860481] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:52:52.877636+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:52:52.910494+0800 AIFormCoach[68356:1852578] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:52:57.868162+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:52:57.902356+0800 AIFormCoach[68356:1856064] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:53:02.864582+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:53:02.894924+0800 AIFormCoach[68356:1856064] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:53:07.855747+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:53:07.883099+0800 AIFormCoach[68356:1860479] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+2026-10-15 19:53:12.855338+0800 AIFormCoach[68356:1852477] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:53:12.888971+0800 AIFormCoach[68356:1860480] [AVAB]          AVAudioBuffer.mm:281   mBuffers[0].mDataByteSize (0) should be non-zero
+CoreData: debug: PostSaveMaintenance: incremental_vacuum with freelist_count - 5 and pages_to_free 1
+2026-10-15 19:54:22.582925+0800 AIFormCoach[68356:1860477] [auext] Error in destroying pipe Error Domain=NSCocoaErrorDomain Code=4099 "The connection from pid 70470 on anonymousListener or serviceListener was invalidated from this process." UserInfo={NSDebugDescription=The connection from pid 70470 on anonymousListener or serviceListener was invalidated from this process.}
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' passed (295.190 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-15 19:54:22.604.
+	 Executed 1 test, with 0 failures (0 unexpected) in 295.190 (295.190) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-15 19:54:22.604.
+	 Executed 1 test, with 0 failures (0 unexpected) in 295.190 (295.191) seconds
+Test Suite 'Selected tests' passed at 2026-10-15 19:54:22.604.
+	 Executed 1 test, with 0 failures (0 unexpected) in 295.190 (295.191) seconds
+2026-10-15 19:54:31.868 xcodebuild[68337:1852203] [MT] IDETestOperationsObserverDebug: 306.391 elapsed -- Testing started completed.
+2026-10-15 19:54:31.868 xcodebuild[68337:1852203] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-15 19:54:31.868 xcodebuild[68337:1852203] [MT] IDETestOperationsObserverDebug: 306.391 sec, +306.391 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/kids/Library/Developer/Xcode/DerivedData/AIFormCoach-collyivzimzqkecgcvydhotuloqa/Logs/Test/Test-AIFormCoach-Integration-2026.10.15_19-49-25-+0800.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

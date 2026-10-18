@@ -1,0 +1,210 @@
+[
+  {
+    "name": "qwen3vl-perf",
+    "returncode": 0,
+    "seconds": 11.15407674999733,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3-VL-2B-Instruct-4bit/9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen3vl-perf",
+      "--ids",
+      "real-cycle",
+      "--repeat",
+      "6"
+    ]
+  },
+  {
+    "name": "qwen35-perf",
+    "returncode": 0,
+    "seconds": 10.212154958993779,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-2B-4bit/674aaa7240b91e8012fcad5d791b7dfe5ba90207",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-perf",
+      "--ids",
+      "real-cycle",
+      "--repeat",
+      "6"
+    ]
+  },
+  {
+    "name": "qwen35-diagnostic",
+    "returncode": 0,
+    "seconds": 3.46660262500518,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-2B-4bit/674aaa7240b91e8012fcad5d791b7dfe5ba90207",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/diagnostic-suite.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-diagnostic"
+    ]
+  },
+  {
+    "name": "qwen35-recommended",
+    "returncode": 0,
+    "seconds": 34.63966787500249,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-2B-4bit/674aaa7240b91e8012fcad5d791b7dfe5ba90207",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-recommended",
+      "--sampling",
+      "recommended",
+      "--seed",
+      "17"
+    ]
+  },
+  {
+    "name": "qwen35-4b-perf",
+    "returncode": 0,
+    "seconds": 13.715875249996316,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-4B-MLX-4bit/32f3e8ecf65426fc3306969496342d504bfa13f3",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-4b-perf",
+      "--ids",
+      "real-cycle",
+      "--repeat",
+      "6"
+    ]
+  },
+  {
+    "name": "qwen35-4b-diagnostic",
+    "returncode": 0,
+    "seconds": 3.7215508339868393,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-4B-MLX-4bit/32f3e8ecf65426fc3306969496342d504bfa13f3",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/diagnostic-suite.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-4b-diagnostic"
+    ]
+  },
+  {
+    "name": "qwen35-4b-recommended",
+    "returncode": 0,
+    "seconds": 52.59794841600524,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3.5-4B-MLX-4bit/32f3e8ecf65426fc3306969496342d504bfa13f3",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/qwen35-4b-recommended",
+      "--sampling",
+      "recommended",
+      "--seed",
+      "17"
+    ]
+  },
+  {
+    "name": "gemma4-perf",
+    "returncode": 0,
+    "seconds": 14.624840583011974,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/gemma-4-e2b-it-4bit/238767527555cb75a05732a84dff5d6ba0dd6809",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/gemma4-perf",
+      "--ids",
+      "real-cycle",
+      "--repeat",
+      "6"
+    ]
+  },
+  {
+    "name": "gemma4-diagnostic",
+    "returncode": 0,
+    "seconds": 5.185365541998181,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/gemma-4-e2b-it-4bit/238767527555cb75a05732a84dff5d6ba0dd6809",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/diagnostic-suite.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/gemma4-diagnostic"
+    ]
+  },
+  {
+    "name": "gemma4-recommended",
+    "returncode": 0,
+    "seconds": 83.75474366600974,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/gemma-4-e2b-it-4bit/238767527555cb75a05732a84dff5d6ba0dd6809",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/gemma4-recommended",
+      "--sampling",
+      "recommended",
+      "--seed",
+      "17"
+    ]
+  },
+  {
+    "name": "smolvlm-perf",
+    "returncode": 0,
+    "seconds": 6.194209834007779,
+    "command": [
+      "/usr/bin/time",
+      "-l",
+      "/tmp/coach-alternatives-venv/bin/python",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py",
+      "/Users/kids/Library/Application Support/AIFormCoach/Models/SmolVLM2-500M-Video-Instruct-mlx/fa57db46815177fbdfd65cc85a2b3416a8332268",
+      "--suite",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/protocol-v1.json",
+      "--out",
+      "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/results/smolvlm-perf",
+      "--ids",
+      "real-cycle",
+      "--repeat",
+      "6"
+    ]
+  }
+]

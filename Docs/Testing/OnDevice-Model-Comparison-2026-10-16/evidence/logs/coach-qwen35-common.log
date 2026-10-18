@@ -1,0 +1,46 @@
+LOADED qwen3_5 0.793594499991741
+fresh-01 1.698 'uncertain'
+fresh-02 0.883 'uncertain'
+fresh-03 0.691 'uncertain'
+fresh-04 0.684 'uncertain'
+fresh-05 0.688 'uncertain'
+fresh-06 0.68 'uncertain'
+fresh-07 0.679 'uncertain'
+fresh-08 0.708 'uncertain'
+fresh-09 0.706 'uncertain'
+fresh-10 0.713 'uncertain'
+fresh-11 0.683 'uncertain'
+fresh-12 0.688 'uncertain'
+confirmation-01 0.69 'uncertain'
+confirmation-02 0.684 'uncertain'
+confirmation-03 0.679 'uncertain'
+confirmation-04 0.685 'uncertain'
+confirmation-05 0.681 'uncertain'
+confirmation-06 0.707 'uncertain'
+confirmation-07 0.702 'uncertain'
+confirmation-08 0.696 'high'
+confirmation-09 0.701 'uncertain'
+confirmation-10 0.702 'uncertain'
+real-cycle 1.14 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat and then returns to standing, with knee position unclear from the side view."\n}'
+standing-static 0.734 '{\n    "motion": "static",\n    "lowest_frame": null,\n    "returned": "no",\n    "knee_in": "uncertain",\n    "explanation": "The subject maintains a static standing posture with no visible knee flexion."\n}'
+blank-control 0.645 '{"motion": "unknown", "lowest_frame": null, "returned": "uncertain", "knee_in": "uncertain", "explanation": "No visible movement or knee position observed."}'
+cropped-control 0.79 '{\n  "motion": "static",\n  "lowest_frame": "null",\n  "returned": "no",\n  "knee_in": "uncertain",\n  "explanation": "The subject maintains a static pose with no visible knee movement."\n}'
+ascent-omitted 0.785 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat position and then returns to standing."\n}'
+       25.05 real         5.99 user         7.79 sys
+          2516746240  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              247618  page reclaims
+                 766  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                4850  voluntary context switches
+               86917  involuntary context switches
+        120640458050  instructions retired
+         54277616417  cycles elapsed
+          4719102544  peak memory footprint

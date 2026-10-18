@@ -1,0 +1,117 @@
+{
+  "decodedPromptTail" : " stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2209532352,
+  "extractSeconds" : 0.14206898212432861,
+  "firstChunkSeconds" : 0.7031790018081665,
+  "frames" : [
+    {
+      "actualTime" : 0.16666666666666666,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-4bit\/office-12\/F1.png",
+      "height" : 480,
+      "id" : "F1",
+      "requestedTime" : 0.17699999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 0.95833333333333337,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-4bit\/office-12\/F2.png",
+      "height" : 480,
+      "id" : "F2",
+      "requestedTime" : 0.97199999999999998,
+      "width" : 640
+    },
+    {
+      "actualTime" : 1.75,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-4bit\/office-12\/F3.png",
+      "height" : 480,
+      "id" : "F3",
+      "requestedTime" : 1.7669999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 2.5416666666666665,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-4bit\/office-12\/F4.png",
+      "height" : 480,
+      "id" : "F4",
+      "requestedTime" : 2.5619999999999998,
+      "width" : 640
+    },
+    {
+      "actualTime" : 3.3333333333333335,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-4bit\/office-12\/F5.png",
+      "height" : 480,
+      "id" : "F5",
+      "requestedTime" : 3.3570000000000002,
+      "width" : 640
+    },
+    {
+      "actualTime" : 4.125,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-4bit\/office-12\/F6.png",
+      "height" : 480,
+      "id" : "F6",
+      "requestedTime" : 4.1520000000000001,
+      "width" : 640
+    }
+  ],
+  "generateWallSeconds" : 1.7197049856185913,
+  "generation" : {
+    "generationSeconds" : 1.0157619714736938,
+    "outputTokens" : 63,
+    "promptSeconds" : 0.70297598838806152,
+    "promptTokens" : 1685,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 62.02240462753096
+  },
+  "id" : "office-12",
+  "inputTokens" : 1685,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1816461176,
+    "cacheBytes" : 136588460,
+    "peakActiveBytes" : 2884074890
+  },
+  "peakFootprintBytes" : 3148237248,
+  "prefillChunking" : "balanced",
+  "prepareSeconds" : 0.030917048454284668,
+  "prompt" : "This dataset uses this target movement: start standing, bend the knees and lower the torso while raising both arms sideways symmetrically, then return upright. These are dataset-specific labels. Choose one primary visible deviation: correct (no clear deviation), high (hardly bends knees \/ stays too high), low (torso lowered much farther than the target), arms (arms fail to rise to horizontal), tilt (arms or torso visibly tilt to one side), fast (unusually fast execution), or uncertain. Return exactly three JSON keys: label, evidence (a list of frame IDs), explanation (one short Chinese sentence stating the visible evidence). Do not call ordinary forward torso inclination a medical problem. Frame labels include actual seconds. If speed cannot be decided without a target speed, choose uncertain rather than inventing one.",
+  "rawOutput" : "```json\n{\n  \"label\": \"low\",\n  \"evidence\": [\n    \"t=2.542s\"\n  ],\n  \"explanation\": \"At t=2.542s, the person's torso is lowered more than the target, indicating a deviation.\"\n}\n```",
+  "success" : true,
+  "totalSeconds" : 1.8935670852661133,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/OfficeSquat\/Squat\/paper_squat_tn_tilt3.avi",
+  "visualGridTHW" : [
+    {
+      "h" : 26,
+      "t" : 1,
+      "w" : 36
+    },
+    {
+      "h" : 26,
+      "t" : 1,
+      "w" : 36
+    },
+    {
+      "h" : 26,
+      "t" : 1,
+      "w" : 36
+    },
+    {
+      "h" : 26,
+      "t" : 1,
+      "w" : 36
+    },
+    {
+      "h" : 26,
+      "t" : 1,
+      "w" : 36
+    },
+    {
+      "h" : 26,
+      "t" : 1,
+      "w" : 36
+    }
+  ],
+  "visualTokens" : 1404
+}

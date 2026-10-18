@@ -1,0 +1,195 @@
+{
+  "decodedPromptTail" : " F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2323663416,
+  "extractSeconds" : 0.37168800830841064,
+  "firstChunkSeconds" : 4.0635250806808472,
+  "frames" : [
+    {
+      "actualTime" : 0.16666666666666666,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/R1.png",
+      "height" : 480,
+      "id" : "R1",
+      "requestedTime" : 0.17499999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 0.95833333333333337,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/R2.png",
+      "height" : 480,
+      "id" : "R2",
+      "requestedTime" : 0.96299999999999997,
+      "width" : 640
+    },
+    {
+      "actualTime" : 1.75,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/R3.png",
+      "height" : 480,
+      "id" : "R3",
+      "requestedTime" : 1.75,
+      "width" : 640
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/R4.png",
+      "height" : 480,
+      "id" : "R4",
+      "requestedTime" : 2.5369999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 3.2916666666666665,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/R5.png",
+      "height" : 480,
+      "id" : "R5",
+      "requestedTime" : 3.3250000000000002,
+      "width" : 640
+    },
+    {
+      "actualTime" : 4.083333333333333,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/R6.png",
+      "height" : 480,
+      "id" : "R6",
+      "requestedTime" : 4.1120000000000001,
+      "width" : 640
+    },
+    {
+      "actualTime" : 0.16666666666666666,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/F1.png",
+      "height" : 480,
+      "id" : "F1",
+      "requestedTime" : 0.17499999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 0.95833333333333337,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/F2.png",
+      "height" : 480,
+      "id" : "F2",
+      "requestedTime" : 0.96299999999999997,
+      "width" : 640
+    },
+    {
+      "actualTime" : 1.75,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/F3.png",
+      "height" : 480,
+      "id" : "F3",
+      "requestedTime" : 1.75,
+      "width" : 640
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/F4.png",
+      "height" : 480,
+      "id" : "F4",
+      "requestedTime" : 2.5369999999999999,
+      "width" : 640
+    },
+    {
+      "actualTime" : 3.2916666666666665,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/F5.png",
+      "height" : 480,
+      "id" : "F5",
+      "requestedTime" : 3.3250000000000002,
+      "width" : 640
+    },
+    {
+      "actualTime" : 4.083333333333333,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/office-reference-dev\/office-01\/F6.png",
+      "height" : 480,
+      "id" : "F6",
+      "requestedTime" : 4.1120000000000001,
+      "width" : 640
+    }
+  ],
+  "generateWallSeconds" : 4.0639220476150513,
+  "generation" : {
+    "generationSeconds" : 3.3108088970184326,
+    "outputTokens" : 192,
+    "promptSeconds" : 0.75216901302337646,
+    "promptTokens" : 1780,
+    "stopReason" : "length",
+    "tokensPerSecond" : 57.991870256512442
+  },
+  "id" : "office-01",
+  "inputTokens" : 1780,
+  "jsonValid" : false,
+  "maxPixels" : 131072,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1911259220,
+    "cacheBytes" : 137232640,
+    "peakActiveBytes" : 2854076912
+  },
+  "peakFootprintBytes" : 3080964640,
+  "prefillChunking" : "balanced",
+  "prepareSeconds" : 0.05621790885925293,
+  "prompt" : "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough \/ torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left\/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+  "rawOutput" : "{\n  \"label\": \"low\",\n  \"evidence\": \"F3, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F1, F2, F4, F5, F6, F",
+  "success" : true,
+  "totalSeconds" : 4.4928779602050781,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/OfficeSquat\/Squat\/paper_squat_tn_corr1.avi",
+  "visualGridTHW" : [
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    },
+    {
+      "h" : 18,
+      "t" : 1,
+      "w" : 26
+    }
+  ],
+  "visualTokens" : 1404
+}

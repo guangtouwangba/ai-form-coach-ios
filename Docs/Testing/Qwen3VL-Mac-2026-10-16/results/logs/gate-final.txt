@@ -1,0 +1,1 @@
+PASS: 11 validation checks plus 4 captured real model failure regressions; automatic coaching stays disabled.

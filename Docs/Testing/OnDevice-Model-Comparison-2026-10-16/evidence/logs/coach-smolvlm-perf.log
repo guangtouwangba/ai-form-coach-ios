@@ -1,0 +1,25 @@
+LOADED smolvlm 0.2805425840051612
+real-cycle-repeat1 0.453 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+real-cycle-repeat2 0.423 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+real-cycle-repeat3 0.42 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+real-cycle-repeat4 0.415 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+real-cycle-repeat5 0.418 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+real-cycle-repeat6 0.412 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+        6.18 real         4.04 user         1.26 sys
+          1477115904  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              108938  page reclaims
+                  50  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2851  voluntary context switches
+               28807  involuntary context switches
+         70911509201  instructions retired
+         17761169766  cycles elapsed
+          2480654208  peak memory footprint

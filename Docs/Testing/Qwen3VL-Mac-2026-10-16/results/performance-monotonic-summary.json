@@ -1,0 +1,70 @@
+{
+  "generateWallSeconds": {
+    "n": 10,
+    "p50": 1.142816416664573,
+    "p95": 1.1611352083309612,
+    "min": 1.1163669583329465,
+    "max": 1.1615694583306322
+  },
+  "prepareSeconds": {
+    "n": 10,
+    "p50": 0.0349824374934542,
+    "p95": 0.0449784833290323,
+    "min": 0.03353241666627582,
+    "max": 0.04996133332315367
+  },
+  "extractSeconds": {
+    "n": 10,
+    "p50": 0.4170364791571046,
+    "p95": 0.47160088125456234,
+    "min": 0.4028437916713301,
+    "max": 0.5123058750032214
+  },
+  "totalSeconds": {
+    "n": 10,
+    "p50": 1.5933690416568425,
+    "p95": 1.6650198958341207,
+    "min": 1.5535753750009462,
+    "max": 1.7013013333344134
+  },
+  "firstChunkSeconds": {
+    "n": 10,
+    "p50": 0.6981575416648411,
+    "p95": 0.7087335062446073,
+    "min": 0.67884774999402,
+    "max": 0.7100882499944419
+  },
+  "peakFootprintBytes": {
+    "n": 10,
+    "p50": 3173239124.0,
+    "p95": 3225771240.4,
+    "min": 3168209320,
+    "max": 3241740736
+  },
+  "environment": {
+    "execution": "real macOS Metal GPU inference; not simulator or iPhone",
+    "gpu": "Apple M5 Pro",
+    "loadMLX": {
+      "activeBytes": 1781949872,
+      "cacheBytes": 4240,
+      "peakActiveBytes": 1781954112
+    },
+    "loadPeakFootprintBytes": 1929922576,
+    "loadSeconds": 0.42445383332960773,
+    "mlxCacheLimitBytes": 134217728,
+    "modelDirectory": "/Users/kids/Library/Application Support/AIFormCoach/Models/Qwen3-VL-2B-Instruct-4bit/9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+    "os": "Version 26.5.1 (Build 25F80)",
+    "physicalMemoryBytes": 51539607552
+  },
+  "clock": "ProcessInfo.systemUptime (monotonic)",
+  "inputTokens": [
+    1772
+  ],
+  "visualTokens": [
+    1512
+  ],
+  "outputTokens": [
+    66
+  ],
+  "scope": "Ten repetitions of the same six frames measure warm performance and repeatability, not action accuracy. File/Metal caches warm. Frame extraction includes diagnostic PNG export. macOS only, no concurrent camera or MediaPipe."
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "negative-cropped-4820063-report.json",
+    "count": 0,
+    "attempts": 0,
+    "pass_": true
+  },
+  {
+    "file": "negative-frontal-moving-5319965-report.json",
+    "count": 0,
+    "attempts": 0,
+    "pass_": true
+  },
+  {
+    "file": "standing-five-rotated-metadata-report.json",
+    "count": 5,
+    "attempts": 5,
+    "pass_": true
+  },
+  {
+    "file": "standing-then-five-squats-report.json",
+    "count": 5,
+    "attempts": 5,
+    "pass_": true
+  }
+]

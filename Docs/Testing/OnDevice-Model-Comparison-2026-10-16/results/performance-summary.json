@@ -1,0 +1,200 @@
+{
+  "scope": "Apple M5 Pro 48GiB macOS 26.5.1; sequential real Metal inference. Same saved six real images; no camera, no video extraction in timing. Model-specific processors and output lengths differ. Five warm requests after one excluded warmup, file and shader caches warm; not iPhone performance. Footprint sampled every 50ms and separately recorded by time -l.",
+  "models": [
+    {
+      "model": "qwen3vl",
+      "warmN": 5,
+      "discardedWarmup": "repeat1",
+      "generateP50Seconds": 1.2829662919975817,
+      "generateMaxSeconds": 2.1479482499998994,
+      "preprocessedTotalP50Seconds": 1.4466695000010077,
+      "maxSampledFootprintBytes": 3469871528,
+      "wholeProcessPeakFootprintBytes": 3545139600,
+      "outputTokens": [
+        95
+      ],
+      "inputTokens": [
+        980
+      ],
+      "maxMLXPeakBytes": 2948455924,
+      "inputShapes": {
+        "attention_mask": [
+          1,
+          980
+        ],
+        "input_ids": [
+          1,
+          980
+        ],
+        "pixel_values": [
+          2880,
+          1536
+        ],
+        "image_grid_thw": [
+          6,
+          3
+        ]
+      },
+      "modelLoadSeconds": 0.5474471669876948
+    },
+    {
+      "model": "qwen35",
+      "warmN": 5,
+      "discardedWarmup": "repeat1",
+      "generateP50Seconds": 1.0919414160016458,
+      "generateMaxSeconds": 1.7636849999980768,
+      "preprocessedTotalP50Seconds": 1.2461902079958236,
+      "maxSampledFootprintBytes": 4089055608,
+      "wholeProcessPeakFootprintBytes": 4116023672,
+      "outputTokens": [
+        71
+      ],
+      "inputTokens": [
+        984
+      ],
+      "maxMLXPeakBytes": 3470276566,
+      "inputShapes": {
+        "attention_mask": [
+          1,
+          984
+        ],
+        "input_ids": [
+          1,
+          984
+        ],
+        "pixel_values": [
+          2880,
+          1536
+        ],
+        "image_grid_thw": [
+          6,
+          3
+        ]
+      },
+      "modelLoadSeconds": 1.109043833988835
+    },
+    {
+      "model": "qwen35-4b",
+      "warmN": 5,
+      "discardedWarmup": "repeat1",
+      "generateP50Seconds": 1.8248749170015799,
+      "generateMaxSeconds": 2.1640357080032118,
+      "preprocessedTotalP50Seconds": 1.9487713749986142,
+      "maxSampledFootprintBytes": 5753933064,
+      "wholeProcessPeakFootprintBytes": 5821173000,
+      "outputTokens": [
+        62
+      ],
+      "inputTokens": [
+        984
+      ],
+      "maxMLXPeakBytes": 5194767384,
+      "inputShapes": {
+        "attention_mask": [
+          1,
+          984
+        ],
+        "input_ids": [
+          1,
+          984
+        ],
+        "pixel_values": [
+          2880,
+          1536
+        ],
+        "image_grid_thw": [
+          6,
+          3
+        ]
+      },
+      "modelLoadSeconds": 1.0133145409927238
+    },
+    {
+      "model": "gemma4",
+      "warmN": 5,
+      "discardedWarmup": "repeat1",
+      "generateP50Seconds": 1.8135233750072075,
+      "generateMaxSeconds": 2.18972329099779,
+      "preprocessedTotalP50Seconds": 1.9808112910104683,
+      "maxSampledFootprintBytes": 5721919328,
+      "wholeProcessPeakFootprintBytes": 5840703328,
+      "outputTokens": [
+        51
+      ],
+      "inputTokens": [
+        993
+      ],
+      "maxMLXPeakBytes": 4802484344,
+      "inputShapes": {
+        "attention_mask": [
+          1,
+          993
+        ],
+        "input_ids": [
+          1,
+          993
+        ],
+        "pixel_values": [
+          6,
+          3,
+          720,
+          384
+        ]
+      },
+      "modelLoadSeconds": 1.5208078330033459
+    },
+    {
+      "model": "smolvlm",
+      "warmN": 5,
+      "discardedWarmup": "repeat1",
+      "generateP50Seconds": 0.41773666700464673,
+      "generateMaxSeconds": 0.42327612500230316,
+      "preprocessedTotalP50Seconds": 0.6910184170119464,
+      "maxSampledFootprintBytes": 2422933376,
+      "wholeProcessPeakFootprintBytes": 2480654208,
+      "outputTokens": [
+        75
+      ],
+      "inputTokens": [
+        635
+      ],
+      "maxMLXPeakBytes": 1915701984,
+      "inputShapes": {
+        "attention_mask": [
+          1,
+          635
+        ],
+        "pixel_values": [
+          1,
+          6,
+          3,
+          512,
+          512
+        ],
+        "pixel_attention_mask": [
+          1,
+          6,
+          512,
+          512
+        ],
+        "input_ids": [
+          1,
+          635
+        ]
+      },
+      "modelLoadSeconds": 0.2805425840051612
+    }
+  ],
+  "pose": {
+    "clips": 40,
+    "sampledFrames": 1725,
+    "perClipInferenceMedianP50Seconds": 0.011521198000991717,
+    "perClipInferenceMedianP95Seconds": 0.012403562576218975,
+    "wholeProcessPeakFootprintBytes": 306595088,
+    "classifierOnlyP50Seconds": 1.0812495020218194e-05,
+    "modelBytes": 9398198,
+    "centroidHeadBytes": 9560,
+    "logisticHeadBytes": 10044,
+    "declaredDecodeMismatchClips": 22
+  }
+}

@@ -1,0 +1,45 @@
+fresh-01 ' correct = matches R'
+fresh-02 ' correct = matches R'
+fresh-03 ' correct = matches R'
+fresh-04 ' correct = matches R'
+fresh-05 ' correct = matches R'
+fresh-06 ' correct = matches R'
+fresh-07 ' correct = matches R'
+fresh-08 ' correct = matches R'
+fresh-09 ' correct = matches R'
+fresh-10 ' correct = matches R'
+fresh-11 ' correct = matches R'
+fresh-12 ' correct = matches R'
+confirmation-01 ' correct = matches R'
+confirmation-02 ' correct = matches R'
+confirmation-03 ' correct = matches R'
+confirmation-04 ' correct = matches R'
+confirmation-05 ' correct = matches R'
+confirmation-06 ' correct = matches R'
+confirmation-07 ' correct = matches R'
+confirmation-08 ' correct = matches R'
+confirmation-09 ' correct = matches R'
+confirmation-10 ' correct = matches R'
+real-cycle ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+standing-static ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+blank-control ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: one short English sentence describing the observed evidence, not generic exercise instructions.'
+cropped-control ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: one short English sentence describing the observed evidence, not generic exercise instructions.'
+ascent-omitted ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+        8.99 real         2.57 user         3.93 sys
+          1460748288  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              179818  page reclaims
+                  19  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                4538  voluntary context switches
+               46180  involuntary context switches
+         62853712334  instructions retired
+         27142769748  cycles elapsed
+          2396604024  peak memory footprint

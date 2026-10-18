@@ -1,0 +1,402 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/coach-mediapipe-simulator/Build/Products/AIFormCoach-MediaPipe-Full.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB" -test-timeouts-enabled YES -default-test-execution-time-allowance 120 -maximum-test-execution-time-allowance 120 -resultBundlePath /tmp/coach-mediapipe-verified-final.xcresult
+
+2026-10-15 23:28:39.713 xcodebuild[39473:2496913] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Writing result bundle at path:
+	/tmp/coach-mediapipe-verified-final.xcresult
+
+2026-10-15 23:28:39.716 xcodebuild[39473:2496913] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 23:28:39.866 xcodebuild[39473:2496913] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+IOSurfaceClientSetSurfaceNotify failed e00002c7
+Test Suite 'All tests' started at 2026-10-15 23:28:41.880.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-15 23:28:41.880.
+Test Suite 'AppIntegrationTests' started at 2026-10-15 23:28:41.880.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testBackFromDiscardConfirmationNeverDiscardsGroup]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testBackFromDiscardConfirmationNeverDiscardsGroup]' passed (0.078 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationAndTrainingKeepTheSamePreview]' started.
+2026-10-15 23:28:41.985703+0800 AIFormCoach[39489:2497366] [] <<<< FigCaptureSessionSimulator >>>> signalled err=-12782 at <>:297
+objc[39489]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x126a38310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x126ae4398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationAndTrainingKeepTheSamePreview]' passed (0.690 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationInterruptionKeepsControlsAvailable]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationInterruptionKeepsControlsAvailable]' passed (0.069 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationProgressRequiresThreeObservedMovements]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationProgressRequiresThreeObservedMovements]' passed (0.073 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testChangingPoseEngineResetsStandingWithoutStartingCamera]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testChangingPoseEngineResetsStandingWithoutStartingCamera]' passed (0.082 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDiagnosticTraceIsRelativeAndStopsCollecting]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDiagnosticTraceIsRelativeAndStopsCollecting]' passed (0.070 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftReloadRestoresCompletedRepsWithoutCountingPartialRep]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftReloadRestoresCompletedRepsWithoutCountingPartialRep]' passed (0.076 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftWriteFailureRetainsDraftAndDoesNotClaimSuccess]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftWriteFailureRetainsDraftAndDoesNotClaimSuccess]' passed (0.077 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:64: -[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview] : Test skipped - Interactive review is opt-in; not part of automated regression
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' skipped (0.073 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLandmarkReplayCountsAndRejectsNonMonotonicTimestamps]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLandmarkReplayCountsAndRejectsNonMonotonicTimestamps]' passed (0.075 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLiveInputToTwoGroupsSaveReloadAndDelete]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLiveInputToTwoGroupsSaveReloadAndDelete]' passed (0.097 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeActualVideoReplayAndModelSelection]' started.
+2026-10-15 23:28:43.401595+0800 AIFormCoach[39489:2497356] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078123.458450 2497501 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+2026-10-15 23:28:43.459078+0800 AIFormCoach[39489:2497509] Initialized TensorFlow Lite runtime.
+INFO: Initialized TensorFlow Lite runtime.
+2026-10-15 23:28:43.460957+0800 AIFormCoach[39489:2497509] Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792078123.496661 2497509 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078123.518114 2497522 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078123.538833 2497518 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+MEDIAPIPE_REAL_VIDEO {
+  "count" : 5,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "standing-then-five-squats-hd.mp4",
+  "firstStandingMs" : 2000,
+  "frames" : 630,
+  "inferenceP50Ms" : 14.939792,
+  "inferenceP95Ms" : 15.858292,
+  "maximumFrameGapMs" : 34,
+  "rejectionCounts" : {
+    "waitingForTop" : 49
+  },
+  "reps" : [
+    {
+      "descentDurationMs" : 1300,
+      "endMs" : 5733,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 1,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7263518408768149,
+      "maximumTrunkDelta" : 44.085911072389855,
+      "startMs" : 3733
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 9133,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 2,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7294928910235742,
+      "maximumTrunkDelta" : 44.3471793426413,
+      "startMs" : 7233
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 12533,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 3,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.727216801208256,
+      "maximumTrunkDelta" : 43.94843988665128,
+      "startMs" : 10633
+    },
+    {
+      "descentDurationMs" : 1233,
+      "endMs" : 15933,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 4,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7271531089747695,
+      "maximumTrunkDelta" : 44.10768105197145,
+      "startMs" : 14033
+    },
+    {
+      "descentDurationMs" : 1300,
+      "endMs" : 19333,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 5,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7257145885303774,
+      "maximumTrunkDelta" : 44.44443657372775,
+      "startMs" : 17333
+    }
+  ],
+  "usablePoseFrames" : 630
+}
+2026-10-15 23:28:53.142023+0800 AIFormCoach[39489:2497501] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078133.151050 2497504 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792078133.181561 2497786 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078133.188338 2497799 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 5,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "standing-then-five-squats.mp4",
+  "firstStandingMs" : 2000,
+  "frames" : 630,
+  "inferenceP50Ms" : 12.788625,
+  "inferenceP95Ms" : 13.649917,
+  "maximumFrameGapMs" : 34,
+  "rejectionCounts" : {
+    "waitingForTop" : 49
+  },
+  "reps" : [
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 5733,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 1,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7215765269071579,
+      "maximumTrunkDelta" : 44.463657299208776,
+      "startMs" : 3833
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 9100,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 2,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7189264298228717,
+      "maximumTrunkDelta" : 44.44575666880398,
+      "startMs" : 7233
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 12533,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 3,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7161753361920826,
+      "maximumTrunkDelta" : 44.69983424926901,
+      "startMs" : 10633
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 15933,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 4,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7167329417206708,
+      "maximumTrunkDelta" : 44.41137404654274,
+      "startMs" : 14033
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 19333,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 5,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7145809635259321,
+      "maximumTrunkDelta" : 44.48455252033532,
+      "startMs" : 17433
+    }
+  ],
+  "usablePoseFrames" : 630
+}
+2026-10-15 23:29:01.430345+0800 AIFormCoach[39489:2497507] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078141.438746 2497367 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792078141.468622 2498106 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078141.475601 2498109 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 5,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "standing-five-rotated-metadata.mp4",
+  "firstStandingMs" : 2000,
+  "frames" : 630,
+  "inferenceP50Ms" : 16.054792,
+  "inferenceP95Ms" : 17.847083,
+  "maximumFrameGapMs" : 34,
+  "rejectionCounts" : {
+    "waitingForTop" : 49
+  },
+  "reps" : [
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 5733,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 1,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.723554892386511,
+      "maximumTrunkDelta" : 43.874286086296145,
+      "startMs" : 3833
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 9133,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 2,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7288174082865277,
+      "maximumTrunkDelta" : 43.98713250750336,
+      "startMs" : 7233
+    },
+    {
+      "descentDurationMs" : 1167,
+      "endMs" : 12533,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 3,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7307700413552366,
+      "maximumTrunkDelta" : 43.770322094756516,
+      "startMs" : 10633
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 15933,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 4,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7278656521377244,
+      "maximumTrunkDelta" : 44.129836910877984,
+      "startMs" : 14000
+    },
+    {
+      "descentDurationMs" : 1200,
+      "endMs" : 19333,
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "id" : 5,
+      "issues" : [
+
+      ],
+      "maximumDepth" : 0.7291193856444439,
+      "maximumTrunkDelta" : 44.15880821616845,
+      "startMs" : 17433
+    }
+  ],
+  "usablePoseFrames" : 630
+}
+2026-10-15 23:29:11.857149+0800 AIFormCoach[39489:2498374] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078151.868492 2498578 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792078151.898601 2498683 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078151.905355 2498693 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 0,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "negative-frontal-moving-5319965.mp4",
+  "frames" : 150,
+  "inferenceP50Ms" : 12.527,
+  "inferenceP95Ms" : 17.375375,
+  "maximumFrameGapMs" : 40,
+  "rejectionCounts" : {
+    "lowConfidence" : 23,
+    "multiplePeople" : 58,
+    "noPerson" : 18,
+    "notUpright" : 45,
+    "outOfFrame" : 4,
+    "tooSmall" : 1
+  },
+  "reps" : [
+
+  ],
+  "usablePoseFrames" : 46
+}
+2026-10-15 23:29:13.819978+0800 AIFormCoach[39489:2498380] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078153.828275 2497506 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792078153.858590 2498752 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078153.865510 2498757 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+MEDIAPIPE_EXTRA {
+  "count" : 0,
+  "engine" : "MediaPipe Full",
+  "engineVersion" : "mediapipe-pose-full-1.1.1",
+  "file" : "negative-cropped-4820063.mp4",
+  "frames" : 185,
+  "inferenceP50Ms" : 12.768083,
+  "inferenceP95Ms" : 13.083458,
+  "maximumFrameGapMs" : 42,
+  "rejectionCounts" : {
+    "lowConfidence" : 145,
+    "multiplePeople" : 17,
+    "noPerson" : 23
+  },
+  "reps" : [
+
+  ],
+  "usablePoseFrames" : 0
+}
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeActualVideoReplayAndModelSelection]' passed (32.854 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeImportComparisonExportAndCancellation]' started.
+2026-10-15 23:29:16.317278+0800 AIFormCoach[39489:2497360] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078156.330202 2497366 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792078156.368985 2498841 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078156.376252 2498854 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+2026-10-15 23:29:24.591350+0800 AIFormCoach[39489:2497501] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078164.600628 2497367 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792078164.631022 2499066 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078164.637692 2499071 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+2026-10-15 23:29:32.837792+0800 AIFormCoach[39489:2497504] [] (Fig) signalled err=-12900 at <>:1242
+2026-10-15 23:29:32.865007+0800 AIFormCoach[39489:2497503] [espresso] [Espresso::handle_ex_plan] exception=Espresso exception: "I/O error": Missing weights path cnn_human_pose.espresso.weights status=-2
+Test Case '-[AIFormCoachTests.AppIntegrationTests testMediaPipeImportComparisonExportAndCancellation]' passed (16.749 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingArchivesActiveRepsAndRecalibrationKeepsEarlierGroup]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingArchivesActiveRepsAndRecalibrationKeepsEarlierGroup]' passed (0.090 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingDoesNotHijackOrOverwriteDraft]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingDoesNotHijackOrOverwriteDraft]' passed (0.071 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingFromColdDraftPreservesActiveRepsWithoutOpeningCamera]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingFromColdDraftPreservesActiveRepsWithoutOpeningCamera]' passed (0.074 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPauseResumeAndReturnHomePreserveCompletedReps]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPauseResumeAndReturnHomePreserveCompletedReps]' passed (0.074 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPrivacyAndHelpReturnToTheirSourceWithoutPausing]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPrivacyAndHelpReturnToTheirSourceWithoutPausing]' passed (0.066 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:622: -[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames]' skipped (0.075 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:595: -[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames]' skipped (0.069 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:655: -[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive]' skipped (0.067 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:707: -[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive]' skipped (0.068 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplaySheetPresentsAndDismissesWithFlowEnvironment]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReplaySheetPresentsAndDismissesWithFlowEnvironment]' passed (1.515 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReturningFromPauseKeepsUncertainStatusUntilValidInputResumes]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testReturningFromPauseKeepsUncertainStatusUntilValidInputResumes]' passed (0.072 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSelectedRealSquatVideoReplay]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:219: -[AIFormCoachTests.AppIntegrationTests testSelectedRealSquatVideoReplay] : Test skipped - Real video inference requires a physical iPhone
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSelectedRealSquatVideoReplay]' skipped (0.070 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatAutomaticStandingCountsAndPersistsExerciseIdentity]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testSquatAutomaticStandingCountsAndPersistsExerciseIdentity]' passed (0.087 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testTrainingEntryRoutesByAuthorizationAndDoesNotCreateEmptyDraftOnBack]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testTrainingEntryRoutesByAuthorizationAndDoesNotCreateEmptyDraftOnBack]' passed (0.078 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testVideoReplayDecodesActualMovieAndDoesNotCountEmptyFrames]' started.
+2026-10-15 23:29:35.438100+0800 AIFormCoach[39489:2497295] [] (Fig) signalled err=0 at <>:85
+2026-10-15 23:29:35.519848+0800 AIFormCoach[39489:2497502] [] (Fig) signalled err=-12900 at <>:1242
+Test Case '-[AIFormCoachTests.AppIntegrationTests testVideoReplayDecodesActualMovieAndDoesNotCountEmptyFrames]' passed (0.161 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-15 23:29:35.591.
+	 Executed 28 tests, with 6 tests skipped and 0 failures (0 unexpected) in 53.700 (53.711) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-15 23:29:35.591.
+	 Executed 28 tests, with 6 tests skipped and 0 failures (0 unexpected) in 53.700 (53.711) seconds
+Test Suite 'All tests' passed at 2026-10-15 23:29:35.592.
+	 Executed 28 tests, with 6 tests skipped and 0 failures (0 unexpected) in 53.700 (53.712) seconds
+2026-10-15 23:29:44.029 xcodebuild[39473:2496913] [MT] IDETestOperationsObserverDebug: 64.161 elapsed -- Testing started completed.
+2026-10-15 23:29:44.029 xcodebuild[39473:2496913] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-15 23:29:44.029 xcodebuild[39473:2496913] [MT] IDETestOperationsObserverDebug: 64.161 sec, +64.161 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/coach-mediapipe-verified-final.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

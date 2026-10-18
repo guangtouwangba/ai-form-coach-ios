@@ -1,0 +1,17 @@
+{
+  "count": 0,
+  "engine": "MediaPipe Full",
+  "engineVersion": "mediapipe-pose-full-1.1.1",
+  "file": "standing-five-rotated-metadata.mp4",
+  "frames": 630,
+  "inferenceP50Ms": 12.598583,
+  "inferenceP95Ms": 15.721541,
+  "maximumFrameGapMs": 34,
+  "rejectionCounts": {
+    "lowConfidence": 148,
+    "noPerson": 150,
+    "tooSmall": 332
+  },
+  "reps": [],
+  "usablePoseFrames": 0
+}

@@ -1,0 +1,48 @@
+/tmp/coach-alternatives-venv/lib/python3.12/site-packages/transformers/audio_utils.py:829: UserWarning: At least one mel filter has all zero values. The value for `num_mel_filters` (128) may be set too high. Or, the value for `num_frequency_bins` (257) may be set too low.
+  warnings.warn(
+LOADED gemma4 1.4982024589990033
+fresh-01 2.921 'correct'
+fresh-02 3.336 'correct'
+fresh-03 2.988 'correct'
+fresh-04 3.128 'correct'
+fresh-05 2.964 'correct'
+fresh-06 3.193 'correct'
+fresh-07 2.899 'correct'
+fresh-08 3.121 'correct'
+fresh-09 3.157 'correct'
+fresh-10 3.133 'correct'
+fresh-11 3.07 'correct'
+fresh-12 3.154 'low'
+confirmation-01 3.015 'correct'
+confirmation-02 3.202 'correct'
+confirmation-03 3.06 'correct'
+confirmation-04 2.917 'correct'
+confirmation-05 3.008 'correct'
+confirmation-06 2.99 'correct'
+confirmation-07 3.071 'correct'
+confirmation-08 3.052 'correct'
+confirmation-09 2.935 'correct'
+confirmation-10 3.199 'correct'
+real-cycle 2.029 '{\n  "motion": "squat",\n  "lowest_frame": "F6",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "The sequence shows a progression of a squat movement culminating in a return to standing."\n}'
+standing-static 1.928 '{"motion": "squat", "lowest_frame": "F6", "returned": "no", "knee_in": "uncertain", "explanation": "The frames show a person performing a movement that appears to be a squat."}'
+blank-control 2.009 '{"motion": "squat", "lowest_frame": "F1", "returned": "no", "knee_in": "uncertain", "explanation": "The first frame shows the beginning of a squat movement."}'
+cropped-control 2.237 '{\n  "motion": "squat",\n  "lowest_frame": "F1",\n  "returned": "no",\n  "knee_in": "uncertain",\n  "explanation": "A person is shown in a motion that suggests a squat movement."\n}'
+ascent-omitted 1.904 '{"motion": "squat", "lowest_frame": "F6", "returned": "no", "knee_in": "uncertain", "explanation": "The sequence shows a progression from a standing position to a deep squat position."}'
+       83.75 real         9.90 user        47.39 sys
+          4585406464  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              393008  page reclaims
+                  32  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 608  voluntary context switches
+              159344  involuntary context switches
+        355475411905  instructions retired
+        147547264906  cycles elapsed
+          6849908672  peak memory footprint

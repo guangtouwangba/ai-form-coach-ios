@@ -1,3 +1,7 @@
+# 2026-10-15 更新
+
+旧审计保留在下方作为历史记录，不代表当前配置。当前 Xcode 26.6 / iOS 26.5 SDK；MediaPipeTasksVision 1.1.1 通过 Google 官方 Swift Package 接入，固定提交 `7dd8fe00c17e7732818ea1406c4fb64beb237e6c`，默认引擎为 MediaPipe Full。无需 `MEDIAPIPE_ENABLED`、`ENABLE_MEDIAPIPE` 或 `pod install`。旧 Podfile.lock 仅为历史记录，构建入口是 xcodeproj。最新编译和真实视频证据见 [MediaPipe 验证记录](Testing/MediaPipe-2026-10-15/README.md)。
+
 # 本地依赖审计（2026-08-24）
 
 ## 检测结果

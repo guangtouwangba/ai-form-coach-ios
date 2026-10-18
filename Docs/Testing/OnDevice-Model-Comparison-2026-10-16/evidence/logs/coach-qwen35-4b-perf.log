@@ -1,0 +1,25 @@
+LOADED qwen3_5 1.0133145409927238
+real-cycle-repeat1 1.456 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "Side view shows a squatting motion with knees not clearly visible."\n}'
+real-cycle-repeat2 1.631 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "Side view shows a squatting motion with knees not clearly visible."\n}'
+real-cycle-repeat3 2.164 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "Side view shows a squatting motion with knees not clearly visible."\n}'
+real-cycle-repeat4 1.825 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "Side view shows a squatting motion with knees not clearly visible."\n}'
+real-cycle-repeat5 1.857 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "Side view shows a squatting motion with knees not clearly visible."\n}'
+real-cycle-repeat6 1.778 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "uncertain",\n  "explanation": "Side view shows a squatting motion with knees not clearly visible."\n}'
+       13.71 real         4.55 user         2.76 sys
+          3579641856  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              253711  page reclaims
+                  14  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 249  voluntary context switches
+               45214  involuntary context switches
+         61182071983  instructions retired
+         22635191721  cycles elapsed
+          5821173000  peak memory footprint

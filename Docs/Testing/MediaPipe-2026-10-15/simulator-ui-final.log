@@ -1,0 +1,72 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/coach-mediapipe-simulator/Build/Products/AIFormCoach-MediaPipe-UI.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB" "-only-testing:AIFormCoachTests/AppIntegrationTests/testInteractiveSimulatorDesignReview" -resultBundlePath /tmp/coach-mediapipe-ui-final.xcresult
+
+2026-10-15 23:30:06.220 xcodebuild[39907:2506401] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Writing result bundle at path:
+	/tmp/coach-mediapipe-ui-final.xcresult
+
+2026-10-15 23:30:06.223 xcodebuild[39907:2506401] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 23:30:06.382 xcodebuild[39907:2506401] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+IOSurfaceClientSetSurfaceNotify failed e00002c7
+Test Suite 'Selected tests' started at 2026-10-15 23:30:08.323.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-15 23:30:08.323.
+Test Suite 'AppIntegrationTests' started at 2026-10-15 23:30:08.323.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' started.
+INTERACTIVE_DESIGN_REVIEW_READY stop=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/tmp/coach-design-review-stop scenario=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/tmp/coach-design-review-scenario.txt
+objc[39916]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x125fac310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x12644c398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+2026-10-15 23:30:31.249541+0800 AIFormCoach[39916:2506697] [DocumentManager] Unable to get ISSymbol for UTI: com.apple.ios-simulator Error: Error Domain=com.apple.iconServices.symbol-error Code=-1 "Failed to find symbol using type id: com.apple.ios-simulator. Options: 1, strategy: 0" UserInfo={NSLocalizedDescription=Failed to find symbol using type id: com.apple.ios-simulator. Options: 1, strategy: 0}
+2026-10-15 23:30:59.223626+0800 AIFormCoach[39916:2506697] [DocumentManager] Unable to get ISSymbol for UTI: com.apple.ios-simulator Error: Error Domain=com.apple.iconServices.symbol-error Code=-1 "Failed to find symbol using type id: com.apple.ios-simulator. Options: 1, strategy: 0" UserInfo={NSLocalizedDescription=Failed to find symbol using type id: com.apple.ios-simulator. Options: 1, strategy: 0}
+2026-10-15 23:30:59.894100+0800 AIFormCoach[39916:2507631] [] (Fig) signalled err=-12900 at <>:1242
+2026-10-15 23:30:59.896387+0800 AIFormCoach[39916:2508638] [] (Fig) signalled err=-12900 at <>:1242
+2026-10-15 23:30:59.896906+0800 AIFormCoach[39916:2508638] [] <<<< VRP >>>> signalled err=-12852 at <>:2336
+I0000 00:00:1792078259.927266 2508667 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+2026-10-15 23:30:59.927636+0800 AIFormCoach[39916:2508680] Initialized TensorFlow Lite runtime.
+INFO: Initialized TensorFlow Lite runtime.
+2026-10-15 23:30:59.928433+0800 AIFormCoach[39916:2508680] Created TensorFlow Lite XNNPACK delegate for CPU.
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792078259.959241 2508680 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078259.966093 2508682 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078259.979039 2508680 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+2026-10-15 23:31:00.570432+0800 AIFormCoach[39916:2508668] [VisualTranslation] Visual isTranslatable: NO; reason: observation failure: noObservations
+2026-10-15 23:31:00.570573+0800 AIFormCoach[39916:2506697] Warning: -[UITextInteractionAssistant selectionView] now returns nil with redesigned_text_cursor=on.
+2026-10-15 23:31:01.590537+0800 AIFormCoach[39916:2508670] [Unknown process name] verify_image_parameters: invalid image bits/pixel or bytes/row.
+2026-10-15 23:31:01.591150+0800 AIFormCoach[39916:2508670] [com.apple.VisionKit.RemoveBackground] Request to remove background on an unsupported device. Error Domain=com.apple.VisionKit.RemoveBackground Code=-8 "(null)"
+2026-10-15 23:31:01.591500+0800 AIFormCoach[39916:2508670] [com.apple.VisionKit.RemoveBackground] Error generating mask only remove background image: <VKCImageSubjectHighlightView: 0x12a409f80> id: 1 - Error Domain=com.apple.VisionKit.RemoveBackground Code=-8 "(null)"
+2026-10-15 23:31:21.373439+0800 AIFormCoach[39916:2506774] [] (Fig) signalled err=-12900 at <>:1242
+I0000 00:00:1792078281.385608 2509465 gl_context.cc:408] GL version: 3.0 (OpenGL ES 3.0 APPLE-23.1.1), renderer: Apple Software Renderer
+W0000 00:00:1792078281.416531 2509471 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792078281.423269 2509473 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+2026-10-15 23:31:29.715506+0800 AIFormCoach[39916:2509467] [] (Fig) signalled err=-12900 at <>:1242
+2026-10-15 23:31:29.744257+0800 AIFormCoach[39916:2509484] [espresso] [Espresso::handle_ex_plan] exception=Espresso exception: "I/O error": Missing weights path cnn_human_pose.espresso.weights status=-2
+2026-10-15 23:32:00.498068+0800 AIFormCoach[39916:2509465] [MADService] Client XPC connection invalidated
+2026-10-15 23:32:11.476121+0800 AIFormCoach[39916:2506697] [ShareSheet] Failed to request default share mode for fileURL:file:///Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/Documents/PoseDiagnostics/comparison-039C7882-DD81-4AD7-8301-CE75F8AD4634.json error:Error Domain=NSOSStatusErrorDomain Code=-10814 "(null)" UserInfo={_LSFile=LSBindingEvaluator.mm, _LSLine=1973, _LSFunction=runEvaluator}
+2026-10-15 23:32:11.487035+0800 AIFormCoach[39916:2506697] [ShareSheet] Only support loading options for CKShare and SWY types.
+2026-10-15 23:32:11.535893+0800 AIFormCoach[39916:2509461] [default] [ERROR] failed to get service endpoint creating for for item at URL file:///Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/Documents/PoseDiagnostics/comparison-039C7882-DD81-4AD7-8301-CE75F8AD4634.json: Error Domain=NSCocoaErrorDomain Code=3328 "所请求的操作未能完成，因为该功能不受支持。"
+2026-10-15 23:32:11.538915+0800 AIFormCoach[39916:2509461] [ShareSheet] Collaboration: error loading metadata for documentURL:file:///Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/Documents/PoseDiagnostics/comparison-039C7882-DD81-4AD7-8301-CE75F8AD4634.json error:Error Domain=NSCocoaErrorDomain Code=3328 "所请求的操作未能完成，因为该功能不受支持。"
+2026-10-15 23:32:11.878649+0800 AIFormCoach[39916:2509465] Could not get attrs using token.pid for connection com.apple.xpc.anonymous.0x125467c00.peer[40385].0x12a43aa00, pid -1: 144: Requestor lacks required entitlement
+2026-10-15 23:32:26.347790+0800 AIFormCoach[39916:2506697] includesStylesSubmenu changed value to true from true
+2026-10-15 23:32:26.357411+0800 AIFormCoach[39916:2506697] includesStylesSubmenu changed value to true from true
+2026-10-15 23:32:26.357675+0800 AIFormCoach[39916:2506697] includesStylesSubmenu changed value to true from true
+2026-10-15 23:32:40.625197+0800 AIFormCoach[39916:2509461] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/tmp/coach-tests-AF9C2CCD-FF07-4A9A-A400-3E3CF9C23746/store.sqlite-wal
+2026-10-15 23:32:40.625225+0800 AIFormCoach[39916:2510824] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/tmp/coach-tests-AF9C2CCD-FF07-4A9A-A400-3E3CF9C23746/store.sqlite-shm
+2026-10-15 23:32:40.625265+0800 AIFormCoach[39916:2509465] [logging] BUG IN CLIENT OF libsqlite3.dylib: database integrity compromised by API violation: vnode unlinked while in use: /Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/3EE4CC11-D7B3-475C-970F-24740645A938/tmp/coach-tests-AF9C2CCD-FF07-4A9A-A400-3E3CF9C23746/store.sqlite
+2026-10-15 23:32:40.625284+0800 AIFormCoach[39916:2509461] [logging] invalidated open fd: 17 (0x11)
+2026-10-15 23:32:40.625290+0800 AIFormCoach[39916:2510824] [logging] invalidated open fd: 18 (0x11)
+2026-10-15 23:32:40.625298+0800 AIFormCoach[39916:2509465] [logging] invalidated open fd: 16 (0x11)
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' passed (152.302 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-15 23:32:40.626.
+	 Executed 1 test, with 0 failures (0 unexpected) in 152.302 (152.303) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-15 23:32:40.627.
+	 Executed 1 test, with 0 failures (0 unexpected) in 152.302 (152.303) seconds
+Test Suite 'Selected tests' passed at 2026-10-15 23:32:40.627.
+	 Executed 1 test, with 0 failures (0 unexpected) in 152.302 (152.304) seconds
+2026-10-15 23:32:47.206 xcodebuild[39907:2506401] [MT] IDETestOperationsObserverDebug: 160.823 elapsed -- Testing started completed.
+2026-10-15 23:32:47.206 xcodebuild[39907:2506401] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-15 23:32:47.206 xcodebuild[39907:2506401] [MT] IDETestOperationsObserverDebug: 160.823 sec, +160.823 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/coach-mediapipe-ui-final.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

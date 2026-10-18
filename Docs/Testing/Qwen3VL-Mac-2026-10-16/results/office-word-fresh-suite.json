@@ -1,0 +1,304 @@
+{
+  "cases": [
+    {
+      "id": "fresh-01",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr4.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-02",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr5.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-03",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high5.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-04",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high6.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-05",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low9.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-06",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low10.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-07",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt5.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-08",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt6.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-09",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms4_fast.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-10",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms6.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-11",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_fast4.avi",
+      "times": [
+        0.155,
+        0.853,
+        1.55,
+        2.248,
+        2.945,
+        3.642
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    },
+    {
+      "id": "fresh-12",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/SquatTransSmall/paper_squat_ts_fast1.avi",
+      "times": [
+        0.135,
+        0.743,
+        1.35,
+        1.957,
+        2.565,
+        3.172
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16
+    }
+  ]
+}

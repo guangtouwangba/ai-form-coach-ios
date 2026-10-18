@@ -1,0 +1,1 @@
+participant_id,session_id,source_id,derived_from,source_sha256,split,view,attempt_start_ms,bottom_ms,attempt_end_ms,return_observed,descent_visible,bottom_visible,ascent_visible,target_source,minimum_descent_ms,minimum_hip_drop,range_label,tempo_label,unassessable_reason,evidence_start_ms,evidence_end_ms,annotator,review_status

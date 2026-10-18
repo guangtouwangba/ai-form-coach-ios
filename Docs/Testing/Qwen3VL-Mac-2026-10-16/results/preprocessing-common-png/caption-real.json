@@ -1,0 +1,53 @@
+{
+  "decodedPromptTail" : "<|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|>用一句中文具体描述图片里的人正在做什么，不要评价标准与否。<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2058259144,
+  "extractSeconds" : 0.17490095832908992,
+  "firstChunkSeconds" : 0.14514787500957027,
+  "frames" : [
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/preprocessing-common-png\/caption-real\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 0.18924529166542925,
+  "generation" : {
+    "generationSeconds" : 0.041298031806945801,
+    "outputTokens" : 8,
+    "promptSeconds" : 0.144569993019104,
+    "promptTokens" : 300,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 193.71383211183692
+  },
+  "id" : "caption-real",
+  "inputTokens" : 300,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1788143924,
+    "cacheBytes" : 85263796,
+    "peakActiveBytes" : 2785970830
+  },
+  "peakFootprintBytes" : 2941323976,
+  "prefillChunking" : "balanced",
+  "preparedTensorPath" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/preprocessing-common-png\/caption-real\/prepared-pixels.npy",
+  "prepareSeconds" : 0.073129374999552965,
+  "prompt" : "用一句中文具体描述图片里的人正在做什么，不要评价标准与否。",
+  "rawOutput" : "一位女士正在做深蹲动作。",
+  "success" : true,
+  "totalSeconds" : 0.43861637500231154,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 252
+}

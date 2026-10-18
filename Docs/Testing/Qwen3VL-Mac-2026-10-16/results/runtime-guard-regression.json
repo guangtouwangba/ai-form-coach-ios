@@ -1,0 +1,34 @@
+{
+  "checks": [
+    {
+      "id": "too-many-frames",
+      "exitCode": 1,
+      "failedBeforeModelLoad": true,
+      "stderr": "BENCHMARK FAILED: Error Domain=Benchmark Code=2 \"Unsafe input budget or unsupported variant: too-many-frames\" UserInfo={NSLocalizedDescription=Unsafe input budget or unsupported variant: too-many-frames}"
+    },
+    {
+      "id": "too-many-pixels",
+      "exitCode": 1,
+      "failedBeforeModelLoad": true,
+      "stderr": "BENCHMARK FAILED: Error Domain=Benchmark Code=2 \"Unsafe input budget or unsupported variant: too-many-pixels\" UserInfo={NSLocalizedDescription=Unsafe input budget or unsupported variant: too-many-pixels}"
+    },
+    {
+      "id": "too-many-tokens",
+      "exitCode": 1,
+      "failedBeforeModelLoad": true,
+      "stderr": "BENCHMARK FAILED: Error Domain=Benchmark Code=2 \"Unsafe input budget or unsupported variant: too-many-tokens\" UserInfo={NSLocalizedDescription=Unsafe input budget or unsupported variant: too-many-tokens}"
+    },
+    {
+      "id": "invalid-variant",
+      "exitCode": 1,
+      "failedBeforeModelLoad": true,
+      "stderr": "BENCHMARK FAILED: Error Domain=Benchmark Code=2 \"Unsafe input budget or unsupported variant: invalid-variant\" UserInfo={NSLocalizedDescription=Unsafe input budget or unsupported variant: invalid-variant}"
+    },
+    {
+      "id": "empty-suite",
+      "exitCode": 1,
+      "failedBeforeModelLoad": true
+    }
+  ],
+  "allPassed": true
+}

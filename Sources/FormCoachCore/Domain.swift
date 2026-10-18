@@ -2,6 +2,10 @@ import Foundation
 
 public enum LandmarkID: String, Codable, CaseIterable, Sendable {
     case nose
+    case leftEyeInner, leftEye, leftEyeOuter, rightEyeInner, rightEye, rightEyeOuter
+    case leftEar, rightEar, mouthLeft, mouthRight
+    case leftElbow, rightElbow, leftWrist, rightWrist
+    case leftPinky, rightPinky, leftIndex, rightIndex, leftThumb, rightThumb
     case leftShoulder, rightShoulder
     case leftHip, rightHip
     case leftKnee, rightKnee
@@ -42,13 +46,25 @@ public struct PoseObservation: Codable, Equatable, Sendable {
     public let landmarks: [LandmarkID: Landmark]
     public let inferenceMs: Double
     public let engineVersion: String
+    public let imageWidth: Double
+    public let imageHeight: Double
+    public var detectedPersonCount: Int? = nil
 
-    public init(timestampMs: Int, landmarks: [LandmarkID: Landmark], inferenceMs: Double = 0, engineVersion: String = "fixture") {
+    public init(timestampMs: Int, landmarks: [LandmarkID: Landmark], inferenceMs: Double = 0, engineVersion: String = "fixture", imageWidth: Double = 1, imageHeight: Double = 1, detectedPersonCount: Int? = nil) {
         self.timestampMs = timestampMs
         self.landmarks = landmarks
         self.inferenceMs = inferenceMs
+        self.imageWidth = imageWidth
+        self.imageHeight = imageHeight
+        self.detectedPersonCount = detectedPersonCount
         self.engineVersion = engineVersion
     }
+}
+
+public enum ExerciseKind: String, Codable, Sendable {
+    case bulgarianSplitSquat = "bulgarian_split_squat"
+    case bodyweightSquat = "bodyweight_squat"
+    public var title: String { self == .bodyweightSquat ? "徒手深蹲" : "保加利亚分腿蹲" }
 }
 
 public enum TrainingSide: String, Codable, CaseIterable, Sendable { case left, right }
@@ -58,6 +74,7 @@ public enum IssueType: String, Codable, CaseIterable, Sendable { case torsoColla
 public enum ConfidenceDisposition: String, Codable, Sendable { case spoken, summaryOnly, suppressed }
 
 public struct SessionConfig: Codable, Equatable, Sendable {
+    public var exercise: ExerciseKind
     public var trainingSide: TrainingSide
     public var variant: ExerciseVariant
     public var speechEnabled: Bool
@@ -69,6 +86,7 @@ public struct SessionConfig: Codable, Equatable, Sendable {
     public var ruleVersion: String
 
     public init(
+        exercise: ExerciseKind = .bulgarianSplitSquat,
         trainingSide: TrainingSide = .right,
         variant: ExerciseVariant = .general,
         speechEnabled: Bool = true,
@@ -79,6 +97,7 @@ public struct SessionConfig: Codable, Equatable, Sendable {
         feedbackCooldownMs: Int = 3_000,
         ruleVersion: String = "bss-0.1.0"
     ) {
+        self.exercise = exercise
         self.trainingSide = trainingSide
         self.variant = variant
         self.speechEnabled = speechEnabled
@@ -200,11 +219,13 @@ public struct WorkoutSummary: Codable, Equatable, Sendable {
     public let reps: [RepSummary]
     public let suppressedIssueCount: Int
     public let feedbackEvents: [FeedbackEvent]
+    public var squatAnalysis: SquatAnalysis?
     public var effectiveRepCount: Int { reps.count }
 
-    public init(reps: [RepSummary], suppressedIssueCount: Int, feedbackEvents: [FeedbackEvent] = []) {
+    public init(reps: [RepSummary], suppressedIssueCount: Int, feedbackEvents: [FeedbackEvent] = [], squatAnalysis: SquatAnalysis? = nil) {
         self.reps = reps
         self.suppressedIssueCount = suppressedIssueCount
         self.feedbackEvents = feedbackEvents
+        self.squatAnalysis = squatAnalysis
     }
 }

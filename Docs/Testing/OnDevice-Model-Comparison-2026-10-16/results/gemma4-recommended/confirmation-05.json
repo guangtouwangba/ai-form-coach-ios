@@ -1,0 +1,127 @@
+{
+  "id": "confirmation-05",
+  "caseID": "confirmation-05",
+  "split": "unused-trial-confirmation",
+  "success": true,
+  "rawOutput": "correct",
+  "finishReason": "stop",
+  "generateSeconds": 3.0082306249969406,
+  "prepareSeconds": 0.11500783301016781,
+  "totalSeconds": 3.1234325830009766,
+  "peakFootprintBytes": 6207311784,
+  "endFootprintBytes": 4558819240,
+  "peakRSSBytes": 4516495360,
+  "mlxPeakBytes": 5683770390,
+  "promptTokens": 1849,
+  "outputTokens": 2,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      1849
+    ],
+    "input_ids": [
+      1,
+      1849
+    ],
+    "pixel_values": [
+      12,
+      3,
+      480,
+      624
+    ]
+  },
+  "promptTail": "nd torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.<turn|>\n<|turn>model\n",
+  "frames": [
+    {
+      "id": "R1",
+      "requestedTime": 0.175,
+      "actualTime": 0.16666666666666666,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/R1.png",
+      "sha256": "251ab5bb78d41cf33ea3fd866d4af3bd644660f308105fd26029a7facec3908a"
+    },
+    {
+      "id": "R2",
+      "requestedTime": 0.963,
+      "actualTime": 0.9583333333333334,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/R2.png",
+      "sha256": "eb9d80e9c4f229ab127b6029185cb1b3187e25e85c2937fc2a0d63b0f27a92a8"
+    },
+    {
+      "id": "R3",
+      "requestedTime": 1.75,
+      "actualTime": 1.75,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/R3.png",
+      "sha256": "5e0605bce2c98bf6263a631f7b6ec60fc8b9308f5e3e5b26f85a19c5b46f0599"
+    },
+    {
+      "id": "R4",
+      "requestedTime": 2.537,
+      "actualTime": 2.5416666666666665,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/R4.png",
+      "sha256": "e03847a23450a123c8c5fb8d83a66c760765cba367e8c3b17644e6d821785073"
+    },
+    {
+      "id": "R5",
+      "requestedTime": 3.325,
+      "actualTime": 3.3333333333333335,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/R5.png",
+      "sha256": "9b19613cbcf02093936aa1aa9199e18ca52548187accedaab90c950028cea5fd"
+    },
+    {
+      "id": "R6",
+      "requestedTime": 4.112,
+      "actualTime": 4.125,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/R6.png",
+      "sha256": "23d8d55027d773ecf29676e133afb2c69c2b06a8c58789d3984a0370913fdcf7"
+    },
+    {
+      "id": "F1",
+      "requestedTime": 0.178,
+      "actualTime": 0.16666666666666666,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/F1.png",
+      "sha256": "711b79f545da4caf96e577176509170413700a1212fcb8ea129ce39d67692f80"
+    },
+    {
+      "id": "F2",
+      "requestedTime": 0.981,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/F2.png",
+      "sha256": "b53333cadffd670712c83663e37c66e7b9959b310f63620d64c296d1d46d6e16"
+    },
+    {
+      "id": "F3",
+      "requestedTime": 1.783,
+      "actualTime": 1.7916666666666667,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/F3.png",
+      "sha256": "fa67156343b42b5d80c85ff6a09d648807b5bcbbe6d40637d237056b16821592"
+    },
+    {
+      "id": "F4",
+      "requestedTime": 2.586,
+      "actualTime": 2.5833333333333335,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/F4.png",
+      "sha256": "e3765265b95791ed550cdf7b25a0087d6535fd908e28529fff58fce161c6d50c"
+    },
+    {
+      "id": "F5",
+      "requestedTime": 3.388,
+      "actualTime": 3.375,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/F5.png",
+      "sha256": "cbf66ac3482b2a162932209ef1c44a3e2ec0234883d14a5a0d6c781887b820d7"
+    },
+    {
+      "id": "F6",
+      "requestedTime": 4.191,
+      "actualTime": 4.208333333333333,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/confirmation-05/F6.png",
+      "sha256": "10e772875a9d60d0408b4f93cee3dddc6e97de48198a38041cb50f079796715b"
+    }
+  ],
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 64
+  },
+  "seed": 17,
+  "maxTokens": 16
+}

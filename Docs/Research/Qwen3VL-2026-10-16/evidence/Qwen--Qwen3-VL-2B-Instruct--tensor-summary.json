@@ -1,0 +1,24 @@
+{
+  "repo": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "headerOnly": true,
+  "headerBytes": 76240,
+  "httpStatus": 206,
+  "contentRange": "bytes 0-76247/4255140312",
+  "stats": [
+    {
+      "section": "language",
+      "dtype": "BF16",
+      "tensors": 310,
+      "elements": 1720574976,
+      "bytes": 3441149952
+    },
+    {
+      "section": "vision",
+      "dtype": "BF16",
+      "tensors": 315,
+      "elements": 406957056,
+      "bytes": 813914112
+    }
+  ]
+}

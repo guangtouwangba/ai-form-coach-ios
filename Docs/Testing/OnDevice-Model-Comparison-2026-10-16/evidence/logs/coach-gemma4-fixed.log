@@ -1,0 +1,48 @@
+/tmp/coach-alternatives-venv/lib/python3.12/site-packages/transformers/audio_utils.py:829: UserWarning: At least one mel filter has all zero values. The value for `num_mel_filters` (128) may be set too high. Or, the value for `num_frequency_bins` (257) may be set too low.
+  warnings.warn(
+LOADED gemma4 1.426665207996848
+fresh-01 4.243 'correct'
+fresh-02 2.235 'correct'
+fresh-03 2.233 'correct'
+fresh-04 2.227 'correct'
+fresh-05 2.146 'correct'
+fresh-06 2.183 'correct'
+fresh-07 2.183 'correct'
+fresh-08 2.166 'correct'
+fresh-09 2.226 'correct'
+fresh-10 2.178 'correct'
+fresh-11 2.139 'correct'
+fresh-12 2.194 'correct'
+confirmation-01 2.178 'correct'
+confirmation-02 2.173 'correct'
+confirmation-03 2.178 'correct'
+confirmation-04 2.211 'correct'
+confirmation-05 2.204 'correct'
+confirmation-06 2.289 'correct'
+confirmation-07 2.224 'correct'
+confirmation-08 2.253 'correct'
+confirmation-09 2.255 'correct'
+confirmation-10 2.277 'correct'
+real-cycle 1.53 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+standing-static 1.52 '{"motion": "squat", "lowest_frame": "F6", "returned": "no", "knee_in": "uncertain", "explanation": "The person is performing a movement that resembles a squat in the visible frames."}'
+blank-control 1.472 '{"motion": "squat", "lowest_frame": "F1", "returned": "no", "knee_in": "uncertain", "explanation": "The first frame shows a person in a squat position."}'
+cropped-control 1.532 '{"motion": "squat", "lowest_frame": "F6", "returned": "no", "knee_in": "uncertain", "explanation": "A person is performing a downward motion resembling a squat."}'
+ascent-omitted 1.573 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+       62.87 real         6.97 user        40.50 sys
+          4487233536  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              409795  page reclaims
+                 144  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                2039  voluntary context switches
+              154214  involuntary context switches
+        363009452725  instructions retired
+        193738435859  cycles elapsed
+          6927552328  peak memory footprint

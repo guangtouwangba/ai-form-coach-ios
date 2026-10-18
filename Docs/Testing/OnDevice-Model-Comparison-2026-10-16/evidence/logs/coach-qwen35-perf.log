@@ -1,0 +1,25 @@
+LOADED qwen3_5 1.109043833988835
+real-cycle-repeat1 0.877 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat and then returns to standing, with knee position unclear from the side view."\n}'
+real-cycle-repeat2 0.844 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat and then returns to standing, with knee position unclear from the side view."\n}'
+real-cycle-repeat3 1.092 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat and then returns to standing, with knee position unclear from the side view."\n}'
+real-cycle-repeat4 1.764 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat and then returns to standing, with knee position unclear from the side view."\n}'
+real-cycle-repeat5 1.097 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat and then returns to standing, with knee position unclear from the side view."\n}'
+real-cycle-repeat6 0.991 '{\n    "motion": "squat",\n    "lowest_frame": "F4",\n    "returned": "yes",\n    "knee_in": "uncertain",\n    "explanation": "The subject descends into a squat and then returns to standing, with knee position unclear from the side view."\n}'
+       10.20 real         4.85 user         2.49 sys
+          2265300992  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              173057  page reclaims
+                   2  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 639  voluntary context switches
+               39219  involuntary context switches
+         56315243108  instructions retired
+         19289907151  cycles elapsed
+          4116023672  peak memory footprint

@@ -1,20 +1,21 @@
 # AI 动作教练 iOS P0
 
-一个隐私优先、端侧运行的保加利亚分腿蹲动作辅助原型。手机侧面拍摄后，应用实时提取人体关键点、识别动作阶段和完整次数，并在高置信度问题出现时给出简短中文语音提示。
+一个隐私优先、端侧运行的动作辅助原型。当前主流程为徒手深蹲：手机侧面拍摄，自动检测站稳、建立静态基线，再识别完整次数。保留旧版分腿蹲历史与核心实现。
 
 > Status: experimental open-source prototype. It has not completed real-device,
 > coach-labelled accuracy or App Store release gates.
 
 ## 当前能力
 
-- iOS 17 SwiftUI 流程：安全说明、动作配置、机位引导、三次校准引导、实时训练、组后总结、历史和设置。
+- iOS 17 SwiftUI 流程：首页、训练配置、机位引导、自动站稳、实时训练、组后总结、历史和个人中心。
 - 实时后置摄像头预览与 latest-frame 丢帧策略；推理落后时不积压旧帧。
-- 默认 Apple Vision 2D 姿态适配器；本轮在 Xcode 26.6 / iOS 26.5 模拟器验证。
-- MediaPipe Pose Landmarker 1.0 适配器和模型已纳入源码，使用 Xcode 26 时可选择启用。
+- 默认 MediaPipe Pose Landmarker Full，官方 Swift Package 1.1.1 固定提交；Apple Vision 可在诊断页切换对照。
+- 显示真实关键点骨架，分别报告无人、多人、弱关节、出画、人物过小、晃动、帧中断等原因。
 - 个体尺度归一化、低通滤波、阶段状态机、完整计次、躯干稳定/深度/下降速度规则。
 - 置信度门控、单次只说一个最高优先级问题、同类提示冷却、低质量画面暂停分析。
 - V3 页面已连接相机、三次真实动作校准、计数、多个问题总结、行动建议和逐次证据，不再用示例次数驱动训练。
-- SwiftData 多组会话、本地历史与显式删除；每次完整重复保存结构化草稿，可重启后恢复；视频不保存。
+- SwiftData 多组会话、本地历史与显式删除；每次完整重复保存结构化草稿，可重启后恢复。默认不录像；显式诊断录像保存在本机，可通过“文件”管理。
+- 导入本地录像、逐帧运行真实模型、比较两个引擎的站稳时间与计次、导出诊断报告。
 - 切后台、画面质量不足和主动暂停会丢弃半次动作，保留已完成重复；语音关闭仍显示文字提示。
 
 ## 快速验证
@@ -33,19 +34,19 @@ COACH_TEST_SIMULATOR=<你的模拟器UUID> ./Scripts/verify.sh
 
 集成测试使用独立临时数据库与合成姿态输入，不访问真实相机，不改已有训练记录。它验证程序流程，不代表实际识别准确率。
 
-启用 MediaPipe（要求当前 Apple 工具链；面向 2026 App Store 发布建议 Xcode 26）：
+MediaPipe 已通过 Xcode 的官方 Swift Package 接入，无需 CocoaPods 或额外编译开关。打开 `AIFormCoach.xcodeproj` 后由 Xcode 解析固定依赖；首次下载体积较大。不要重复添加同名 Pod。当前验证工具链为 Xcode 26.6 / iOS 26.5 Simulator。
+
+真实视频回归与双模型对照说明见 [MediaPipe 验证记录](Docs/Testing/MediaPipe-2026-10-15/README.md)。Mac 可运行共享 Apple Vision 解码器：
 
 ```bash
-ENABLE_MEDIAPIPE=1 LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 pod install
+./Scripts/replay-video.sh <本地视频路径> <预期次数> [结果.json]
 ```
-
-然后在 App target 的 `SWIFT_ACTIVE_COMPILATION_CONDITIONS` 添加 `MEDIAPIPE_ENABLED`，通过生成的 workspace 构建。
 
 ## 重要边界
 
-这不是医疗诊断或专业教练替代品。当前规则只覆盖纯侧面机位下的保加利亚分腿蹲；卧推、3D 几何、多机位和经过教练标注的准确率验证不在 P0 内。
+这不是医疗诊断或专业教练替代品。当前训练主流程只覆盖侧面机位下的徒手深蹲；卧推、3D 几何、多机位和经过教练标注的准确率验证不在 P0 内。
 
-V3 中的具体光线、距离、侧面角度、错腿等诊断仍未分别接入自动检测，目前统一通过关键点质量门控暂停。Gemini、账号、云同步和订阅未启用。当前属于可开始真机试用的集成版本，尚不具备正式发布验收证据。
+诊断原因描述的是模型与几何检查结果，不能仅凭弱关键点断言是光线、对焦或遮挡造成。Gemini、账号、云同步和订阅未启用。当前属于可开始真机试用的集成版本，尚不具备正式发布验收证据。
 
 本轮集成范围与真机检查表见 [集成验收记录](Docs/INTEGRATION-STATUS.md)。
 

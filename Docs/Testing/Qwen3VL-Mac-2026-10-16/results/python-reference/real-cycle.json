@@ -1,0 +1,60 @@
+{
+  "id": "real-cycle",
+  "text": "```json\n{\n  \"motion\": \"squat\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"unknown\",\n  \"explanation\": \"在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。\"\n}\n```",
+  "seconds": 3.7616353330085985,
+  "mlxPeakBytes": 3294197484,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      1772
+    ],
+    "input_ids": [
+      1,
+      1772
+    ],
+    "pixel_values": [
+      6048,
+      1536
+    ],
+    "image_grid_thw": [
+      6,
+      3
+    ]
+  },
+  "imageGridTHW": [
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ]
+  ],
+  "promptTail": " evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "promptTokens": 1772,
+  "outputTokens": 67,
+  "scope": "Python MLX-VLM 0.3.4 using identical saved PNG files and pinned quantized weights; not phone timing"
+}

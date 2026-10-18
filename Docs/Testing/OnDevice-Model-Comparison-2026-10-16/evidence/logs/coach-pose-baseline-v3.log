@@ -1,0 +1,144 @@
+I0000 00:00:1792108442.211748 3225627 init-domain.cc:134] Fiber init: default domain = pthread, concurrency = 16, prefix = pthread-default
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792108442.248724 3225631 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108442.253691 3225629 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108442.267720 3225636 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+train-office-01 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108444.239483 3225725 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108444.243605 3225726 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-02 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108445.890338 3225812 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108445.894547 3225813 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-03 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108449.033248 3225931 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108449.037330 3225939 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/pose_baseline.py:59: RuntimeWarning: Mean of empty slice
+  knee=np.nanmean(arr[:,:2],axis=1);good=np.isfinite(knee)
+train-office-04 coverage 0.89 inference ms 11.5
+W0000 00:00:1792108450.700379 3225990 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108450.704585 3225990 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-05 coverage 0.77 inference ms 11.5
+W0000 00:00:1792108453.765308 3226088 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108453.769448 3226095 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-06 coverage 0.8 inference ms 11.4
+W0000 00:00:1792108456.223672 3226188 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108456.227763 3226193 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-07 coverage 0.84 inference ms 11.5
+W0000 00:00:1792108458.433666 3226275 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108458.437798 3226288 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-08 coverage 0.91 inference ms 11.5
+W0000 00:00:1792108460.071735 3226366 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108460.075794 3226369 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-09 coverage 0.93 inference ms 11.5
+W0000 00:00:1792108461.715600 3226442 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108461.719746 3226456 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-10 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108463.176142 3226567 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108463.180151 3226568 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-11 coverage 1.0 inference ms 11.6
+W0000 00:00:1792108464.665289 3226689 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108464.670006 3226693 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-12 coverage 1.0 inference ms 11.4
+W0000 00:00:1792108467.952293 3226804 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108467.956420 3226817 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-13 coverage 1.0 inference ms 11.4
+W0000 00:00:1792108469.786744 3226899 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108469.790930 3226902 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-14 coverage 1.0 inference ms 11.4
+W0000 00:00:1792108471.903868 3226997 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108471.908014 3226995 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-15 coverage 0.91 inference ms 11.5
+W0000 00:00:1792108473.407162 3227094 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108473.411311 3227094 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-16 coverage 1.0 inference ms 11.6
+W0000 00:00:1792108476.167161 3227189 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108476.171111 3227190 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-17 coverage 1.0 inference ms 11.4
+W0000 00:00:1792108477.827456 3227283 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108477.831642 3227297 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+train-office-18 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108480.549747 3227374 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108480.554000 3227374 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-01 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108482.070909 3227463 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108482.074935 3227463 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-02 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108483.661981 3227573 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108483.666103 3227573 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-03 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108487.343344 3227705 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108487.347527 3227707 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-04 coverage 1.0 inference ms 11.6
+W0000 00:00:1792108489.015941 3227795 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108489.020047 3227796 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-05 coverage 0.84 inference ms 11.6
+W0000 00:00:1792108490.978217 3227918 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108490.982400 3227927 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-06 coverage 0.86 inference ms 11.5
+W0000 00:00:1792108494.307370 3228113 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108494.311439 3228115 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-07 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108495.616085 3228195 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108495.620240 3228195 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-08 coverage 1.0 inference ms 11.5
+W0000 00:00:1792108498.250774 3228307 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108498.255213 3228308 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-09 coverage 0.86 inference ms 11.5
+W0000 00:00:1792108501.683834 3228443 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108501.687934 3228446 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-10 coverage 0.95 inference ms 11.5
+W0000 00:00:1792108503.004149 3228532 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108503.008190 3228536 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-11 coverage 1.0 inference ms 11.6
+W0000 00:00:1792108505.154706 3228663 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108505.158406 3228665 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+fresh-12 coverage 1.0 inference ms 12.1
+W0000 00:00:1792108506.529337 3228747 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108506.532961 3228750 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-01 coverage 1.0 inference ms 11.9
+W0000 00:00:1792108507.827166 3228843 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108507.830736 3228843 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-02 coverage 1.0 inference ms 12.0
+W0000 00:00:1792108509.719617 3229059 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108509.723182 3229061 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-03 coverage 1.0 inference ms 11.8
+W0000 00:00:1792108511.203764 3229187 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108511.207419 3229194 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-04 coverage 0.86 inference ms 11.9
+W0000 00:00:1792108513.069182 3229288 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108513.072793 3229288 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-05 coverage 0.7 inference ms 11.8
+W0000 00:00:1792108515.559393 3229416 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108515.563151 3229416 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-06 coverage 1.0 inference ms 11.8
+W0000 00:00:1792108516.975024 3229511 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108516.978779 3229511 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-07 coverage 1.0 inference ms 11.8
+W0000 00:00:1792108518.525095 3229666 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108518.528599 3229666 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-08 coverage 1.0 inference ms 11.8
+W0000 00:00:1792108520.739185 3229827 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108520.743453 3229840 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-09 coverage 1.0 inference ms 11.7
+W0000 00:00:1792108523.277148 3229955 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792108523.280764 3229956 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+confirmation-10 coverage 1.0 inference ms 11.6
+{"nearest-centroid": [14, 22], "logistic-C1": [18, 22]}
+       85.90 real        27.25 user         3.46 sys
+           418725888  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              364041  page reclaims
+                  45  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 466  voluntary context switches
+              336169  involuntary context switches
+        434588106446  instructions retired
+        124467552420  cycles elapsed
+           306595088  peak memory footprint

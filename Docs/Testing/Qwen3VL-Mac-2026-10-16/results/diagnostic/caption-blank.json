@@ -1,0 +1,50 @@
+{
+  "endFootprintBytes" : 2057226976,
+  "extractSeconds" : 0.063575983047485352,
+  "firstChunkSeconds" : 0.14805698394775391,
+  "frames" : [
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/caption-blank\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 0.32165098190307617,
+  "generation" : {
+    "generationSeconds" : 0.17271697521209717,
+    "outputTokens" : 11,
+    "promptSeconds" : 0.1478499174118042,
+    "promptTokens" : 286,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 63.688007426554073
+  },
+  "id" : "caption-blank",
+  "inputTokens" : 286,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1788143880,
+    "cacheBytes" : 59329192,
+    "peakActiveBytes" : 2786398658
+  },
+  "peakFootprintBytes" : 2900314848,
+  "prepareSeconds" : 0.0071630477905273438,
+  "prompt" : "用一句中文具体描述图片里是否有人，正在做什么。",
+  "rawOutput" : "图片中没有显示任何人，也看不到任何动作。",
+  "success" : true,
+  "totalSeconds" : 0.39263701438903809,
+  "variant" : "blank",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 252
+}

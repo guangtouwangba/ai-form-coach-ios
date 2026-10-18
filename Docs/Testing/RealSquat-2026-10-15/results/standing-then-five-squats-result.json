@@ -1,0 +1,647 @@
+{
+  "actual" : 0,
+  "decodedPoseFrames" : 630,
+  "expected" : 5,
+  "file" : "standing-then-five-squats.mp4",
+  "reps" : [
+
+  ],
+  "snapshots" : [
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 0
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 1000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 1200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 1400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 1600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 1800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 2000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 2200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 2400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 2600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 2800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 3000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 3200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 3400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 3600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 4000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 4200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 4400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 4600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 4800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 5000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 5200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 5800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 6000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 6200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 6400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 6600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 6800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 7000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 7200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 7400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 7600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 7800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 8000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 8200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 8400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 8600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 8800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 9000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 9200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 9400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 9600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 9800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 10000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 10200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 10400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 10600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 10800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 11000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 11200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 11400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 11600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 11800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 12000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 12200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 12400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 12600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 12800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 13000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 13200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 13400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 13600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 13800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 14000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 14200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 14400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 14600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 14800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 15000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 15200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 15400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 15600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 15800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 16000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 16200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 16400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 16600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 16800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 17000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 17200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 17400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 17600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 17800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 18000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 18200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 18400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 18600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 18800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 19000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 19200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "保持站稳，正在建立起始位置",
+      "timeMs" : 19400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 19600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 19800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 20000
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 20200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 20400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 20600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请让侧面的肩、髋、膝、踝完整入镜",
+      "timeMs" : 20800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未建立站立起点，请检查视频中的机位与姿势",
+      "timeMs" : 0
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "decodedPromptTail" : "<|im_start|>system\nYou are a helpful assistant.<|im_end|>\n<|im_start|>user\n7乘8等于多少？只输出数字。<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2017151136,
+  "extractSeconds" : 0.00030398368835449219,
+  "firstChunkSeconds" : 0.041530966758728027,
+  "frames" : [
+
+  ],
+  "generateWallSeconds" : 0.074972987174987793,
+  "generation" : {
+    "generationSeconds" : 0.032500028610229492,
+    "outputTokens" : 2,
+    "promptSeconds" : 0.041370034217834473,
+    "promptTokens" : 29,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 61.538407365293622
+  },
+  "id" : "text-math",
+  "inputTokens" : 29,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 16,
+  "mlx" : {
+    "activeBytes" : 1781949664,
+    "cacheBytes" : 29972132,
+    "peakActiveBytes" : 1880408824
+  },
+  "peakFootprintBytes" : 2038630560,
+  "prefillChunking" : "balanced",
+  "prepareSeconds" : 0.0010550022125244141,
+  "prompt" : "7乘8等于多少？只输出数字。",
+  "rawOutput" : "56",
+  "success" : true,
+  "totalSeconds" : 0.07677304744720459,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+
+  ],
+  "visualTokens" : 0
+}

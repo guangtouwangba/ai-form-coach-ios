@@ -1,0 +1,8 @@
+{
+  "source": "https://www2.informatik.uni-hamburg.de/WTM/corpora/OfficeSquat.zip",
+  "paper": "https://doi.org/10.3389/frobt.2022.669719",
+  "zipBytes": 169183708,
+  "zipSHA256": "375b74a560f51a6cd41dc305229ccabe45c9d0dfc5d8b4ba784c155fde5421d5",
+  "videoCount": 62,
+  "notice": "One real participant; dataset-specific arm/height/tilt/speed protocol; local research only, no redistribution or commercial clearance inferred from article license. Labels inferred from author filenames, not separately distributed annotation CSV."
+}

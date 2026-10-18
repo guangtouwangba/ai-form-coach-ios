@@ -1,0 +1,46 @@
+LOADED qwen3_5 0.7755953750020126
+fresh-01 1.994 'low'
+fresh-02 0.765 'high'
+fresh-03 1.18 'high'
+fresh-04 1.485 'high'
+fresh-05 1.061 'low'
+fresh-06 1.0 'uncertain'
+fresh-07 1.12 'low'
+fresh-08 1.239 'low'
+fresh-09 1.303 'uncertain'
+fresh-10 1.143 'low'
+fresh-11 1.088 'uncertain'
+fresh-12 1.043 'uncertain'
+confirmation-01 1.053 'high'
+confirmation-02 1.092 'low'
+confirmation-03 1.141 'low'
+confirmation-04 1.125 'uncertain'
+confirmation-05 1.187 'high'
+confirmation-06 1.219 'uncertain'
+confirmation-07 1.022 'low'
+confirmation-08 0.992 'high'
+confirmation-09 1.037 'high'
+confirmation-10 1.074 'low'
+real-cycle 1.054 '{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "no",\n  "knee_in": "uncertain",\n  "explanation": "The woman demonstrates a squat but cannot determine knee position from this side view."\n}'
+standing-static 0.821 '{\n  "motion": "static",\n  "lowest_frame": null,\n  "returned": "no",\n  "knee_in": "unknown"\n}'
+blank-control 0.925 '{"motion":"unknown","lowest_frame":null,"returned":"no","knee_in":"uncertain","explanation":"No visible movement; person remains standing."}'
+cropped-control 1.254 '{\n  "motion": "unknown",\n  "lowest_frame": null,\n  "returned": "uncertain",\n  "knee_in": "uncertain",\n  "explanation": "The sequence shows a side view of a person with no clear descent or return to standing, making motion classification uncertain."\n}'
+ascent-omitted 1.012 '{\n    "motion": "squat",\n    "lowest_frame": "F6",\n    "returned": "yes",\n    "knee_in": "unknown",\n    "explanation": "The subject descends into a squat position and returns to standing."\n}'
+       34.63 real         6.09 user         8.05 sys
+          2508341248  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              247595  page reclaims
+                  70  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 592  voluntary context switches
+               71990  involuntary context switches
+        120594097506  instructions retired
+         48224345245  cycles elapsed
+          4721330768  peak memory footprint

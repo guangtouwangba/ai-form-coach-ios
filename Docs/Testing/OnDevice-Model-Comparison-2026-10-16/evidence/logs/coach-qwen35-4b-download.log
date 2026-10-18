@@ -1,0 +1,12 @@
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "README.md", "bytes": 2273}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "chat_template.jinja", "bytes": 7756}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "config.json", "bytes": 3366}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "model.safetensors", "bytes": 3034300695}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "model.safetensors.index.json", "bytes": 101944}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "preprocessor_config.json", "bytes": 390}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "processor_config.json", "bytes": 1300}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "tokenizer.json", "bytes": 19989343}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "tokenizer_config.json", "bytes": 1139}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "video_preprocessor_config.json", "bytes": 385}
+{"repo": "mlx-community/Qwen3.5-4B-MLX-4bit", "verified": "vocab.json", "bytes": 6722759}
+COMPLETE mlx-community/Qwen3.5-4B-MLX-4bit

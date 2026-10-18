@@ -1,0 +1,25 @@
+/tmp/coach-alternatives-venv/lib/python3.12/site-packages/transformers/audio_utils.py:829: UserWarning: At least one mel filter has all zero values. The value for `num_mel_filters` (128) may be set too high. Or, the value for `num_frequency_bins` (257) may be set too low.
+  warnings.warn(
+LOADED gemma4 1.4764545829966664
+caption-real-cycle-0 0.659 'A person is standing with both legs straight and apart.'
+caption-real-cycle-3 0.282 'A person is shown with both legs bent and positioned in a dynamic stance.'
+caption-blank-control-0 0.197 'no person'
+simple-incomplete 1.035 'yes'
+        5.18 real         2.59 user         2.62 sys
+          4486643712  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              321494  page reclaims
+                  12  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  30  voluntary context switches
+               15335  involuntary context switches
+         41161622023  instructions retired
+         17410620007  cycles elapsed
+          5774905472  peak memory footprint

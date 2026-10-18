@@ -1,0 +1,36 @@
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "README.md", "bytes": 593}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "README.md", "bytes": 898}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "README.md", "bytes": 666}
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "chat_template.jinja", "bytes": 17336}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "chat_template.jinja", "bytes": 7755}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "added_tokens.json", "bytes": 4739}
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "config.json", "bytes": 6395}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "config.json", "bytes": 3113}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "chat_template.json", "bytes": 430}
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "generation_config.json", "bytes": 208}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "config.json", "bytes": 10200}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "merges.txt", "bytes": 466391}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "model.safetensors", "bytes": 1015023993}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "model.safetensors.index.json", "bytes": 39556}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "preprocessor_config.json", "bytes": 599}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "processor_config.json", "bytes": 67}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "special_tokens_map.json", "bytes": 868}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "tokenizer.json", "bytes": 3548256}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "tokenizer_config.json", "bytes": 28626}
+{"repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx", "verified": "vocab.json", "bytes": 800662}
+COMPLETE HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "model.safetensors", "bytes": 1722271785}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "model.safetensors.index.json", "bytes": 81722}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "preprocessor_config.json", "bytes": 390}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "processor_config.json", "bytes": 1300}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "tokenizer.json", "bytes": 19989343}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "tokenizer_config.json", "bytes": 1139}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "video_preprocessor_config.json", "bytes": 385}
+{"repo": "mlx-community/Qwen3.5-2B-4bit", "verified": "vocab.json", "bytes": 6722759}
+COMPLETE mlx-community/Qwen3.5-2B-4bit
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "model.safetensors", "bytes": 3550670554}
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "model.safetensors.index.json", "bytes": 218323}
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "processor_config.json", "bytes": 1316}
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "tokenizer.json", "bytes": 32169626}
+{"repo": "mlx-community/gemma-4-e2b-it-4bit", "verified": "tokenizer_config.json", "bytes": 2740}
+COMPLETE mlx-community/gemma-4-e2b-it-4bit

@@ -13,7 +13,7 @@
         T0000000000000000000000E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests/FormCoachCoreTests/FixtureFactory.swift; sourceTree = SOURCE_ROOT; };
         T0000000000000000000000F = {isa = PBXBuildFile; fileRef = T0000000000000000000000E; };
         T00000000000000000000005 = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (T0000000000000000000000D,); runOnlyForDeploymentPostprocessing = 0; };
-        T00000000000000000000006 = {isa = PBXNativeTarget; name = AIFormCoachTests; productName = AIFormCoachTests; productReference = T00000000000000000000003; productType = "com.apple.product-type.bundle.unit-test"; buildConfigurationList = T00000000000000000000007; buildPhases = (T00000000000000000000004,T00000000000000000000005,); dependencies = (T0000000000000000000000A,); packageProductDependencies = (D00000000000000000000002,); };
+        T00000000000000000000006 = {isa = PBXNativeTarget; name = AIFormCoachTests; productName = AIFormCoachTests; productReference = T00000000000000000000003; productType = "com.apple.product-type.bundle.unit-test"; buildConfigurationList = T00000000000000000000007; buildPhases = (T00000000000000000000004,T00000000000000000000005,T00000000000000000000010,); dependencies = (T0000000000000000000000A,); packageProductDependencies = (D00000000000000000000002,); };
         T00000000000000000000007 = {isa = XCConfigurationList; buildConfigurations = (T00000000000000000000008,T00000000000000000000009,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Debug; };
         T00000000000000000000008 = {isa = XCBuildConfiguration; name = Debug; buildSettings = { GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.aiformcoach.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIFormCoach.app/AIFormCoach"; BUNDLE_LOADER = "$(TEST_HOST)"; TARGETED_DEVICE_FAMILY = 1; CODE_SIGNING_ALLOWED = NO; }; };
         T00000000000000000000009 = {isa = XCBuildConfiguration; name = Release; buildSettings = { GENERATE_INFOPLIST_FILE = YES; PRODUCT_BUNDLE_IDENTIFIER = com.aiformcoach.tests; PRODUCT_NAME = "$(TARGET_NAME)"; SWIFT_VERSION = 5.0; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AIFormCoach.app/AIFormCoach"; BUNDLE_LOADER = "$(TEST_HOST)"; TARGETED_DEVICE_FAMILY = 1; CODE_SIGNING_ALLOWED = NO; }; };
@@ -22,6 +22,13 @@
         T0000000000000000000000D = {isa = PBXBuildFile; productRef = D00000000000000000000002; };
 
 
+        T00000000000000000000010 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (T00000000000000000000012,T00000000000000000000014,T00000000000000000000016,); runOnlyForDeploymentPostprocessing = 0; };
+        T00000000000000000000011 = {isa = PBXFileReference; lastKnownFileType = folder; path = "Docs/Testing/RealSquat-2026-10-15/media"; sourceTree = SOURCE_ROOT; };
+        T00000000000000000000012 = {isa = PBXBuildFile; fileRef = T00000000000000000000011; };
+        T00000000000000000000013 = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Docs/Testing/Squat-Coaching-2026-10-16/results/real-mediapipe-poses.json"; sourceTree = SOURCE_ROOT; };
+        T00000000000000000000014 = {isa = PBXBuildFile; fileRef = T00000000000000000000013; };
+        T00000000000000000000015 = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Docs/Testing/Squat-Coaching-2026-10-16/results/mac-shared-core.json"; sourceTree = SOURCE_ROOT; };
+        T00000000000000000000016 = {isa = PBXBuildFile; fileRef = T00000000000000000000015; };
 /* Begin PBXBuildFile section */
 		A00000000000000000000001 /* AIFormCoachApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000001 /* AIFormCoachApp.swift */; };
 		A00000000000000000000002 /* AppModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F00000000000000000000002 /* AppModel.swift */; };
@@ -36,6 +43,9 @@
 		A0000000000000000000000C /* P0FlowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000C /* P0FlowModel.swift */; };
 		A0000000000000000000000D /* P0Screens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000D /* P0Screens.swift */; };
 		A0000000000000000000000E /* DESIGN-MANIFEST-v3.json in Resources */ = {isa = PBXBuildFile; fileRef = F0000000000000000000000E /* DESIGN-MANIFEST-v3.json */; };
+		A0000000000000000000000F = {isa = PBXBuildFile; fileRef = F0000000000000000000000F; };
+		A00000000000000000000010 = {isa = PBXBuildFile; productRef = D00000000000000000000004; };
+		A00000000000000000000011 = {isa = PBXBuildFile; fileRef = F00000000000000000000010; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +64,8 @@
 		F0000000000000000000000C /* P0FlowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P0FlowModel.swift; sourceTree = "<group>"; };
 		F0000000000000000000000D /* P0Screens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = P0Screens.swift; sourceTree = "<group>"; };
 		F0000000000000000000000E /* DESIGN-MANIFEST-v3.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "../Docs/Design/AI-Coach-Prototype/DESIGN-MANIFEST-v3.json"; sourceTree = "<group>"; };
+		F0000000000000000000000F = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoReplayAnalyzer.swift; sourceTree = "<group>"; };
+		F00000000000000000000010 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoseDiagnostics.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +74,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A00000000000000000000008 /* FormCoachCore in Frameworks */,
+                A00000000000000000000010,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,8 @@
 				F00000000000000000000001 /* AIFormCoachApp.swift */,
 				F00000000000000000000002 /* AppModel.swift */,
 				F00000000000000000000003 /* Services.swift */,
+                F0000000000000000000000F,
+                F00000000000000000000010,
 				F00000000000000000000004 /* PoseAdapters.swift */,
 				F0000000000000000000000A /* CameraService.swift */,
 				F0000000000000000000000B /* DesignSystem.swift */,
@@ -125,6 +140,7 @@
 			name = AIFormCoach;
 			packageProductDependencies = (
 				D00000000000000000000002 /* FormCoachCore */,
+                D00000000000000000000004,
 			);
 			productName = AIFormCoach;
 			productReference = F00000000000000000000000 /* AIFormCoach.app */;
@@ -157,6 +173,7 @@
 			mainGroup = C00000000000000000000000;
 			packageReferences = (
 				D00000000000000000000003 /* XCLocalSwiftPackageReference "." */,
+                D00000000000000000000005,
 			);
 			productRefGroup = C00000000000000000000002 /* Products */;
 			projectDirPath = "";
@@ -189,6 +206,8 @@
 				A00000000000000000000001 /* AIFormCoachApp.swift in Sources */,
 				A00000000000000000000002 /* AppModel.swift in Sources */,
 				A00000000000000000000003 /* Services.swift in Sources */,
+                A0000000000000000000000F,
+                A00000000000000000000011,
 				A00000000000000000000004 /* PoseAdapters.swift in Sources */,
 				A0000000000000000000000A /* CameraService.swift in Sources */,
 				A0000000000000000000000B /* DesignSystem.swift in Sources */,
@@ -241,7 +260,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HHF36ADN5P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;
 				MARKETING_VERSION = 0.1.0;
@@ -261,7 +280,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = HHF36ADN5P;
 				GENERATE_INFOPLIST_FILE = NO;
 				INFOPLIST_FILE = App/Info.plist;
 				MARKETING_VERSION = 0.1.0;
@@ -311,7 +330,9 @@
 			package = D00000000000000000000003 /* XCLocalSwiftPackageReference "." */;
 			productName = FormCoachCore;
 		};
+		D00000000000000000000004 = {isa = XCSwiftPackageProductDependency; package = D00000000000000000000005; productName = MediaPipeTasksVision; };
 /* End XCSwiftPackageProductDependency section */
+        D00000000000000000000005 = {isa = XCRemoteSwiftPackageReference; repositoryURL = "https://github.com/google-ai-edge/mediapipe"; requirement = {kind = revision; revision = 7dd8fe00c17e7732818ea1406c4fb64beb237e6c; }; };
 	};
 	rootObject = D00000000000000000000000 /* Project object */;
 }

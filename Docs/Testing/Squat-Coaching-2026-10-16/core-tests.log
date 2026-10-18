@@ -1,0 +1,120 @@
+Building for debugging...
+[0/3] Write sources
+[1/3] Write swift-version--58304C5D6DBC2206.txt
+[3/5] Compiling FormCoachCore SquatQuality.swift
+[4/5] Emitting module FormCoachCore
+[4/6] Write Objects.LinkFileList
+[5/6] Linking AIFormCoachPackageTests
+Build complete! (0.76s)
+Test Suite 'All tests' started at 2026-10-16 10:59:45.773.
+Test Suite 'AIFormCoachPackageTests.xctest' started at 2026-10-16 10:59:45.774.
+Test Suite 'CalibrationTests' started at 2026-10-16 10:59:45.774.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildRejectsInconsistentRepetitions]' started.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildRejectsInconsistentRepetitions]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildUsesMedianOfThreeGuidedRepetitions]' started.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildUsesMedianOfThreeGuidedRepetitions]' passed (0.000 seconds).
+Test Suite 'CalibrationTests' passed at 2026-10-16 10:59:45.775.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'GuidedCalibrationCollectorTests' started at 2026-10-16 10:59:45.775.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testLowQualityFramesCannotAdvanceCalibration]' started.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testLowQualityFramesCannotAdvanceCalibration]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testThreeObservedRepetitionsProducePersonalProfile]' started.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testThreeObservedRepetitionsProducePersonalProfile]' passed (0.000 seconds).
+Test Suite 'GuidedCalibrationCollectorTests' passed at 2026-10-16 10:59:45.775.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'PoseDiagnosticsTests' started at 2026-10-16 10:59:45.775.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testAspectFillMatchesPortraitCameraPreviewCrop]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testAspectFillMatchesPortraitCameraPreviewCrop]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testDetectionCountIsNotConfusedWithPointConfidence]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testDetectionCountIsNotConfusedWithPointConfidence]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testFrameGapExplainsWhyStandingRestarts]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testFrameGapExplainsWhyStandingRestarts]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testSmallPersonAndOutOfFrameHaveDifferentReasons]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testSmallPersonAndOutOfFrameHaveDifferentReasons]' passed (0.000 seconds).
+Test Suite 'PoseDiagnosticsTests' passed at 2026-10-16 10:59:45.776.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'SquatQualityTests' started at 2026-10-16 10:59:45.776.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testActualVideoBackToBackAttemptsAreNotLostAfterFirstReturn]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testActualVideoBackToBackAttemptsAreNotLostAfterFirstReturn]' passed (0.017 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testCompleteCyclesHaveTargetsAndAlignedEvidence]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testCompleteCyclesHaveTargetsAndAlignedEvidence]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testDisablingCountingMidAttemptCannotStitchAcrossPause]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testDisablingCountingMidAttemptCannotStitchAcrossPause]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testFrameGapDoesNotStitchAndReportsCause]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testFrameGapDoesNotStitchAndReportsCause]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testLegacySummaryDecodesAndNewAnalysisRoundTrips]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testLegacySummaryDecodesAndNewAnalysisRoundTrips]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testNoiseCannotManufactureAnAttemptAndCalibrationIsNotTraining]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testNoiseCannotManufactureAnAttemptAndCalibrationIsNotTraining]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testOccludedBottomTerminatesAttemptAndNeverInventsReturnOrAdvice]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testOccludedBottomTerminatesAttemptAndNeverInventsReturnOrAdvice]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testRangeNeedsExplicitNamedReferenceAndTargetFreezesPerAttempt]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testRangeNeedsExplicitNamedReferenceAndTargetFreezesPerAttempt]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSlowDescentMeetsSelectedTask]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSlowDescentMeetsSelectedTask]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSmallSustainedAttemptIsRetainedWithoutChangingCounter]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSmallSustainedAttemptIsRetainedWithoutChangingCounter]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testVideoEndPauseAndCameraMoveAreDifferentFromUserFault]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testVideoEndPauseAndCameraMoveAreDifferentFromUserFault]' passed (0.004 seconds).
+Test Suite 'SquatQualityTests' passed at 2026-10-16 10:59:45.809.
+	 Executed 11 tests, with 0 failures (0 unexpected) in 0.032 (0.033) seconds
+Test Suite 'SquatSessionTests' started at 2026-10-16 10:59:45.809.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testActualVisionStandingAndFiveCyclesAtBothResolutions]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testActualVisionStandingAndFiveCyclesAtBothResolutions]' passed (0.073 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMissingBottomCannotBeStitchedIntoARep]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMissingBottomCannotBeStitchedIntoARep]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionCountsCyclesButNotMovementOrMissingJoints]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionCountsCyclesButNotMovementOrMissingJoints]' passed (0.004 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionOcclusionAndJointJumpCannotCompleteHalfRep]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionOcclusionAndJointJumpCannotCompleteHalfRep]' passed (0.004 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingBodyAndBentKneeDoNotEstablishStanding]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingBodyAndBentKneeDoNotEstablishStanding]' passed (0.003 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingFeetInvalidatesBaselineWithoutLosingCompletedReps]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingFeetInvalidatesBaselineWithoutLosingCompletedReps]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testNonVisionModerateConfidenceDoesNotInheritVisionPolicy]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testNonVisionModerateConfidenceDoesNotInheritVisionPolicy]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPauseRequiresReturningToTopAndDoesNotCountPartialMotion]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPauseRequiresReturningToTopAndDoesNotCountPartialMotion]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPortraitGeometryUsesEqualCoordinateUnits]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPortraitGeometryUsesEqualCoordinateUnits]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStandingRequiresElapsedTimeAndEnoughSamples]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStandingRequiresElapsedTimeAndEnoughSamples]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStationaryAndSmallMotionDoNotCount]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStationaryAndSmallMotionDoNotCount]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testSupportedModerateVisionHipNeedsStableObservedSkeleton]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testSupportedModerateVisionHipNeedsStableObservedSkeleton]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testThreeCompleteCyclesCountExactlyThree]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testThreeCompleteCyclesCountExactlyThree]' passed (0.002 seconds).
+Test Suite 'SquatSessionTests' passed at 2026-10-16 10:59:45.906.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.096 (0.097) seconds
+Test Suite 'WorkoutSessionEngineTests' started at 2026-10-16 10:59:45.906.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testCompleteSequenceCountsExactlyOneRep]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testCompleteSequenceCountsExactlyOneRep]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testFeedbackCooldownPreventsRepeatedCue]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testFeedbackCooldownPreventsRepeatedCue]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testInterruptedRepIsNotStitchedAcrossResume]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testInterruptedRepIsNotStitchedAcrossResume]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testLowConfidenceIssueNeverProducesFeedback]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testLowConfidenceIssueNeverProducesFeedback]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMovementBelowNinetyPercentOfCalibratedDepthDoesNotCount]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMovementBelowNinetyPercentOfCalibratedDepthDoesNotCount]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMutedTrainingStillProducesEquivalentTextFeedback]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMutedTrainingStillProducesEquivalentTextFeedback]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPartialMovementDoesNotCount]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPartialMovementDoesNotCount]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPredictedRequiredPointSuppressesIssue]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPredictedRequiredPointSuppressesIssue]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testRestoreRetainsCompletedRepsAndContinuesNumbering]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testRestoreRetainsCompletedRepsAndContinuesNumbering]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testSpokenFeedbackPersistsTraceabilityMetadata]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testSpokenFeedbackPersistsTraceabilityMetadata]' passed (0.000 seconds).
+Test Suite 'WorkoutSessionEngineTests' passed at 2026-10-16 10:59:45.909.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'AIFormCoachPackageTests.xctest' passed at 2026-10-16 10:59:45.909.
+	 Executed 42 tests, with 0 failures (0 unexpected) in 0.132 (0.135) seconds
+Test Suite 'All tests' passed at 2026-10-16 10:59:45.909.
+	 Executed 42 tests, with 0 failures (0 unexpected) in 0.132 (0.135) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

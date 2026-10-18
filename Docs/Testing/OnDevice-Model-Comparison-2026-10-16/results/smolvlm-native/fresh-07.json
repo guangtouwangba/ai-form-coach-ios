@@ -1,0 +1,58 @@
+{
+  "id": "fresh-07",
+  "success": true,
+  "split": "seen-comparison",
+  "rawOutput": " correct = matches R",
+  "finishReason": "stop",
+  "generateSeconds": 0.22367799999483395,
+  "mlxPeakBytes": 1886775624,
+  "peakRSSBytes": 1459355648,
+  "originalShapes": {
+    "pixel_values": [
+      2,
+      6,
+      3,
+      512,
+      512
+    ],
+    "pixel_attention_mask": [
+      2,
+      6,
+      512,
+      512
+    ],
+    "input_ids": [
+      1,
+      1131
+    ],
+    "attention_mask": [
+      1,
+      1131
+    ]
+  },
+  "actualShapes": {
+    "pixel_values": [
+      1,
+      12,
+      3,
+      512,
+      512
+    ],
+    "pixel_attention_mask": [
+      1,
+      12,
+      512,
+      512
+    ],
+    "input_ids": [
+      1,
+      1131
+    ],
+    "mask": [
+      1,
+      1131
+    ]
+  },
+  "promptTokens": 1131,
+  "outputTokens": 5
+}

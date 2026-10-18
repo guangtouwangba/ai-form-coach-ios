@@ -1,0 +1,48 @@
+{
+  "id": "ascent-omitted",
+  "text": "```json\n{\n  \"motion\": \"squat\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"yes\",\n  \"explanation\": \"The person is performing a squat, and the motion shows a descent followed by a return to a standing position.\"\n}\n```",
+  "seconds": 4.763729250000324,
+  "inputTokens": 1772,
+  "outputTokens": 68,
+  "pixelShape": [
+    6048,
+    1536
+  ],
+  "imageGridTHW": [
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ]
+  ],
+  "dtype": "bfloat16",
+  "backend": "official Transformers 4.57.1 / PyTorch 2.9.0 / MPS",
+  "driverAllocatedBytes": 6672121856,
+  "currentAllocatedBytes": 4293159936,
+  "maxRSSBytes": 940605440
+}

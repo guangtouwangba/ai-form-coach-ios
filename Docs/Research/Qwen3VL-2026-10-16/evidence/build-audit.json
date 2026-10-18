@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-16",
+  "xcode": "26.6 (17F113)",
+  "swift": "6.3.3",
+  "iPhoneOSSDK": "26.5",
+  "metalToolchainAdded": "17F109",
+  "builds": [
+    {
+      "name": "missing-metal",
+      "success": false,
+      "fullLogLocalPath": "/tmp/coach-qwen-preflight-ios.log",
+      "fullLogSHA256": "55dc2de3864ff28359964533bf60a36466a8cb47fdb29324d98b2bd056604f08",
+      "excerpt": "logs/missing-metal.txt"
+    },
+    {
+      "name": "macro-trust",
+      "success": false,
+      "fullLogLocalPath": "/tmp/coach-qwen-preflight-full-ios.log",
+      "fullLogSHA256": "1eaf05b661d8cb82dfbaee22c6e08359903b63aabbf407475dce8000603bfc36",
+      "excerpt": "logs/macro-trust.txt"
+    },
+    {
+      "name": "ios-library",
+      "success": true,
+      "fullLogLocalPath": "/tmp/coach-qwen-preflight-full-ios-fixed.log",
+      "fullLogSHA256": "398b94683603a6d8cb0445339debee2873af4ba56f794363613270374c58f100",
+      "excerpt": "logs/ios-library.txt"
+    },
+    {
+      "name": "mac-tokenizer-build",
+      "success": true,
+      "fullLogLocalPath": "/tmp/coach-qwen-preflight-mac-fixed.log",
+      "fullLogSHA256": "44299d2844ee5f0d0ad5050278e29c9b7aa82fcedfd800d6b90ee88d1263679e",
+      "excerpt": "logs/mac-tokenizer-build.txt"
+    },
+    {
+      "name": "combined-ios-link",
+      "success": true,
+      "fullLogLocalPath": "/tmp/coach-qwen-combined-ios-fixed.log",
+      "fullLogSHA256": "29976fcaa7a6f9fe2b86bf9734001acf5e2abf6ff8f7c227ecce515f39dc933e",
+      "excerpt": "logs/combined-ios-link.txt"
+    }
+  ],
+  "phoneInstalled": false,
+  "phoneAppLaunched": false,
+  "fullModelWeightsDownloaded": false,
+  "actualInference": false,
+  "simulatorInference": false,
+  "mainAppProjectModifiedByAudit": false,
+  "combinedBuild": {
+    "destination": "generic/platform=iOS",
+    "configuration": "Debug",
+    "scheme": "AIFormCoach-Integration",
+    "codeSigningAllowed": false,
+    "mediaPipeAndMLXLinked": true,
+    "metalLibraryPackaged": true,
+    "runtimeResourceLookupTested": false,
+    "unresolvedWarnings": [
+      "Existing app CameraService/MediaPipePosePerception Sendable captures remain warnings in Swift 5 mode; not resolved by this research."
+    ]
+  },
+  "commands": [
+    "xcodebuild -scheme CoachQwenPreflight -destination generic/platform=iOS -derivedDataPath /tmp/coach-qwen-preflight-build -jobs 4 CODE_SIGNING_ALLOWED=NO build",
+    "xcodebuild -scheme CoachConfigAudit -destination platform=macOS,arch=arm64 -derivedDataPath /tmp/coach-qwen-preflight-build -jobs 4 CODE_SIGNING_ALLOWED=NO build",
+    "/tmp/coach-qwen-preflight-build/Build/Products/Debug/CoachConfigAudit /tmp/coach-qwen-tokenizer",
+    "python3 Docs/Research/Qwen3VL-2026-10-16/scripts/prepare_combined_audit.py",
+    "xcodebuild -project AIFormCoach.xcodeproj -scheme AIFormCoach-Integration -destination generic/platform=iOS -derivedDataPath /tmp/coach-qwen-preflight-build -jobs 4 CODE_SIGNING_ALLOWED=NO build (in temporary copy)"
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "chineseRoundTrip": true,
+  "chineseTextTokens": 23,
+  "config": {
+    "headDim": 128,
+    "kvHeads": 8,
+    "layers": 28,
+    "maxPixels": 16777216,
+    "mergeSize": 2,
+    "minPixels": 65536,
+    "patchSize": 16
+  },
+  "eos151645": "<|im_end|>",
+  "scope": "configuration, CPU tokenization and template only; no MLXArray evaluation or weights",
+  "sixImageTemplateMarkers": 6,
+  "templateTokensBeforeVisualExpansion": 49,
+  "videoTemplateMarkers": 1
+}

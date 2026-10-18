@@ -1,0 +1,51 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (0.12s)
+Test Suite 'All tests' started at 2026-10-15 19:54:43.442.
+Test Suite 'AIFormCoachPackageTests.xctest' started at 2026-10-15 19:54:43.443.
+Test Suite 'CalibrationTests' started at 2026-10-15 19:54:43.443.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildRejectsInconsistentRepetitions]' started.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildRejectsInconsistentRepetitions]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildUsesMedianOfThreeGuidedRepetitions]' started.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildUsesMedianOfThreeGuidedRepetitions]' passed (0.000 seconds).
+Test Suite 'CalibrationTests' passed at 2026-10-15 19:54:43.444.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.002) seconds
+Test Suite 'GuidedCalibrationCollectorTests' started at 2026-10-15 19:54:43.444.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testLowQualityFramesCannotAdvanceCalibration]' started.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testLowQualityFramesCannotAdvanceCalibration]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testThreeObservedRepetitionsProducePersonalProfile]' started.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testThreeObservedRepetitionsProducePersonalProfile]' passed (0.000 seconds).
+Test Suite 'GuidedCalibrationCollectorTests' passed at 2026-10-15 19:54:43.445.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.000 (0.000) seconds
+Test Suite 'WorkoutSessionEngineTests' started at 2026-10-15 19:54:43.445.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testCompleteSequenceCountsExactlyOneRep]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testCompleteSequenceCountsExactlyOneRep]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testFeedbackCooldownPreventsRepeatedCue]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testFeedbackCooldownPreventsRepeatedCue]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testInterruptedRepIsNotStitchedAcrossResume]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testInterruptedRepIsNotStitchedAcrossResume]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testLowConfidenceIssueNeverProducesFeedback]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testLowConfidenceIssueNeverProducesFeedback]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMovementBelowNinetyPercentOfCalibratedDepthDoesNotCount]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMovementBelowNinetyPercentOfCalibratedDepthDoesNotCount]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMutedTrainingStillProducesEquivalentTextFeedback]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMutedTrainingStillProducesEquivalentTextFeedback]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPartialMovementDoesNotCount]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPartialMovementDoesNotCount]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPredictedRequiredPointSuppressesIssue]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPredictedRequiredPointSuppressesIssue]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testRestoreRetainsCompletedRepsAndContinuesNumbering]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testRestoreRetainsCompletedRepsAndContinuesNumbering]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testSpokenFeedbackPersistsTraceabilityMetadata]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testSpokenFeedbackPersistsTraceabilityMetadata]' passed (0.000 seconds).
+Test Suite 'WorkoutSessionEngineTests' passed at 2026-10-15 19:54:43.448.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'AIFormCoachPackageTests.xctest' passed at 2026-10-15 19:54:43.448.
+	 Executed 14 tests, with 0 failures (0 unexpected) in 0.004 (0.005) seconds
+Test Suite 'All tests' passed at 2026-10-15 19:54:43.448.
+	 Executed 14 tests, with 0 failures (0 unexpected) in 0.004 (0.006) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.

@@ -1,0 +1,25 @@
+LOADED qwen3_vl 0.5474471669876948
+real-cycle-repeat1 1.036 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person returns to a standing position, as they are in a standing position at the end of the sequence."\n}\n```'
+real-cycle-repeat2 1.283 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person returns to a standing position, as they are in a standing position at the end of the sequence."\n}\n```'
+real-cycle-repeat3 2.148 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person returns to a standing position, as they are in a standing position at the end of the sequence."\n}\n```'
+real-cycle-repeat4 1.253 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person returns to a standing position, as they are in a standing position at the end of the sequence."\n}\n```'
+real-cycle-repeat5 1.27 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person returns to a standing position, as they are in a standing position at the end of the sequence."\n}\n```'
+real-cycle-repeat6 1.291 '```json\n{\n  "motion": "squat",\n  "lowest_frame": "F4",\n  "returned": "yes",\n  "knee_in": "yes",\n  "explanation": "The person is in a squat position with their knees bent and their hips lowered, indicating a descent. The motion is a squat, and the person returns to a standing position, as they are in a standing position at the end of the sequence."\n}\n```'
+       11.15 real         4.62 user         2.49 sys
+          2247409664  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              157563  page reclaims
+                  21  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                1615  voluntary context switches
+               47755  involuntary context switches
+         57264600885  instructions retired
+         19053569968  cycles elapsed
+          3545139600  peak memory footprint

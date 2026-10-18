@@ -1,0 +1,29 @@
+Loaded Python reference 0.6861994170030812
+mx.metal.device_info is deprecated and will be removed in a future version. Use mx.device_info instead.
+real-cycle 3.7616353330085985 ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+standing-static 1.5266073329985375 ```json
+{
+  "motion": "unknown",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "uncertain",
+  "explanation": "人物站立，身体保持直立，没有明显的下降动作。"
+}
+```
+blank-control 1.5119346669962397 ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "uncertain",
+  "explanation": "在F4帧中，人物的膝盖位置处于蹲下状态，表明动作处于蹲下阶段。"
+}
+```

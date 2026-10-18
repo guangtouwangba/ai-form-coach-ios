@@ -1,0 +1,79 @@
+{
+  "n": 12,
+  "matched": 3,
+  "rows": [
+    {
+      "id": "fresh-01",
+      "expected": "correct",
+      "predicted": "low",
+      "matches": false
+    },
+    {
+      "id": "fresh-02",
+      "expected": "correct",
+      "predicted": "correct",
+      "matches": true
+    },
+    {
+      "id": "fresh-03",
+      "expected": "high",
+      "predicted": "low",
+      "matches": false
+    },
+    {
+      "id": "fresh-04",
+      "expected": "high",
+      "predicted": "correct",
+      "matches": false
+    },
+    {
+      "id": "fresh-05",
+      "expected": "low",
+      "predicted": "low",
+      "matches": true
+    },
+    {
+      "id": "fresh-06",
+      "expected": "low",
+      "predicted": "low",
+      "matches": true
+    },
+    {
+      "id": "fresh-07",
+      "expected": "tilt",
+      "predicted": "low",
+      "matches": false
+    },
+    {
+      "id": "fresh-08",
+      "expected": "tilt",
+      "predicted": "correct",
+      "matches": false
+    },
+    {
+      "id": "fresh-09",
+      "expected": "arms",
+      "predicted": "low",
+      "matches": false
+    },
+    {
+      "id": "fresh-10",
+      "expected": "arms",
+      "predicted": "low",
+      "matches": false
+    },
+    {
+      "id": "fresh-11",
+      "expected": "fast",
+      "predicted": "low",
+      "matches": false
+    },
+    {
+      "id": "fresh-12",
+      "expected": "fast",
+      "predicted": "low",
+      "matches": false
+    }
+  ],
+  "scope": "Descriptive agreement on 12 distinct trials from one participant under the OfficeSquat protocol; not population coaching accuracy."
+}

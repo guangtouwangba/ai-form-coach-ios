@@ -1,0 +1,12 @@
+{
+  "cases": [
+    {
+      "id": "hybrid-measured-summary",
+      "video": "../../RealSquat-2026-10-15/media/standing-then-five-squats.mp4",
+      "times": [],
+      "maxTokens": 128,
+      "systemPrompt": "仅解释已核实的测量，不推测动作问题。",
+      "prompt": "根据以下程序实际测量，用两句中文概述训练结果；没有确认的问题就明确说证据不足以确认具体动作问题，不要说动作标准或安全。测量：{\"completedRepCount\": 5, \"firstStandingMs\": 2000, \"confirmedTechniqueFindings\": [], \"kneeValgusAssessableFromSide\": false}"
+    }
+  ]
+}

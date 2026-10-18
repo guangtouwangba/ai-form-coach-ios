@@ -1,0 +1,2141 @@
+{
+  "scope": "Evidence numbers are measured projected 2D pose, not medical or biomechanical ground truth. Suggestions refer specifically to the OfficeSquat arms-raised demonstration, not general squat standards. Expected evaluation labels are excluded from inference.",
+  "exportParityCases": 22,
+  "classifierOnlyP50Seconds": 1.0812495020218194e-05,
+  "drafts": [
+    {
+      "id": "fresh-01",
+      "candidateIssue": "fast",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.3749999999999998,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 160.456,
+          "median": 174.64,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 165.695,
+          "median": 175.577,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 143.464,
+          "median": 162.579,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 141.538,
+          "median": 164.529,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.081,
+          "median": 0.334,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.044,
+          "median": 0.324,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.156,
+          "median": 0.613,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.064,
+          "median": 0.574,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.002,
+          "median": 0.018,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.004,
+          "median": 0.008,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.986,
+          "median": 0.997,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.362,
+          "median": 0.659,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.022,
+          "median": -0.003,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.006,
+          "median": 0.028,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "动作节奏可能快于本次示范；按示范节奏放慢一次。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-02",
+      "candidateIssue": "correct",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.7083333333333333,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 159.753,
+          "median": 171.452,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 165.663,
+          "median": 175.53,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 136.764,
+          "median": 159.081,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 140.682,
+          "median": 163.331,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.089,
+          "median": 0.324,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.035,
+          "median": 0.326,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.177,
+          "median": 0.596,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.051,
+          "median": 0.57,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.005,
+          "median": 0.029,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.004,
+          "median": 0.01,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.985,
+          "median": 0.995,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.327,
+          "median": 0.637,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.015,
+          "median": 0.01,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.015,
+          "median": 0.029,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "这段片段与本次示范较接近；此结果不能证明其他动作维度均符合要求。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-03",
+      "candidateIssue": "high",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 0,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 177.816,
+          "median": 179.133,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 176.957,
+          "median": 178.693,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 139.394,
+          "median": 166.402,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 161.089,
+          "median": 168.458,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.037,
+          "median": 0.341,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.056,
+          "median": 0.341,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.002,
+          "median": 0.612,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.09,
+          "median": 0.594,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.001,
+          "median": 0.02,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": -0.001,
+          "median": 0.003,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.999,
+          "median": 0.999,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.233,
+          "median": 0.664,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.023,
+          "median": -0.009,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.022,
+          "median": 0.03,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "与本次示范相比，屈膝幅度可能偏小；下一次按这套示范的目标幅度练习。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-04",
+      "candidateIssue": "high",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 0,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 175.167,
+          "median": 178.83,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 177.08,
+          "median": 179.05,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 127.547,
+          "median": 166.444,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 160.228,
+          "median": 166.938,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.06,
+          "median": 0.331,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.091,
+          "median": 0.332,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.018,
+          "median": 0.598,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.146,
+          "median": 0.57,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.007,
+          "median": 0.018,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": -0.001,
+          "median": 0.005,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.998,
+          "median": 0.999,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.184,
+          "median": 0.659,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.017,
+          "median": -0.002,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.02,
+          "median": 0.03,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "与本次示范相比，屈膝幅度可能偏小；下一次按这套示范的目标幅度练习。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-05",
+      "candidateIssue": "fast",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 0.8409090909090909,
+      "activeSeconds": 1.4999999999999998,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 153.791,
+          "median": 174.226,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 169.452,
+          "median": 178.366,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 84.304,
+          "median": 163.798,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 78.2,
+          "median": 167.33,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.123,
+          "median": 0.355,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.141,
+          "median": 0.356,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.133,
+          "median": 0.658,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.256,
+          "median": 0.635,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.002,
+          "median": 0.016,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.003,
+          "median": 0.007,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.944,
+          "median": 0.998,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.056,
+          "median": 0.661,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.012,
+          "median": 0.017,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.01,
+          "median": 0.028,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "动作节奏可能快于本次示范；按示范节奏放慢一次。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-06",
+      "candidateIssue": "low",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 0.8636363636363636,
+      "activeSeconds": 1.1666666666666667,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 160.974,
+          "median": 174.234,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 157.899,
+          "median": 178.178,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 65.794,
+          "median": 163.738,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 28.767,
+          "median": 167.323,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.125,
+          "median": 0.357,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.198,
+          "median": 0.351,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.123,
+          "median": 0.674,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.352,
+          "median": 0.649,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.002,
+          "median": 0.009,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.001,
+          "median": 0.007,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.898,
+          "median": 0.998,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": -0.128,
+          "median": 0.655,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.012,
+          "median": 0.005,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.009,
+          "median": 0.028,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "躯干降低幅度可能大于本次示范；先放慢动作，对照示范确认幅度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-07",
+      "candidateIssue": "tilt",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.2083333333333335,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 155.661,
+          "median": 171.325,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 170.246,
+          "median": 177.184,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 73.73,
+          "median": 149.149,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 167.248,
+          "median": 171.074,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.202,
+          "median": 0.331,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.326,
+          "median": 0.181,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.435,
+          "median": 0.617,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.58,
+          "median": 0.319,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.01,
+          "median": 0.159,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.004,
+          "median": 0.03,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.984,
+          "median": 0.997,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.139,
+          "median": 0.602,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.005,
+          "median": 0.015,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.03,
+          "median": 0.019,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "左右上肢高度可能不一致；先暂停，对照示范调整两侧高度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-08",
+      "candidateIssue": "tilt",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.1250000000000002,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 164.268,
+          "median": 171.902,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 166.619,
+          "median": 177.434,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 95.872,
+          "median": 149.743,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 167.66,
+          "median": 174.911,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.264,
+          "median": 0.345,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.294,
+          "median": 0.244,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.515,
+          "median": 0.635,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.533,
+          "median": 0.43,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.008,
+          "median": 0.15,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.005,
+          "median": 0.03,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.99,
+          "median": 0.997,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.218,
+          "median": 0.629,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.003,
+          "median": 0.014,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.035,
+          "median": 0.019,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "左右上肢高度可能不一致；先暂停，对照示范调整两侧高度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-09",
+      "candidateIssue": "arms",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 0.8636363636363636,
+      "activeSeconds": 1.0000000000000002,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 168.115,
+          "median": 178.265,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 171.508,
+          "median": 177.503,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 153.785,
+          "median": 167.527,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 153.107,
+          "median": 169.974,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.147,
+          "median": 0.364,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.112,
+          "median": 0.375,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.445,
+          "median": 0.703,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.405,
+          "median": 0.681,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.003,
+          "median": 0.015,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.005,
+          "median": 0.008,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.993,
+          "median": 0.999,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.416,
+          "median": 0.688,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.011,
+          "median": -0.002,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.013,
+          "median": 0.034,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "双臂抬起高度可能低于本次示范；按示范将双臂抬至目标高度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-10",
+      "candidateIssue": "arms",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 0.9545454545454546,
+      "activeSeconds": 1.0833333333333333,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 161.855,
+          "median": 172.607,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 166.558,
+          "median": 177.429,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 146.374,
+          "median": 163.152,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 140.555,
+          "median": 165.722,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.138,
+          "median": 0.341,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.105,
+          "median": 0.35,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.226,
+          "median": 0.63,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.423,
+          "median": 0.659,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.033,
+          "median": 0.013,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": -0.011,
+          "median": 0.008,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.98,
+          "median": 0.997,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.35,
+          "median": 0.641,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.005,
+          "median": 0.026,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.012,
+          "median": 0.031,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "双臂抬起高度可能低于本次示范；按示范将双臂抬至目标高度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-11",
+      "candidateIssue": "fast",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.1666666666666667,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 161.969,
+          "median": 172.933,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 168.964,
+          "median": 176.236,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 131.12,
+          "median": 160.134,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 145.443,
+          "median": 162.756,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.027,
+          "median": 0.35,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.014,
+          "median": 0.336,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.099,
+          "median": 0.632,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.008,
+          "median": 0.609,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.0,
+          "median": 0.026,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.001,
+          "median": 0.01,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.989,
+          "median": 0.996,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.283,
+          "median": 0.619,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.019,
+          "median": 0.003,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.009,
+          "median": 0.026,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "动作节奏可能快于本次示范；按示范节奏放慢一次。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "fresh-12",
+      "candidateIssue": "fast",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.0000000000000002,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 157.115,
+          "median": 171.724,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 167.636,
+          "median": 176.343,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 130.575,
+          "median": 160.727,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 146.427,
+          "median": 166.129,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.073,
+          "median": 0.322,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.086,
+          "median": 0.318,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.081,
+          "median": 0.574,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.133,
+          "median": 0.561,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.003,
+          "median": 0.021,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.002,
+          "median": 0.008,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.986,
+          "median": 0.997,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.3,
+          "median": 0.629,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.013,
+          "median": 0.019,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.016,
+          "median": 0.025,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "动作节奏可能快于本次示范；按示范节奏放慢一次。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-01",
+      "candidateIssue": "correct",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.6666666666666667,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 161.34,
+          "median": 170.412,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 163.758,
+          "median": 174.454,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 140.997,
+          "median": 158.905,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 145.676,
+          "median": 162.978,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.072,
+          "median": 0.303,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.03,
+          "median": 0.303,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.145,
+          "median": 0.56,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.048,
+          "median": 0.523,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.008,
+          "median": 0.03,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.004,
+          "median": 0.009,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.986,
+          "median": 0.995,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.371,
+          "median": 0.639,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.018,
+          "median": 0.012,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.025,
+          "median": 0.019,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "这段片段与本次示范较接近；此结果不能证明其他动作维度均符合要求。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-02",
+      "candidateIssue": "correct",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.8333333333333333,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 162.856,
+          "median": 171.705,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 167.775,
+          "median": 173.977,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 136.771,
+          "median": 160.221,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 142.203,
+          "median": 162.285,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.057,
+          "median": 0.314,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.017,
+          "median": 0.312,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.12,
+          "median": 0.579,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.015,
+          "median": 0.547,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.002,
+          "median": 0.025,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.002,
+          "median": 0.008,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.989,
+          "median": 0.995,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.289,
+          "median": 0.63,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.022,
+          "median": 0.013,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.009,
+          "median": 0.024,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "这段片段与本次示范较接近；此结果不能证明其他动作维度均符合要求。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-03",
+      "candidateIssue": "high",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 0,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 176.834,
+          "median": 178.759,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 178.489,
+          "median": 179.312,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 148.168,
+          "median": 167.859,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 159.853,
+          "median": 168.827,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.008,
+          "median": 0.341,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.036,
+          "median": 0.348,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.042,
+          "median": 0.635,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.062,
+          "median": 0.606,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.005,
+          "median": 0.015,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": -0.001,
+          "median": 0.003,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.999,
+          "median": 0.999,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.284,
+          "median": 0.669,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.017,
+          "median": -0.01,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.016,
+          "median": 0.026,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "与本次示范相比，屈膝幅度可能偏小；下一次按这套示范的目标幅度练习。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-04",
+      "candidateIssue": "low",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 0.8636363636363636,
+      "activeSeconds": 1.2916666666666665,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 143.484,
+          "median": 175.365,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 166.348,
+          "median": 177.428,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 9.533,
+          "median": 162.778,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 23.362,
+          "median": 167.985,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.191,
+          "median": 0.337,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.214,
+          "median": 0.345,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.226,
+          "median": 0.639,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.311,
+          "median": 0.648,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.001,
+          "median": 0.013,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.001,
+          "median": 0.005,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.959,
+          "median": 0.998,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": -0.202,
+          "median": 0.639,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.011,
+          "median": -0.0,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.004,
+          "median": 0.025,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "躯干降低幅度可能大于本次示范；先放慢动作，对照示范确认幅度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-05",
+      "candidateIssue": "uncertain",
+      "reason": "insufficient_landmarks",
+      "jointCoverage": 0.7045454545454546,
+      "activeSeconds": 1.3333333333333333,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 165.599,
+          "median": 176.782,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 174.283,
+          "median": 178.86,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 122.321,
+          "median": 167.086,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 137.056,
+          "median": 167.596,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.043,
+          "median": 0.356,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.061,
+          "median": 0.369,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.005,
+          "median": 0.679,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.04,
+          "median": 0.676,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.004,
+          "median": 0.009,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.001,
+          "median": 0.005,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.994,
+          "median": 0.999,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.125,
+          "median": 0.665,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.009,
+          "median": 0.003,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.007,
+          "median": 0.027,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "关键点持续可见程度不足；调整机位，使全身关节持续入镜后再评估。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-06",
+      "candidateIssue": "tilt",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.1666666666666667,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 154.29,
+          "median": 173.659,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 173.198,
+          "median": 177.265,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 143.877,
+          "median": 168.316,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 124.259,
+          "median": 158.754,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.284,
+          "median": 0.221,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.201,
+          "median": 0.361,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.503,
+          "median": 0.383,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.407,
+          "median": 0.662,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.266,
+          "median": -0.086,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": -0.017,
+          "median": -0.002,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.986,
+          "median": 0.997,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.213,
+          "median": 0.645,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": 0.0,
+          "median": 0.028,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.003,
+          "median": 0.027,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "左右上肢高度可能不一致；先暂停，对照示范调整两侧高度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-07",
+      "candidateIssue": "tilt",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.0833333333333333,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 156.149,
+          "median": 175.57,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 174.086,
+          "median": 177.042,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 142.336,
+          "median": 168.897,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 122.088,
+          "median": 160.594,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.28,
+          "median": 0.281,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.176,
+          "median": 0.369,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.49,
+          "median": 0.491,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.373,
+          "median": 0.664,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.252,
+          "median": -0.073,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": -0.018,
+          "median": -0.002,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.987,
+          "median": 0.998,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.2,
+          "median": 0.66,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.007,
+          "median": 0.013,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.001,
+          "median": 0.023,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "左右上肢高度可能不一致；先暂停，对照示范调整两侧高度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-08",
+      "candidateIssue": "arms",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.2083333333333335,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 156.755,
+          "median": 172.807,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 173.276,
+          "median": 177.668,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 137.595,
+          "median": 162.52,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 148.0,
+          "median": 166.899,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": 0.2,
+          "median": 0.351,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": 0.15,
+          "median": 0.362,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": 0.465,
+          "median": 0.671,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": 0.42,
+          "median": 0.68,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.007,
+          "median": 0.015,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.003,
+          "median": 0.008,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.985,
+          "median": 0.996,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.358,
+          "median": 0.647,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.015,
+          "median": 0.009,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": 0.027,
+          "median": 0.041,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "双臂抬起高度可能低于本次示范；按示范将双臂抬至目标高度。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-09",
+      "candidateIssue": "fast",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.166666666666667,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 154.197,
+          "median": 170.325,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 166.645,
+          "median": 175.312,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 130.587,
+          "median": 161.332,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 149.421,
+          "median": 165.633,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.063,
+          "median": 0.339,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.085,
+          "median": 0.341,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.073,
+          "median": 0.607,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.133,
+          "median": 0.609,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": -0.001,
+          "median": 0.009,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": -0.001,
+          "median": 0.008,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.982,
+          "median": 0.996,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.338,
+          "median": 0.638,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.02,
+          "median": 0.022,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.025,
+          "median": 0.011,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "动作节奏可能快于本次示范；按示范节奏放慢一次。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    },
+    {
+      "id": "confirmation-10",
+      "candidateIssue": "correct",
+      "reason": "research_classifier_candidate",
+      "jointCoverage": 1.0,
+      "activeSeconds": 1.5,
+      "referenceActiveSecondsMedian": 1.4166666666666667,
+      "evidence": {
+        "leftKneeDeg": {
+          "p10": 153.265,
+          "median": 168.033,
+          "referenceP10": 156.842,
+          "referenceMedian": 169.768
+        },
+        "rightKneeDeg": {
+          "p10": 162.934,
+          "median": 173.498,
+          "referenceP10": 171.982,
+          "referenceMedian": 176.766
+        },
+        "leftHipDeg": {
+          "p10": 132.335,
+          "median": 160.722,
+          "referenceP10": 130.246,
+          "referenceMedian": 159.951
+        },
+        "rightHipDeg": {
+          "p10": 143.863,
+          "median": 163.35,
+          "referenceP10": 150.402,
+          "referenceMedian": 165.207
+        },
+        "leftElbowBelowShoulderLegRatio": {
+          "p10": -0.103,
+          "median": 0.277,
+          "referenceP10": 0.051,
+          "referenceMedian": 0.335
+        },
+        "rightElbowBelowShoulderLegRatio": {
+          "p10": -0.106,
+          "median": 0.281,
+          "referenceP10": 0.01,
+          "referenceMedian": 0.314
+        },
+        "leftWristBelowShoulderLegRatio": {
+          "p10": -0.159,
+          "median": 0.487,
+          "referenceP10": 0.137,
+          "referenceMedian": 0.6
+        },
+        "rightWristBelowShoulderLegRatio": {
+          "p10": -0.189,
+          "median": 0.486,
+          "referenceP10": 0.011,
+          "referenceMedian": 0.567
+        },
+        "shoulderHeightDifferenceLegRatio": {
+          "p10": 0.002,
+          "median": 0.012,
+          "referenceP10": 0.012,
+          "referenceMedian": 0.033
+        },
+        "hipHeightDifferenceLegRatio": {
+          "p10": 0.002,
+          "median": 0.009,
+          "referenceP10": 0.004,
+          "referenceMedian": 0.012
+        },
+        "hipAboveAnkleLegRatio": {
+          "p10": 0.982,
+          "median": 0.995,
+          "referenceP10": 0.986,
+          "referenceMedian": 0.995
+        },
+        "torsoHeightLegRatio": {
+          "p10": 0.321,
+          "median": 0.629,
+          "referenceP10": 0.337,
+          "referenceMedian": 0.646
+        },
+        "leftKneeAnkleOffsetLegRatio": {
+          "p10": -0.015,
+          "median": 0.035,
+          "referenceP10": -0.012,
+          "referenceMedian": 0.023
+        },
+        "rightKneeAnkleOffsetLegRatio": {
+          "p10": -0.039,
+          "median": 0.001,
+          "referenceP10": 0.008,
+          "referenceMedian": 0.037
+        }
+      },
+      "suggestionDraft": "这段片段与本次示范较接近；此结果不能证明其他动作维度均符合要求。",
+      "reviewRequired": true,
+      "eligibleForAutomaticCoaching": false
+    }
+  ]
+}

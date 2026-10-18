@@ -1,0 +1,48 @@
+{
+  "id": "standing-static",
+  "text": "{\n  \"motion\": \"static\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"no\",\n  \"knee_in\": \"uncertain\",\n  \"explanation\": \"The person is standing in a static pose with no visible descent or return to standing.\"\n}",
+  "seconds": 4.536071374997846,
+  "inputTokens": 1772,
+  "outputTokens": 59,
+  "pixelShape": [
+    6048,
+    1536
+  ],
+  "imageGridTHW": [
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ]
+  ],
+  "dtype": "bfloat16",
+  "backend": "official Transformers 4.57.1 / PyTorch 2.9.0 / MPS",
+  "driverAllocatedBytes": 6739230720,
+  "currentAllocatedBytes": 4292301056,
+  "maxRSSBytes": 930299904
+}

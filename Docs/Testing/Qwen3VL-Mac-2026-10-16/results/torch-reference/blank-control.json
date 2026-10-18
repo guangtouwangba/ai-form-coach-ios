@@ -1,0 +1,48 @@
+{
+  "id": "blank-control",
+  "text": "{\n  \"motion\": \"unknown\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"uncertain\",\n  \"knee_in\": \"uncertain\",\n  \"explanation\": \"所有帧均为灰色背景，未显示任何运动或姿势变化。\"\n}",
+  "seconds": 4.466784000003827,
+  "inputTokens": 1772,
+  "outputTokens": 58,
+  "pixelShape": [
+    6048,
+    1536
+  ],
+  "imageGridTHW": [
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ]
+  ],
+  "dtype": "bfloat16",
+  "backend": "official Transformers 4.57.1 / PyTorch 2.9.0 / MPS",
+  "driverAllocatedBytes": 6672121856,
+  "currentAllocatedBytes": 4293159936,
+  "maxRSSBytes": 935067648
+}

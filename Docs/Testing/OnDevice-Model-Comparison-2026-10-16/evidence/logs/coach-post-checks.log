@@ -1,0 +1,22 @@
+START qwen3vl-perf
+END qwen3vl-perf 0
+START qwen35-perf
+END qwen35-perf 0
+START qwen35-diagnostic
+END qwen35-diagnostic 0
+START qwen35-recommended
+END qwen35-recommended 0
+START qwen35-4b-perf
+END qwen35-4b-perf 0
+START qwen35-4b-diagnostic
+END qwen35-4b-diagnostic 0
+START qwen35-4b-recommended
+END qwen35-4b-recommended 0
+START gemma4-perf
+END gemma4-perf 0
+START gemma4-diagnostic
+END gemma4-diagnostic 0
+START gemma4-recommended
+END gemma4-recommended 0
+START smolvlm-perf
+END smolvlm-perf 0

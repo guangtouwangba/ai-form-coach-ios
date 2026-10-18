@@ -1,0 +1,128 @@
+{
+  "endFootprintBytes" : 2329037200,
+  "extractSeconds" : 0.35541093349456787,
+  "firstChunkSeconds" : 2.5265220403671265,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/blank-control\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/blank-control\/F2.png",
+      "height" : 1920,
+      "id" : "F2",
+      "requestedTime" : 1.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/blank-control\/F3.png",
+      "height" : 1920,
+      "id" : "F3",
+      "requestedTime" : 2,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/blank-control\/F4.png",
+      "height" : 1920,
+      "id" : "F4",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 3,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/blank-control\/F5.png",
+      "height" : 1920,
+      "id" : "F5",
+      "requestedTime" : 3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 4,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/blank-control\/F6.png",
+      "height" : 1920,
+      "id" : "F6",
+      "requestedTime" : 4,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 2.5460500717163086,
+  "generation" : {
+    "generationSeconds" : 1.7961529493331909,
+    "outputTokens" : 107,
+    "promptSeconds" : 0.74810099601745605,
+    "promptTokens" : 1764,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 59.571764219591095
+  },
+  "id" : "blank-control",
+  "inputTokens" : 1764,
+  "jsonValid" : true,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1999410372,
+    "cacheBytes" : 134770420,
+    "peakActiveBytes" : 2969038088
+  },
+  "parsedOutput" : {
+    "cue" : "简短中文建议或说明看不清必须填uncertain。侧面不能确定膝内扣。只输出一行JSON，不要Markdown或额外文字：",
+    "depth" : "reached|not_reached|uncertain",
+    "evidence" : [
+      "F1"
+    ],
+    "full_body" : true,
+    "heel" : "down|raised|uncertain",
+    "knee_in" : "yes|no|uncertain",
+    "motion" : "squat|static|unknown",
+    "returned" : "yes|no|uncertain",
+    "view" : "side|front|oblique|unknown"
+  },
+  "peakFootprintBytes" : 3188804008,
+  "prepareSeconds" : 0.052868008613586426,
+  "prompt" : "这些图片按时间排序，图旁标签是帧ID和采集时间。仅根据图片分析徒手深蹲。看不清必须填uncertain。侧面不能确定膝内扣。只输出一行JSON，不要Markdown或额外文字：{\"motion\":\"squat|static|unknown\",\"view\":\"side|front|oblique|unknown\",\"full_body\":true,\"depth\":\"reached|not_reached|uncertain\",\"returned\":\"yes|no|uncertain\",\"heel\":\"down|raised|uncertain\",\"knee_in\":\"yes|no|uncertain\",\"evidence\":[\"F1\"],\"cue\":\"简短中文建议或说明看不清\"}。depth仅指最低时髋部达到膝高附近或以下的可见证据，不代表整体动作合格。只在有明显证据时下结论。",
+  "rawOutput" : "{\"motion\":\"squat|static|unknown\",\"view\":\"side|front|oblique|unknown\",\"full_body\":true,\"depth\":\"reached|not_reached|uncertain\",\"returned\":\"yes|no|uncertain\",\"heel\":\"down|raised|uncertain\",\"knee_in\":\"yes|no|uncertain\",\"evidence\":[\"F1\"],\"cue\":\"简短中文建议或说明看不清必须填uncertain。侧面不能确定膝内扣。只输出一行JSON，不要Markdown或额外文字：\"}",
+  "success" : true,
+  "totalSeconds" : 2.9550999402999878,
+  "variant" : "blank",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 1512
+}

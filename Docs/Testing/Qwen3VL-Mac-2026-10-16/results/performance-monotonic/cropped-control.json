@@ -1,0 +1,126 @@
+{
+  "decodedPromptTail" : " For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2312227264,
+  "extractSeconds" : 0.28590808334411122,
+  "firstChunkSeconds" : 0.66738549999718089,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/cropped-control\/F1.png",
+      "height" : 960,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/cropped-control\/F2.png",
+      "height" : 960,
+      "id" : "F2",
+      "requestedTime" : 1.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/cropped-control\/F3.png",
+      "height" : 960,
+      "id" : "F3",
+      "requestedTime" : 2,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/cropped-control\/F4.png",
+      "height" : 960,
+      "id" : "F4",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 3,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/cropped-control\/F5.png",
+      "height" : 960,
+      "id" : "F5",
+      "requestedTime" : 3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 4,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/performance-monotonic\/cropped-control\/F6.png",
+      "height" : 960,
+      "id" : "F6",
+      "requestedTime" : 4,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 1.1198248750006314,
+  "generation" : {
+    "generationSeconds" : 0.44859397411346436,
+    "outputTokens" : 63,
+    "promptSeconds" : 0.66723799705505371,
+    "promptTokens" : 1700,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 140.43880131137294
+  },
+  "id" : "cropped-control",
+  "identicalQueryFramePixels" : false,
+  "inputTokens" : 1700,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 1857721604,
+    "cacheBytes" : 137551256,
+    "peakActiveBytes" : 2912267060
+  },
+  "observationGate" : {
+    "acceptedAsObservation" : false,
+    "eligibleForAutomaticCoaching" : false,
+    "reasons" : [
+      "non_squat_claims_cycle"
+    ]
+  },
+  "peakFootprintBytes" : 3120499136,
+  "prefillChunking" : "balanced",
+  "preparedTensorPath" : "",
+  "prepareSeconds" : 0.027611249999608845,
+  "prompt" : "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+  "rawOutput" : "```json\n{\n  \"motion\": \"unknown\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"uncertain\",\n  \"explanation\": \"The person is in a static position throughout the sequence, with no visible movement or descent.\"\n}\n```",
+  "success" : true,
+  "totalSeconds" : 1.4344251250004163,
+  "variant" : "crop",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 30,
+      "t" : 1,
+      "w" : 32
+    },
+    {
+      "h" : 30,
+      "t" : 1,
+      "w" : 32
+    },
+    {
+      "h" : 30,
+      "t" : 1,
+      "w" : 32
+    },
+    {
+      "h" : 30,
+      "t" : 1,
+      "w" : 32
+    },
+    {
+      "h" : 30,
+      "t" : 1,
+      "w" : 32
+    },
+    {
+      "h" : 30,
+      "t" : 1,
+      "w" : 32
+    }
+  ],
+  "visualTokens" : 1440
+}

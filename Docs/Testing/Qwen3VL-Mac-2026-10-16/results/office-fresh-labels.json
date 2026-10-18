@@ -1,0 +1,89 @@
+{
+  "notice": "Frozen before any reference-prompt model results. Same participant; distinct video trials, not subject-independent. Arms4_fast has a secondary fast suffix; primary arms scored. One translation fast trial.",
+  "labels": [
+    {
+      "id": "fresh-01",
+      "label": "correct",
+      "sourceFile": "Squat/paper_squat_tn_corr4.avi",
+      "sha256": "b818385f74376e14ee61a5477d025b3b95e53f477fb62e822be53426731c32ce",
+      "duration": 4.375
+    },
+    {
+      "id": "fresh-02",
+      "label": "correct",
+      "sourceFile": "Squat/paper_squat_tn_corr5.avi",
+      "sha256": "635c89752f3d476249b2e3fb7cf350a9e93960d38b9725b3fb07704b9fc40ef9",
+      "duration": 4.416667
+    },
+    {
+      "id": "fresh-03",
+      "label": "high",
+      "sourceFile": "Squat/paper_squat_tn_high5.avi",
+      "sha256": "4e5ab23bf7b08b34cbe7eb3a001c0e2ff31ef6224285567b99f0f08e93ec9de7",
+      "duration": 4.375
+    },
+    {
+      "id": "fresh-04",
+      "label": "high",
+      "sourceFile": "Squat/paper_squat_tn_high6.avi",
+      "sha256": "50315f3cf4745902ad9d5530baf54f32e4de4800faabe6291f5b84b1aa534140",
+      "duration": 4.458333
+    },
+    {
+      "id": "fresh-05",
+      "label": "low",
+      "sourceFile": "Squat/paper_squat_tn_low9.avi",
+      "sha256": "b1d4f5e0c54224d4e8ffef1565a122fa6e5497bee789d6cddd31730aca1f72c5",
+      "duration": 4.416667
+    },
+    {
+      "id": "fresh-06",
+      "label": "low",
+      "sourceFile": "Squat/paper_squat_tn_low10.avi",
+      "sha256": "a6b99bda424c1ad08123a23ade6a5b3f63babd46b47c4bdc125dfecfe1e408ab",
+      "duration": 4.416667
+    },
+    {
+      "id": "fresh-07",
+      "label": "tilt",
+      "sourceFile": "Squat/paper_squat_tn_tilt5.avi",
+      "sha256": "dc0159ec67ae4031830ec873499be5092443a21f669b886d0633e1ace035dd99",
+      "duration": 4.375
+    },
+    {
+      "id": "fresh-08",
+      "label": "tilt",
+      "sourceFile": "Squat/paper_squat_tn_tilt6.avi",
+      "sha256": "138b629a2a713b5e4a02fef44b15e316190d9b1c419d8cbcea5cd74ebb6a8832",
+      "duration": 4.458333
+    },
+    {
+      "id": "fresh-09",
+      "label": "arms",
+      "sourceFile": "Squat/paper_squat_tn_arms4_fast.avi",
+      "sha256": "449c7861df52a7af00569dd6c3a282a0d01eaf900e99653b8bdecf7f8ae39880",
+      "duration": 4.375
+    },
+    {
+      "id": "fresh-10",
+      "label": "arms",
+      "sourceFile": "Squat/paper_squat_tn_arms6.avi",
+      "sha256": "acdca3fd5db3f7c7d7fffda430affb192e8ed9b6d010ad4d3962f5c5b90364cc",
+      "duration": 4.458333
+    },
+    {
+      "id": "fresh-11",
+      "label": "fast",
+      "sourceFile": "Squat/paper_squat_tn_fast4.avi",
+      "sha256": "d05fb484f974c28e741392689ed88b417b65b95b85f8aad811306aa466724c94",
+      "duration": 3.875
+    },
+    {
+      "id": "fresh-12",
+      "label": "fast",
+      "sourceFile": "SquatTransSmall/paper_squat_ts_fast1.avi",
+      "sha256": "40016f68e2e1ac83d1c3bf2891c0634963b5eb16ffa00a3427524946d1e08e2d",
+      "duration": 3.375
+    }
+  ]
+}

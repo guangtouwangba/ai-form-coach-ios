@@ -1,0 +1,26 @@
+[
+  {
+    "file": "standing-then-five-squats",
+    "expected": 5,
+    "actual": 0,
+    "baselineReady": false,
+    "frames": 630,
+    "initialThreeSecondsRightHipConfidenceRange": [
+      0.43896484375,
+      0.442138671875
+    ],
+    "requiredConfidence": 0.65
+  },
+  {
+    "file": "standing-then-five-squats-hd",
+    "expected": 5,
+    "actual": 0,
+    "baselineReady": false,
+    "frames": 630,
+    "initialThreeSecondsRightHipConfidenceRange": [
+      0.466064453125,
+      0.46875
+    ],
+    "requiredConfidence": 0.65
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "execution" : "real macOS Metal GPU inference; not simulator or iPhone",
+  "gpu" : "Apple M5 Pro",
+  "loadMLX" : {
+    "activeBytes" : 1781949872,
+    "cacheBytes" : 4240,
+    "peakActiveBytes" : 1781954112
+  },
+  "loadPeakFootprintBytes" : 1922844664,
+  "loadSeconds" : 0.34293775001424365,
+  "mlxCacheLimitBytes" : 134217728,
+  "modelDirectory" : "\/Users\/kids\/Library\/Application Support\/AIFormCoach\/Models\/Qwen3-VL-2B-Instruct-4bit\/9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+  "os" : "Version 26.5.1 (Build 25F80)",
+  "physicalMemoryBytes" : 51539607552
+}

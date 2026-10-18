@@ -1,0 +1,44 @@
+Loading local verified Qwen3-VL weights
+Loaded in 1.1482340097427368s; MLX ["activeBytes": 1781949872, "cacheBytes": 4240, "peakActiveBytes": 1781954112]
+CASE fresh-01
+DONE fresh-01 0.74s; peak 3086125552; low
+CASE fresh-02
+DONE fresh-02 0.72s; peak 3122252296; correct
+CASE fresh-03
+DONE fresh-03 0.70s; peak 3122661896; low
+CASE fresh-04
+DONE fresh-04 0.74s; peak 3122530824; correct
+CASE fresh-05
+DONE fresh-05 0.73s; peak 3115256328; low
+CASE fresh-06
+DONE fresh-06 0.73s; peak 3043494408; low
+CASE fresh-07
+DONE fresh-07 0.72s; peak 3074558472; low
+CASE fresh-08
+DONE fresh-08 0.72s; peak 3051915784; correct
+CASE fresh-09
+DONE fresh-09 0.70s; peak 3063073288; low
+CASE fresh-10
+DONE fresh-10 0.73s; peak 3121531400; low
+CASE fresh-11
+DONE fresh-11 0.73s; peak 3123120648; low
+CASE fresh-12
+DONE fresh-12 0.75s; peak 3063319048; low
+       13.56 real         6.20 user         4.65 sys
+          2015674368  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              218462  page reclaims
+                  54  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 384  voluntary context switches
+               62203  involuntary context switches
+        122198602094  instructions retired
+         45487888331  cycles elapsed
+          3162475016  peak memory footprint

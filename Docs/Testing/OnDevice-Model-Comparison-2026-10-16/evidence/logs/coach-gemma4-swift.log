@@ -1,0 +1,34 @@
+Loading local verified Qwen3-VL weights
+Loaded in 1.2775897500105202s; MLX ["activeBytes": 2939528786, "peakActiveBytes": 3550535762, "cacheBytes": 134354432]
+CASE fresh-01
+DONE fresh-01 4.15s; peak 6362844736; correct
+CASE fresh-03
+DONE fresh-03 1.13s; peak 6409702976; correct
+CASE fresh-07
+DONE fresh-07 1.11s; peak 6410325568; correct
+CASE fresh-10
+DONE fresh-10 1.11s; peak 6381538880; correct
+CASE real-cycle
+DONE real-cycle 1.05s; peak 5293477440; {"motion": "squat", "lowest_frame": "F5", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}
+CASE blank-control
+DONE blank-control 0.96s; peak 5023436376; {"motion": "squat", "lowest_frame": "F1", "returned": "no", "knee_in": "uncertain", "explanation": "The first frame shows a person in a squat position."}
+CASE ascent-omitted
+DONE ascent-omitted 0.99s; peak 5023764056; {"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from a standing position to a deep squat and back up."}
+       14.94 real         4.97 user         3.61 sys
+          3817553920  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              382141  page reclaims
+                1381  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                1839  voluntary context switches
+               92652  involuntary context switches
+        109703364781  instructions retired
+         34468313806  cycles elapsed
+          6565563968  peak memory footprint

@@ -1,0 +1,60 @@
+[
+  {
+    "repo": "HuggingFaceTB/SmolVLM2-500M-Video-Instruct-mlx",
+    "tensorDtypeCounts": {
+      "BF16": 489
+    },
+    "tensorStoredBytesByDtype": {
+      "BF16": 1014964608
+    },
+    "visionTensorCount": 197,
+    "visionStoredBytes": 172866048,
+    "scope": "Actual complete local safetensors headers; U32 packed quantized weights are not counted as ordinary floating parameter elements."
+  },
+  {
+    "repo": "mlx-community/Qwen3.5-2B-4bit",
+    "tensorDtypeCounts": {
+      "BF16": 786,
+      "U32": 187,
+      "F32": 18
+    },
+    "tensorStoredBytesByDtype": {
+      "BF16": 781509696,
+      "U32": 940638208,
+      "F32": 1152
+    },
+    "visionTensorCount": 297,
+    "visionStoredBytes": 662833152,
+    "scope": "Actual complete local safetensors headers; U32 packed quantized weights are not counted as ordinary floating parameter elements."
+  },
+  {
+    "repo": "mlx-community/Qwen3.5-4B-MLX-4bit",
+    "tensorDtypeCounts": {
+      "BF16": 948,
+      "U32": 249,
+      "F32": 24
+    },
+    "tensorStoredBytesByDtype": {
+      "BF16": 931749376,
+      "U32": 2102394880,
+      "F32": 3072
+    },
+    "visionTensorCount": 297,
+    "visionStoredBytes": 667028480,
+    "scope": "Actual complete local safetensors headers; U32 packed quantized weights are not counted as ordinary floating parameter elements."
+  },
+  {
+    "repo": "mlx-community/gemma-4-e2b-it-4bit",
+    "tensorDtypeCounts": {
+      "BF16": 2231,
+      "U32": 280
+    },
+    "tensorStoredBytesByDtype": {
+      "BF16": 1234441158,
+      "U32": 2315911168
+    },
+    "visionTensorCount": 661,
+    "visionStoredBytes": 335393664,
+    "scope": "Actual complete local safetensors headers; U32 packed quantized weights are not counted as ordinary floating parameter elements."
+  }
+]

@@ -1,0 +1,5 @@
+1: Command line invocation:
+2:     /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme CoachConfigAudit -destination platform=macOS,arch=arm64 -derivedDataPath /tmp/coach-qwen-preflight-build -jobs 4 CODE_SIGNING_ALLOWED=NO build
+283: 
+284: ** BUILD SUCCEEDED **
+285: 

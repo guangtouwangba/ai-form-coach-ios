@@ -1,0 +1,33 @@
+[
+  {
+    "title": "Qwen3.5-2B official card",
+    "url": "https://huggingface.co/Qwen/Qwen3.5-2B",
+    "use": "Native vision candidate, default non-thinking, recommended sampling differs from greedy; no fitness-specific accuracy guarantee."
+  },
+  {
+    "title": "Gemma 4 E2B official card",
+    "url": "https://huggingface.co/google/gemma-4-E2B-it",
+    "use": "E2B is effective parameters; 5.1B with embeddings; multimodal edge-oriented. Current official card Apache 2.0, selected community pinned card still says gemma, discrepancy retained."
+  },
+  {
+    "title": "SmolVLM2 official card",
+    "url": "https://huggingface.co/HuggingFaceTB/SmolVLM2-500M-Video-Instruct",
+    "use": "English video-trained baseline, compact; official video processor also tested separately."
+  },
+  {
+    "title": "Fitness-AQA official authors code",
+    "url": "https://github.com/ParitoshParmar/Fitness-AQA",
+    "checkedCommit": "9a20d751e4a6c2bc5cc0861304f265b4430dadf0",
+    "use": "Task-specific form assessment rather than action recognition. Repo readme requests dataset access, non-commercial only; local audited checkout has no ready fitness classification checkpoints and Code_Release ReadMe says Work in Progress. No access request submitted, no claimed benchmark execution."
+  },
+  {
+    "title": "FitAQA preprint",
+    "url": "https://arxiv.org/html/2608.08736v1",
+    "use": "Perception, judgement and temporal grounding separated; visual evidence remains bottleneck. Used for protocol reasoning only, not downloaded as benchmark or claimed tested."
+  },
+  {
+    "title": "OfficeSquat source paper",
+    "url": "https://www.frontiersin.org/journals/robotics-and-ai/articles/10.3389/frobt.2022.669719/full",
+    "use": "Filename labels belong to a specific arms-raised squat protocol, one participant; not universal bodyweight squat assessment."
+  }
+]

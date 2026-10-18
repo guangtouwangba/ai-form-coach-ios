@@ -1,0 +1,53 @@
+{
+  "decodedPromptTail" : "<|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|image_pad|><|vision_end|>用一句话描述图片中的颜色。<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 2061978336,
+  "extractSeconds" : 0.019396125004277565,
+  "firstChunkSeconds" : 0.1306744166649878,
+  "frames" : [
+    {
+      "actualTime" : 0,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/preprocessing-common-png\/colorchart\/F1.png",
+      "height" : 672,
+      "id" : "F1",
+      "requestedTime" : 0,
+      "width" : 384
+    }
+  ],
+  "generateWallSeconds" : 0.28531512500194367,
+  "generation" : {
+    "generationSeconds" : 0.15225005149841309,
+    "outputTokens" : 28,
+    "promptSeconds" : 0.13051903247833252,
+    "promptTokens" : 291,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 183.90798377031646
+  },
+  "id" : "colorchart",
+  "inputTokens" : 291,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 64,
+  "mlx" : {
+    "activeBytes" : 1788143988,
+    "cacheBytes" : 87362260,
+    "peakActiveBytes" : 2786398766
+  },
+  "peakFootprintBytes" : 2968128224,
+  "prefillChunking" : "balanced",
+  "preparedTensorPath" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/preprocessing-common-png\/colorchart\/prepared-pixels.npy",
+  "prepareSeconds" : 0.015272000004188158,
+  "prompt" : "用一句话描述图片中的颜色。",
+  "rawOutput" : "这是一张色彩鲜艳的电视信号干扰图，由红、绿、黄、蓝、粉、青等色带组成。",
+  "success" : true,
+  "totalSeconds" : 0.32026291667716578,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/diagnostics\/colorchart.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 252
+}

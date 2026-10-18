@@ -1,0 +1,27 @@
+/tmp/coach-alternatives-venv/lib/python3.12/site-packages/transformers/audio_utils.py:829: UserWarning: At least one mel filter has all zero values. The value for `num_mel_filters` (128) may be set too high. Or, the value for `num_frequency_bins` (257) may be set too low.
+  warnings.warn(
+LOADED gemma4 1.5208078330033459
+real-cycle-repeat1 1.466 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+real-cycle-repeat2 1.814 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+real-cycle-repeat3 2.19 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+real-cycle-repeat4 1.802 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+real-cycle-repeat5 1.789 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+real-cycle-repeat6 1.876 '{"motion": "squat", "lowest_frame": "F6", "returned": "yes", "knee_in": "uncertain", "explanation": "The sequence shows a progression from standing to a deep squat and back up."}'
+       14.62 real         5.23 user         6.91 sys
+          4486709248  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              327615  page reclaims
+                  94  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                1421  voluntary context switches
+               60972  involuntary context switches
+         92629569556  instructions retired
+         36177965314  cycles elapsed
+          5840703328  peak memory footprint

@@ -1,0 +1,41 @@
+{
+  "decodedPromptTail" : " are a helpful assistant.<|im_end|>\n<|im_start|>user\n观察到的人一直静止站立，没有任何下蹲和上升过程。能说他已经完成一次深蹲吗？请回答不能或能。<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 1984399520,
+  "extractSeconds" : 0.00027608871459960938,
+  "firstChunkSeconds" : 0.044850945472717285,
+  "frames" : [
+
+  ],
+  "generateWallSeconds" : 0.077672004699707031,
+  "generation" : {
+    "generationSeconds" : 0.032014966011047363,
+    "outputTokens" : 2,
+    "promptSeconds" : 0.044682979583740234,
+    "promptTokens" : 49,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 62.470783174027503
+  },
+  "id" : "text-logic",
+  "inputTokens" : 49,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 32,
+  "mlx" : {
+    "activeBytes" : 1781949792,
+    "cacheBytes" : 29984932,
+    "peakActiveBytes" : 1912169360
+  },
+  "peakFootprintBytes" : 2096285856,
+  "prefillChunking" : "balanced",
+  "prepareSeconds" : 0.0039209127426147461,
+  "prompt" : "观察到的人一直静止站立，没有任何下蹲和上升过程。能说他已经完成一次深蹲吗？请回答不能或能。",
+  "rawOutput" : "不能。",
+  "success" : true,
+  "totalSeconds" : 0.08228302001953125,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+
+  ],
+  "visualTokens" : 0
+}

@@ -1,0 +1,36 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/coach-quality-build/Build/Products/QualityInteractive.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB" "-only-testing:AIFormCoachTests/AppIntegrationTests/testInteractiveSimulatorDesignReview" -resultBundlePath /tmp/coach-quality-ui.xcresult -test-timeouts-enabled NO
+
+2026-10-16 10:56:43.217 xcodebuild[60349:3541339] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Writing result bundle at path:
+	/tmp/coach-quality-ui.xcresult
+
+2026-10-16 10:56:43.219 xcodebuild[60349:3541339] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-16 10:56:43.375 xcodebuild[60349:3541339] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+IOSurfaceClientSetSurfaceNotify failed e00002c7
+Test Suite 'Selected tests' started at 2026-10-16 10:56:45.237.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-16 10:56:45.237.
+Test Suite 'AppIntegrationTests' started at 2026-10-16 10:56:45.237.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' started.
+INTERACTIVE_DESIGN_REVIEW_READY stop=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/09C1478B-A265-4D72-9A11-7ECA8CD7FE80/tmp/coach-design-review-stop scenario=/Users/kids/Library/Developer/CoreSimulator/Devices/B65B8C82-04DC-4400-A8B7-36D74BBDCBAB/data/Containers/Data/Application/09C1478B-A265-4D72-9A11-7ECA8CD7FE80/tmp/coach-design-review-scenario.txt
+objc[60351]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x1253e0310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x124cd0398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+2026-10-16 10:56:58.980230+0800 AIFormCoach[60351:3541629] [AXRuntimeCommon] Unknown client: AIFormCoach
+2026-10-16 10:57:02.616659+0800 AIFormCoach[60351:3541703] [] <<<< FigCaptureSessionSimulator >>>> signalled err=-12782 at <>:297
+CoreData: debug: PostSaveMaintenance: incremental_vacuum with freelist_count - 5 and pages_to_free 1
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' passed (179.404 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-16 10:59:44.642.
+	 Executed 1 test, with 0 failures (0 unexpected) in 179.404 (179.405) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-16 10:59:44.642.
+	 Executed 1 test, with 0 failures (0 unexpected) in 179.404 (179.405) seconds
+Test Suite 'Selected tests' passed at 2026-10-16 10:59:44.643.
+	 Executed 1 test, with 0 failures (0 unexpected) in 179.404 (179.406) seconds
+2026-10-16 10:59:44.919 xcodebuild[60349:3541339] [MT] IDETestOperationsObserverDebug: 181.543 elapsed -- Testing started completed.
+2026-10-16 10:59:44.919 xcodebuild[60349:3541339] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-16 10:59:44.919 xcodebuild[60349:3541339] [MT] IDETestOperationsObserverDebug: 181.543 sec, +181.543 sec -- end
+
+Test session results, code coverage, and logs:
+	/tmp/coach-quality-ui.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

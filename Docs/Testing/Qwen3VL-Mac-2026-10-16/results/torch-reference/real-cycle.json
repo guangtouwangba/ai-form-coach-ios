@@ -1,0 +1,48 @@
+{
+  "id": "real-cycle",
+  "text": "```json\n{\n  \"motion\": \"squat\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"yes\",\n  \"explanation\": \"The woman performs a squat, and the lowest frame shows her knees are bent, indicating a descent. She returns to a standing position in the final frame.\"\n}\n```",
+  "seconds": 12.178332708004746,
+  "inputTokens": 1772,
+  "outputTokens": 77,
+  "pixelShape": [
+    6048,
+    1536
+  ],
+  "imageGridTHW": [
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ]
+  ],
+  "dtype": "bfloat16",
+  "backend": "official Transformers 4.57.1 / PyTorch 2.9.0 / MPS",
+  "driverAllocatedBytes": 5434802176,
+  "currentAllocatedBytes": 4292301056,
+  "maxRSSBytes": 919437312
+}

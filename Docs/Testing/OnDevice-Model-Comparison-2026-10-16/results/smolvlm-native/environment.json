@@ -1,0 +1,7 @@
+{
+  "modelDirectory": "/Users/kids/Library/Application Support/AIFormCoach/Models/SmolVLM2-500M-Video-Instruct-mlx/fa57db46815177fbdfd65cc85a2b3416a8332268",
+  "processor": "Official Transformers 4.57.1 SmolVLM video processor; no resampling, exact same frames. Not native MLX-VLM video fallback.",
+  "runtime": "MLX-VLM 0.6.0 inference, official Transformers 4.57.1 CPU video preprocessing",
+  "scope": "Same saved frames; native video-format diagnostic, not an additional independent test set. Two six-frame clips flatten into a single twelve-image sequence for one prompt.",
+  "eligibleForAutomaticCoaching": false
+}

@@ -1,0 +1,62 @@
+{
+  "actual" : 0,
+  "expected" : 0,
+  "file" : "negative-frontal-moving-5319965-mediapipe.json",
+  "firstStandingMs" : null,
+  "reps" : [
+
+  ],
+  "snapshots" : [
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未检测到人体，请让一个人全身入镜",
+      "timeMs" : 0
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未检测到人体，请让一个人全身入镜",
+      "timeMs" : 1200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "右膝证据不足，请靠近一些或改善光线",
+      "timeMs" : 2400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "检测到多个人体，请只保留训练者入镜",
+      "timeMs" : 3600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未检测到人体，请让一个人全身入镜",
+      "timeMs" : 4800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5880
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未建立站立起点，请检查视频中的机位与姿势",
+      "timeMs" : 5880
+    }
+  ],
+  "summary" : {
+    "feedbackEvents" : [
+
+    ],
+    "reps" : [
+
+    ],
+    "suppressedIssueCount" : 0
+  }
+}

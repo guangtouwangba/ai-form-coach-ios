@@ -1,0 +1,52 @@
+{
+  "id": "caption-real-cycle-0",
+  "caseID": "caption-real-cycle-0",
+  "split": "diagnostic",
+  "success": true,
+  "rawOutput": " A woman with long hair, wearing a black crop top and black shorts, standing in a white background.",
+  "finishReason": "stop",
+  "generateSeconds": 1.0047444999945583,
+  "prepareSeconds": 0.05618083299486898,
+  "totalSeconds": 1.0641910830017878,
+  "peakFootprintBytes": 1541310072,
+  "endFootprintBytes": 1278969536,
+  "peakRSSBytes": 1265844224,
+  "mlxPeakBytes": 1473699046,
+  "promptTokens": 119,
+  "outputTokens": 22,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      119
+    ],
+    "pixel_values": [
+      1,
+      1,
+      3,
+      512,
+      512
+    ],
+    "pixel_attention_mask": [
+      1,
+      1,
+      512,
+      512
+    ],
+    "input_ids": [
+      1,
+      119
+    ]
+  },
+  "promptTail": "<|im_start|>System: <end_of_utterance>\nUser: [F1 t=1.000s]<image>Describe only the visible person and the positions of their legs in one short English sentence. If there is no person, say no person.<end_of_utterance>\nAssistant:",
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 1,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F1.png",
+      "sha256": "3de78f1bee30f23361bc39bd46d2d6477eb805641fef02831ab857e8c1189a20"
+    }
+  ],
+  "generationTemperature": 0,
+  "maxTokens": 64
+}

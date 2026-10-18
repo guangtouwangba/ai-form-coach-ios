@@ -1,0 +1,8 @@
+1: Command line invocation:
+2:     /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -scheme CoachQwenPreflight -destination generic/platform=iOS -derivedDataPath /tmp/coach-qwen-preflight-build -jobs 4 CODE_SIGNING_ALLOWED=NO build
+95: ComputeTargetDependencyGraph
+96: /tmp/coach-qwen-preflight-build/SourcePackages/checkouts/mlx-swift-lm/Package.swift:PACKAGE-TARGET:MLXHuggingFaceMacros: error: Macro “MLXHuggingFaceMacros” from package “mlx-swift-lm” must be enabled before it can be used
+97: note: Building targets in dependency order
+251: 
+252: ** BUILD FAILED **
+253: 

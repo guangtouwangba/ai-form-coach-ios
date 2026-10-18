@@ -1,0 +1,52 @@
+{
+  "id": "caption-real-cycle-3",
+  "caseID": "caption-real-cycle-3",
+  "split": "diagnostic",
+  "success": true,
+  "rawOutput": " A person is squatting with their legs bent and hands on their knees.",
+  "finishReason": "stop",
+  "generateSeconds": 0.08985591599775944,
+  "prepareSeconds": 0.04428583300614264,
+  "totalSeconds": 0.13424604100873694,
+  "peakFootprintBytes": 1518716608,
+  "endFootprintBytes": 1279330008,
+  "peakRSSBytes": 1271021568,
+  "mlxPeakBytes": 1336650378,
+  "promptTokens": 119,
+  "outputTokens": 16,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      119
+    ],
+    "pixel_values": [
+      1,
+      1,
+      3,
+      512,
+      512
+    ],
+    "pixel_attention_mask": [
+      1,
+      1,
+      512,
+      512
+    ],
+    "input_ids": [
+      1,
+      119
+    ]
+  },
+  "promptTail": "<|im_start|>System: <end_of_utterance>\nUser: [F4 t=2.500s]<image>Describe only the visible person and the positions of their legs in one short English sentence. If there is no person, say no person.<end_of_utterance>\nAssistant:",
+  "frames": [
+    {
+      "id": "F4",
+      "requestedTime": 2.5,
+      "actualTime": 2.5,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F4.png",
+      "sha256": "849b9bd75cd49ea837841bf7726e0ea59e08b2a6bcab680e72f5f084809e69ab"
+    }
+  ],
+  "generationTemperature": 0,
+  "maxTokens": 64
+}

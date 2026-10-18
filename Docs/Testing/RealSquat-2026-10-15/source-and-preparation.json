@@ -1,0 +1,75 @@
+{
+  "source": {
+    "title": "Young Woman Exercising",
+    "creator": "Polina Tankilevitch",
+    "page": "https://www.pexels.com/video/young-woman-exercising-6525519/",
+    "download": "https://videos.pexels.com/video-files/6525519/6525519-hd_1080_1920_30fps.mp4",
+    "license": "https://www.pexels.com/license/"
+  },
+  "preparation": {
+    "sourceCycleSeconds": [
+      0.9,
+      4.3
+    ],
+    "repetitionsOfSameCycle": 5,
+    "startFreezeSeconds": 3,
+    "endFreezeSeconds": 1,
+    "originalMotionSpeedUnchanged": true,
+    "notice": "Edited real footage; five copies of one cycle, not five independent performances."
+  },
+  "files": [
+    {
+      "file": "negative-cropped-4820063.mp4",
+      "bytes": 547921,
+      "sha256": "ecfb8b124619af2b308830bbae952e82135e9f093911833f7186d81550a182d0"
+    },
+    {
+      "file": "negative-frontal-moving-5319965.mp4",
+      "bytes": 779332,
+      "sha256": "74b1d78bfab09c024f657412a88bd16c7face36c2ac1107689b6201460d796e9"
+    },
+    {
+      "file": "original-6525519.mp4",
+      "bytes": 4216572,
+      "sha256": "c1b4ce7b4605580c73ecf80dfbde1fffe8b825d04557d125b4b202b0ee760e59"
+    },
+    {
+      "file": "standing-then-five-squats-hd.mp4",
+      "bytes": 6449435,
+      "sha256": "3d307a2223d59594f01f1b3c0b63aecbb3e23c7fdf2e97587d21d66614445899"
+    },
+    {
+      "file": "standing-then-five-squats.mp4",
+      "bytes": 1342221,
+      "sha256": "205c1ae5c3f186b59eefff6141477767f63e0c4e515f9bd97dc80b6cb3294e02"
+    },
+    {
+      "file": "standing-five-rotated-metadata.mp4",
+      "bytes": 981008,
+      "sha256": "6c31517f2ba69672cd23e0d10acc0560aa8b92348ff5e626ab5ff1eed56e37a7"
+    }
+  ],
+  "negativeSources": [
+    {
+      "id": "5319965",
+      "creator": "cottonbro studio",
+      "page": "https://www.pexels.com/video/a-man-doing-squats-5319965/",
+      "download": "https://videos.pexels.com/video-files/5319965/5319965-uhd_2560_1440_25fps.mp4",
+      "preparation": "First 6 seconds, downscale to 960x540, remove audio. Frontal view, moving camera, incomplete framing. No standing expected."
+    },
+    {
+      "id": "4820063",
+      "creator": "Jaza Mirza",
+      "page": "https://www.pexels.com/video/a-man-doing-squats-4820063/",
+      "download": "https://videos.pexels.com/video-files/4820063/4820063-hd_1920_1080_24fps.mp4",
+      "preparation": "Full clip, downscale to 960x540, remove audio. Cropped upper body, no full leg visible. No standing expected."
+    }
+  ],
+  "rotationRegression": {
+    "source": "standing-then-five-squats.mp4",
+    "pixels": "90 degrees counterclockwise",
+    "displayMatrixRotation": -90,
+    "expectedCount": 5,
+    "purpose": "Same visible upright motion with a non-identity preferredTransform; catches model output coordinate mismatches."
+  }
+}

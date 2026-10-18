@@ -1,0 +1,95 @@
+{
+  "scope": "Developer visual review before model output, not expert clinical or coaching ground truth",
+  "source": "Pexels 6525519 original independent cycle; repeats excluded from accuracy denominator",
+  "criteria": {
+    "real-cycle": {
+      "motion": [
+        "squat"
+      ],
+      "view": [
+        "side",
+        "oblique"
+      ],
+      "full_body": [
+        true
+      ],
+      "returned": [
+        "yes"
+      ],
+      "knee_in": [
+        "uncertain"
+      ],
+      "depth": [
+        "reached",
+        "not_reached",
+        "uncertain"
+      ],
+      "depthNotScoredReason": "Hip center not externally marked; do not force ambiguous depth into good/bad label"
+    },
+    "standing-static": {
+      "motion": [
+        "static"
+      ],
+      "returned": [
+        "uncertain",
+        "no"
+      ],
+      "depth": [
+        "uncertain",
+        "not_reached"
+      ],
+      "knee_in": [
+        "uncertain"
+      ]
+    },
+    "blank-control": {
+      "motion": [
+        "unknown"
+      ],
+      "view": [
+        "unknown"
+      ],
+      "full_body": [
+        false
+      ],
+      "depth": [
+        "uncertain"
+      ],
+      "returned": [
+        "uncertain"
+      ],
+      "heel": [
+        "uncertain"
+      ],
+      "knee_in": [
+        "uncertain"
+      ]
+    },
+    "cropped-control": {
+      "full_body": [
+        false
+      ],
+      "depth": [
+        "uncertain"
+      ],
+      "heel": [
+        "uncertain"
+      ],
+      "knee_in": [
+        "uncertain"
+      ]
+    },
+    "ascent-omitted": {
+      "motion": [
+        "squat"
+      ],
+      "returned": [
+        "no",
+        "uncertain"
+      ],
+      "knee_in": [
+        "uncertain"
+      ]
+    }
+  }
+}

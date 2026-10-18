@@ -1,0 +1,212 @@
+[0/1] Planning build
+Building for debugging...
+[0/2] Write swift-version--58304C5D6DBC2206.txt
+Build complete! (0.11s)
+Test Suite 'All tests' started at 2026-10-16 10:54:13.747.
+Test Suite 'AIFormCoachPackageTests.xctest' started at 2026-10-16 10:54:13.748.
+Test Suite 'CalibrationTests' started at 2026-10-16 10:54:13.748.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildRejectsInconsistentRepetitions]' started.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildRejectsInconsistentRepetitions]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildUsesMedianOfThreeGuidedRepetitions]' started.
+Test Case '-[FormCoachCoreTests.CalibrationTests testBuildUsesMedianOfThreeGuidedRepetitions]' passed (0.000 seconds).
+Test Suite 'CalibrationTests' passed at 2026-10-16 10:54:13.749.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'GuidedCalibrationCollectorTests' started at 2026-10-16 10:54:13.749.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testLowQualityFramesCannotAdvanceCalibration]' started.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testLowQualityFramesCannotAdvanceCalibration]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testThreeObservedRepetitionsProducePersonalProfile]' started.
+Test Case '-[FormCoachCoreTests.GuidedCalibrationCollectorTests testThreeObservedRepetitionsProducePersonalProfile]' passed (0.000 seconds).
+Test Suite 'GuidedCalibrationCollectorTests' passed at 2026-10-16 10:54:13.749.
+	 Executed 2 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'PoseDiagnosticsTests' started at 2026-10-16 10:54:13.749.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testAspectFillMatchesPortraitCameraPreviewCrop]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testAspectFillMatchesPortraitCameraPreviewCrop]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testDetectionCountIsNotConfusedWithPointConfidence]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testDetectionCountIsNotConfusedWithPointConfidence]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testFrameGapExplainsWhyStandingRestarts]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testFrameGapExplainsWhyStandingRestarts]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testSmallPersonAndOutOfFrameHaveDifferentReasons]' started.
+Test Case '-[FormCoachCoreTests.PoseDiagnosticsTests testSmallPersonAndOutOfFrameHaveDifferentReasons]' passed (0.000 seconds).
+Test Suite 'PoseDiagnosticsTests' passed at 2026-10-16 10:54:13.750.
+	 Executed 4 tests, with 0 failures (0 unexpected) in 0.001 (0.001) seconds
+Test Suite 'SquatQualityTests' started at 2026-10-16 10:54:13.750.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testActualVideoBackToBackAttemptsAreNotLostAfterFirstReturn]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testActualVideoBackToBackAttemptsAreNotLostAfterFirstReturn]' passed (0.019 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testCompleteCyclesHaveTargetsAndAlignedEvidence]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testCompleteCyclesHaveTargetsAndAlignedEvidence]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testFrameGapDoesNotStitchAndReportsCause]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testFrameGapDoesNotStitchAndReportsCause]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testLegacySummaryDecodesAndNewAnalysisRoundTrips]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testLegacySummaryDecodesAndNewAnalysisRoundTrips]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testNoiseCannotManufactureAnAttemptAndCalibrationIsNotTraining]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testNoiseCannotManufactureAnAttemptAndCalibrationIsNotTraining]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testOccludedBottomTerminatesAttemptAndNeverInventsReturnOrAdvice]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testOccludedBottomTerminatesAttemptAndNeverInventsReturnOrAdvice]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testRangeNeedsExplicitNamedReferenceAndTargetFreezesPerAttempt]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testRangeNeedsExplicitNamedReferenceAndTargetFreezesPerAttempt]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSlowDescentMeetsSelectedTask]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSlowDescentMeetsSelectedTask]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSmallSustainedAttemptIsRetainedWithoutChangingCounter]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testSmallSustainedAttemptIsRetainedWithoutChangingCounter]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatQualityTests testVideoEndPauseAndCameraMoveAreDifferentFromUserFault]' started.
+Test Case '-[FormCoachCoreTests.SquatQualityTests testVideoEndPauseAndCameraMoveAreDifferentFromUserFault]' passed (0.004 seconds).
+Test Suite 'SquatQualityTests' passed at 2026-10-16 10:54:13.785.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.034 (0.034) seconds
+Test Suite 'SquatSessionTests' started at 2026-10-16 10:54:13.785.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testActualVisionStandingAndFiveCyclesAtBothResolutions]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testActualVisionStandingAndFiveCyclesAtBothResolutions]' passed (0.078 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMissingBottomCannotBeStitchedIntoARep]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMissingBottomCannotBeStitchedIntoARep]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionCountsCyclesButNotMovementOrMissingJoints]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionCountsCyclesButNotMovementOrMissingJoints]' passed (0.004 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionOcclusionAndJointJumpCannotCompleteHalfRep]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testModerateVisionOcclusionAndJointJumpCannotCompleteHalfRep]' passed (0.004 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingBodyAndBentKneeDoNotEstablishStanding]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingBodyAndBentKneeDoNotEstablishStanding]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingFeetInvalidatesBaselineWithoutLosingCompletedReps]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testMovingFeetInvalidatesBaselineWithoutLosingCompletedReps]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testNonVisionModerateConfidenceDoesNotInheritVisionPolicy]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testNonVisionModerateConfidenceDoesNotInheritVisionPolicy]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPauseRequiresReturningToTopAndDoesNotCountPartialMotion]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPauseRequiresReturningToTopAndDoesNotCountPartialMotion]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPortraitGeometryUsesEqualCoordinateUnits]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testPortraitGeometryUsesEqualCoordinateUnits]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStandingRequiresElapsedTimeAndEnoughSamples]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStandingRequiresElapsedTimeAndEnoughSamples]' passed (0.001 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStationaryAndSmallMotionDoNotCount]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testStationaryAndSmallMotionDoNotCount]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testSupportedModerateVisionHipNeedsStableObservedSkeleton]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testSupportedModerateVisionHipNeedsStableObservedSkeleton]' passed (0.002 seconds).
+Test Case '-[FormCoachCoreTests.SquatSessionTests testThreeCompleteCyclesCountExactlyThree]' started.
+Test Case '-[FormCoachCoreTests.SquatSessionTests testThreeCompleteCyclesCountExactlyThree]' passed (0.001 seconds).
+Test Suite 'SquatSessionTests' passed at 2026-10-16 10:54:13.883.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.098 (0.098) seconds
+Test Suite 'WorkoutSessionEngineTests' started at 2026-10-16 10:54:13.883.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testCompleteSequenceCountsExactlyOneRep]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testCompleteSequenceCountsExactlyOneRep]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testFeedbackCooldownPreventsRepeatedCue]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testFeedbackCooldownPreventsRepeatedCue]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testInterruptedRepIsNotStitchedAcrossResume]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testInterruptedRepIsNotStitchedAcrossResume]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testLowConfidenceIssueNeverProducesFeedback]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testLowConfidenceIssueNeverProducesFeedback]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMovementBelowNinetyPercentOfCalibratedDepthDoesNotCount]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMovementBelowNinetyPercentOfCalibratedDepthDoesNotCount]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMutedTrainingStillProducesEquivalentTextFeedback]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testMutedTrainingStillProducesEquivalentTextFeedback]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPartialMovementDoesNotCount]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPartialMovementDoesNotCount]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPredictedRequiredPointSuppressesIssue]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testPredictedRequiredPointSuppressesIssue]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testRestoreRetainsCompletedRepsAndContinuesNumbering]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testRestoreRetainsCompletedRepsAndContinuesNumbering]' passed (0.000 seconds).
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testSpokenFeedbackPersistsTraceabilityMetadata]' started.
+Test Case '-[FormCoachCoreTests.WorkoutSessionEngineTests testSpokenFeedbackPersistsTraceabilityMetadata]' passed (0.000 seconds).
+Test Suite 'WorkoutSessionEngineTests' passed at 2026-10-16 10:54:13.886.
+	 Executed 10 tests, with 0 failures (0 unexpected) in 0.002 (0.003) seconds
+Test Suite 'AIFormCoachPackageTests.xctest' passed at 2026-10-16 10:54:13.886.
+	 Executed 41 tests, with 0 failures (0 unexpected) in 0.135 (0.138) seconds
+Test Suite 'All tests' passed at 2026-10-16 10:54:13.886.
+	 Executed 41 tests, with 0 failures (0 unexpected) in 0.135 (0.138) seconds
+◇ Test run started.
+↳ Testing Library Version: 1902
+↳ Target Platform: arm64e-apple-macos14.0
+✔ Test run with 0 tests in 0 suites passed after 0.001 seconds.
+I0000 00:00:1792119254.509108 3522167 init-domain.cc:134] Fiber init: default domain = pthread, concurrency = 16, prefix = pthread-default
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792119254.560500 3522386 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119254.565754 3522381 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119254.600712 3522385 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+{
+  "output": "Docs/Testing/Squat-Coaching-2026-10-16/results/standing-then-five-squats-mediapipe.json",
+  "sourceSHA256": "205c1ae5c3f186b59eefff6141477767f63e0c4e515f9bd97dc80b6cb3294e02",
+  "modelSHA256": "4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad",
+  "sampleRateHz": 10,
+  "declaredFrames": 630,
+  "decodedFrames": 630,
+  "sampledFrames": 210,
+  "timestampFallbackFrames": 0,
+  "orientationPolicy": "OpenCV orientation auto; dimensions from decoded pixels",
+  "exporterVersion": "mediapipe-replay-1"
+}
+PASS Docs/Testing/Squat-Coaching-2026-10-16/results/standing-then-five-squats-mediapipe.json: 5/5, standing=2000ms
+I0000 00:00:1792119260.664517 3528686 init-domain.cc:134] Fiber init: default domain = pthread, concurrency = 16, prefix = pthread-default
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792119260.701471 3528690 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119260.706707 3528690 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119260.723923 3528697 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+{
+  "output": "Docs/Testing/Squat-Coaching-2026-10-16/results/standing-five-rotated-metadata-mediapipe.json",
+  "sourceSHA256": "6c31517f2ba69672cd23e0d10acc0560aa8b92348ff5e626ab5ff1eed56e37a7",
+  "modelSHA256": "4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad",
+  "sampleRateHz": 10,
+  "declaredFrames": 630,
+  "decodedFrames": 630,
+  "sampledFrames": 210,
+  "timestampFallbackFrames": 0,
+  "orientationPolicy": "OpenCV orientation auto; dimensions from decoded pixels",
+  "exporterVersion": "mediapipe-replay-1"
+}
+PASS Docs/Testing/Squat-Coaching-2026-10-16/results/standing-five-rotated-metadata-mediapipe.json: 5/5, standing=2000ms
+I0000 00:00:1792119266.193938 3529102 init-domain.cc:134] Fiber init: default domain = pthread, concurrency = 16, prefix = pthread-default
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792119266.231539 3529107 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119266.236591 3529109 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119266.256532 3529114 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+{
+  "output": "Docs/Testing/Squat-Coaching-2026-10-16/results/negative-frontal-moving-5319965-mediapipe.json",
+  "sourceSHA256": "74b1d78bfab09c024f657412a88bd16c7face36c2ac1107689b6201460d796e9",
+  "modelSHA256": "4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad",
+  "sampleRateHz": 10,
+  "declaredFrames": 150,
+  "decodedFrames": 150,
+  "sampledFrames": 50,
+  "timestampFallbackFrames": 0,
+  "orientationPolicy": "OpenCV orientation auto; dimensions from decoded pixels",
+  "exporterVersion": "mediapipe-replay-1"
+}
+PASS Docs/Testing/Squat-Coaching-2026-10-16/results/negative-frontal-moving-5319965-mediapipe.json: 0/0, standing=nonems
+I0000 00:00:1792119269.567056 3529530 init-domain.cc:134] Fiber init: default domain = pthread, concurrency = 16, prefix = pthread-default
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+W0000 00:00:1792119269.603918 3529534 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119269.609011 3529541 inference_feedback_manager.cc:121] Feedback manager requires a model with a single signature inference. Disabling support for feedback tensors.
+W0000 00:00:1792119269.626614 3529539 landmark_projection_calculator.cc:81] Using NORM_RECT without IMAGE_DIMENSIONS is only supported for the square ROI. Provide IMAGE_DIMENSIONS or use PROJECTION_MATRIX.
+{
+  "output": "Docs/Testing/Squat-Coaching-2026-10-16/results/negative-cropped-4820063-mediapipe.json",
+  "sourceSHA256": "ecfb8b124619af2b308830bbae952e82135e9f093911833f7186d81550a182d0",
+  "modelSHA256": "4eaa5eb7a98365221087693fcc286334cf0858e2eb6e15b506aa4a7ecdcec4ad",
+  "sampleRateHz": 10,
+  "declaredFrames": 185,
+  "decodedFrames": 185,
+  "sampledFrames": 62,
+  "timestampFallbackFrames": 0,
+  "orientationPolicy": "OpenCV orientation auto; dimensions from decoded pixels",
+  "exporterVersion": "mediapipe-replay-1"
+}
+PASS Docs/Testing/Squat-Coaching-2026-10-16/results/negative-cropped-4820063-mediapipe.json: 0/0, standing=nonems
+[
+  {
+    "file": "negative-cropped-4820063-report.json",
+    "count": 0,
+    "attempts": 0,
+    "pass_": true
+  },
+  {
+    "file": "negative-frontal-moving-5319965-report.json",
+    "count": 0,
+    "attempts": 0,
+    "pass_": true
+  },
+  {
+    "file": "standing-five-rotated-metadata-report.json",
+    "count": 5,
+    "attempts": 5,
+    "pass_": true
+  },
+  {
+    "file": "standing-then-five-squats-report.json",
+    "count": 5,
+    "attempts": 5,
+    "pass_": true
+  }
+]

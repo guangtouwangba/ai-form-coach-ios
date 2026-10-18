@@ -1,0 +1,46 @@
+LOADED smolvlm 0.17698329201084562
+fresh-01 1.538 ' R'
+fresh-02 0.219 ' R'
+fresh-03 0.233 ' R'
+fresh-04 0.221 ' R'
+fresh-05 0.224 ' R'
+fresh-06 0.224 ' R'
+fresh-07 0.217 ' R'
+fresh-08 0.218 ' R'
+fresh-09 0.224 ' R'
+fresh-10 0.225 ' R'
+fresh-11 0.224 ' R'
+fresh-12 0.22 ' R'
+confirmation-01 0.224 ' R'
+confirmation-02 0.22 ' R'
+confirmation-03 0.219 ' R'
+confirmation-04 0.212 ' R'
+confirmation-05 0.219 ' R'
+confirmation-06 0.219 ' R'
+confirmation-07 0.224 ' R'
+confirmation-08 0.222 ' R'
+confirmation-09 0.224 ' R'
+confirmation-10 0.222 ' R'
+real-cycle 0.649 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+standing-static 0.281 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing'
+blank-control 0.41 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: one short English sentence describing the observed evidence, not generic exercise instructions.'
+cropped-control 0.41 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is seen from the side, and the knee is not visible.'
+ascent-omitted 0.419 ' motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.'
+       19.79 real        12.23 user         3.88 sys
+          1731100672  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              205570  page reclaims
+                  39  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 767  voluntary context switches
+               49600  involuntary context switches
+        308247506228  instructions retired
+         68267732024  cycles elapsed
+          2703067104  peak memory footprint

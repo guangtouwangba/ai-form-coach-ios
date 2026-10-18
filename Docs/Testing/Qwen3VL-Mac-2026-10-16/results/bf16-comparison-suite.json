@@ -1,0 +1,218 @@
+{
+  "cases": [
+    {
+      "id": "real-cycle",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "variant": "original",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "prompt": "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+      "systemPrompt": "You inspect ordered exercise frames. Report only visible observations. Output a JSON object, without Markdown. Never certify safety or infer an invisible joint.",
+      "lateralView": true
+    },
+    {
+      "id": "standing-static",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "variant": "static",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "prompt": "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+      "systemPrompt": "You inspect ordered exercise frames. Report only visible observations. Output a JSON object, without Markdown. Never certify safety or infer an invisible joint.",
+      "lateralView": true
+    },
+    {
+      "id": "blank-control",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "variant": "blank",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "prompt": "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+      "systemPrompt": "You inspect ordered exercise frames. Report only visible observations. Output a JSON object, without Markdown. Never certify safety or infer an invisible joint.",
+      "lateralView": true
+    },
+    {
+      "id": "ascent-omitted",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "variant": "original",
+      "times": [
+        1,
+        1.3,
+        1.6,
+        1.9,
+        2.2,
+        2.5
+      ],
+      "prompt": "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short Chinese sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+      "systemPrompt": "You inspect ordered exercise frames. Report only visible observations. Output a JSON object, without Markdown. Never certify safety or infer an invisible joint.",
+      "lateralView": true
+    },
+    {
+      "id": "office-01",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "maxPixels": 131072,
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxTokens": 16
+    },
+    {
+      "id": "office-04",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "maxPixels": 131072,
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxTokens": 16
+    },
+    {
+      "id": "office-07",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "maxPixels": 131072,
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxTokens": 16
+    },
+    {
+      "id": "office-10",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "maxPixels": 131072,
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxTokens": 16
+    },
+    {
+      "id": "office-13",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms2.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "maxPixels": 131072,
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxTokens": 16
+    },
+    {
+      "id": "office-16",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_fast1.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "maxPixels": 131072,
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxTokens": 16
+    }
+  ]
+}

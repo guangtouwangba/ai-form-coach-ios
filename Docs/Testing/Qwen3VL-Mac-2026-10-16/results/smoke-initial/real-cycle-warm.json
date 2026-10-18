@@ -1,0 +1,115 @@
+{
+  "endFootprintBytes" : 2328693160,
+  "extractSeconds" : 0.40868806838989258,
+  "firstChunkSeconds" : 0.75230598449707031,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/real-cycle-warm\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/real-cycle-warm\/F2.png",
+      "height" : 1920,
+      "id" : "F2",
+      "requestedTime" : 1.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/real-cycle-warm\/F3.png",
+      "height" : 1920,
+      "id" : "F3",
+      "requestedTime" : 2,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/real-cycle-warm\/F4.png",
+      "height" : 1920,
+      "id" : "F4",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 3,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/real-cycle-warm\/F5.png",
+      "height" : 1920,
+      "id" : "F5",
+      "requestedTime" : 3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 4,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/smoke-initial\/real-cycle-warm\/F6.png",
+      "height" : 1920,
+      "id" : "F6",
+      "requestedTime" : 4,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 2.6512730121612549,
+  "generation" : {
+    "generationSeconds" : 1.8980250358581543,
+    "outputTokens" : 111,
+    "promptSeconds" : 0.75209391117095947,
+    "promptTokens" : 1764,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 58.481841863489201
+  },
+  "id" : "real-cycle-warm",
+  "inputTokens" : 1764,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 2016580772,
+    "cacheBytes" : 134776056,
+    "peakActiveBytes" : 2969038056
+  },
+  "peakFootprintBytes" : 3162458536,
+  "prepareSeconds" : 0.050260066986083984,
+  "prompt" : "这些图片按时间排序，图旁标签是帧ID和采集时间。仅根据图片分析徒手深蹲。看不清必须填uncertain。侧面不能确定膝内扣。只输出一行JSON，不要Markdown或额外文字：{\"motion\":\"squat|static|unknown\",\"view\":\"side|front|oblique|unknown\",\"full_body\":true,\"depth\":\"reached|not_reached|uncertain\",\"returned\":\"yes|no|uncertain\",\"heel\":\"down|raised|uncertain\",\"knee_in\":\"yes|no|uncertain\",\"evidence\":[\"F1\"],\"cue\":\"简短中文建议或说明看不清\"}。depth仅指最低时髋部达到膝高附近或以下的可见证据，不代表整体动作合格。只在有明显证据时下结论。",
+  "rawOutput" : "```json\n{\n  \"motion\": \"squat\",\n  \"view\": \"side\",\n  \"full_body\": true,\n  \"depth\": \"reached\",\n  \"returned\": \"yes\",\n  \"heel\": \"down\",\n  \"knee_in\": \"yes\",\n  \"evidence\": [\n    \"F1\",\n    \"F2\",\n    \"F3\",\n    \"F4\",\n    \"F5\",\n    \"F6\"\n  ],\n  \"cue\": \"简短中文建议或说明看不清\"\n}\n```",
+  "success" : true,
+  "totalSeconds" : 3.1110950708389282,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 1512
+}

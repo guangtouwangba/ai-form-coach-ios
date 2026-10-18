@@ -1,0 +1,656 @@
+{
+  "createdUTC": "2026-10-15T23:46:29Z",
+  "scope": "One participant OfficeSquat primary filename labels; seen comparison vs previously unused trials, not participant holdout. high4_fast/arms1_fast have secondary fast; ts_fast have translation. Controls test visible facts only. Overall fitness correctness and clinical standards not measured.",
+  "cases": [
+    {
+      "id": "fresh-01",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr4.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16,
+      "expected": "correct",
+      "split": "seen-comparison",
+      "sourceSHA256": "b818385f74376e14ee61a5477d025b3b95e53f477fb62e822be53426731c32ce",
+      "frames": [
+        {
+          "id": "R1",
+          "requestedTime": 0.175,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/R1.png",
+          "sha256": "251ab5bb78d41cf33ea3fd866d4af3bd644660f308105fd26029a7facec3908a"
+        },
+        {
+          "id": "R2",
+          "requestedTime": 0.963,
+          "actualTime": 0.9583333333333334,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/R2.png",
+          "sha256": "eb9d80e9c4f229ab127b6029185cb1b3187e25e85c2937fc2a0d63b0f27a92a8"
+        },
+        {
+          "id": "R3",
+          "requestedTime": 1.75,
+          "actualTime": 1.75,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/R3.png",
+          "sha256": "5e0605bce2c98bf6263a631f7b6ec60fc8b9308f5e3e5b26f85a19c5b46f0599"
+        },
+        {
+          "id": "R4",
+          "requestedTime": 2.537,
+          "actualTime": 2.5416666666666665,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/R4.png",
+          "sha256": "e03847a23450a123c8c5fb8d83a66c760765cba367e8c3b17644e6d821785073"
+        },
+        {
+          "id": "R5",
+          "requestedTime": 3.325,
+          "actualTime": 3.3333333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/R5.png",
+          "sha256": "9b19613cbcf02093936aa1aa9199e18ca52548187accedaab90c950028cea5fd"
+        },
+        {
+          "id": "R6",
+          "requestedTime": 4.112,
+          "actualTime": 4.125,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/R6.png",
+          "sha256": "23d8d55027d773ecf29676e133afb2c69c2b06a8c58789d3984a0370913fdcf7"
+        },
+        {
+          "id": "F1",
+          "requestedTime": 0.175,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/F1.png",
+          "sha256": "c220b9978c49162c019946e7b573f3e540c16baa98d9af1c43bed92b3eb064f8"
+        },
+        {
+          "id": "F2",
+          "requestedTime": 0.963,
+          "actualTime": 0.9583333333333334,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/F2.png",
+          "sha256": "8085325a0ec3198868a8f56f0983c1202be6c41c7a60fb1f3f35b58e30878860"
+        },
+        {
+          "id": "F3",
+          "requestedTime": 1.75,
+          "actualTime": 1.75,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/F3.png",
+          "sha256": "6d8ba986640cff20e48a5e5680fa952e7a072be21c035d2d3b961c77b1a212c3"
+        },
+        {
+          "id": "F4",
+          "requestedTime": 2.537,
+          "actualTime": 2.5416666666666665,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/F4.png",
+          "sha256": "5bcadfc214fb80edc7252e35e8f97e60808aa7c4470a3d6f6504b3cff5ca1211"
+        },
+        {
+          "id": "F5",
+          "requestedTime": 3.325,
+          "actualTime": 3.3333333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/F5.png",
+          "sha256": "8d31854616d8473407036aecd9bb484ab74d0b5de29dfebeb0db00de2a57fff3"
+        },
+        {
+          "id": "F6",
+          "requestedTime": 4.112,
+          "actualTime": 4.125,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-01/F6.png",
+          "sha256": "4241adce5387c962dbc784095f17cb0f0f4aa138e7ecdd3ed7ceb15cb47c235f"
+        }
+      ],
+      "useExportedPNGForInput": true
+    },
+    {
+      "id": "fresh-03",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high5.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16,
+      "expected": "high",
+      "split": "seen-comparison",
+      "sourceSHA256": "4e5ab23bf7b08b34cbe7eb3a001c0e2ff31ef6224285567b99f0f08e93ec9de7",
+      "frames": [
+        {
+          "id": "R1",
+          "requestedTime": 0.175,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/R1.png",
+          "sha256": "251ab5bb78d41cf33ea3fd866d4af3bd644660f308105fd26029a7facec3908a"
+        },
+        {
+          "id": "R2",
+          "requestedTime": 0.963,
+          "actualTime": 0.9583333333333334,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/R2.png",
+          "sha256": "eb9d80e9c4f229ab127b6029185cb1b3187e25e85c2937fc2a0d63b0f27a92a8"
+        },
+        {
+          "id": "R3",
+          "requestedTime": 1.75,
+          "actualTime": 1.75,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/R3.png",
+          "sha256": "5e0605bce2c98bf6263a631f7b6ec60fc8b9308f5e3e5b26f85a19c5b46f0599"
+        },
+        {
+          "id": "R4",
+          "requestedTime": 2.537,
+          "actualTime": 2.5416666666666665,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/R4.png",
+          "sha256": "e03847a23450a123c8c5fb8d83a66c760765cba367e8c3b17644e6d821785073"
+        },
+        {
+          "id": "R5",
+          "requestedTime": 3.325,
+          "actualTime": 3.3333333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/R5.png",
+          "sha256": "9b19613cbcf02093936aa1aa9199e18ca52548187accedaab90c950028cea5fd"
+        },
+        {
+          "id": "R6",
+          "requestedTime": 4.112,
+          "actualTime": 4.125,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/R6.png",
+          "sha256": "23d8d55027d773ecf29676e133afb2c69c2b06a8c58789d3984a0370913fdcf7"
+        },
+        {
+          "id": "F1",
+          "requestedTime": 0.175,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/F1.png",
+          "sha256": "b7b8738f683b4f72cf87ecdaf4dfb347ef8050da447a2e65a5c9878d2cbb9af3"
+        },
+        {
+          "id": "F2",
+          "requestedTime": 0.963,
+          "actualTime": 0.9583333333333334,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/F2.png",
+          "sha256": "ecb19b4fb1863bbb0efeddf0c0f6ca406eca3707332fa71d4b9aa6ae59ee61a2"
+        },
+        {
+          "id": "F3",
+          "requestedTime": 1.75,
+          "actualTime": 1.75,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/F3.png",
+          "sha256": "8056006c7b75b2c8b2c7eba2f62132d76714e307b74ac6cc5c4306f5c445cb70"
+        },
+        {
+          "id": "F4",
+          "requestedTime": 2.537,
+          "actualTime": 2.5416666666666665,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/F4.png",
+          "sha256": "210354e3ad6f79b3f8e8e7295dbc9850fa88219019546545cca9d1157772b10b"
+        },
+        {
+          "id": "F5",
+          "requestedTime": 3.325,
+          "actualTime": 3.3333333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/F5.png",
+          "sha256": "136756341853f379cb3f09df5aafd34d23cf2afc7aa9731e19e6879b3e058a38"
+        },
+        {
+          "id": "F6",
+          "requestedTime": 4.112,
+          "actualTime": 4.125,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-03/F6.png",
+          "sha256": "6e2f6f518f63877839ce4ac9bbd7ed5c9b297474a5fa7c06b2c3d859d753a1b6"
+        }
+      ],
+      "useExportedPNGForInput": true
+    },
+    {
+      "id": "fresh-07",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt5.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16,
+      "expected": "tilt",
+      "split": "seen-comparison",
+      "sourceSHA256": "dc0159ec67ae4031830ec873499be5092443a21f669b886d0633e1ace035dd99",
+      "frames": [
+        {
+          "id": "R1",
+          "requestedTime": 0.175,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/R1.png",
+          "sha256": "251ab5bb78d41cf33ea3fd866d4af3bd644660f308105fd26029a7facec3908a"
+        },
+        {
+          "id": "R2",
+          "requestedTime": 0.963,
+          "actualTime": 0.9583333333333334,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/R2.png",
+          "sha256": "eb9d80e9c4f229ab127b6029185cb1b3187e25e85c2937fc2a0d63b0f27a92a8"
+        },
+        {
+          "id": "R3",
+          "requestedTime": 1.75,
+          "actualTime": 1.75,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/R3.png",
+          "sha256": "5e0605bce2c98bf6263a631f7b6ec60fc8b9308f5e3e5b26f85a19c5b46f0599"
+        },
+        {
+          "id": "R4",
+          "requestedTime": 2.537,
+          "actualTime": 2.5416666666666665,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/R4.png",
+          "sha256": "e03847a23450a123c8c5fb8d83a66c760765cba367e8c3b17644e6d821785073"
+        },
+        {
+          "id": "R5",
+          "requestedTime": 3.325,
+          "actualTime": 3.3333333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/R5.png",
+          "sha256": "9b19613cbcf02093936aa1aa9199e18ca52548187accedaab90c950028cea5fd"
+        },
+        {
+          "id": "R6",
+          "requestedTime": 4.112,
+          "actualTime": 4.125,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/R6.png",
+          "sha256": "23d8d55027d773ecf29676e133afb2c69c2b06a8c58789d3984a0370913fdcf7"
+        },
+        {
+          "id": "F1",
+          "requestedTime": 0.175,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/F1.png",
+          "sha256": "802e5c2de5aac28b7d34e661d4f93e72978de32a0603b31ad00dd5e697411bed"
+        },
+        {
+          "id": "F2",
+          "requestedTime": 0.963,
+          "actualTime": 0.9583333333333334,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/F2.png",
+          "sha256": "7d8015a805eb824e09d0fe4a972d0b73f9f21325ed78f177f1813757ced97831"
+        },
+        {
+          "id": "F3",
+          "requestedTime": 1.75,
+          "actualTime": 1.75,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/F3.png",
+          "sha256": "3830dc5bde7e0455ed273a5f97346caa72e74220f33488a00198f3f27eefdbf8"
+        },
+        {
+          "id": "F4",
+          "requestedTime": 2.537,
+          "actualTime": 2.5416666666666665,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/F4.png",
+          "sha256": "7eec74ad56d9cacefc6c53983fac974ecd6594fdebb9e521a2f06378430ad1f0"
+        },
+        {
+          "id": "F5",
+          "requestedTime": 3.325,
+          "actualTime": 3.3333333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/F5.png",
+          "sha256": "8664bb474ec589d10a113dc89ed1011e05656185122db714cedd73d418099fbc"
+        },
+        {
+          "id": "F6",
+          "requestedTime": 4.112,
+          "actualTime": 4.125,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-07/F6.png",
+          "sha256": "b3c2c565f7e1ced2e2bc3aac1ce9091168216034efdddceffaaa91962c7d81f6"
+        }
+      ],
+      "useExportedPNGForInput": true
+    },
+    {
+      "id": "fresh-10",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms6.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "R1-R6 show the target exercise. Classify ONLY the F1-F6 trial relative to R. Choose: correct = matches R; high = knees bend less and torso stays higher than R; low = torso lowers farther than R; arms = both arms raised less than R; tilt = left/right arm height is asymmetric; fast = clearly faster than R; uncertain = cannot decide. Reply with exactly ONE lowercase label and nothing else.",
+      "systemPrompt": "You are a visual comparison classifier. Reply with one lowercase class label only.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072,
+      "maxTokens": 16,
+      "expected": "arms",
+      "split": "seen-comparison",
+      "sourceSHA256": "acdca3fd5db3f7c7d7fffda430affb192e8ed9b6d010ad4d3962f5c5b90364cc",
+      "frames": [
+        {
+          "id": "R1",
+          "requestedTime": 0.175,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/R1.png",
+          "sha256": "251ab5bb78d41cf33ea3fd866d4af3bd644660f308105fd26029a7facec3908a"
+        },
+        {
+          "id": "R2",
+          "requestedTime": 0.963,
+          "actualTime": 0.9583333333333334,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/R2.png",
+          "sha256": "eb9d80e9c4f229ab127b6029185cb1b3187e25e85c2937fc2a0d63b0f27a92a8"
+        },
+        {
+          "id": "R3",
+          "requestedTime": 1.75,
+          "actualTime": 1.75,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/R3.png",
+          "sha256": "5e0605bce2c98bf6263a631f7b6ec60fc8b9308f5e3e5b26f85a19c5b46f0599"
+        },
+        {
+          "id": "R4",
+          "requestedTime": 2.537,
+          "actualTime": 2.5416666666666665,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/R4.png",
+          "sha256": "e03847a23450a123c8c5fb8d83a66c760765cba367e8c3b17644e6d821785073"
+        },
+        {
+          "id": "R5",
+          "requestedTime": 3.325,
+          "actualTime": 3.3333333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/R5.png",
+          "sha256": "9b19613cbcf02093936aa1aa9199e18ca52548187accedaab90c950028cea5fd"
+        },
+        {
+          "id": "R6",
+          "requestedTime": 4.112,
+          "actualTime": 4.125,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/R6.png",
+          "sha256": "23d8d55027d773ecf29676e133afb2c69c2b06a8c58789d3984a0370913fdcf7"
+        },
+        {
+          "id": "F1",
+          "requestedTime": 0.178,
+          "actualTime": 0.16666666666666666,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/F1.png",
+          "sha256": "4fc36d02c0e64864d30a1adcb695e5f049675b6ad0fc281920580d21f5994f78"
+        },
+        {
+          "id": "F2",
+          "requestedTime": 0.981,
+          "actualTime": 1.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/F2.png",
+          "sha256": "fc67cdbfa610d396554c5fa0e431a017cdfbd503084a576446cc85ec6378c21b"
+        },
+        {
+          "id": "F3",
+          "requestedTime": 1.783,
+          "actualTime": 1.7916666666666667,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/F3.png",
+          "sha256": "729ae0d3b99e0584d0a86037710e3dbe6762b1e1d6ce3c40d8129ddb2cb0c2a6"
+        },
+        {
+          "id": "F4",
+          "requestedTime": 2.586,
+          "actualTime": 2.5833333333333335,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/F4.png",
+          "sha256": "9343d418042e635fd80bca68248af3305a645d90e8b3c7e7e348103618b39148"
+        },
+        {
+          "id": "F5",
+          "requestedTime": 3.388,
+          "actualTime": 3.375,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/F5.png",
+          "sha256": "7446d3fa03d7a0ee20b9d81711fe1e01c609410245166f28790e4ee237244a8f"
+        },
+        {
+          "id": "F6",
+          "requestedTime": 4.191,
+          "actualTime": 4.208333333333333,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-10/F6.png",
+          "sha256": "dd940bb472b91d4a90d8401ce998995de958fc45e64c55025f445972911efece"
+        }
+      ],
+      "useExportedPNGForInput": true
+    },
+    {
+      "id": "real-cycle",
+      "video": "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/RealSquat-2026-10-15/media/original-6525519.mp4",
+      "variant": "original",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "prompt": "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short English sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+      "systemPrompt": "You inspect ordered exercise frames. Report only visible observations. Output a JSON object, without Markdown. Never certify safety or infer an invisible joint.",
+      "split": "temporal-controls",
+      "maxTokens": 192,
+      "frames": [
+        {
+          "id": "F1",
+          "requestedTime": 1,
+          "actualTime": 1.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F1.png",
+          "sha256": "3de78f1bee30f23361bc39bd46d2d6477eb805641fef02831ab857e8c1189a20"
+        },
+        {
+          "id": "F2",
+          "requestedTime": 1.5,
+          "actualTime": 1.5,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F2.png",
+          "sha256": "a2267fc4ebdc92bc35e97db4001e600dc87c17496869fc826bd15bff00297ce6"
+        },
+        {
+          "id": "F3",
+          "requestedTime": 2,
+          "actualTime": 2.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F3.png",
+          "sha256": "80c7e135fe3685fabec230d3c7dda9ead43dfab0a4513e6d4a1cca77cab9c463"
+        },
+        {
+          "id": "F4",
+          "requestedTime": 2.5,
+          "actualTime": 2.5,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F4.png",
+          "sha256": "849b9bd75cd49ea837841bf7726e0ea59e08b2a6bcab680e72f5f084809e69ab"
+        },
+        {
+          "id": "F5",
+          "requestedTime": 3,
+          "actualTime": 3.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F5.png",
+          "sha256": "b5629cab85b5976c5ba63ec263a6dc213d0f7b358a9c536997c766bd8036299c"
+        },
+        {
+          "id": "F6",
+          "requestedTime": 4,
+          "actualTime": 4.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F6.png",
+          "sha256": "e7142a8159ba50b1a1e1191cc64f4d4d028265b2bf7a0f1b549e390b152bf5ab"
+        }
+      ],
+      "maxPixels": 131072,
+      "useExportedPNGForInput": true
+    },
+    {
+      "id": "blank-control",
+      "video": "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/RealSquat-2026-10-15/media/original-6525519.mp4",
+      "variant": "blank",
+      "times": [
+        1,
+        1.5,
+        2,
+        2.5,
+        3,
+        4
+      ],
+      "prompt": "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short English sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+      "systemPrompt": "You inspect ordered exercise frames. Report only visible observations. Output a JSON object, without Markdown. Never certify safety or infer an invisible joint.",
+      "split": "temporal-controls",
+      "maxTokens": 192,
+      "frames": [
+        {
+          "id": "F1",
+          "requestedTime": 1,
+          "actualTime": 1.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/blank-control/F1.png",
+          "sha256": "3782269e1403f45ba531b1f545049cf2f5e3a073019c53cba5ec3020307994c2"
+        },
+        {
+          "id": "F2",
+          "requestedTime": 1.5,
+          "actualTime": 1.5,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/blank-control/F2.png",
+          "sha256": "3782269e1403f45ba531b1f545049cf2f5e3a073019c53cba5ec3020307994c2"
+        },
+        {
+          "id": "F3",
+          "requestedTime": 2,
+          "actualTime": 2.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/blank-control/F3.png",
+          "sha256": "3782269e1403f45ba531b1f545049cf2f5e3a073019c53cba5ec3020307994c2"
+        },
+        {
+          "id": "F4",
+          "requestedTime": 2.5,
+          "actualTime": 2.5,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/blank-control/F4.png",
+          "sha256": "3782269e1403f45ba531b1f545049cf2f5e3a073019c53cba5ec3020307994c2"
+        },
+        {
+          "id": "F5",
+          "requestedTime": 3,
+          "actualTime": 3.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/blank-control/F5.png",
+          "sha256": "3782269e1403f45ba531b1f545049cf2f5e3a073019c53cba5ec3020307994c2"
+        },
+        {
+          "id": "F6",
+          "requestedTime": 4,
+          "actualTime": 4.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/blank-control/F6.png",
+          "sha256": "3782269e1403f45ba531b1f545049cf2f5e3a073019c53cba5ec3020307994c2"
+        }
+      ],
+      "maxPixels": 131072,
+      "useExportedPNGForInput": true
+    },
+    {
+      "id": "ascent-omitted",
+      "video": "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/RealSquat-2026-10-15/media/original-6525519.mp4",
+      "variant": "original",
+      "times": [
+        1,
+        1.3,
+        1.6,
+        1.9,
+        2.2,
+        2.5
+      ],
+      "prompt": "Inspect the ordered frames. Return exactly these five JSON keys: motion, lowest_frame, returned, knee_in, explanation. For motion choose squat, static, or unknown. lowest_frame is a frame ID such as F4, or null if no visible squat. returned is yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in must be uncertain for side views or invisible knees. explanation is one short English sentence describing the observed evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.",
+      "systemPrompt": "You inspect ordered exercise frames. Report only visible observations. Output a JSON object, without Markdown. Never certify safety or infer an invisible joint.",
+      "split": "temporal-controls",
+      "maxTokens": 192,
+      "frames": [
+        {
+          "id": "F1",
+          "requestedTime": 1,
+          "actualTime": 1.0,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F1.png",
+          "sha256": "3de78f1bee30f23361bc39bd46d2d6477eb805641fef02831ab857e8c1189a20"
+        },
+        {
+          "id": "F2",
+          "requestedTime": 1.3,
+          "actualTime": 1.3,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F2.png",
+          "sha256": "ce4bfa4b74e04d93618425d34295db39719b7490a192ec378718d403934c4106"
+        },
+        {
+          "id": "F3",
+          "requestedTime": 1.6,
+          "actualTime": 1.6,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F3.png",
+          "sha256": "f04520d4dc26012057c212960ab7ee36415ca629563eb6833a6cf1726fe25e2b"
+        },
+        {
+          "id": "F4",
+          "requestedTime": 1.9,
+          "actualTime": 1.9,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F4.png",
+          "sha256": "ed7015f5ab4002fb9a01ba48e7502eab156a69352b3f2ebe2ae033a7a59fb0d1"
+        },
+        {
+          "id": "F5",
+          "requestedTime": 2.2,
+          "actualTime": 2.2,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F5.png",
+          "sha256": "675361c964fe944011abff435d3ebace729dee23d8bf93a33c524b2b60fa23b8"
+        },
+        {
+          "id": "F6",
+          "requestedTime": 2.5,
+          "actualTime": 2.5,
+          "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F6.png",
+          "sha256": "849b9bd75cd49ea837841bf7726e0ea59e08b2a6bcab680e72f5f084809e69ab"
+        }
+      ],
+      "maxPixels": 131072,
+      "useExportedPNGForInput": true
+    }
+  ],
+  "languagePolicy": "All models receive English prompts and English observations; SmolVLM2 is English-only. This v1 protocol was finalized before alternative inference."
+}

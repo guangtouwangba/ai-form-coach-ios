@@ -1,0 +1,29 @@
+Using Python 3.12.13 environment at: /tmp/coach-alternatives-venv
+Resolved 25 packages in 6.34s
+Downloading mediapipe (35.5MiB)
+Downloading opencv-contrib-python (53.1MiB)
+Downloading scikit-learn (7.9MiB)
+Downloading fonttools (3.0MiB)
+Downloading matplotlib (8.9MiB)
+ Downloaded fonttools
+ Downloaded scikit-learn
+ Downloaded matplotlib
+ Downloaded mediapipe
+ Downloaded opencv-contrib-python
+Prepared 10 packages in 2m 18s
+Installed 15 packages in 94ms
+ + absl-py==2.5.1
+ + cloudpickle==3.1.2
+ + contourpy==1.4.0
+ + cycler==0.12.1
+ + flatbuffers==25.12.19
+ + fonttools==4.67.0
+ + joblib==1.6.0
+ + kiwisolver==1.5.1
+ + matplotlib==3.11.2
+ + mediapipe==1.1.1
+ + narwhals==2.27.1
+ + opencv-contrib-python==5.0.0.93
+ + pyparsing==3.3.3
+ + scikit-learn==1.9.1
+ + threadpoolctl==3.7.0

@@ -1,0 +1,23 @@
+LOADED qwen3_5 0.8880744999914896
+caption-real-cycle-0 0.358 'A woman is standing with her legs straight and slightly apart.'
+caption-real-cycle-3 0.385 'A woman is performing a squat with her legs bent at the knees and feet flat on the ground.'
+caption-blank-control-0 0.182 'no person'
+simple-incomplete 0.739 'no'
+        3.71 real         1.84 user         1.41 sys
+          3579641856  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              246381  page reclaims
+                  16  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 167  voluntary context switches
+               10022  involuntary context switches
+         30512169173  instructions retired
+         11536722330  cycles elapsed
+          5676584392  peak memory footprint

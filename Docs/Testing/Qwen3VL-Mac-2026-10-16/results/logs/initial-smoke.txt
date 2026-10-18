@@ -1,0 +1,115 @@
+Loading local verified Qwen3-VL weights
+Loaded in 1.0246689319610596s; MLX ["activeBytes": 1781949872, "peakActiveBytes": 1781954112, "cacheBytes": 4240]
+CASE real-cycle
+DONE real-cycle 6.78s; peak 3012430056; ```json
+{
+  "motion": "squat",
+  "view": "side",
+  "full_body": true,
+  "depth": "reached",
+  "returned": "yes",
+  "heel": "down",
+  "knee_in": "yes",
+  "evidence": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6"
+  ],
+  "cue": "简短中文建议或说明看不清"
+}
+```
+CASE real-cycle-warm
+DONE real-cycle-warm 2.65s; peak 3162458536; ```json
+{
+  "motion": "squat",
+  "view": "side",
+  "full_body": true,
+  "depth": "reached",
+  "returned": "yes",
+  "heel": "down",
+  "knee_in": "yes",
+  "evidence": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6"
+  ],
+  "cue": "简短中文建议或说明看不清"
+}
+```
+CASE standing-static
+DONE standing-static 2.33s; peak 3116042664; ```json
+{
+  "motion": "squat|static|unknown",
+  "view": "side|front|oblique|unknown",
+  "full_body": true,
+  "depth": "reached",
+  "returned": "yes",
+  "heel": "down",
+  "knee_in": "yes",
+  "evidence": ["F1"],
+  "cue": "简短中文建议或说明看不清"
+}
+```
+CASE blank-control
+DONE blank-control 2.55s; peak 3188804008; {"motion":"squat|static|unknown","view":"side|front|oblique|unknown","full_body":true,"depth":"reached|not_reached|uncertain","returned":"yes|no|uncertain","heel":"down|raised|uncertain","knee_in":"yes|no|uncertain","evidence":["F1"],"cue":"简短中文建议或说明看不清必须填uncertain。侧面不能确定膝内扣。只输出一行JSON，不要Markdown或额外文字："}
+CASE cropped-control
+DONE cropped-control 2.47s; peak 3078605248; ```json
+{
+  "motion": "squat|static|unknown",
+  "view": "side|front|oblique|unknown",
+  "full_body": true,
+  "depth": "reached",
+  "returned": "yes",
+  "heel": "down",
+  "knee_in": "no",
+  "evidence": [
+    "F1"
+  ],
+  "cue": "简短中文建议或说明看不清"
+}
+```
+CASE ascent-omitted
+DONE ascent-omitted 2.86s; peak 3182184872; ```json
+{
+  "motion": "squat|static|unknown",
+  "view": "side|front|oblique|unknown",
+  "full_body": true,
+  "depth": "reached",
+  "returned": "yes",
+  "heel": "down",
+  "knee_in": "yes",
+  "evidence": [
+    "F1",
+    "F2",
+    "F3",
+    "F4",
+    "F5",
+    "F6"
+  ],
+  "cue": "简短中文建议或说明看不清"
+}
+```
+       25.40 real        15.25 user         4.19 sys
+          2079588352  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              222115  page reclaims
+                 396  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                1284  voluntary context switches
+              147029  involuntary context switches
+        258234578403  instructions retired
+         81991623407  cycles elapsed
+          3224914344  peak memory footprint

@@ -1,0 +1,7 @@
+{
+  "runtime": "mlx-vlm 0.6.0",
+  "originalSHA256": "20466f7e33103b0070c699383fd932a12850d9e9b46b50831c21f636937a1e61",
+  "patchedSHA256": "411b946ef3240ace63f90c843595ecf7dbd6a4b9f01cebf0e7e35a6366792c28",
+  "reason": "Checkpoint has no K/V projections or K norm in layers 15..34 because num_kv_shared_layers=20. Original Python module declared 60 nonexistent parameters. Preserve strict load; omit unused modules according to shared-KV architecture, consistent with Swift upstream 3.32.3.",
+  "independentSource": "https://github.com/ml-explore/mlx-swift-lm/blob/3.32.3/Libraries/MLXVLM/Models/Gemma4.swift"
+}

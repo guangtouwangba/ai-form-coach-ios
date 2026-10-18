@@ -1,0 +1,24 @@
+{
+  "cases": [
+    {
+      "id": "caption-real",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        2.5
+      ],
+      "variant": "original",
+      "prompt": "用一句中文具体描述图片里的人正在做什么，不要评价标准与否。",
+      "exportPreparedTensor": true
+    },
+    {
+      "id": "caption-blank",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [
+        2.5
+      ],
+      "variant": "blank",
+      "prompt": "用一句中文具体描述图片里是否有人，正在做什么。",
+      "exportPreparedTensor": true
+    }
+  ]
+}

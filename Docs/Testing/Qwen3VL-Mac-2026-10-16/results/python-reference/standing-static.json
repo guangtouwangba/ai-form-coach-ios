@@ -1,0 +1,60 @@
+{
+  "id": "standing-static",
+  "text": "```json\n{\n  \"motion\": \"unknown\",\n  \"lowest_frame\": \"F4\",\n  \"returned\": \"yes\",\n  \"knee_in\": \"uncertain\",\n  \"explanation\": \"人物站立，身体保持直立，没有明显的下降动作。\"\n}\n```",
+  "seconds": 1.5266073329985375,
+  "mlxPeakBytes": 3294508734,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      1772
+    ],
+    "input_ids": [
+      1,
+      1772
+    ],
+    "pixel_values": [
+      6048,
+      1536
+    ],
+    "image_grid_thw": [
+      6,
+      3
+    ]
+  },
+  "imageGridTHW": [
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ],
+    [
+      1,
+      42,
+      24
+    ]
+  ],
+  "promptTail": " evidence, not generic exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n",
+  "promptTokens": 1772,
+  "outputTokens": 60,
+  "scope": "Python MLX-VLM 0.3.4 using identical saved PNG files and pinned quantized weights; not phone timing"
+}

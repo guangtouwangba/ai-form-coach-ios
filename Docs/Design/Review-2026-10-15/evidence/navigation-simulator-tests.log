@@ -1,0 +1,73 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild test-without-building -xctestrun /tmp/ai-form-coach-navigation-20261015/Build/Products/AIFormCoach-Integration_iphonesimulator26.5-arm64.xctestrun -destination "platform=iOS Simulator,id=B65B8C82-04DC-4400-A8B7-36D74BBDCBAB"
+
+2026-10-15 19:54:58.688 xcodebuild[71959:1876096] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:54:58.691 xcodebuild[71959:1876096] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:54:58.851 xcodebuild[71959:1876096] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+2026-10-15 19:55:00.118 xcodebuild[71959:1876096] [MT] IDERunDestination: Supported platforms for the buildables in the current scheme is empty.
+Test Suite 'All tests' started at 2026-10-15 19:55:00.816.
+Test Suite 'AIFormCoachTests.xctest' started at 2026-10-15 19:55:00.816.
+Test Suite 'AppIntegrationTests' started at 2026-10-15 19:55:00.816.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testBackFromDiscardConfirmationNeverDiscardsGroup]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testBackFromDiscardConfirmationNeverDiscardsGroup]' passed (0.083 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationAndTrainingKeepTheSamePreview]' started.
+2026-10-15 19:55:00.931801+0800 AIFormCoach[71966:1876454] [] <<<< FigCaptureSessionSimulator >>>> signalled err=-12782 at <>:297
+objc[71966]: Class UIAccessibilityLoaderWebShared is implemented in both /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebCore.axbundle/WebCore (0x123e38310) and /Library/Developer/CoreSimulator/Volumes/iOS_23F77/Library/Developer/CoreSimulator/Profiles/Runtimes/iOS 26.5.simruntime/Contents/Resources/RuntimeRoot/System/Library/AccessibilityBundles/WebKit.axbundle/WebKit (0x123644398). This may cause spurious casting failures and mysterious crashes. One of the duplicates must be removed or renamed.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationAndTrainingKeepTheSamePreview]' passed (0.512 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationInterruptionKeepsControlsAvailable]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationInterruptionKeepsControlsAvailable]' passed (0.122 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationProgressRequiresThreeObservedMovements]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testCalibrationProgressRequiresThreeObservedMovements]' passed (0.080 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftReloadRestoresCompletedRepsWithoutCountingPartialRep]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftReloadRestoresCompletedRepsWithoutCountingPartialRep]' passed (0.083 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftWriteFailureRetainsDraftAndDoesNotClaimSuccess]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testDraftWriteFailureRetainsDraftAndDoesNotClaimSuccess]' passed (0.082 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:63: -[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview] : Test skipped - Interactive review is opt-in; not part of automated regression
+Test Case '-[AIFormCoachTests.AppIntegrationTests testInteractiveSimulatorDesignReview]' skipped (0.074 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLiveInputToTwoGroupsSaveReloadAndDelete]' started.
+2026-10-15 19:55:01.871827+0800 AIFormCoach[71966:1876360] [AXCommon] Potential Structural Swift Concurrency Issue: unsafeForcedSync called from Swift Concurrent context.
+2026-10-15 19:55:01.879461+0800 AIFormCoach[71966:1876464] [VoiceDBClient] Error fetching voices: DecodingError.dataCorrupted: Data was corrupted. Debug description: Invalid container metadata for _UnkeyedDecodingContainer, found keyedGraphEncodingNodeID. Using fallback voices.
+2026-10-15 19:55:01.944108+0800 AIFormCoach[71966:1876641] [plugin] AddInstanceForFactory: No factory registered for id <CFUUID 0x10aad12a0> F8BB1C28-BAE8-11D6-9C31-00039315CD46
+2026-10-15 19:55:01.975399+0800 AIFormCoach[71966:1876462] [VoiceDBClient] Error fetching voices: DecodingError.dataCorrupted: Data was corrupted. Debug description: Invalid container metadata for _UnkeyedDecodingContainer, found keyedGraphEncodingNodeID. Using fallback voices.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testLiveInputToTwoGroupsSaveReloadAndDelete]' passed (0.187 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingArchivesActiveRepsAndRecalibrationKeepsEarlierGroup]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingArchivesActiveRepsAndRecalibrationKeepsEarlierGroup]' passed (0.077 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingDoesNotHijackOrOverwriteDraft]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingDoesNotHijackOrOverwriteDraft]' passed (0.074 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingFromColdDraftPreservesActiveRepsWithoutOpeningCamera]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testNewTrainingFromColdDraftPreservesActiveRepsWithoutOpeningCamera]' passed (0.077 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPauseResumeAndReturnHomePreserveCompletedReps]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPauseResumeAndReturnHomePreserveCompletedReps]' passed (0.070 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPrivacyAndHelpReturnToTheirSourceWithoutPausing]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testPrivacyAndHelpReturnToTheirSourceWithoutPausing]' passed (0.066 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:360: -[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraFlowCanExitAfterReceivingFrames]' skipped (0.071 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:333: -[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraPreviewStartsAndDeliversFrames]' skipped (0.066 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:394: -[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealCameraResumeKeepsMainRunLoopResponsive]' skipped (0.067 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive]' started.
+/Users/kids/Documents/ai-form-coach-ios/Tests/AppIntegrationTests.swift:446: -[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive] : Test skipped - Requires an unlocked physical iPhone with camera permission
+Test Case '-[AIFormCoachTests.AppIntegrationTests testRealTrainingEntryKeepsPreviewAndMainRunLoopResponsive]' skipped (0.064 seconds).
+Test Case '-[AIFormCoachTests.AppIntegrationTests testTrainingEntryRoutesByAuthorizationAndDoesNotCreateEmptyDraftOnBack]' started.
+Test Case '-[AIFormCoachTests.AppIntegrationTests testTrainingEntryRoutesByAuthorizationAndDoesNotCreateEmptyDraftOnBack]' passed (0.073 seconds).
+Test Suite 'AppIntegrationTests' passed at 2026-10-15 19:55:02.748.
+	 Executed 18 tests, with 5 tests skipped and 0 failures (0 unexpected) in 1.927 (1.932) seconds
+Test Suite 'AIFormCoachTests.xctest' passed at 2026-10-15 19:55:02.748.
+	 Executed 18 tests, with 5 tests skipped and 0 failures (0 unexpected) in 1.927 (1.932) seconds
+Test Suite 'All tests' passed at 2026-10-15 19:55:02.748.
+	 Executed 18 tests, with 5 tests skipped and 0 failures (0 unexpected) in 1.927 (1.932) seconds
+2026-10-15 19:55:09.331 xcodebuild[71959:1876096] [MT] IDETestOperationsObserverDebug: 10.478 elapsed -- Testing started completed.
+2026-10-15 19:55:09.331 xcodebuild[71959:1876096] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-15 19:55:09.331 xcodebuild[71959:1876096] [MT] IDETestOperationsObserverDebug: 10.478 sec, +10.478 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/kids/Library/Developer/Xcode/DerivedData/AIFormCoach-fzwjzyiesnnjlncxaddhybffhbwc/Logs/Test/Test-AIFormCoach-Integration-2026.10.15_19-54-58-+0800.xcresult
+
+** TEST EXECUTE SUCCEEDED **
+
+Testing started

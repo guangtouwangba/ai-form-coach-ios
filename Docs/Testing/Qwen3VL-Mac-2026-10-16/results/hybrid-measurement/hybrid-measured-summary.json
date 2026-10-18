@@ -1,0 +1,42 @@
+{
+  "decodedPromptTail" : "completedRepCount\": 5, \"firstStandingMs\": 2000, \"confirmedTechniqueFindings\": [], \"kneeValgusAssessableFromSide\": false}<|im_end|>\n<|im_start|>assistant\n",
+  "endFootprintBytes" : 1985038568,
+  "extractSeconds" : 0.0011552916548680514,
+  "firstChunkSeconds" : 0.23439770832192153,
+  "frames" : [
+
+  ],
+  "generateWallSeconds" : 0.36929979166598059,
+  "generation" : {
+    "generationSeconds" : 0.13271605968475342,
+    "outputTokens" : 26,
+    "promptSeconds" : 0.23404192924499512,
+    "promptTokens" : 101,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 195.90696153697601
+  },
+  "id" : "hybrid-measured-summary",
+  "inputTokens" : 101,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 128,
+  "mlx" : {
+    "activeBytes" : 1781949940,
+    "cacheBytes" : 44377596,
+    "peakActiveBytes" : 1966776269
+  },
+  "peakFootprintBytes" : 2091567312,
+  "prefillChunking" : "balanced",
+  "preparedTensorPath" : "",
+  "prepareSeconds" : 0.0093177499948069453,
+  "prompt" : "根据以下程序实际测量，用两句中文概述训练结果；没有确认的问题就明确说证据不足以确认具体动作问题，不要说动作标准或安全。测量：{\"completedRepCount\": 5, \"firstStandingMs\": 2000, \"confirmedTechniqueFindings\": [], \"kneeValgusAssessableFromSide\": false}",
+  "rawOutput" : "该程序共完成5次测量，起始站立时间2000毫秒，未确认具体技术动作问题。",
+  "success" : true,
+  "totalSeconds" : 0.38360979166463949,
+  "variant" : "original",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/standing-then-five-squats.mp4",
+  "visualGridTHW" : [
+
+  ],
+  "visualTokens" : 0
+}

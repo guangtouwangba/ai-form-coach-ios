@@ -1,0 +1,14 @@
+{
+  "Sources/FormCoachCore/SquatSession.swift": "0c539fdb3151415e4e34dc350b94de8de7fcbdf3ae949f8a5e1a55e19198d48e",
+  "Sources/FormCoachCore/SquatQuality.swift": "064f7cc9bba6c30a6caf3b6ff0338643271945785b42943689d8a785651b65c3",
+  "Sources/FormCoachCore/Domain.swift": "07437f578e19275a4eceaa744a18362464cf7d2068833d6d90da4b2c0f358790",
+  "App/VideoReplayAnalyzer.swift": "5314ccb518a24fc81a6b9e34d9206dc44abdd3f270b0fe7ef7367dba146b8c27",
+  "App/P0FlowModel.swift": "cc79384b32f617651b5444979c9d2d16652b7bcdaaee9210e2bfa1b8d7ecaf38",
+  "App/P0Screens.swift": "848d4b149ba2b9f79d983b9a3b2a071d2dea6e53a42ce1e27d487e8d14181261",
+  "App/Services.swift": "9e749f958f7c5b21fde76022a6347ee781ca6aece214d832aea6ac778dab1f16",
+  "Scripts/ReplayCLI.swift": "cf0466b8811990cb00f30781ddd8512b12383ad0d5df39a493f189d5df7d4600",
+  "Scripts/export-mediapipe-replay.py": "b5555c68b396e9949124c2561c3c0297eaaa48bf3192b01a2108632cef012276",
+  "Scripts/verify-squat-quality.sh": "1c47f7b95d847108c108d3b5d280ff5531b2a6b4e2e57824326b7a1831f2e665",
+  "Tests/FormCoachCoreTests/SquatQualityTests.swift": "0338d2af3c6837c4a06e08297c4711c93e96adcb45017c2e09ab7cd58b6a344f",
+  "Tests/AppIntegrationTests.swift": "0e205bfc1beedb04a8b37900a8f578347a08ef14664b9da82ac89c447b7600a5"
+}

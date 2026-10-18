@@ -1,0 +1,52 @@
+Loaded official PyTorch MPS BF16 2.5418341670010705
+The following generation flags are not valid and may be ignored: ['temperature', 'top_p', 'top_k']. Set `TRANSFORMERS_VERBOSITY=info` for more details.
+real-cycle 12.178332708004746 ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "yes",
+  "explanation": "The woman performs a squat, and the lowest frame shows her knees are bent, indicating a descent. She returns to a standing position in the final frame."
+}
+```
+standing-static 4.536071374997846 {
+  "motion": "static",
+  "lowest_frame": "F4",
+  "returned": "no",
+  "knee_in": "uncertain",
+  "explanation": "The person is standing in a static pose with no visible descent or return to standing."
+}
+blank-control 4.466784000003827 {
+  "motion": "unknown",
+  "lowest_frame": "F4",
+  "returned": "uncertain",
+  "knee_in": "uncertain",
+  "explanation": "所有帧均为灰色背景，未显示任何运动或姿势变化。"
+}
+ascent-omitted 4.763729250000324 ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "yes",
+  "explanation": "The person is performing a squat, and the motion shows a descent followed by a return to a standing position."
+}
+```
+       30.51 real         8.31 user         3.34 sys
+          1060519936  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              -86972  page reclaims
+              195383  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 435  voluntary context switches
+              121497  involuntary context switches
+        110906465327  instructions retired
+         47433282628  cycles elapsed
+          7685506704  peak memory footprint

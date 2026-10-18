@@ -1,0 +1,240 @@
+[
+  {
+    "count": 5,
+    "engine": "MediaPipe Full",
+    "engineVersion": "mediapipe-pose-full-1.1.1",
+    "file": "standing-then-five-squats-hd.mp4",
+    "firstStandingMs": 2000,
+    "frames": 630,
+    "inferenceP50Ms": 14.939792,
+    "inferenceP95Ms": 15.858292,
+    "maximumFrameGapMs": 34,
+    "rejectionCounts": {
+      "waitingForTop": 49
+    },
+    "reps": [
+      {
+        "descentDurationMs": 1300,
+        "endMs": 5733,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 1,
+        "issues": [],
+        "maximumDepth": 0.7263518408768149,
+        "maximumTrunkDelta": 44.085911072389855,
+        "startMs": 3733
+      },
+      {
+        "descentDurationMs": 1167,
+        "endMs": 9133,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 2,
+        "issues": [],
+        "maximumDepth": 0.7294928910235742,
+        "maximumTrunkDelta": 44.3471793426413,
+        "startMs": 7233
+      },
+      {
+        "descentDurationMs": 1200,
+        "endMs": 12533,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 3,
+        "issues": [],
+        "maximumDepth": 0.727216801208256,
+        "maximumTrunkDelta": 43.94843988665128,
+        "startMs": 10633
+      },
+      {
+        "descentDurationMs": 1233,
+        "endMs": 15933,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 4,
+        "issues": [],
+        "maximumDepth": 0.7271531089747695,
+        "maximumTrunkDelta": 44.10768105197145,
+        "startMs": 14033
+      },
+      {
+        "descentDurationMs": 1300,
+        "endMs": 19333,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 5,
+        "issues": [],
+        "maximumDepth": 0.7257145885303774,
+        "maximumTrunkDelta": 44.44443657372775,
+        "startMs": 17333
+      }
+    ],
+    "usablePoseFrames": 630
+  },
+  {
+    "count": 5,
+    "engine": "MediaPipe Full",
+    "engineVersion": "mediapipe-pose-full-1.1.1",
+    "file": "standing-then-five-squats.mp4",
+    "firstStandingMs": 2000,
+    "frames": 630,
+    "inferenceP50Ms": 12.788625,
+    "inferenceP95Ms": 13.649917,
+    "maximumFrameGapMs": 34,
+    "rejectionCounts": {
+      "waitingForTop": 49
+    },
+    "reps": [
+      {
+        "descentDurationMs": 1200,
+        "endMs": 5733,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 1,
+        "issues": [],
+        "maximumDepth": 0.7215765269071579,
+        "maximumTrunkDelta": 44.463657299208776,
+        "startMs": 3833
+      },
+      {
+        "descentDurationMs": 1167,
+        "endMs": 9100,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 2,
+        "issues": [],
+        "maximumDepth": 0.7189264298228717,
+        "maximumTrunkDelta": 44.44575666880398,
+        "startMs": 7233
+      },
+      {
+        "descentDurationMs": 1167,
+        "endMs": 12533,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 3,
+        "issues": [],
+        "maximumDepth": 0.7161753361920826,
+        "maximumTrunkDelta": 44.69983424926901,
+        "startMs": 10633
+      },
+      {
+        "descentDurationMs": 1200,
+        "endMs": 15933,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 4,
+        "issues": [],
+        "maximumDepth": 0.7167329417206708,
+        "maximumTrunkDelta": 44.41137404654274,
+        "startMs": 14033
+      },
+      {
+        "descentDurationMs": 1167,
+        "endMs": 19333,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 5,
+        "issues": [],
+        "maximumDepth": 0.7145809635259321,
+        "maximumTrunkDelta": 44.48455252033532,
+        "startMs": 17433
+      }
+    ],
+    "usablePoseFrames": 630
+  },
+  {
+    "count": 5,
+    "engine": "MediaPipe Full",
+    "engineVersion": "mediapipe-pose-full-1.1.1",
+    "file": "standing-five-rotated-metadata.mp4",
+    "firstStandingMs": 2000,
+    "frames": 630,
+    "inferenceP50Ms": 16.054792,
+    "inferenceP95Ms": 17.847083,
+    "maximumFrameGapMs": 34,
+    "rejectionCounts": {
+      "waitingForTop": 49
+    },
+    "reps": [
+      {
+        "descentDurationMs": 1167,
+        "endMs": 5733,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 1,
+        "issues": [],
+        "maximumDepth": 0.723554892386511,
+        "maximumTrunkDelta": 43.874286086296145,
+        "startMs": 3833
+      },
+      {
+        "descentDurationMs": 1167,
+        "endMs": 9133,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 2,
+        "issues": [],
+        "maximumDepth": 0.7288174082865277,
+        "maximumTrunkDelta": 43.98713250750336,
+        "startMs": 7233
+      },
+      {
+        "descentDurationMs": 1167,
+        "endMs": 12533,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 3,
+        "issues": [],
+        "maximumDepth": 0.7307700413552366,
+        "maximumTrunkDelta": 43.770322094756516,
+        "startMs": 10633
+      },
+      {
+        "descentDurationMs": 1200,
+        "endMs": 15933,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 4,
+        "issues": [],
+        "maximumDepth": 0.7278656521377244,
+        "maximumTrunkDelta": 44.129836910877984,
+        "startMs": 14000
+      },
+      {
+        "descentDurationMs": 1200,
+        "endMs": 19333,
+        "engineVersion": "mediapipe-pose-full-1.1.1",
+        "id": 5,
+        "issues": [],
+        "maximumDepth": 0.7291193856444439,
+        "maximumTrunkDelta": 44.15880821616845,
+        "startMs": 17433
+      }
+    ],
+    "usablePoseFrames": 630
+  },
+  {
+    "count": 0,
+    "engine": "MediaPipe Full",
+    "engineVersion": "mediapipe-pose-full-1.1.1",
+    "file": "negative-frontal-moving-5319965.mp4",
+    "frames": 150,
+    "inferenceP50Ms": 12.527,
+    "inferenceP95Ms": 17.375375,
+    "maximumFrameGapMs": 40,
+    "rejectionCounts": {
+      "lowConfidence": 23,
+      "multiplePeople": 58,
+      "noPerson": 18,
+      "notUpright": 45,
+      "outOfFrame": 4,
+      "tooSmall": 1
+    },
+    "reps": [],
+    "usablePoseFrames": 46
+  },
+  {
+    "count": 0,
+    "engine": "MediaPipe Full",
+    "engineVersion": "mediapipe-pose-full-1.1.1",
+    "file": "negative-cropped-4820063.mp4",
+    "frames": 185,
+    "inferenceP50Ms": 12.768083,
+    "inferenceP95Ms": 13.083458,
+    "maximumFrameGapMs": 42,
+    "rejectionCounts": {
+      "lowConfidence": 145,
+      "multiplePeople": 17,
+      "noPerson": 23
+    },
+    "reps": [],
+    "usablePoseFrames": 0
+  }
+]

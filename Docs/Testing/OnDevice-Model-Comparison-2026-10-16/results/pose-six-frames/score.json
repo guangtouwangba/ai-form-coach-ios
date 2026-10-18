@@ -1,0 +1,364 @@
+{
+  "nearest-centroid": {
+    "rows": [
+      {
+        "id": "fresh-01",
+        "split": "seen-comparison",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-02",
+        "split": "seen-comparison",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-03",
+        "split": "seen-comparison",
+        "expected": "high",
+        "predicted": "high",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-04",
+        "split": "seen-comparison",
+        "expected": "high",
+        "predicted": "high",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-05",
+        "split": "seen-comparison",
+        "expected": "low",
+        "predicted": "low",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-06",
+        "split": "seen-comparison",
+        "expected": "low",
+        "predicted": "low",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-07",
+        "split": "seen-comparison",
+        "expected": "tilt",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-08",
+        "split": "seen-comparison",
+        "expected": "tilt",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-09",
+        "split": "seen-comparison",
+        "expected": "arms",
+        "predicted": "fast",
+        "correct": false,
+        "coverage": 0.8333333333333334
+      },
+      {
+        "id": "fresh-10",
+        "split": "seen-comparison",
+        "expected": "arms",
+        "predicted": "arms",
+        "correct": true,
+        "coverage": 0.8333333333333334
+      },
+      {
+        "id": "fresh-11",
+        "split": "seen-comparison",
+        "expected": "fast",
+        "predicted": "arms",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-12",
+        "split": "seen-comparison",
+        "expected": "fast",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-01",
+        "split": "unused-trial-confirmation",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-02",
+        "split": "unused-trial-confirmation",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-03",
+        "split": "unused-trial-confirmation",
+        "expected": "high",
+        "predicted": "high",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-04",
+        "split": "unused-trial-confirmation",
+        "expected": "low",
+        "predicted": "uncertain",
+        "correct": false,
+        "coverage": 0.6666666666666666
+      },
+      {
+        "id": "confirmation-05",
+        "split": "unused-trial-confirmation",
+        "expected": "low",
+        "predicted": "low",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-06",
+        "split": "unused-trial-confirmation",
+        "expected": "tilt",
+        "predicted": "tilt",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-07",
+        "split": "unused-trial-confirmation",
+        "expected": "tilt",
+        "predicted": "tilt",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-08",
+        "split": "unused-trial-confirmation",
+        "expected": "arms",
+        "predicted": "arms",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-09",
+        "split": "unused-trial-confirmation",
+        "expected": "fast",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-10",
+        "split": "unused-trial-confirmation",
+        "expected": "fast",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      }
+    ],
+    "eligibleForAutomaticCoaching": false
+  },
+  "logistic-C1": {
+    "rows": [
+      {
+        "id": "fresh-01",
+        "split": "seen-comparison",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-02",
+        "split": "seen-comparison",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-03",
+        "split": "seen-comparison",
+        "expected": "high",
+        "predicted": "high",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-04",
+        "split": "seen-comparison",
+        "expected": "high",
+        "predicted": "high",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-05",
+        "split": "seen-comparison",
+        "expected": "low",
+        "predicted": "low",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-06",
+        "split": "seen-comparison",
+        "expected": "low",
+        "predicted": "low",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-07",
+        "split": "seen-comparison",
+        "expected": "tilt",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-08",
+        "split": "seen-comparison",
+        "expected": "tilt",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-09",
+        "split": "seen-comparison",
+        "expected": "arms",
+        "predicted": "arms",
+        "correct": true,
+        "coverage": 0.8333333333333334
+      },
+      {
+        "id": "fresh-10",
+        "split": "seen-comparison",
+        "expected": "arms",
+        "predicted": "arms",
+        "correct": true,
+        "coverage": 0.8333333333333334
+      },
+      {
+        "id": "fresh-11",
+        "split": "seen-comparison",
+        "expected": "fast",
+        "predicted": "arms",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "fresh-12",
+        "split": "seen-comparison",
+        "expected": "fast",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-01",
+        "split": "unused-trial-confirmation",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-02",
+        "split": "unused-trial-confirmation",
+        "expected": "correct",
+        "predicted": "correct",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-03",
+        "split": "unused-trial-confirmation",
+        "expected": "high",
+        "predicted": "high",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-04",
+        "split": "unused-trial-confirmation",
+        "expected": "low",
+        "predicted": "uncertain",
+        "correct": false,
+        "coverage": 0.6666666666666666
+      },
+      {
+        "id": "confirmation-05",
+        "split": "unused-trial-confirmation",
+        "expected": "low",
+        "predicted": "low",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-06",
+        "split": "unused-trial-confirmation",
+        "expected": "tilt",
+        "predicted": "tilt",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-07",
+        "split": "unused-trial-confirmation",
+        "expected": "tilt",
+        "predicted": "tilt",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-08",
+        "split": "unused-trial-confirmation",
+        "expected": "arms",
+        "predicted": "arms",
+        "correct": true,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-09",
+        "split": "unused-trial-confirmation",
+        "expected": "fast",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      },
+      {
+        "id": "confirmation-10",
+        "split": "unused-trial-confirmation",
+        "expected": "fast",
+        "predicted": "correct",
+        "correct": false,
+        "coverage": 1.0
+      }
+    ],
+    "eligibleForAutomaticCoaching": false
+  }
+}

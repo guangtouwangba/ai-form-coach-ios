@@ -1,0 +1,23 @@
+LOADED smolvlm 0.16778941699885763
+caption-real-cycle-0 1.005 ' A woman with long hair, wearing a black crop top and black shorts, standing in a white background.'
+caption-real-cycle-3 0.09 ' A person is squatting with their legs bent and hands on their knees.'
+caption-blank-control-0 0.113 ' The person is standing on the left side of the frame, with their legs positioned in a straight line.'
+simple-incomplete 0.118 ' no'
+        2.65 real         1.24 user         0.58 sys
+          1478295552  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              100225  page reclaims
+                  17  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  10  voluntary context switches
+                6438  involuntary context switches
+         26078278396  instructions retired
+          7677885888  cycles elapsed
+          2475853672  peak memory footprint

@@ -1,0 +1,15 @@
+{
+  "execution" : "real macOS Metal GPU inference; not simulator or iPhone",
+  "gpu" : "Apple M5 Pro",
+  "loadMLX" : {
+    "activeBytes" : 2939528786,
+    "cacheBytes" : 134354432,
+    "peakActiveBytes" : 3550535762
+  },
+  "loadPeakFootprintBytes" : 3759967544,
+  "loadSeconds" : 1.2775897500105202,
+  "mlxCacheLimitBytes" : 134217728,
+  "modelDirectory" : "\/tmp\/coach-gemma4-swift-140",
+  "os" : "Version 26.5.1 (Build 25F80)",
+  "physicalMemoryBytes" : 51539607552
+}

@@ -1,0 +1,48 @@
+{
+  "id": "caption-real-cycle-0",
+  "caseID": "caption-real-cycle-0",
+  "split": "diagnostic",
+  "success": true,
+  "rawOutput": "A person is standing with both legs straight and apart.",
+  "finishReason": "stop",
+  "generateSeconds": 0.6585031249996973,
+  "prepareSeconds": 0.023762999990140088,
+  "totalSeconds": 0.7098765419941628,
+  "peakFootprintBytes": 5107929072,
+  "endFootprintBytes": 4348268576,
+  "peakRSSBytes": 4486643712,
+  "mlxPeakBytes": 4290555908,
+  "promptTokens": 180,
+  "outputTokens": 12,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      180
+    ],
+    "input_ids": [
+      1,
+      180
+    ],
+    "pixel_values": [
+      1,
+      3,
+      720,
+      384
+    ]
+  },
+  "promptTail": "<bos><|turn>system\nDescribe the image accurately.<turn|>\n<|turn>user\n[F1 t=1.000s]<|image|>Describe only the visible person and the positions of their legs in one short English sentence. If there is no person, say no person.<turn|>\n<|turn>model\n",
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 1,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/real-cycle/F1.png",
+      "sha256": "3de78f1bee30f23361bc39bd46d2d6477eb805641fef02831ab857e8c1189a20"
+    }
+  ],
+  "sampling": {
+    "temperature": 0
+  },
+  "seed": 17,
+  "maxTokens": 64
+}

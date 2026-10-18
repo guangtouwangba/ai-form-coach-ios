@@ -1,0 +1,22 @@
+Loading local verified Qwen3-VL weights
+Loaded in 0.34293775001424365s; MLX ["activeBytes": 1781949872, "peakActiveBytes": 1781954112, "cacheBytes": 4240]
+CASE perf-01
+DONE perf-01 1.12s; peak 3185379560; ```json
+{
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "在F4帧中，女性的膝盖已经进入蹲姿，且身体处于最低点。"
+}
+```
+CASE standing-static
+DONE standing-static 1.04s; peak 3217705312; ```json
+{
+  "motion": "static",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "unknown",
+  "explanation": "人物保持静止，没有明显的下降或返回动作。"
+}
+```

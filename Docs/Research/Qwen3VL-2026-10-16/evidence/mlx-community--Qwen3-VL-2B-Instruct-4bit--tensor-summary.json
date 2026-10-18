@@ -1,0 +1,31 @@
+{
+  "repo": "mlx-community/Qwen3-VL-2B-Instruct-4bit",
+  "revision": "9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+  "headerOnly": true,
+  "headerBytes": 125265,
+  "httpStatus": 206,
+  "contentRange": "bytes 0-125272/1782040921",
+  "stats": [
+    {
+      "section": "language",
+      "dtype": "BF16",
+      "tensors": 507,
+      "elements": 53888000,
+      "bytes": 107776000
+    },
+    {
+      "section": "language",
+      "dtype": "U32",
+      "tensors": 197,
+      "elements": 215056384,
+      "bytes": 860225536
+    },
+    {
+      "section": "vision",
+      "dtype": "BF16",
+      "tensors": 315,
+      "elements": 406957056,
+      "bytes": 813914112
+    }
+  ]
+}

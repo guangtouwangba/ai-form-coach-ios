@@ -1,0 +1,88 @@
+{
+  "id": "cropped-control",
+  "caseID": "cropped-control",
+  "split": "temporal-controls",
+  "success": true,
+  "rawOutput": "{\n  \"motion\": \"unknown\",\n  \"lowest_frame\": null,\n  \"returned\": \"uncertain\",\n  \"knee_in\": \"uncertain\",\n  \"explanation\": \"The sequence shows a side view of a person with no clear descent or return to standing, making motion classification uncertain.\"\n}",
+  "finishReason": "stop",
+  "generateSeconds": 1.2538265839975793,
+  "prepareSeconds": 0.0836682499939343,
+  "totalSeconds": 1.3376809589972254,
+  "peakFootprintBytes": 4058303104,
+  "endFootprintBytes": 2759559808,
+  "peakRSSBytes": 2501394432,
+  "mlxPeakBytes": 3470251722,
+  "promptTokens": 984,
+  "outputTokens": 70,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      984
+    ],
+    "input_ids": [
+      1,
+      984
+    ],
+    "pixel_values": [
+      2880,
+      1536
+    ],
+    "image_grid_thw": [
+      6,
+      3
+    ]
+  },
+  "promptTail": "ric exercise instructions. For blank frames use unknown motion, null lowest_frame, uncertain returned and knee_in. For a static person use static, null, uncertain, uncertain. Choose actual values; do not copy these instructions.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 1,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/cropped-control/F1.png",
+      "sha256": "9c1e122b613de13471f99a9e70354f01a43ee183905893b8c2f8e72ae960025d"
+    },
+    {
+      "id": "F2",
+      "requestedTime": 1.5,
+      "actualTime": 1.5,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/cropped-control/F2.png",
+      "sha256": "a4f982f89f3e369b1d20cc65de5bf385738ebd943ea8e8ad7c14ba3a02fee445"
+    },
+    {
+      "id": "F3",
+      "requestedTime": 2,
+      "actualTime": 2.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/cropped-control/F3.png",
+      "sha256": "c316dd1425111414cddc332105d74fc46b30795c7e044997066fd90a753409da"
+    },
+    {
+      "id": "F4",
+      "requestedTime": 2.5,
+      "actualTime": 2.5,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/cropped-control/F4.png",
+      "sha256": "4fb1fffcd4785d6b2477048bc594b811ed16d1d0b4f5c853463db445c616d4a9"
+    },
+    {
+      "id": "F5",
+      "requestedTime": 3,
+      "actualTime": 3.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/cropped-control/F5.png",
+      "sha256": "62db4f0c9232315f9b88b2a57f70aab7221160f6905266b40244cbc3fc7adcf4"
+    },
+    {
+      "id": "F6",
+      "requestedTime": 4,
+      "actualTime": 4.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/cropped-control/F6.png",
+      "sha256": "0d95d31a1c872b45b84b6ef5730d92e79f3550bfb10ddc60e4e3ee9bb20b3565"
+    }
+  ],
+  "sampling": {
+    "temperature": 0.7,
+    "top_p": 0.8,
+    "top_k": 20,
+    "presence_penalty": 1.5
+  },
+  "seed": 17,
+  "maxTokens": 192
+}

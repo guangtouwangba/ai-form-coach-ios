@@ -1,0 +1,96 @@
+{
+  "id": "fresh-02",
+  "split": "seen-comparison",
+  "expected": "correct",
+  "features": [
+    158.08012320783163,
+    172.9470417400496,
+    179.60544270547774,
+    165.82629852164465,
+    177.97678062540695,
+    179.22151670531542,
+    138.47171900534647,
+    161.1234339932255,
+    168.14342089630156,
+    143.52109182573565,
+    165.61466505080222,
+    168.87264323132175,
+    0.10692156650135887,
+    0.34206307057814,
+    0.36160583300055255,
+    0.04606562582255649,
+    0.3392371520205812,
+    0.3751715193306767,
+    0.20834903384959935,
+    0.6298532880205603,
+    0.6824782170057812,
+    0.0958588475109711,
+    0.6113318848443097,
+    0.6814183030326713,
+    0.004218529987114406,
+    0.02481273980977996,
+    0.04491134760410194,
+    0.0067722398387159,
+    0.012092183072032737,
+    0.02351899991946453,
+    0.9834794719977318,
+    0.9961378544177224,
+    0.9980031086821766,
+    0.3606756999042918,
+    0.6501021134646435,
+    0.683500392691079,
+    -0.014997160524063559,
+    0.006683771155993931,
+    0.0726921140071123,
+    -0.007502107858163991,
+    0.0336516526148474,
+    0.044198534704492726,
+    0.7916666666666665,
+    17.075543306800284
+  ],
+  "coverage": 1.0,
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 0.177,
+      "actualTime": 0.16666666666666666,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-02/F1.png",
+      "sha256": "fb545f28bb9091aad79637ce25c632cd88e7970384884a31d0e28db0e4e1b32b"
+    },
+    {
+      "id": "F2",
+      "requestedTime": 0.972,
+      "actualTime": 0.9583333333333334,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-02/F2.png",
+      "sha256": "3a3f29437359bac5871e304edb000fbda62b499fb78bbd5edbfab33e5be28d5d"
+    },
+    {
+      "id": "F3",
+      "requestedTime": 1.767,
+      "actualTime": 1.75,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-02/F3.png",
+      "sha256": "9479a3db7efc6ce47d2ad7b99b2b21ed55ddd4c17f6fe94bfbb5d065bc4ebcd7"
+    },
+    {
+      "id": "F4",
+      "requestedTime": 2.562,
+      "actualTime": 2.5416666666666665,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-02/F4.png",
+      "sha256": "df6f2490baf60757bf2a43c30dce6c2f113a549c1954a0abf8bd4c6aedc134fe"
+    },
+    {
+      "id": "F5",
+      "requestedTime": 3.357,
+      "actualTime": 3.375,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-02/F5.png",
+      "sha256": "2dab9c45e335894a8a4e6d7f5d132b17ddc11d0b9dc2db70146161665aa06b0b"
+    },
+    {
+      "id": "F6",
+      "requestedTime": 4.152,
+      "actualTime": 4.166666666666667,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-02/F6.png",
+      "sha256": "9bbd9ecf84d902a6f4648dc98e410d30313bf890fb1be61e0a6cc9e10a2db860"
+    }
+  ]
+}

@@ -1,0 +1,292 @@
+{
+  "cases": [
+    {
+      "id": "fresh-01",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr4.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-02",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr5.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-03",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high5.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-04",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_high6.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-05",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low9.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-06",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_low10.avi",
+      "times": [
+        0.177,
+        0.972,
+        1.767,
+        2.562,
+        3.357,
+        4.152
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-07",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt5.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-08",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_tilt6.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-09",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms4_fast.avi",
+      "times": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-10",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_arms6.avi",
+      "times": [
+        0.178,
+        0.981,
+        1.783,
+        2.586,
+        3.388,
+        4.191
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-11",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_fast4.avi",
+      "times": [
+        0.155,
+        0.853,
+        1.55,
+        2.248,
+        2.945,
+        3.642
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    },
+    {
+      "id": "fresh-12",
+      "video": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/SquatTransSmall/paper_squat_ts_fast1.avi",
+      "times": [
+        0.135,
+        0.743,
+        1.35,
+        1.957,
+        2.565,
+        3.172
+      ],
+      "prompt": "The R1-R6 images are an author-labeled correct example of a research squat protocol. F1-F6 are a different query trial. Compare only the F trial with the R reference. Labels are specific to this protocol: correct=no clear difference; high=does not bend knees enough / torso remains higher than R; low=torso lowers much farther than R; arms=both arms fail to rise to R height; tilt=left/right arm height or torso is asymmetric; fast=execution clearly faster than R; uncertain=not enough evidence. Return a JSON object with exactly label, evidence, explanation. label must be one label from the list. evidence must use frame IDs like F3, not timestamps. explanation is one short Chinese sentence about the observed difference. Do not invent a medical diagnosis or a generic exercise instruction. Assess the query F images, not the R example.",
+      "systemPrompt": "You inspect a specific research exercise protocol, not universal fitness standards. Return JSON only. Use uncertain when the images do not show the requested distinction.",
+      "referenceVideo": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OfficeSquat/Squat/paper_squat_tn_corr1.avi",
+      "referenceTimes": [
+        0.175,
+        0.963,
+        1.75,
+        2.537,
+        3.325,
+        4.112
+      ],
+      "maxPixels": 131072
+    }
+  ]
+}

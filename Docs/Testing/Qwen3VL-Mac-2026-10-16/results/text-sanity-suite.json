@@ -1,0 +1,25 @@
+{
+  "cases": [
+    {
+      "id": "text-obey",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [],
+      "prompt": "请只输出一个英文单词 correct，不要添加其他内容。",
+      "maxTokens": 16
+    },
+    {
+      "id": "text-math",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [],
+      "prompt": "7乘8等于多少？只输出数字。",
+      "maxTokens": 16
+    },
+    {
+      "id": "text-logic",
+      "video": "../../RealSquat-2026-10-15/media/original-6525519.mp4",
+      "times": [],
+      "prompt": "观察到的人一直静止站立，没有任何下蹲和上升过程。能说他已经完成一次深蹲吗？请回答不能或能。",
+      "maxTokens": 32
+    }
+  ]
+}

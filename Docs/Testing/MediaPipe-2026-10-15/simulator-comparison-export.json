@@ -1,0 +1,86 @@
+{
+  "createdAt" : 813771089.751084,
+  "errors" : {
+    "Apple Vision" : "当前模拟器无法启动人体姿态识别。可运行内置关键点测试；真人录像请在 iPhone 上分析。"
+  },
+  "reports" : [
+    {
+      "count" : 5,
+      "engine" : "MediaPipe Full",
+      "engineVersion" : "mediapipe-pose-full-1.1.1",
+      "file" : "standing-then-five-squats.mp4",
+      "firstStandingMs" : 2000,
+      "frames" : 630,
+      "inferenceP50Ms" : 12.86425,
+      "inferenceP95Ms" : 13.926917,
+      "maximumFrameGapMs" : 34,
+      "rejectionCounts" : {
+        "waitingForTop" : 49
+      },
+      "reps" : [
+        {
+          "descentDurationMs" : 1200,
+          "endMs" : 5733,
+          "engineVersion" : "mediapipe-pose-full-1.1.1",
+          "id" : 1,
+          "issues" : [
+
+          ],
+          "maximumDepth" : 0.7215765269071579,
+          "maximumTrunkDelta" : 44.463657299208776,
+          "startMs" : 3833
+        },
+        {
+          "descentDurationMs" : 1167,
+          "endMs" : 9100,
+          "engineVersion" : "mediapipe-pose-full-1.1.1",
+          "id" : 2,
+          "issues" : [
+
+          ],
+          "maximumDepth" : 0.7189264298228717,
+          "maximumTrunkDelta" : 44.44575666880398,
+          "startMs" : 7233
+        },
+        {
+          "descentDurationMs" : 1167,
+          "endMs" : 12533,
+          "engineVersion" : "mediapipe-pose-full-1.1.1",
+          "id" : 3,
+          "issues" : [
+
+          ],
+          "maximumDepth" : 0.7161753361920826,
+          "maximumTrunkDelta" : 44.69983424926901,
+          "startMs" : 10633
+        },
+        {
+          "descentDurationMs" : 1200,
+          "endMs" : 15933,
+          "engineVersion" : "mediapipe-pose-full-1.1.1",
+          "id" : 4,
+          "issues" : [
+
+          ],
+          "maximumDepth" : 0.7167329417206708,
+          "maximumTrunkDelta" : 44.41137404654274,
+          "startMs" : 14033
+        },
+        {
+          "descentDurationMs" : 1167,
+          "endMs" : 19333,
+          "engineVersion" : "mediapipe-pose-full-1.1.1",
+          "id" : 5,
+          "issues" : [
+
+          ],
+          "maximumDepth" : 0.7145809635259321,
+          "maximumTrunkDelta" : 44.48455252033532,
+          "startMs" : 17433
+        }
+      ],
+      "usablePoseFrames" : 630
+    }
+  ],
+  "source" : "standing-then-five-squats.mp4"
+}

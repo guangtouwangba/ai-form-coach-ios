@@ -1,0 +1,65 @@
+{
+  "assumptions": [
+    "Batch 1; full unquantized 16-bit K/V; actual dtype/capacity must be observed at runtime.",
+    "Weights + KV are a lower bound, excluding all vision activations, prefill, Metal caches, decoder/camera, UI and operating-system accounting."
+  ],
+  "original_tensor_parameters": 2127532032,
+  "repo_bytes": 1798023774,
+  "tensor_storage_bytes": 1781915648,
+  "vision_bf16_bytes": 813914112,
+  "kv_bytes_per_token": 114688,
+  "kv_examples": [
+    {
+      "tokens": 2048,
+      "kv_mib": 224.0,
+      "weights_plus_kv_gib_lower_bound": 1.8782882690429688
+    },
+    {
+      "tokens": 4096,
+      "kv_mib": 448.0,
+      "weights_plus_kv_gib_lower_bound": 2.0970382690429688
+    },
+    {
+      "tokens": 8192,
+      "kv_mib": 896.0,
+      "weights_plus_kv_gib_lower_bound": 2.5345382690429688
+    },
+    {
+      "tokens": 16384,
+      "kv_mib": 1792.0,
+      "weights_plus_kv_gib_lower_bound": 3.4095382690429688
+    },
+    {
+      "tokens": 32768,
+      "kv_mib": 3584.0,
+      "weights_plus_kv_gib_lower_bound": 5.159538269042969
+    },
+    {
+      "tokens": 262144,
+      "kv_mib": 28672.0,
+      "weights_plus_kv_gib_lower_bound": 29.65953826904297
+    }
+  ],
+  "image_examples": [
+    {
+      "height": 512,
+      "width": 512,
+      "per_image_visual_tokens_after_spatial_merge": 256,
+      "six_image_visual_tokens": 1536
+    },
+    {
+      "height": 672,
+      "width": 384,
+      "per_image_visual_tokens_after_spatial_merge": 252,
+      "six_image_visual_tokens": 1512
+    },
+    {
+      "height": 1280,
+      "width": 736,
+      "per_image_visual_tokens_after_spatial_merge": 920,
+      "six_image_visual_tokens": 5520
+    }
+  ],
+  "patch_factor": 32,
+  "temporal_patch_size": 2
+}

@@ -85,7 +85,7 @@ struct CalibrationView: View {
     var body: some View {
         ZStack {
             CoachTrainingBackground()
-            CameraPreview(session: camera.session).ignoresSafeArea().opacity(0.48)
+            CameraPreview(camera: camera).ignoresSafeArea().opacity(0.48)
             VStack(spacing:24) {
                 Text("建立你的动作基线").font(.title2.bold())
                 Text(model.calibrationMessage).multilineTextAlignment(.center).foregroundStyle(.white.opacity(0.8))
@@ -109,7 +109,7 @@ struct LiveWorkoutView: View {
     var body: some View {
         ZStack {
             CoachTrainingBackground()
-            CameraPreview(session: camera.session).ignoresSafeArea()
+            CameraPreview(camera: camera).ignoresSafeArea()
             PoseSilhouette().stroke(CoachColor.mint.opacity(0.85), style:StrokeStyle(lineWidth:5,lineCap:.round,lineJoin:.round)).frame(width:270,height:440).offset(y:20)
             if camera.status == .denied {
                 ContentUnavailableView("无法使用摄像头", systemImage: "camera.fill", description: Text("请在系统设置中允许摄像头权限后重试。"))

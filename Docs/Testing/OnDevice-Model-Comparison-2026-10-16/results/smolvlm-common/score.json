@@ -1,0 +1,318 @@
+{
+  "rows": [
+    {
+      "id": "fresh-01",
+      "split": "seen-comparison",
+      "expected": "correct",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-02",
+      "split": "seen-comparison",
+      "expected": "correct",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-03",
+      "split": "seen-comparison",
+      "expected": "high",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-04",
+      "split": "seen-comparison",
+      "expected": "high",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-05",
+      "split": "seen-comparison",
+      "expected": "low",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-06",
+      "split": "seen-comparison",
+      "expected": "low",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-07",
+      "split": "seen-comparison",
+      "expected": "tilt",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-08",
+      "split": "seen-comparison",
+      "expected": "tilt",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-09",
+      "split": "seen-comparison",
+      "expected": "arms",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": "fast",
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-10",
+      "split": "seen-comparison",
+      "expected": "arms",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-11",
+      "split": "seen-comparison",
+      "expected": "fast",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "fresh-12",
+      "split": "seen-comparison",
+      "expected": "fast",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-01",
+      "split": "unused-trial-confirmation",
+      "expected": "correct",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-02",
+      "split": "unused-trial-confirmation",
+      "expected": "correct",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-03",
+      "split": "unused-trial-confirmation",
+      "expected": "high",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": "fast",
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-04",
+      "split": "unused-trial-confirmation",
+      "expected": "low",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-05",
+      "split": "unused-trial-confirmation",
+      "expected": "low",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-06",
+      "split": "unused-trial-confirmation",
+      "expected": "tilt",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-07",
+      "split": "unused-trial-confirmation",
+      "expected": "tilt",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-08",
+      "split": "unused-trial-confirmation",
+      "expected": "arms",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": "fast",
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-09",
+      "split": "unused-trial-confirmation",
+      "expected": "fast",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    },
+    {
+      "id": "confirmation-10",
+      "split": "unused-trial-confirmation",
+      "expected": "fast",
+      "predicted": "invalid",
+      "correct": false,
+      "primaryOrSecondaryCorrect": false,
+      "secondary": null,
+      "falseTargetMatch": false,
+      "rawOutput": " R"
+    }
+  ],
+  "controls": [
+    {
+      "id": "real-cycle",
+      "rawOutput": " motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.",
+      "checks": {
+        "allPass": false,
+        "schemaValid": false,
+        "reason": "not a complete JSON object"
+      }
+    },
+    {
+      "id": "standing-static",
+      "rawOutput": " motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing",
+      "checks": {
+        "allPass": false,
+        "schemaValid": false,
+        "reason": "not a complete JSON object"
+      }
+    },
+    {
+      "id": "blank-control",
+      "rawOutput": " motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: one short English sentence describing the observed evidence, not generic exercise instructions.",
+      "checks": {
+        "allPass": false,
+        "schemaValid": false,
+        "reason": "not a complete JSON object"
+      }
+    },
+    {
+      "id": "cropped-control",
+      "rawOutput": " motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is seen from the side, and the knee is not visible.",
+      "checks": {
+        "allPass": false,
+        "schemaValid": false,
+        "reason": "not a complete JSON object"
+      }
+    },
+    {
+      "id": "ascent-omitted",
+      "rawOutput": " motion: squat, static, or unknown. lowest_frame: F4, or null if no visible squat. returned: yes, no, or uncertain: has a descent followed by a return to standing been observed? knee_in: side views or invisible knees. explanation: the person is squatting down, then standing up, and then squatting down again.",
+      "checks": {
+        "allPass": false,
+        "schemaValid": false,
+        "reason": "not a complete JSON object"
+      }
+    }
+  ],
+  "eligibleForAutomaticCoaching": false,
+  "statistics": {
+    "seen-comparison": {
+      "correct": 0,
+      "n": 12,
+      "primaryOrSecondaryCorrect": 0,
+      "falseTargetMatch": 0,
+      "invalid": 12,
+      "abstentions": 0
+    },
+    "unused-trial-confirmation": {
+      "correct": 0,
+      "n": 10,
+      "primaryOrSecondaryCorrect": 0,
+      "falseTargetMatch": 0,
+      "invalid": 10,
+      "abstentions": 0
+    }
+  },
+  "performanceMixedTasks": {
+    "n": 27,
+    "generateP50Seconds": 0.2236760840023635,
+    "maxFootprintBytes": 2626340832,
+    "scope": "Mixed 12-image label and 6-image JSON cases, not matched output lengths; separate repeated performance is preferred."
+  }
+}

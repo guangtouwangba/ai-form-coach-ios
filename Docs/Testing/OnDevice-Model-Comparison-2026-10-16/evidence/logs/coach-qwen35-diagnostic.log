@@ -1,0 +1,23 @@
+LOADED qwen3_5 0.9106339999998454
+caption-real-cycle-0 0.331 'A woman stands in profile facing right, wearing a black crop top and shorts with white sneakers.'
+caption-real-cycle-3 0.251 'A woman in a black top and white sneakers is squatting with her legs bent at the knees and her feet flat on the ground.'
+caption-blank-control-0 0.101 'no person'
+simple-incomplete 0.4 'no'
+        3.46 real         2.20 user         1.15 sys
+          2404564992  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              166261  page reclaims
+                  25  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  31  voluntary context switches
+                9597  involuntary context switches
+         27673552208  instructions retired
+          9715950328  cycles elapsed
+          4220914256  peak memory footprint

@@ -1,0 +1,85 @@
+{
+  "id": "simple-incomplete",
+  "caseID": "simple-incomplete",
+  "split": "diagnostic",
+  "success": true,
+  "rawOutput": "no",
+  "finishReason": "stop",
+  "generateSeconds": 0.4004492499952903,
+  "prepareSeconds": 0.1538442919991212,
+  "totalSeconds": 0.5544861249945825,
+  "peakFootprintBytes": 3779414608,
+  "endFootprintBytes": 2710981200,
+  "peakRSSBytes": 2404564992,
+  "mlxPeakBytes": 3365985664,
+  "promptTokens": 854,
+  "outputTokens": 2,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      854
+    ],
+    "input_ids": [
+      1,
+      854
+    ],
+    "pixel_values": [
+      2880,
+      1536
+    ],
+    "image_grid_thw": [
+      6,
+      3
+    ]
+  },
+  "promptTail": "[F5 t=2.200s]<|vision_start|><|image_pad|><|vision_end|>[F6 t=2.500s]<|vision_start|><|image_pad|><|vision_end|>These images are in time order. Is the person standing upright in the LAST image? Answer only yes, no, or uncertain.<|im_end|>\n<|im_start|>assistant\n<think>\n\n</think>\n\n",
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 1,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F1.png",
+      "sha256": "3de78f1bee30f23361bc39bd46d2d6477eb805641fef02831ab857e8c1189a20"
+    },
+    {
+      "id": "F2",
+      "requestedTime": 1.3,
+      "actualTime": 1.3,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F2.png",
+      "sha256": "ce4bfa4b74e04d93618425d34295db39719b7490a192ec378718d403934c4106"
+    },
+    {
+      "id": "F3",
+      "requestedTime": 1.6,
+      "actualTime": 1.6,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F3.png",
+      "sha256": "f04520d4dc26012057c212960ab7ee36415ca629563eb6833a6cf1726fe25e2b"
+    },
+    {
+      "id": "F4",
+      "requestedTime": 1.9,
+      "actualTime": 1.9,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F4.png",
+      "sha256": "ed7015f5ab4002fb9a01ba48e7502eab156a69352b3f2ebe2ae033a7a59fb0d1"
+    },
+    {
+      "id": "F5",
+      "requestedTime": 2.2,
+      "actualTime": 2.2,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F5.png",
+      "sha256": "675361c964fe944011abff435d3ebace729dee23d8bf93a33c524b2b60fa23b8"
+    },
+    {
+      "id": "F6",
+      "requestedTime": 2.5,
+      "actualTime": 2.5,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/ascent-omitted/F6.png",
+      "sha256": "849b9bd75cd49ea837841bf7726e0ea59e08b2a6bcab680e72f5f084809e69ab"
+    }
+  ],
+  "sampling": {
+    "temperature": 0
+  },
+  "seed": 17,
+  "maxTokens": 16
+}

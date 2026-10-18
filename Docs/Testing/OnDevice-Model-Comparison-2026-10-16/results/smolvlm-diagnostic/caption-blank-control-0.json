@@ -1,0 +1,52 @@
+{
+  "id": "caption-blank-control-0",
+  "caseID": "caption-blank-control-0",
+  "split": "diagnostic",
+  "success": true,
+  "rawOutput": " The person is standing on the left side of the frame, with their legs positioned in a straight line.",
+  "finishReason": "stop",
+  "generateSeconds": 0.11286333300813567,
+  "prepareSeconds": 0.03801454200583976,
+  "totalSeconds": 0.1509673330001533,
+  "peakFootprintBytes": 1279346392,
+  "endFootprintBytes": 1279346392,
+  "peakRSSBytes": 1271054336,
+  "mlxPeakBytes": 1337993866,
+  "promptTokens": 119,
+  "outputTokens": 22,
+  "inputShapes": {
+    "attention_mask": [
+      1,
+      119
+    ],
+    "pixel_values": [
+      1,
+      1,
+      3,
+      512,
+      512
+    ],
+    "pixel_attention_mask": [
+      1,
+      1,
+      512,
+      512
+    ],
+    "input_ids": [
+      1,
+      119
+    ]
+  },
+  "promptTail": "<|im_start|>System: <end_of_utterance>\nUser: [F1 t=1.000s]<image>Describe only the visible person and the positions of their legs in one short English sentence. If there is no person, say no person.<end_of_utterance>\nAssistant:",
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 1,
+      "actualTime": 1.0,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/blank-control/F1.png",
+      "sha256": "3782269e1403f45ba531b1f545049cf2f5e3a073019c53cba5ec3020307994c2"
+    }
+  ],
+  "generationTemperature": 0,
+  "maxTokens": 64
+}

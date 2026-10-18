@@ -1,0 +1,167 @@
+{
+  "actual" : 0,
+  "expected" : 0,
+  "file" : "negative-frontal-moving-5319965.mp4",
+  "firstStandingMs" : null,
+  "reps" : [
+
+  ],
+  "snapshots" : [
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 0
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 240
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 480
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 720
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 960
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 1200
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 1440
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 1680
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 1920
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 2160
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 2400
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 2640
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 2880
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3120
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3360
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 3600
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 3840
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 4080
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 4320
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 4560
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 4800
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 5040
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "关键点证据不足，请改善光线或机位，露出肩、髋、膝、踝",
+      "timeMs" : 5280
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5520
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "请先自然站直，再开始深蹲",
+      "timeMs" : 5760
+    },
+    {
+      "baselineReady" : false,
+      "count" : 0,
+      "message" : "未建立站立起点，请检查视频中的机位与姿势",
+      "timeMs" : 0
+    }
+  ]
+}

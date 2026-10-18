@@ -1,0 +1,10 @@
+{
+  "repo": "mlx-community/Qwen3-VL-2B-Instruct-4bit",
+  "revision": "9c4f5209e57b31f4b9dfba735de3fb983739c9cc",
+  "file": "tokenizer.json",
+  "bytes": 11422654,
+  "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "upstreamExpectedSha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+  "completeTokenizerDownloaded": true,
+  "modelWeightsDownloaded": false
+}

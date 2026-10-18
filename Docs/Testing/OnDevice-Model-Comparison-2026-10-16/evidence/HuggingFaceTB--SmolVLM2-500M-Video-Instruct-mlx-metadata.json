@@ -1,0 +1,161 @@
+{
+  "_id": "67acfbac622590048bf40671",
+  "id": "mlx-community/SmolVLM2-500M-Video-Instruct-mlx",
+  "private": false,
+  "pipeline_tag": "video-text-to-text",
+  "library_name": "transformers",
+  "tags": [
+    "transformers",
+    "safetensors",
+    "smolvlm",
+    "image-text-to-text",
+    "mlx",
+    "video-text-to-text",
+    "en",
+    "dataset:HuggingFaceM4/the_cauldron",
+    "dataset:HuggingFaceM4/Docmatix",
+    "base_model:HuggingFaceTB/SmolLM2-360M-Instruct",
+    "base_model:finetune:HuggingFaceTB/SmolLM2-360M-Instruct",
+    "license:apache-2.0",
+    "endpoints_compatible",
+    "region:us"
+  ],
+  "downloads": 2084,
+  "likes": 18,
+  "modelId": "mlx-community/SmolVLM2-500M-Video-Instruct-mlx",
+  "author": "mlx-community",
+  "sha": "fa57db46815177fbdfd65cc85a2b3416a8332268",
+  "lastModified": "2025-02-20T11:35:37.000Z",
+  "gated": false,
+  "disabled": false,
+  "model-index": null,
+  "config": {
+    "architectures": [
+      "SmolVLMForConditionalGeneration"
+    ],
+    "model_type": "smolvlm",
+    "processor_config": {
+      "chat_template": "<|im_start|>{% for message in messages %}{{message['role'] | capitalize}}{% if message['content'][0]['type'] == 'image' %}{{':'}}{% else %}{{': '}}{% endif %}{% for line in message['content'] %}{% if line['type'] == 'text' %}{{line['text']}}{% elif line['type'] == 'image' %}{{ '<image>' }}{% endif %}{% endfor %}<end_of_utterance>\n{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}"
+    },
+    "tokenizer_config": {
+      "bos_token": "<|im_start|>",
+      "chat_template": "<|im_start|>{% for message in messages %}{{message['role'] | capitalize}}{% if message['content'][0]['type'] == 'image' %}{{':'}}{% else %}{{': '}}{% endif %}{% for line in message['content'] %}{% if line['type'] == 'text' %}{{line['text']}}{% elif line['type'] == 'image' %}{{ '<image>' }}{% endif %}{% endfor %}<end_of_utterance>\n{% endfor %}{% if add_generation_prompt %}{{ 'Assistant:' }}{% endif %}",
+      "eos_token": "<end_of_utterance>",
+      "pad_token": "<|im_end|>",
+      "unk_token": "<|endoftext|>"
+    }
+  },
+  "cardData": {
+    "library_name": "transformers",
+    "license": "apache-2.0",
+    "datasets": [
+      "HuggingFaceM4/the_cauldron",
+      "HuggingFaceM4/Docmatix"
+    ],
+    "pipeline_tag": "video-text-to-text",
+    "language": [
+      "en"
+    ],
+    "base_model": [
+      "HuggingFaceTB/SmolLM2-360M-Instruct",
+      "google/siglip-base-patch16-512",
+      "HuggingFaceTB/SmolVLM2-500M-Video-Instruct"
+    ],
+    "tags": [
+      "mlx"
+    ]
+  },
+  "transformersInfo": {
+    "auto_model": "AutoModelForMultimodalLM",
+    "pipeline_tag": "image-text-to-text",
+    "processor": "AutoProcessor"
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes",
+      "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+      "size": 1519
+    },
+    {
+      "rfilename": "README.md",
+      "blobId": "f126108edc53300f6a1c050efaa6a3564db4c62d",
+      "size": 898
+    },
+    {
+      "rfilename": "added_tokens.json",
+      "blobId": "71dc811700b6aa9274d3697ee7d4fb2d5375e766",
+      "size": 4739
+    },
+    {
+      "rfilename": "chat_template.json",
+      "blobId": "1d342e4f070c962a14ba4ece4e06212bc70d8e36",
+      "size": 430
+    },
+    {
+      "rfilename": "config.json",
+      "blobId": "11859dc2e0037e29f2d3d824220ec2ce9e87b261",
+      "size": 10200
+    },
+    {
+      "rfilename": "merges.txt",
+      "blobId": "69503b13f727ba3812b6803e97442a6de05ef5eb",
+      "size": 466391
+    },
+    {
+      "rfilename": "model.safetensors",
+      "blobId": "4fdb6a02427326c2d5024ae3ef5f14cd85278284",
+      "size": 1015023993,
+      "lfs": {
+        "sha256": "a9839c8f79ecc93e54a00dc73cc0e68ba477debcd065d50c1c289fbb1075f981",
+        "size": 1015023993,
+        "pointerSize": 135
+      }
+    },
+    {
+      "rfilename": "model.safetensors.index.json",
+      "blobId": "1923836dbcb85653932c902189e7ebc68f57ef32",
+      "size": 39556
+    },
+    {
+      "rfilename": "preprocessor_config.json",
+      "blobId": "bf7669a38692ad141d333db3be18bd55cb6e2c59",
+      "size": 599
+    },
+    {
+      "rfilename": "processor_config.json",
+      "blobId": "83df8c48da1f41e1a9129a4bc2aba000eb2b529f",
+      "size": 67
+    },
+    {
+      "rfilename": "special_tokens_map.json",
+      "blobId": "2b5aee28d56c0e9d89ff6bc70818fba986a90ca9",
+      "size": 868
+    },
+    {
+      "rfilename": "tokenizer.json",
+      "blobId": "a4005d1cf3170a31600a5c96f95768166cbc2b28",
+      "size": 3548256
+    },
+    {
+      "rfilename": "tokenizer_config.json",
+      "blobId": "e4042a1126290fdb96ece2a4ad8dd7108c5de484",
+      "size": 28626
+    },
+    {
+      "rfilename": "vocab.json",
+      "blobId": "0ad5ecc2035b7031b88afb544ee95e2d49baa484",
+      "size": 800662
+    }
+  ],
+  "spaces": [
+    "idormoy/focus_buddy"
+  ],
+  "createdAt": "2025-02-12T19:51:08.000Z",
+  "safetensors": {
+    "parameters": {
+      "BF16": 507482304
+    },
+    "total": 507482304
+  },
+  "usedStorage": 1015023993
+}

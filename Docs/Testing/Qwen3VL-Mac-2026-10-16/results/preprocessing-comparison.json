@@ -1,0 +1,67 @@
+{
+  "scope": "Swift actual AVAsset/CIImage patches vs Python HF fast processor of the saved sRGB PNG; bicubic implementations can differ. Not assumed bit identical.",
+  "results": [
+    {
+      "case": "caption-real",
+      "swiftShape": [
+        1008,
+        1536
+      ],
+      "pythonShape": [
+        1008,
+        1536
+      ],
+      "swiftGrid": [
+        {
+          "h": 42,
+          "t": 1,
+          "w": 24
+        }
+      ],
+      "pythonGrid": [
+        [
+          1,
+          42,
+          24
+        ]
+      ],
+      "meanAbsoluteError": 0.003137556603178382,
+      "p99AbsoluteError": 0.03372221440076828,
+      "maxAbsoluteError": 0.11891168355941772,
+      "swiftMean": 0.7480707168579102,
+      "pythonMean": 0.7494975924491882,
+      "sameLayout": true
+    },
+    {
+      "case": "caption-blank",
+      "swiftShape": [
+        1008,
+        1536
+      ],
+      "pythonShape": [
+        1008,
+        1536
+      ],
+      "swiftGrid": [
+        {
+          "h": 42,
+          "t": 1,
+          "w": 24
+        }
+      ],
+      "pythonGrid": [
+        [
+          1,
+          42,
+          24
+        ]
+      ],
+      "meanAbsoluteError": 0.003921568859368563,
+      "p99AbsoluteError": 0.003921568859368563,
+      "maxAbsoluteError": 0.003921568859368563,
+      "swiftMean": 0.0,
+      "pythonMean": -0.003921568859368563,
+      "sameLayout": true
+    }
+  ]
+}

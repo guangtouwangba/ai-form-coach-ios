@@ -1,0 +1,115 @@
+{
+  "endFootprintBytes" : 2379287264,
+  "extractSeconds" : 0.36903905868530273,
+  "firstChunkSeconds" : 0.74222397804260254,
+  "frames" : [
+    {
+      "actualTime" : 1,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/fixed-blank\/F1.png",
+      "height" : 1920,
+      "id" : "F1",
+      "requestedTime" : 1,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 1.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/fixed-blank\/F2.png",
+      "height" : 1920,
+      "id" : "F2",
+      "requestedTime" : 1.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/fixed-blank\/F3.png",
+      "height" : 1920,
+      "id" : "F3",
+      "requestedTime" : 2,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 2.5,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/fixed-blank\/F4.png",
+      "height" : 1920,
+      "id" : "F4",
+      "requestedTime" : 2.5,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 3,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/fixed-blank\/F5.png",
+      "height" : 1920,
+      "id" : "F5",
+      "requestedTime" : 3,
+      "width" : 1080
+    },
+    {
+      "actualTime" : 4,
+      "file" : "\/Users\/kids\/Library\/Caches\/AIFormCoach\/Benchmarks\/Qwen3VL-Mac-2026-10-16\/captured-frames\/diagnostic\/fixed-blank\/F6.png",
+      "height" : 1920,
+      "id" : "F6",
+      "requestedTime" : 4,
+      "width" : 1080
+    }
+  ],
+  "generateWallSeconds" : 2.8293800354003906,
+  "generation" : {
+    "generationSeconds" : 2.0860309600830078,
+    "outputTokens" : 126,
+    "promptSeconds" : 0.74202108383178711,
+    "promptTokens" : 1770,
+    "stopReason" : "stop",
+    "tokensPerSecond" : 60.401788089945789
+  },
+  "id" : "fixed-blank",
+  "inputTokens" : 1770,
+  "jsonValid" : false,
+  "maxPixels" : 262144,
+  "maxTokens" : 192,
+  "mlx" : {
+    "activeBytes" : 2008716452,
+    "cacheBytes" : 135704852,
+    "peakActiveBytes" : 2969038088
+  },
+  "peakFootprintBytes" : 3195374304,
+  "prepareSeconds" : 0.046445965766906738,
+  "prompt" : "按时间顺序观察这些图片。仅报告看得到的内容，看不清用uncertain。请直接输出JSON对象，不要代码块。字段要求：motion取squat、static或unknown之一；view取side、front、oblique或unknown之一；full_body是布尔值；depth取reached、not_reached或uncertain之一，指最低点髋达到膝高附近；returned取yes、no或uncertain之一，指这一序列是否已从下蹲回到站立；heel取down、raised或uncertain之一；knee_in取yes、no或uncertain之一，侧面图必须用uncertain；evidence是支持判断的帧ID数组；cue是你实际给出的简短中文建议，没证据就说明。每个字段只填写一个实际判断值。不要复述这些要求。",
+  "rawOutput" : "```json\n{\n  \"motion\": \"static\",\n  \"view\": \"front\",\n  \"full_body\": false,\n  \"depth\": \"not_reached\",\n  \"returned\": \"no\",\n  \"heel\": \"down\",\n  \"knee_in\": \"no\",\n  \"evidence\": [1.000, 1.500, 2.000, 2.500, 3.000, 4.000],\n  \"cue\": \"所有图片均为灰色背景，没有可见的运动或身体动作。\"\n}\n```",
+  "success" : true,
+  "totalSeconds" : 3.2456150054931641,
+  "variant" : "blank",
+  "video" : "\/Users\/kids\/Documents\/ai-form-coach-ios\/Docs\/Testing\/RealSquat-2026-10-15\/media\/original-6525519.mp4",
+  "visualGridTHW" : [
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    },
+    {
+      "h" : 42,
+      "t" : 1,
+      "w" : 24
+    }
+  ],
+  "visualTokens" : 1512
+}

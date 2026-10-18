@@ -1,0 +1,26 @@
+{
+  "modelDirectory": "/Users/kids/Library/Application Support/AIFormCoach/Models/gemma-4-e2b-it-4bit/238767527555cb75a05732a84dff5d6ba0dd6809",
+  "modelType": "gemma4",
+  "loadSeconds": 1.4982024589990033,
+  "loadPeakFootprintBytes": 4354133712,
+  "os": "macOS-26.5.1-arm64-arm-64bit",
+  "scope": "Real macOS Metal GPU, sequential inference. File/Metal caches may be warm; no camera or iPhone.",
+  "suiteSHA256": "e9633cd0cc64e9779fae193adf6855f05723d4c750408032e9bb456406fa2373",
+  "mlxCacheBytes": 134217728,
+  "runtime": "mlx-vlm 0.6.0",
+  "thinking": false,
+  "sampling": {
+    "temperature": 1.0,
+    "top_p": 0.95,
+    "top_k": 64
+  },
+  "seed": 17,
+  "processorPolicy": {
+    "qwenPixels": [
+      65536,
+      131072
+    ],
+    "gemmaSoftTokens": 140,
+    "smolImageSplitting": false
+  }
+}

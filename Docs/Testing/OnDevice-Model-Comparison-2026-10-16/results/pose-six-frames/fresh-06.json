@@ -1,0 +1,96 @@
+{
+  "id": "fresh-06",
+  "split": "seen-comparison",
+  "expected": "low",
+  "features": [
+    134.51142963064217,
+    171.9698059960606,
+    178.61380947914122,
+    158.97205692022354,
+    179.44297817626227,
+    179.84759272842027,
+    70.83322754392839,
+    161.93023052202435,
+    168.95336145779703,
+    32.6939861672991,
+    166.80582025789784,
+    169.30924905279255,
+    -0.10895371024482055,
+    0.34833520838848925,
+    0.36559591017272325,
+    -0.1509503011748672,
+    0.34265926507605493,
+    0.37390514384339335,
+    -0.13010567573463658,
+    0.6397505489196758,
+    0.6896667688579152,
+    -0.3031974860506954,
+    0.6175012461615483,
+    0.6899848797323285,
+    -0.08844385386374498,
+    0.005908907453247684,
+    0.024685568553427385,
+    -0.011350699914620135,
+    0.00908390417638473,
+    0.02404821505311481,
+    0.6812622523759649,
+    0.9973000829523084,
+    0.9989993910302675,
+    -0.004108587881763735,
+    0.632228165757166,
+    0.6866965071524561,
+    -0.0009575496096537396,
+    0.024886876210397542,
+    0.18531080156739863,
+    -0.0008530764019940851,
+    0.029199680702018494,
+    0.15162412586586127,
+    0.7916666666666665,
+    37.31999267990407
+  ],
+  "coverage": 1.0,
+  "frames": [
+    {
+      "id": "F1",
+      "requestedTime": 0.177,
+      "actualTime": 0.16666666666666666,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-06/F1.png",
+      "sha256": "35ebaf2b5445469c1eea56785902e9a1ec27ea2b00a47fa4842881ea392ce45d"
+    },
+    {
+      "id": "F2",
+      "requestedTime": 0.972,
+      "actualTime": 0.9583333333333334,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-06/F2.png",
+      "sha256": "68ba55fbdd173d1f229937e61629c6b8a623007ed31228fe4f099ab630fe944e"
+    },
+    {
+      "id": "F3",
+      "requestedTime": 1.767,
+      "actualTime": 1.75,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-06/F3.png",
+      "sha256": "5b9386818a0065792e553038a9bb1011e3a0dcb32f06c5929ef915b1bc4cbf0b"
+    },
+    {
+      "id": "F4",
+      "requestedTime": 2.562,
+      "actualTime": 2.5416666666666665,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-06/F4.png",
+      "sha256": "eaf7f387bdb4e2e4a0d4c3470b6a7a6ad5ca31541eb78dfdc9a229b653829428"
+    },
+    {
+      "id": "F5",
+      "requestedTime": 3.357,
+      "actualTime": 3.375,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-06/F5.png",
+      "sha256": "ff55b0f27abd0ad81433f7cc96b6461a4f0b57f088ace9447e686d13674cc7d4"
+    },
+    {
+      "id": "F6",
+      "requestedTime": 4.152,
+      "actualTime": 4.166666666666667,
+      "file": "/Users/kids/Library/Caches/AIFormCoach/Benchmarks/OnDevice-Comparison-2026-10-16/fresh-06/F6.png",
+      "sha256": "92dc65052f5894c90f4acaa3d81e25d51e3cc12d084636bcfab469b3f36afb83"
+    }
+  ]
+}

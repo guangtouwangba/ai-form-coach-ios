@@ -1,0 +1,90 @@
+Traceback (most recent call last):
+  File "/Users/kids/Documents/ai-form-coach-ios/Docs/Testing/OnDevice-Model-Comparison-2026-10-16/scripts/compare_vlm.py", line 24, in <module>
+    sampler=Sampler();mx.set_cache_limit(128*1024**2);start=time.monotonic();model,processor=load(a.model,use_fast=True,local_files_only=True);mx.synchronize();config=json.loads((Path(a.model)/'config.json').read_text());kind=config['model_type']
+                                                                                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/coach-alternatives-venv/lib/python3.12/site-packages/mlx_vlm/utils.py", line 502, in load
+    model = load_model(model_path, lazy, strict=strict, **kwargs)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/tmp/coach-alternatives-venv/lib/python3.12/site-packages/mlx_vlm/utils.py", line 378, in load_model
+    model.load_weights(list(weights.items()))
+  File "/tmp/coach-alternatives-venv/lib/python3.12/site-packages/mlx/nn/layers/base.py", line 191, in load_weights
+    raise ValueError(f"Missing {num_missing} parameters: \n{missing}.")
+ValueError: Missing 60 parameters: 
+language_model.model.layers.15.self_attn.k_norm.weight,
+language_model.model.layers.15.self_attn.k_proj.weight,
+language_model.model.layers.15.self_attn.v_proj.weight,
+language_model.model.layers.16.self_attn.k_norm.weight,
+language_model.model.layers.16.self_attn.k_proj.weight,
+language_model.model.layers.16.self_attn.v_proj.weight,
+language_model.model.layers.17.self_attn.k_norm.weight,
+language_model.model.layers.17.self_attn.k_proj.weight,
+language_model.model.layers.17.self_attn.v_proj.weight,
+language_model.model.layers.18.self_attn.k_norm.weight,
+language_model.model.layers.18.self_attn.k_proj.weight,
+language_model.model.layers.18.self_attn.v_proj.weight,
+language_model.model.layers.19.self_attn.k_norm.weight,
+language_model.model.layers.19.self_attn.k_proj.weight,
+language_model.model.layers.19.self_attn.v_proj.weight,
+language_model.model.layers.20.self_attn.k_norm.weight,
+language_model.model.layers.20.self_attn.k_proj.weight,
+language_model.model.layers.20.self_attn.v_proj.weight,
+language_model.model.layers.21.self_attn.k_norm.weight,
+language_model.model.layers.21.self_attn.k_proj.weight,
+language_model.model.layers.21.self_attn.v_proj.weight,
+language_model.model.layers.22.self_attn.k_norm.weight,
+language_model.model.layers.22.self_attn.k_proj.weight,
+language_model.model.layers.22.self_attn.v_proj.weight,
+language_model.model.layers.23.self_attn.k_norm.weight,
+language_model.model.layers.23.self_attn.k_proj.weight,
+language_model.model.layers.23.self_attn.v_proj.weight,
+language_model.model.layers.24.self_attn.k_norm.weight,
+language_model.model.layers.24.self_attn.k_proj.weight,
+language_model.model.layers.24.self_attn.v_proj.weight,
+language_model.model.layers.25.self_attn.k_norm.weight,
+language_model.model.layers.25.self_attn.k_proj.weight,
+language_model.model.layers.25.self_attn.v_proj.weight,
+language_model.model.layers.26.self_attn.k_norm.weight,
+language_model.model.layers.26.self_attn.k_proj.weight,
+language_model.model.layers.26.self_attn.v_proj.weight,
+language_model.model.layers.27.self_attn.k_norm.weight,
+language_model.model.layers.27.self_attn.k_proj.weight,
+language_model.model.layers.27.self_attn.v_proj.weight,
+language_model.model.layers.28.self_attn.k_norm.weight,
+language_model.model.layers.28.self_attn.k_proj.weight,
+language_model.model.layers.28.self_attn.v_proj.weight,
+language_model.model.layers.29.self_attn.k_norm.weight,
+language_model.model.layers.29.self_attn.k_proj.weight,
+language_model.model.layers.29.self_attn.v_proj.weight,
+language_model.model.layers.30.self_attn.k_norm.weight,
+language_model.model.layers.30.self_attn.k_proj.weight,
+language_model.model.layers.30.self_attn.v_proj.weight,
+language_model.model.layers.31.self_attn.k_norm.weight,
+language_model.model.layers.31.self_attn.k_proj.weight,
+language_model.model.layers.31.self_attn.v_proj.weight,
+language_model.model.layers.32.self_attn.k_norm.weight,
+language_model.model.layers.32.self_attn.k_proj.weight,
+language_model.model.layers.32.self_attn.v_proj.weight,
+language_model.model.layers.33.self_attn.k_norm.weight,
+language_model.model.layers.33.self_attn.k_proj.weight,
+language_model.model.layers.33.self_attn.v_proj.weight,
+language_model.model.layers.34.self_attn.k_norm.weight,
+language_model.model.layers.34.self_attn.k_proj.weight,
+language_model.model.layers.34.self_attn.v_proj.weight.
+        0.87 real         0.60 user         0.18 sys
+           119209984  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+                8420  page reclaims
+                  10  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 612  voluntary context switches
+                 430  involuntary context switches
+         11653850661  instructions retired
+          3384729706  cycles elapsed
+            94339768  peak memory footprint

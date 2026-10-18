@@ -1,0 +1,64 @@
+Loading local verified Qwen3-VL weights
+Loaded in 0.45481693744659424s; MLX ["activeBytes": 4255078744, "peakActiveBytes": 4255086144, "cacheBytes": 7400]
+CASE real-cycle
+DONE real-cycle 5.54s; peak 5308665744; {
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "yes",
+  "explanation": "The woman performs a squat, and the lowest frame shows her in a squat position with her knees bent and her body lowered. The return to standing is observed as she rises back to the starting position."
+}
+CASE standing-static
+DONE standing-static 1.60s; peak 5648830592; {
+  "motion": "static",
+  "lowest_frame": "F4",
+  "returned": "no",
+  "knee_in": "uncertain",
+  "explanation": "The person is standing in a static pose with no visible movement or descent."
+}
+CASE blank-control
+DONE blank-control 1.59s; peak 5647896704; {
+  "motion": "unknown",
+  "lowest_frame": "F4",
+  "returned": "uncertain",
+  "knee_in": "uncertain",
+  "explanation": "所有帧均为灰色背景，未显示任何运动或姿势变化。"
+}
+CASE ascent-omitted
+DONE ascent-omitted 1.67s; peak 5637345408; {
+  "motion": "squat",
+  "lowest_frame": "F4",
+  "returned": "yes",
+  "knee_in": "yes",
+  "explanation": "The person is performing a squat, and the motion shows a descent followed by a return to a standing position."
+}
+CASE office-01
+DONE office-01 0.66s; peak 5556965504; correct
+CASE office-04
+DONE office-04 0.65s; peak 5566763136; correct
+CASE office-07
+DONE office-07 0.66s; peak 5649551488; correct
+CASE office-10
+DONE office-10 0.68s; peak 5578313856; correct
+CASE office-13
+DONE office-13 0.66s; peak 5567139968; correct
+CASE office-16
+DONE office-16 0.67s; peak 5582426240; correct
+       19.63 real         4.61 user         5.27 sys
+          4519985152  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              386857  page reclaims
+                 365  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                 968  voluntary context switches
+               99598  involuntary context switches
+        108841171457  instructions retired
+         38621967189  cycles elapsed
+          5748543616  peak memory footprint
